@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLink="/">
+          <a class="nav-link" >Dashboard</a>
+        </li>
+        <li class="nav-item" routerLink="/events">
+          <a class="nav-link" >Events</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" >Sponsors & Guests</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" >Bank & Bank Types</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+<div class="container" style="margin-top: 5em">
+      <router-outlet></router-outlet>
+      <app-messages></app-messages>
+</div>
