@@ -37,6 +37,15 @@ export class EventService {
             );
   }
 
+   /** GET event by id. Will 404 if id not found */
+   getEvent(id: number): Observable<Event> {
+    const url = `${this.apiUrl}find/${id}`;
+    return this.http.get<Event>(url).pipe(
+      tap(_ => this.log(`fetched event id=${id}`)),
+      catchError(this.handleError<Event>(`getEvent id=${id}`))
+    );
+  }
+
   /** POST: add a new event to the server */
   addEvent (event: Event): Observable<Event> {
     return this.http.post<Event>(this.apiUrl+'create', event, httpOptions).pipe(

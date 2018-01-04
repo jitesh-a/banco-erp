@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'eventform', component: EventFormComponent },
+  { path: 'eventform/:id', component: EventFormComponent },
 ];
 
 @NgModule({
