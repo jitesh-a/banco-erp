@@ -1,0 +1,43 @@
+<div class="row" >
+  <div class="col-md-6"><h1> Sponsors And Guests </h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/spandgstform"> New Event </a></div>
+</div>
+<hr/>
+<div class="row" >
+<div class="col-md-12">
+    
+    <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
+    
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+        <thead>
+              <tr>
+                <th>Id</th>
+                <th>Event Name</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Contact</th>
+                <th>Amount</th>
+                <th>Topic</th>
+                <th>Type</th>
+              </tr>
+        </thead> 
+        <tbody>
+          <tr *ngFor="let sg of sponsorAndGuests">
+            <td>{{sg.Id}}</td>
+            <td>{{sg.EventName}}</td>
+            <td>{{sg.Name}}</td>
+            <td>{{sg.Description}}</td>
+            <td>{{sg.Contact}}</td>
+            <td>{{sg.Amount}}</td>
+            <td>{{sg.Topic}}</td>
+            <td>{{sg.Type}}</td>
+            <td>
+              <a class="btn btn-sm btn-primary" href=""> Edit </a>
+              <a class="btn btn-sm btn-danger"> Delete </a>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>

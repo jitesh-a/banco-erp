@@ -16,6 +16,10 @@ import { MessageService } from "./message.service";
 import { EventService } from "./event.service";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventFormComponent } from './event-form/event-form.component';
+import { Event } from "../models/event.model";
+import { SponsorAndGuestComponent } from './sponsor-and-guest/sponsor-and-guest.component';
+import { SponsorAndGuestFormComponent } from './sponsor-and-guest-form/sponsor-and-guest-form.component';
+import { SponsorAndGuestService } from "./sponsor-and-guest.service";
 
 @NgModule({
   declarations: [
@@ -25,6 +29,8 @@ import { EventFormComponent } from './event-form/event-form.component';
     MessagesComponent,
     DashboardComponent,
     EventFormComponent,
+    SponsorAndGuestComponent,
+    SponsorAndGuestFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { EventFormComponent } from './event-form/event-form.component';
   ],
   providers: [
     MessageService,
-    EventService],
+    EventService,
+     SponsorAndGuestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

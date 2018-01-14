@@ -9,8 +9,9 @@ import { EventService } from "../event.service";
   styleUrls: ['./banco-event.component.css']
 })
 export class BancoEventComponent implements OnInit {
-events: Event[]=[];
-dataLoaded: boolean;
+
+  events: Event[]=[];
+  dataLoaded: boolean;
   
   constructor(private eventService: EventService) { }
 

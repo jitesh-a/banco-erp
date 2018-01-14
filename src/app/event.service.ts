@@ -49,7 +49,7 @@ export class EventService {
   /** POST: add a new event to the server */
   addEvent (event: Event): Observable<Event> {
     return this.http.post<Event>(this.apiUrl+'create', event, httpOptions).pipe(
-      tap(res => this.log(`added event w/ Id=${res["event"].Id}`)),
+      tap(res => this.log(`added event`)),
       catchError(this.handleError<Event>('addEvent'))
     );
   }

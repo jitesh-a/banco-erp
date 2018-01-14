@@ -1,10 +1,10 @@
-export class Event{
+export class Hotel{
 
     Id: number;
     Name: string;
     Description: string;
-    StartDate: Date;
-    EndDate: Date;
     Location: string;
+    NumberOfRooms: number;
+    Amount: number;
     
 }
