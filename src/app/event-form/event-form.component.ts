@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-event-form',
+  
   templateUrl: './event-form.component.html',
   styleUrls: ['./event-form.component.css']
 })
@@ -23,6 +23,7 @@ export class EventFormComponent implements OnInit {
     }
   }
 
+  
   getEvent(id: number): void {
     //const id = +this.route.snapshot.paramMap.get('id');
     this.eventService.getEvent(id)

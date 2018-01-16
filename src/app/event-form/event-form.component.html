@@ -5,7 +5,7 @@
       <hr/>
       <form (ngSubmit)="onSubmit()" #eventForm="ngForm">
           <div class="form-group" *ngIf="event.Id>0">
-              <label for="Name">Name</label>
+              <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"
                      required
                      [(ngModel)]="event.Id" name="Id"

@@ -20,6 +20,10 @@ import { Event } from "../models/event.model";
 import { SponsorAndGuestComponent } from './sponsor-and-guest/sponsor-and-guest.component';
 import { SponsorAndGuestFormComponent } from './sponsor-and-guest-form/sponsor-and-guest-form.component';
 import { SponsorAndGuestService } from "./sponsor-and-guest.service";
+import { BankTypeComponent } from './bank-type/bank-type.component';
+import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
+import { BankTypeService } from './bank-type.service';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { SponsorAndGuestService } from "./sponsor-and-guest.service";
     EventFormComponent,
     SponsorAndGuestComponent,
     SponsorAndGuestFormComponent,
+    BankTypeComponent,
+    BankTypeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,8 @@ import { SponsorAndGuestService } from "./sponsor-and-guest.service";
   providers: [
     MessageService,
     EventService,
-     SponsorAndGuestService],
+     SponsorAndGuestService,
+     BankTypeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

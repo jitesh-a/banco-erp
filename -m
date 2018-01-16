@@ -1,0 +1,39 @@
+14-01-2018
+
+# Please enter the commit message for your changes. Lines starting #
+with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   package-lock.json
+#	modified:   package.json
+#	modified:   src/app/app-routing.module.ts
+#	modified:   src/app/app.component.html
+#	modified:   src/app/app.module.ts
+#	modified:   src/app/banco-event/banco-event.component.html
+#	modified:   src/app/banco-event/banco-event.component.ts
+#	modified:   src/app/event.service.ts
+#	new file:   src/app/sponsor-and-guest-form/sponsor-and-guest-form.component.css
+#	new file:   src/app/sponsor-and-guest-form/sponsor-and-guest-form.component.html
+#	new file:   src/app/sponsor-and-guest-form/sponsor-and-guest-form.component.spec.ts
+#	new file:   src/app/sponsor-and-guest-form/sponsor-and-guest-form.component.ts
+#	new file:   src/app/sponsor-and-guest.service.spec.ts
+#	new file:   src/app/sponsor-and-guest.service.ts
+#	new file:   src/app/sponsor-and-guest/sponsor-and-guest.component.css
+#	new file:   src/app/sponsor-and-guest/sponsor-and-guest.component.html
+#	new file:   src/app/sponsor-and-guest/sponsor-and-guest.component.spec.ts
+#	new file:   src/app/sponsor-and-guest/sponsor-and-guest.component.ts
+#	new file:   src/models/bank.model.ts
+#	new file:   src/models/bankType.model.ts
+#	new file:   src/models/employee.model.ts
+#	modified:   src/models/event.model.ts
+#	new file:   src/models/expenses.model.ts
+#	new file:   src/models/financialDetails.model.ts
+#	new file:   src/models/hotel.model.ts
+#	new file:   src/models/incomes.model.ts
+#	new file:   src/models/pickUpAndDrop.model.ts
+#	new file:   src/models/sponsorAndGuest.model.ts
+#	new file:   src/models/technologyAwards.model.ts
+#

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+      <h1>Bank Type Form</h1>
+      <hr/>
+      <form (ngSubmit)="onSubmit()" #bankTypeForm="ngForm">
+          <div class="form-group" *ngIf="banktype.Id>0">
+              <label for="Id">Id</label>
+              <input type="text" class="form-control" id="Id"
+                     required
+                     [(ngModel)]="event.Id" name="Id"
+                     #Id="ngModel" readonly> 
+                <div [hidden]="Id.valid || Id.pristine"
+                     class="alert alert-danger">
+                  Id is required
+                </div>            
+            </div>
+          <div class="form-group">
+            <label for="Type">Type</label>
+            <input type="text" class="form-control" id="Type"
+                   required
+                   [(ngModel)]="banktype.Type" name="Type"
+                   #Type="ngModel">
+            <div [hidden]="Type.valid || Type.pristine"
+                 class="alert alert-danger">
+                Type is required
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="Description">Description</label>
+              <textarea type="text" class="form-control" id="Description"
+                     required
+                     [(ngModel)]="banktype.Description" name="Description"
+                     #Description="ngModel"></textarea>
+              <div [hidden]="Description.valid || Description.pristine"
+                   class="alert alert-danger">
+                   Description is required
+              </div>
+            </div>
+          <button type="submit" class="btn btn-success" [disabled]="!bankTypeForm.form.valid" (click)="save()">Submit</button>
+          <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
+        </form>
+  </div>   
+</div>
