@@ -59,19 +59,7 @@
                 </div>
               </div>
               
-              
-
-              <div class="form-group">
-                <label for="QuestionarieTypeId">Questionaries  Type ID </label>
-                <select  class="form-control" id="EventName"
-                required
-                [(ngModel)]="bank.QuestionarieTypeId" name="QuestionarieTypeId"
-                #Type="ngModel">
-                  <option *ngFor="let e of events" [value]="e.Id">
-                    {{e.Name}}
-                  </option>
-                </select>
-              </div>
+            
    
         <button type="submit" class="btn btn-success" [disabled]="!sponsorandguestForm.form.valid" (click)="save()">Submit</button>
         <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
