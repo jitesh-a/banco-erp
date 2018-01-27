@@ -25,6 +25,7 @@ import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component
 import { BankTypeService } from './bank-type.service';
 import { BankComponent } from './bank/bank.component';
 import { BankService } from './bank.service';
+import { BankFormComponent } from './bank-form/bank-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { BankService } from './bank.service';
     BankTypeComponent,
     BankTypeFormComponent,
     BankComponent,
+    BankFormComponent,
   ],
   imports: [
     BrowserModule,

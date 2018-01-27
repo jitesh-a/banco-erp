@@ -8,7 +8,7 @@ import { SponsorAndGuestFormComponent } from "./sponsor-and-guest-form/sponsor-a
 import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { BankComponent } from "./bank/bank.component";
-
+import {BankFormComponent  } from "./bank-form/bank-form.component";
 
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
@@ -19,7 +19,8 @@ const routes: Routes = [
   {path:'spandgstform',component:SponsorAndGuestFormComponent},
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
-  {path: 'bank',component:BankComponent}
+  {path: 'bank',component:BankComponent},
+  {path: 'bankform',component:BankFormComponent}
 ];
 
 @NgModule({
