@@ -57,6 +57,4 @@ export class BankFormComponent implements OnInit {
         }
          
       }
-    
-    
     }

@@ -9,6 +9,9 @@ import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { BankComponent } from "./bank/bank.component";
 import {BankFormComponent  } from "./bank-form/bank-form.component";
+import { IncomeComponent } from "./income/income.component";
+import { IncomeFormComponent } from "./income-form/income-form.component";
+
 
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
@@ -20,7 +23,9 @@ const routes: Routes = [
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
   {path: 'bank',component:BankComponent},
-  {path: 'bankform',component:BankFormComponent}
+  {path: 'bankform',component:BankFormComponent},
+  {path: 'income' , component:IncomeComponent},
+  {path:'incomeform',component:IncomeFormComponent}
 ];
 
 @NgModule({

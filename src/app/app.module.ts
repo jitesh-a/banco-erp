@@ -26,6 +26,9 @@ import { BankTypeService } from './bank-type.service';
 import { BankComponent } from './bank/bank.component';
 import { BankService } from './bank.service';
 import { BankFormComponent } from './bank-form/bank-form.component';
+import { IncomeComponent } from './income/income.component';
+import { IncomeService } from './income.service';
+import { IncomeFormComponent } from './income-form/income-form.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { BankFormComponent } from './bank-form/bank-form.component';
     BankTypeFormComponent,
     BankComponent,
     BankFormComponent,
+    IncomeComponent,
+    IncomeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import { BankFormComponent } from './bank-form/bank-form.component';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
-     BankService],
+     BankService,
+     IncomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
