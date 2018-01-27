@@ -23,10 +23,15 @@ import { SponsorAndGuestService } from "./sponsor-and-guest.service";
 import { BankTypeComponent } from './bank-type/bank-type.component';
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { BankTypeService } from './bank-type.service';
+<<<<<<< HEAD
 import { HotelComponent } from './hotel/hotel.component';
 import { HotelService } from './hotel.service';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
 
+=======
+import { BankComponent } from './bank/bank.component';
+import { BankService } from './bank.service';
+>>>>>>> b1c974c43310b2b1401526603f75854759601678
 
 @NgModule({
   declarations: [
@@ -40,9 +45,13 @@ import { HotelFormComponent } from './hotel-form/hotel-form.component';
     SponsorAndGuestFormComponent,
     BankTypeComponent,
     BankTypeFormComponent,
+<<<<<<< HEAD
     TestComponent,
     HotelComponent,
     HotelFormComponent
+=======
+    BankComponent,
+>>>>>>> b1c974c43310b2b1401526603f75854759601678
   ],
   imports: [
     BrowserModule,
@@ -57,7 +66,11 @@ import { HotelFormComponent } from './hotel-form/hotel-form.component';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
+<<<<<<< HEAD
     HotelService],
+=======
+     BankService],
+>>>>>>> b1c974c43310b2b1401526603f75854759601678
   bootstrap: [AppComponent]
 })
 export class AppModule { }
