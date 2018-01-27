@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Event } from "../models/event.model";
+import { Hotel } from "../models/hotel.model";
 import { Observable } from 'rxjs/Rx';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import 'rxjs/add/operator/toPromise';
-import { Hotel } from '../models/hotel.model';
 
 //header options  
 const httpOptions = {
@@ -14,44 +13,44 @@ const httpOptions = {
 };
 
 @Injectable()
-export class EventService {
+export class HotelService {
 
-  private apiUrl='http://localhost:7888/event/';
+  private apiUrl='http://localhost:7888/hotel/';
 
   constructor(private messageService: MessageService,private http:HttpClient) { }
 
   /** GET events from the server */
-  getEvents (): Observable<Event[]> {
-    return this.http.get<Event[]>(this.apiUrl+'list')
+  getHotels (): Observable<Hotel[]> {
+    return this.http.get<Hotel[]>(this.apiUrl+'list')
       .pipe(
-        tap(events => this.log(`fetched events`)),
-        catchError(this.handleError('getevents', []))
+        tap(events => this.log(`fetched hotels`)),
+        catchError(this.handleError('gethotels', []))
       );
   }
 
-  updateEvent(event: Event): Observable<any>{
+  updateHotel(hotel: Hotel): Observable<any>{
     //console.log(event);
-    return this.http.put<Event>(this.apiUrl+`edit/${event.Id}`, event, httpOptions)
+    return this.http.put<Hotel>(this.apiUrl+`edit/${hotel.Id}`, hotel, httpOptions)
             .pipe(
-              tap(_=>this.log(`Updated event : ${event.Id}`)),
-              catchError(this.handleError<any>(`update event Id=${event.Id}`))
+              tap(_=>this.log(`Updated hotel : ${hotel.Id}`)),
+              catchError(this.handleError<any>(`update event Id=${hotel.Id}`))
             );
   }
 
    /** GET event by id. Will 404 if id not found */
-   getEvent(id: number): Observable<Event> {
+   getHotel(id: number): Observable<Hotel> {
     const url = `${this.apiUrl}find/${id}`;
-    return this.http.get<Event>(url).pipe(
-      tap(_ => this.log(`fetched event id=${id}`)),
-      catchError(this.handleError<Event>(`getEvent id=${id}`))
+    return this.http.get<Hotel>(url).pipe(
+      tap(_ => this.log(`fetched hotel id=${id}`)),
+      catchError(this.handleError<Hotel>(`getHotel id=${id}`))
     );
   }
 
   /** POST: add a new event to the server */
-  addEvent (event: Event): Observable<Event> {
-    return this.http.post<Event>(this.apiUrl+'create', event, httpOptions).pipe(
-      tap(res => this.log(`added event`)),
-      catchError(this.handleError<Event>('addEvent'))
+  addHotel (hotel: Hotel): Observable<Hotel> {
+    return this.http.post<Hotel>(this.apiUrl+'create', hotel, httpOptions).pipe(
+      tap(res => this.log(`added hotel`)),
+      catchError(this.handleError<Hotel>('addHotel'))
     );
   }
 
@@ -74,15 +73,15 @@ export class EventService {
   }
 
   /** DELETE: delete the event from the server */
-  deleteEvent (event: Event | number): Observable<Event> {
-    const Id = typeof event === 'number' ? event : event.Id;
+  deleteHotel (hotel: Hotel | number): Observable<Hotel> {
+    const Id = typeof hotel === 'number' ? hotel : hotel.Id;
     const url = `${this.apiUrl}delete/${Id}`;
 
-    return this.http.delete<Event>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted event Id=${Id}`)),
-      catchError(this.handleError<Event>('deleteEvent'))
+    return this.http.delete<Hotel>(url, httpOptions).pipe(
+      tap(_ => this.log(`deleted hotel Id=${Id}`)),
+      catchError(this.handleError<Hotel>('deleteEvent'))
     );
-  }
+  } 
 
 
 }
