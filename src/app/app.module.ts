@@ -38,6 +38,7 @@ import { IncomeService } from './income.service';
 import { IncomeFormComponent } from './income-form/income-form.component';
 import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
 import { ExcellentPerformanceService } from './excellent-performance.service';
+import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ExcellentPerformanceService } from './excellent-performance.service';
     IncomeComponent,
     IncomeFormComponent,
     ExcellentPerformanceComponent,
+    ExcellentPerformanceFormComponent,
   ],
   imports: [
     BrowserModule,

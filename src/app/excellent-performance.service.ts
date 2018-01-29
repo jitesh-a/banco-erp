@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FinancialDetails  } from "../models/financialDetails.model";
+import { ExcellentPerformance } from "../models/excellentPerformance.model";
 import { Observable } from 'rxjs/Rx';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
@@ -29,26 +29,26 @@ export class ExcellentPerformanceService{
       );
   }
 
-  updateemployee(employee: Employee): Observable<any>{
+  updateexcellentPerformance(excel_perf: ExcellentPerformance): Observable<any>{
     //console.log(employee);
-    return this.http.put<Employee>(this.apiUrl+`edit/${employee.Id}`, employee, httpOptions)
+    return this.http.put<ExcellentPerformance>(this.apiUrl+`edit/${excel_perf.Id}`, employee, httpOptions)
             ;
   }
 
    /** GET banktype by id. Will 404 if id not found */
-   getemployee(id: number): Observable<Employee> {
+   getexcellentPerformance(id: number): Observable<ExcellentPerformance> {
     const url = `${this.apiUrl}find/${id}`;
-    return this.http.get<Employee>(url).pipe(
-      tap(_ => this.log(`fetched banktype id=${id}`)),
-      catchError(this.handleError<Employee>(`getemployee id=${id}`))
+    return this.http.get<ExcellentPerformance>(url).pipe(
+      tap(_ => this.log(`fetched excellent performance id=${id}`)),
+      catchError(this.handleError<ExcellentPerformance>(`getemployee id=${id}`))
     );
   }
 
   /** POST: add a new banktype to the server */
-  addemployee(employee:Employee): Observable<Employee> {
-    return this.http.post<Employee>(this.apiUrl+'create', employee, httpOptions).pipe(
-      tap(res => this.log(`added employee`)),
-      catchError(this.handleError<Employee>('addemployee'))
+  addexcellentPerformance(excel_perf:ExcellentPerformance): Observable<ExcellentPerformance> {
+    return this.http.post<ExcellentPerformance>(this.apiUrl+'create', excel_perf, httpOptions).pipe(
+      tap(res => this.log(`added excellent Performance`)),
+      catchError(this.handleError<ExcellentPerformance>('addexcellentPerformance'))
     );
   }
 
@@ -71,13 +71,13 @@ export class ExcellentPerformanceService{
   }
 
   /** DELETE: delete the sponsorandguest from the server */
-  deleteemployee (employee: Employee | number): Observable<Employee> {
-    const Id = typeof employee === 'number' ? employee : employee.Id;
+  deleteexcellentPerformance (excel_perf: ExcellentPerformance | number): Observable<ExcellentPerformance> {
+    const Id = typeof excel_perf === 'number' ? excel_perf : excel_perf.Id;
     const url = `${this.apiUrl}delete/${Id}`;
 
-    return this.http.delete<Employee>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted employee Id=${Id}`)),
-      catchError(this.handleError<Employee>('deleteemployee'))
+    return this.http.delete<ExcellentPerformance>(url, httpOptions).pipe(
+      tap(_ => this.log(`deleted data Id=${Id}`)),
+      catchError(this.handleError<ExcellentPerformance>('deletedata'))
     );
   }
 
