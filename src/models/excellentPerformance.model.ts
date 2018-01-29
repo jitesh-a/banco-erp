@@ -1,4 +1,4 @@
-export class FinancialDetails {
+export class ExcellentPerformance {
 
     Id: number;
     status: boolean;
