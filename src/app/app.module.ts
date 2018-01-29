@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CustomMaterialModule } from './custom-material.module';
-import { TestComponent } from "./test.component";
+import { TestComponent } from "./test/test.component";
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
@@ -27,6 +27,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeService } from './employee.service';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
+import { HotelComponent } from './hotel/hotel.component';
+import { HotelService } from './hotel.service';
+import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import { BankComponent } from './bank/bank.component';
 import { BankService } from './bank.service';
 import { BankFormComponent } from './bank-form/bank-form.component';
@@ -50,6 +53,9 @@ import { ExcellentPerformanceService } from './excellent-performance.service';
     BankTypeFormComponent,
     EmployeeComponent,
     EmployeeFormComponent,
+    TestComponent,
+    HotelComponent,
+    HotelFormComponent,
     BankComponent,
     BankFormComponent,
     IncomeComponent,
@@ -72,7 +78,11 @@ import { ExcellentPerformanceService } from './excellent-performance.service';
      EmployeeService,
      BankService,
      IncomeService,
-     ExcellentPerformanceService],
+     ExcellentPerformanceService,
+    HotelService,
+  BankService,
+     BankService,
+     IncomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

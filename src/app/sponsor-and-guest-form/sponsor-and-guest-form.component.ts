@@ -69,6 +69,4 @@ export class SponsorAndGuestFormComponent implements OnInit {
       }
        
     }
-
- 
 }

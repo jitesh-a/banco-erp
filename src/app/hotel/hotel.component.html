@@ -1,6 +1,6 @@
 <div class="row" >
-  <div class="col-md-6"><h1> Events </h1></div>
-  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/eventform/0"> New Event </a></div>
+  <div class="col-md-6"><h1> Hotels </h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/hotelform/0"> New Event </a></div>
 </div>
 <hr/>
 <div class="row" >
@@ -14,20 +14,22 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Description</th>
-                <th>Start Date</th>
-                <th>End Date</th>
+                <th>Location</th>
+                <th>Number Of Rooms</th>
+                <th>Amount</th>
                 <th>Actions</th>
               </tr>
         </thead> 
         <tbody>
-          <tr *ngFor="let e of events">
-            <td>{{e.Id}}</td>
-            <td>{{e.Name}}</td>
-            <td>{{e.Description}}</td>
-            <td>{{e.StartDate}}</td>
-            <td>{{e.EndDate}}</td>
+          <tr *ngFor="let h of hotels">
+            <td>{{h.Id}}</td>
+            <td>{{h.Name}}</td>
+            <td>{{h.Description}}</td>
+            <td>{{h.Location}}</td>
+            <td>{{h.NumberOfRooms}}</td>
+            <td>{{h.Amount}}</td>
             <td>
-              <a class="btn btn-sm btn-primary" href="/eventform/{{e.Id}}"> Edit </a>
+              <a class="btn btn-sm btn-primary" href="/hotelform/{{h.Id}}"> Edit </a>
               <a class="btn btn-sm btn-danger"> Delete </a>
               
             </td>
@@ -36,3 +38,4 @@
       </table>
 </div>
 </div>
+

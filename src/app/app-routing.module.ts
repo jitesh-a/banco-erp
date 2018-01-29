@@ -1,4 +1,4 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BancoEventComponent } from "./banco-event/banco-event.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
@@ -9,7 +9,9 @@ import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { EmployeeComponent } from "./employee/employee.component";
 import { EmployeeFormComponent } from "./employee-form/employee-form.component";
+import { HotelComponent } from "./hotel/hotel.component";
 import { BankComponent } from "./bank/bank.component";
+import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import {BankFormComponent  } from "./bank-form/bank-form.component";
 import { IncomeComponent } from "./income/income.component";
 import { IncomeFormComponent } from "./income-form/income-form.component";
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'eventform/:id', component: EventFormComponent },
+  { path:'hotelform/:id', component: HotelFormComponent},
   {path:'spandgstform',component:SponsorAndGuestFormComponent},
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
@@ -28,6 +31,7 @@ const routes: Routes = [
   {path:'employeeform/:id',component:EmployeeFormComponent},
 
 
+  {path:'hotel',component:HotelComponent},
   {path: 'bank',component:BankComponent},
   {path: 'bankform',component:BankFormComponent},
   {path: 'income' , component:IncomeComponent},
