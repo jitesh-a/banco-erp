@@ -7,28 +7,23 @@ import { SponsorAndGuestComponent } from "./sponsor-and-guest/sponsor-and-guest.
 import { SponsorAndGuestFormComponent } from "./sponsor-and-guest-form/sponsor-and-guest-form.component";
 import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
-<<<<<<< HEAD
 import { HotelComponent } from "./hotel/hotel.component";
-=======
 import { BankComponent } from "./bank/bank.component";
+import { HotelFormComponent } from './hotel-form/hotel-form.component';
 
 
->>>>>>> b1c974c43310b2b1401526603f75854759601678
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'eventform/:id', component: EventFormComponent },
+  { path:'hotelform/:id', component: HotelFormComponent},
   {path:'spandgstform',component:SponsorAndGuestFormComponent},
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
-<<<<<<< HEAD
-  {path:'hotel',component:HotelComponent}
-
-=======
+  {path:'hotel',component:HotelComponent},
   {path: 'bank',component:BankComponent}
->>>>>>> b1c974c43310b2b1401526603f75854759601678
 ];
 
 @NgModule({

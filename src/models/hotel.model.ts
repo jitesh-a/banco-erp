@@ -6,5 +6,6 @@ export class Hotel{
     Location: string;
     NumberOfRooms: number;
     Amount: number;
-    
+    EventId : number;
+    EventName: string;
 }
