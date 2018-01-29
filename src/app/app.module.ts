@@ -23,6 +23,9 @@ import { SponsorAndGuestService } from "./sponsor-and-guest.service";
 import { BankTypeComponent } from './bank-type/bank-type.component';
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { BankTypeService } from './bank-type.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeService } from './employee.service';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 
 @NgModule({
@@ -37,6 +40,8 @@ import { BankTypeService } from './bank-type.service';
     SponsorAndGuestFormComponent,
     BankTypeComponent,
     BankTypeFormComponent,
+    EmployeeComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { BankTypeService } from './bank-type.service';
     MessageService,
     EventService,
      SponsorAndGuestService,
-     BankTypeService],
+     BankTypeService,
+     EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
