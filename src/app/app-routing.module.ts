@@ -9,6 +9,10 @@ import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { EmployeeComponent } from "./employee/employee.component";
 import { EmployeeFormComponent } from "./employee-form/employee-form.component";
+import { BankComponent } from "./bank/bank.component";
+import {BankFormComponent  } from "./bank-form/bank-form.component";
+import { IncomeComponent } from "./income/income.component";
+import { IncomeFormComponent } from "./income-form/income-form.component";
 
 
 const routes: Routes = [
@@ -24,6 +28,10 @@ const routes: Routes = [
   {path:'employeeform/:id',component:EmployeeFormComponent},
 
 
+  {path: 'bank',component:BankComponent},
+  {path: 'bankform',component:BankFormComponent},
+  {path: 'income' , component:IncomeComponent},
+  {path:'incomeform',component:IncomeFormComponent}
 ];
 
 @NgModule({

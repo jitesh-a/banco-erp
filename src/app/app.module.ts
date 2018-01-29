@@ -27,6 +27,14 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeService } from './employee.service';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
+import { BankComponent } from './bank/bank.component';
+import { BankService } from './bank.service';
+import { BankFormComponent } from './bank-form/bank-form.component';
+import { IncomeComponent } from './income/income.component';
+import { IncomeService } from './income.service';
+import { IncomeFormComponent } from './income-form/income-form.component';
+import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
+import { ExcellentPerformanceService } from './excellent-performance.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +50,11 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
     BankTypeFormComponent,
     EmployeeComponent,
     EmployeeFormComponent,
+    BankComponent,
+    BankFormComponent,
+    IncomeComponent,
+    IncomeFormComponent,
+    ExcellentPerformanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +69,10 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
-     EmployeeService],
+     EmployeeService,
+     BankService,
+     IncomeService,
+     ExcellentPerformanceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
