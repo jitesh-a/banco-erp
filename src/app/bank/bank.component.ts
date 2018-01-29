@@ -44,4 +44,4 @@ export class BankComponent implements OnInit {
       }
     );
   }          
-            }
+}

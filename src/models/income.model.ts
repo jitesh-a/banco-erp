@@ -1,4 +1,4 @@
-export class Incomes{
+export class Income{
 
     Id: number;
     Name: string;

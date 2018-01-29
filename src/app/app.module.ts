@@ -28,6 +28,10 @@ import { HotelService } from './hotel.service';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import { BankComponent } from './bank/bank.component';
 import { BankService } from './bank.service';
+import { BankFormComponent } from './bank-form/bank-form.component';
+import { IncomeComponent } from './income/income.component';
+import { IncomeService } from './income.service';
+import { IncomeFormComponent } from './income-form/income-form.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import { BankService } from './bank.service';
     TestComponent,
     HotelComponent,
     HotelFormComponent,
-    BankComponent
+    BankComponent,
+    BankFormComponent,
+    IncomeComponent,
+    IncomeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +66,13 @@ import { BankService } from './bank.service';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
+<<<<<<< HEAD
     HotelService,
   BankService],
+=======
+     BankService,
+     IncomeService],
+>>>>>>> 72b7af0f62a16cc2e1472c97a365c0ebb6d60b4c
   bootstrap: [AppComponent]
 })
 export class AppModule { }
