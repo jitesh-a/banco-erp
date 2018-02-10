@@ -6,7 +6,7 @@ import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import 'rxjs/add/operator/toPromise';
-import { Hotel } from '../models/hotel.model';
+
 
 //header options  
 const httpOptions = {
