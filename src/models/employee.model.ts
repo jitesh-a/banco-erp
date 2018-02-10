@@ -7,5 +7,7 @@ export class Employee{
     EmployeeNumber: number;
     Gender: boolean;
     IDProof: string;
+    BankId : number;
+    BankName : string;
     
 }

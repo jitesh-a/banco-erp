@@ -36,6 +36,9 @@ import { BankFormComponent } from './bank-form/bank-form.component';
 import { IncomeComponent } from './income/income.component';
 import { IncomeService } from './income.service';
 import { IncomeFormComponent } from './income-form/income-form.component';
+import { PickupAndDropComponent } from './pickup-and-drop/pickup-and-drop.component';
+import { pickUpAndDropService } from "./pickup-and-drop.service";
+import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-drop-from.component';
 import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
 import { ExcellentPerformanceService } from './excellent-performance.service';
 import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
@@ -62,6 +65,10 @@ import { TestFormComponent } from './test-form/test-form.component';
     BankFormComponent,
     IncomeComponent,
     IncomeFormComponent,
+
+    PickupAndDropComponent,
+
+    PickupAndDropFromComponent,
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
     TestFormComponent,
@@ -79,6 +86,9 @@ import { TestFormComponent } from './test-form/test-form.component';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
+    HotelService,
+  BankService,
+  pickUpAndDropService,
      EmployeeService,
      BankService,
      IncomeService,

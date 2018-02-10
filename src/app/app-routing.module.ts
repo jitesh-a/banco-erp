@@ -15,6 +15,8 @@ import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import {BankFormComponent  } from "./bank-form/bank-form.component";
 import { IncomeComponent } from "./income/income.component";
 import { IncomeFormComponent } from "./income-form/income-form.component";
+import {  PickupAndDropComponent} from "./pickup-and-drop/pickup-and-drop.component";
+import {PickupAndDropFromComponent  } from "./pickup-and-drop-from/pickup-and-drop-from.component";
 
 
 const routes: Routes = [
@@ -28,14 +30,14 @@ const routes: Routes = [
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
   {path:'employee',component:EmployeeComponent},
-  {path:'employeeform/:id',component:EmployeeFormComponent},
-
-
+  {path:'employeeform',component:EmployeeFormComponent},
   {path:'hotel',component:HotelComponent},
   {path: 'bank',component:BankComponent},
   {path: 'bankform',component:BankFormComponent},
   {path: 'income' , component:IncomeComponent},
-  {path:'incomeform',component:IncomeFormComponent}
+  {path:'incomeform',component:IncomeFormComponent},
+  {path: 'pickupdrop',component:PickupAndDropComponent},
+  {path: 'pickupanddropform',component:PickupAndDropFromComponent},
 ];
 
 @NgModule({
