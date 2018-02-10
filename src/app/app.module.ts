@@ -32,6 +32,9 @@ import { BankFormComponent } from './bank-form/bank-form.component';
 import { IncomeComponent } from './income/income.component';
 import { IncomeService } from './income.service';
 import { IncomeFormComponent } from './income-form/income-form.component';
+import { PickupAndDropComponent } from './pickup-and-drop/pickup-and-drop.component';
+import { pickUpAndDropService } from "./pickup-and-drop.service";
+import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-drop-from.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,10 @@ import { IncomeFormComponent } from './income-form/income-form.component';
     BankFormComponent,
     IncomeComponent,
     IncomeFormComponent,
+
+    PickupAndDropComponent,
+
+    PickupAndDropFromComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,13 +73,11 @@ import { IncomeFormComponent } from './income-form/income-form.component';
     EventService,
      SponsorAndGuestService,
      BankTypeService,
-<<<<<<< HEAD
     HotelService,
-  BankService],
-=======
+  BankService,
+  pickUpAndDropService,
      BankService,
      IncomeService],
->>>>>>> 72b7af0f62a16cc2e1472c97a365c0ebb6d60b4c
   bootstrap: [AppComponent]
 })
 export class AppModule { }
