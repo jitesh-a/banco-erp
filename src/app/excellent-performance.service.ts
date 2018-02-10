@@ -31,7 +31,7 @@ export class ExcellentPerformanceService{
 
   updateexcellentPerformance(excel_perf: ExcellentPerformance): Observable<any>{
     //console.log(employee);
-    return this.http.put<ExcellentPerformance>(this.apiUrl+`edit/${excel_perf.Id}`, employee, httpOptions)
+    return this.http.put<ExcellentPerformance>(this.apiUrl+`edit/${excel_perf.Id}`,excel_perf, httpOptions)
             ;
   }
 

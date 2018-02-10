@@ -48,7 +48,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="EmployeeNumber">EmployeeNumber</label>
+              <label for="EmployeeNumber">Employee Number</label>
               <textarea type="number" class="form-control" id="EmployeeNumber"
                      required
                      [(ngModel)]="employee.EmployeeNumber" name="EmployeeNumber"
@@ -75,10 +75,10 @@
             </div>
             <div class="form-group">
               <label for="IDProof">IDProof</label>
-              <textarea type="text" class="form-control" id="IDProof"
+              <input type="text" class="form-control" id="IDProof"
                      required
                      [(ngModel)]="employee.IDProof" name="IDProof"
-                     #IDProof="ngModel"></textarea>
+                     #IDProof="ngModel"/>
               <div [hidden]="IDProof.valid || IDProof.pristine"
                    class="alert alert-danger">
                    IDProof is required

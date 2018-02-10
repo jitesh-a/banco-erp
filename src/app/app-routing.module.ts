@@ -28,9 +28,7 @@ const routes: Routes = [
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
   {path:'employee',component:EmployeeComponent},
-  {path:'employeeform/:id',component:EmployeeFormComponent},
-
-
+  {path:'employeeform',component:EmployeeFormComponent},
   {path:'hotel',component:HotelComponent},
   {path: 'bank',component:BankComponent},
   {path: 'bankform',component:BankFormComponent},
