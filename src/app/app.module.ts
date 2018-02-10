@@ -42,6 +42,8 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
 import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
 import { ExcellentPerformanceService } from './excellent-performance.service';
 import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
+import { TechnologyDetailsComponent } from './technology-details/technology-details.component';
+import { TechnologyDetailsService } from './technology-details.service';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,7 @@ import { ExcellentPerformanceFormComponent } from './excellent-performance-form/
     PickupAndDropFromComponent,
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
+    TechnologyDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,7 +97,8 @@ import { ExcellentPerformanceFormComponent } from './excellent-performance-form/
     HotelService,
   BankService,
      BankService,
-     IncomeService],
+     IncomeService,
+     TechnologyDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

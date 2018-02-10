@@ -1,4 +1,4 @@
-export class TechnologyAwards{
+export class TechnologyDetails{
 
     Id: number;
     Status: boolean;
