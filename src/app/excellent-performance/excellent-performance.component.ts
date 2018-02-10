@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ExcellentPerformanceService } from "../excellent-performance.service";
 import { ExcellentPerformance } from "../../models/excellentPerformance.model";
 @Component({
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  templateUrl: './excellent-performance.component.html',
+  styleUrls: ['./excellent-performance.component.css']
 })
 export class ExcellentPerformanceComponent implements OnInit {
  

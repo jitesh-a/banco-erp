@@ -5,8 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 @Component({
   selector: 'app-excellent-performance',
-  templateUrl: './excellent-performance.component.html',
-  styleUrls: ['./excellent-performance.component.css']
+  templateUrl: './excellent-performance-form.component.html',
+  styleUrls: ['./excellent-performance-form.component.css']
 })
 export class ExcellentPerformanceFormComponent implements OnInit {
   excel_perf:ExcellentPerformance=new ExcellentPerformance();
