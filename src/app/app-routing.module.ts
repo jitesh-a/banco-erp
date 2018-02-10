@@ -7,6 +7,8 @@ import { SponsorAndGuestComponent } from "./sponsor-and-guest/sponsor-and-guest.
 import { SponsorAndGuestFormComponent } from "./sponsor-and-guest-form/sponsor-and-guest-form.component";
 import { BankTypeComponent } from "./bank-type/bank-type.component";
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
+import { EmployeeComponent } from "./employee/employee.component";
+import { EmployeeFormComponent } from "./employee-form/employee-form.component";
 import { HotelComponent } from "./hotel/hotel.component";
 import { BankComponent } from "./bank/bank.component";
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
@@ -27,6 +29,10 @@ const routes: Routes = [
   {path:'spandgstform',component:SponsorAndGuestFormComponent},
   {path:'banktype',component:BankTypeComponent},
   {path:'banktypeform',component:BankTypeFormComponent},
+  {path:'employee',component:EmployeeComponent},
+  {path:'employeeform/:id',component:EmployeeFormComponent},
+
+
   {path:'hotel',component:HotelComponent},
   {path: 'bank',component:BankComponent},
   {path: 'bankform',component:BankFormComponent},

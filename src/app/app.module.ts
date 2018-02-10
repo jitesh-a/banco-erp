@@ -23,6 +23,10 @@ import { SponsorAndGuestService } from "./sponsor-and-guest.service";
 import { BankTypeComponent } from './bank-type/bank-type.component';
 import { BankTypeFormComponent } from './bank-type-form/bank-type-form.component';
 import { BankTypeService } from './bank-type.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeService } from './employee.service';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
+
 import { HotelComponent } from './hotel/hotel.component';
 import { HotelService } from './hotel.service';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
@@ -35,6 +39,9 @@ import { IncomeFormComponent } from './income-form/income-form.component';
 import { PickupAndDropComponent } from './pickup-and-drop/pickup-and-drop.component';
 import { pickUpAndDropService } from "./pickup-and-drop.service";
 import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-drop-from.component';
+import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
+import { ExcellentPerformanceService } from './excellent-performance.service';
+import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +55,8 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
     SponsorAndGuestFormComponent,
     BankTypeComponent,
     BankTypeFormComponent,
+    EmployeeComponent,
+    EmployeeFormComponent,
     TestComponent,
     HotelComponent,
     HotelFormComponent,
@@ -59,6 +68,8 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
     PickupAndDropComponent,
 
     PickupAndDropFromComponent,
+    ExcellentPerformanceComponent,
+    ExcellentPerformanceFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +87,12 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
     HotelService,
   BankService,
   pickUpAndDropService,
+     EmployeeService,
+     BankService,
+     IncomeService,
+     ExcellentPerformanceService,
+    HotelService,
+  BankService,
      BankService,
      IncomeService],
   bootstrap: [AppComponent]

@@ -1,0 +1,41 @@
+<div class="row" >
+  <div class="col-md-6"><h1> Employee </h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/employeeform/0"> Employee details </a></div>
+</div>
+<hr/>
+<div class="row" >
+<div class="col-md-12">
+    
+    <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
+    
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+        <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Contact</th>
+                <th>EmployeeNumber</th>
+                <th>Gender</th>
+                <th>IDProof</th>
+              </tr>
+        </thead> 
+        <tbody>
+          <tr *ngFor="let e of employees">
+            <td>{{e.Id}}</td>
+            <td>{{e.Name}}</td>
+            <td>{{e.Description}}</td>
+            <td>{{e.Contact}}</td>
+            <td>{{e.EmployeeNumber}}</td>
+            <td>{{e.Gender}}</td>
+            <td>{{e.IDProof}}</td>
+            <td>
+              <a class="btn btn-sm btn-primary" href="/employeeform/{{e.Id}}"> Edit </a>
+              <a class="btn btn-sm btn-danger"> Delete </a>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
