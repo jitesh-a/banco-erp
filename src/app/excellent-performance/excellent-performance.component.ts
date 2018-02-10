@@ -1,15 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ExcellentPerformanceService } from "../excellent-performance.service";
+import { ExcellentPerformance } from "../../models/excellentPerformance.model";
 @Component({
-  selector: 'app-excellent-performance',
-  templateUrl: './excellent-performance.component.html',
-  styleUrls: ['./excellent-performance.component.css']
+  templateUrl: './employee.component.html',
+  styleUrls: ['./employee.component.css']
 })
 export class ExcellentPerformanceComponent implements OnInit {
-
-  constructor() { }
+ 
+  list :ExcellentPerformance[]=[];
+  dataLoaded: boolean;
+  constructor(private excellentService :ExcellentPerformanceService) { }
 
   ngOnInit() {
+    this.dataLoaded=false;
+    this.getexcellentService();
+    this.dataLoaded=true;
+  }
+
+   //get
+   getexcellentService(): void {
+    this. excellentService.getExcellentPerformance()
+                .subscribe(res=>{
+                  console.log(res["Employee"]);
+                  this.excellentService=res["Excellent"];
+                  
+                });
+    //.subscribe(data=>{},err=>{});
+  }
+
+  //delete
+  delete(excellentPerformance:ExcellentPerformance ): void {
+    this.list = this.list.filter(h => h !== excellentPerformance);
+    this.excellentService.deleteexcellentPerformance (excellentPerformance).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
 }
+
