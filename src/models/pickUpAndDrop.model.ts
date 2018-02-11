@@ -5,5 +5,8 @@ export class PickUpAndDrop{
     PickUpPlace: string;
     DropTime: Date;
     DropPlace: string;
-        
+    EmployeeId: number;
+    EmployeeName: string;
+    GuestOrSponsorId : number;
+    GuestOrSponsorName : string;
 }

@@ -14,6 +14,34 @@
                   Id is required
                 </div>            
             </div>
+            <div class="form-group">
+                <label for="Employee Name">Employee Name</label>
+                <select  class="form-control" id="EmployeeName"
+                required
+                [(ngModel)]="pickupdrop.EmployeeName" name="EmployeeId"
+                #Type="ngModel">
+                  <option *ngFor="let e of Employee" [value]="e.Id">
+                    {{e.Name}}
+                  </option>
+                </select>
+              <div [hidden]="EmployeeName.valid || EmployeeName.pristine"
+                   class="alert alert-danger">
+                   Employee Name is required
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="PickUpTime">PickUpTime</label>
+              <input type="text" class="form-control" id="PickUpTime"
+                     required
+                     [(ngModel)]="pickupdrop.PickUpTime" name="PickUpTime"
+                     #Name="ngModel">
+              <div [hidden]="PickUpTime.valid || PickUpTime.pristine"
+                   class="alert alert-danger">
+                Pick Up Time is required
+              </div>
+            </div>
+              
           <div class="form-group">
             <label for="PickUpTime">PickUpTime</label>
             <input type="text" class="form-control" id="PickUpTime"
@@ -60,8 +88,6 @@
                    Drop Place is required
               </div>
             </div>
-
-           
           <button type="submit" class="btn btn-success" [disabled]="!pickupanddropform.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form>

@@ -21,28 +21,18 @@ export class BankService {
 
   /** GET events from the server */
   getBanks (): Observable<Bank[]> {
-    return this.http.get<Bank[]>(this.apiUrl+'list')
-      .pipe(
-        tap(bank => this.log(`fetched banks`)),
-        catchError(this.handleError('getbanks', []))
-      );
+    return this.http.get<Bank[]>(this.apiUrl+'list');
   }
 
   updateBank(bank: Bank): Observable<any>{
-    return this.http.put<Bank>(this.apiUrl+`edit/${bank.Id}`, bank, httpOptions)
-            .pipe(
-              tap(_=>this.log(`Updated bank : ${bank.Id}`)),
-              catchError(this.handleError<any>(`update bank Id=${bank.Id}`))
-            );
+    return this.http.put<Bank>(this.apiUrl+`edit/${bank.Id}`, bank, httpOptions);
+           
   }
 
    /** GET sponsorandguest by id. Will 404 if id not found */
    getBank(id: number): Observable<Bank> {
     const url = `${this.apiUrl}find/${id}`;
-    return this.http.get<Bank>(url).pipe(
-      tap(_ => this.log(`fetched bank id=${id}`)),
-      catchError(this.handleError<Bank>(`getSponsorAndGuest id=${id}`))
-    );
+    return this.http.get<Bank>(url);
   }
 
   /** POST: add a new event to the server */

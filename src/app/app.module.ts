@@ -26,7 +26,6 @@ import { BankTypeService } from './bank-type.service';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeService } from './employee.service';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
-
 import { HotelComponent } from './hotel/hotel.component';
 import { HotelService } from './hotel.service';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
@@ -42,6 +41,7 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
 import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
 import { ExcellentPerformanceService } from './excellent-performance.service';
 import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +70,7 @@ import { ExcellentPerformanceFormComponent } from './excellent-performance-form/
     PickupAndDropFromComponent,
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,
