@@ -42,8 +42,12 @@ import { PickupAndDropFromComponent } from './pickup-and-drop-from/pickup-and-dr
 import { ExcellentPerformanceComponent } from './excellent-performance/excellent-performance.component';
 import { ExcellentPerformanceService } from './excellent-performance.service';
 import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
+<<<<<<< HEAD
 import { TechnologyDetailsComponent } from './technology-details/technology-details.component';
 import { TechnologyDetailsService } from './technology-details.service';
+=======
+import { TestFormComponent } from './test-form/test-form.component';
+>>>>>>> 439a7bca79a64199cb275087aac09a3ad852afff
 
 @NgModule({
   declarations: [
@@ -72,7 +76,11 @@ import { TechnologyDetailsService } from './technology-details.service';
     PickupAndDropFromComponent,
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
+<<<<<<< HEAD
     TechnologyDetailsComponent,
+=======
+    TestFormComponent,
+>>>>>>> 439a7bca79a64199cb275087aac09a3ad852afff
   ],
   imports: [
     BrowserModule,

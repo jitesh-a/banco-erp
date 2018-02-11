@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class IncomeService {
 
-  private apiUrl='http://localhost:7888/event/';
+  private apiUrl='http://localhost:7888/incomeandexpenses/';
   
     constructor(private messageService: MessageService,private http:HttpClient) { }
   
@@ -33,7 +33,7 @@ export class IncomeService {
       return this.http.put<Income>(this.apiUrl+`edit/${income.Id}`, event, httpOptions)
               .pipe(
                 tap(_=>this.log(`Updated income : ${income.Id}`)),
-                catchError(this.handleError<any>(`update event Id=${event.Id}`))
+                catchError(this.handleError<any>(`update income Id=${income.Id}`))
               );
     }
   
