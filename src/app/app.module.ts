@@ -42,6 +42,9 @@ import { ExcellentPerformanceComponent } from './excellent-performance/excellent
 import { ExcellentPerformanceService } from './excellent-performance.service';
 import { ExcellentPerformanceFormComponent } from './excellent-performance-form/excellent-performance-form.component';
 import { DemoComponent } from './demo/demo.component';
+import { TechnologyDetailsComponent } from './technology-details/technology-details.component';
+import { TechnologyDetailsService } from './technology-details.service';
+import { TestFormComponent } from './test-form/test-form.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { DemoComponent } from './demo/demo.component';
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
     DemoComponent,
+    TechnologyDetailsComponent,
+    TestFormComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -95,7 +101,8 @@ import { DemoComponent } from './demo/demo.component';
     HotelService,
   BankService,
      BankService,
-     IncomeService],
+     IncomeService,
+     TechnologyDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
