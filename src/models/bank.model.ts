@@ -1,6 +1,7 @@
 export class Bank{
 
     Id: number;
+    EventId : number;
     Name: string;
     Address: string;
     City: string;

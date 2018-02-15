@@ -1,6 +1,10 @@
 export class PickUpAndDrop{
 
     Id: number;
+    EventId : number;
+    EventName : string;
+    BankId : number;
+    BankName : string;
     PickUpTime: Date;
     PickUpPlace: string;
     DropTime: Date;

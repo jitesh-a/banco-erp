@@ -14,46 +14,52 @@
                   Id is required
                 </div>            
             </div>
-            <div class="form-group">
-                <label for="Employee Name">Employee Name</label>
-                <select  class="form-control" id="EmployeeName"
-                required
-                [(ngModel)]="pickupdrop.EmployeeName" name="EmployeeId"
-                #Type="ngModel">
-                  <option *ngFor="let e of Employee" [value]="e.Id">
-                    {{e.Name}}
-                  </option>
-                </select>
-              <div [hidden]="EmployeeName.valid || EmployeeName.pristine"
-                   class="alert alert-danger">
-                   Employee Name is required
+            
+            <div>
+              <label>Event Name</label>
+              <select class="form-control" id="EventId"
+              required
+              [(ngModel)] = "pickupdrop.EventId" name = "Name"
+              #EventId="ngModel">
+                <option *ngFor = "let e of events" (click)="getBanks(e.Id)" [value]="e.Id">
+                  {{e.Name}}
+                </option>
+              </select>
+              <div [hidden]="EventId.valid || EventId.pristine"
+                class="alert alert-danger">
+                Employee Name is required
               </div>
             </div>
-  
+
+            <div>
+              <label>Bank Name</label>
+              <select class="form-control" id="BankId"
+              required
+              [(ngModel)] = "pickupdrop.BankId" name = "Name"
+              #BankId="ngModel">
+                <option *ngFor = "let b of selectedbanks" (click)="getEmployees(b.Id)" [value]="b.Id">
+                  {{b.Name}}
+                </option>
+              </select>
+              <div [hidden]="BankId.valid || BankId.pristine"
+                class="alert alert-danger">
+                Bank Name is required
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="PickUpTime">PickUpTime</label>
               <input type="text" class="form-control" id="PickUpTime"
                      required
                      [(ngModel)]="pickupdrop.PickUpTime" name="PickUpTime"
-                     #Name="ngModel">
+                     #PickUpTime="ngModel">
               <div [hidden]="PickUpTime.valid || PickUpTime.pristine"
                    class="alert alert-danger">
                 Pick Up Time is required
               </div>
             </div>
               
-          <div class="form-group">
-            <label for="PickUpTime">PickUpTime</label>
-            <input type="text" class="form-control" id="PickUpTime"
-                   required
-                   [(ngModel)]="pickupdrop.PickUpTime" name="PickUpTime"
-                   #Name="ngModel">
-            <div [hidden]="PickUpTime.valid || PickUpTime.pristine"
-                 class="alert alert-danger">
-              Pick Up Time is required
-            </div>
-          </div>
-          <div class="form-group">
+            <div class="form-group">
               <label for="PickUpPlace">Pick Up Place</label>
               <textarea type="text" class="form-control" id="PickUpPlace"
                      required
@@ -70,8 +76,8 @@
               <input type="text" class="form-control" id="DropTime"
                      required
                      [(ngModel)]="pickupdrop.DropTime" name="DropTime"
-                     #Name="ngModel">
-              <div [hidden]="DropTimee.valid || DropTime.pristine"
+                     #DropTime="ngModel">
+              <div [hidden]="DropTime.valid || DropTime.pristine"
                    class="alert alert-danger">
                    Drop TimeTime is required
               </div>
@@ -82,7 +88,7 @@
               <textarea type="text" class="form-control" id="DropPlace"
                      required
                      [(ngModel)]="pickupdrop.DropPlace" name="DropPlace"
-                     #PickUpPlace="ngModel"></textarea>
+                     #DropPlace="ngModel"></textarea>
               <div [hidden]="DropPlace.valid || DropPlace.pristine"
                    class="alert alert-danger">
                    Drop Place is required

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CustomMaterialModule } from './custom-material.module';
@@ -8,10 +7,8 @@ import { TestComponent } from "./test/test.component";
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-
 import { BancoEventComponent } from "./banco-event/banco-event.component";
 import { MessagesComponent } from './messages/messages.component';
-
 import { MessageService } from "./message.service";
 import { EventService } from "./event.service";
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -67,9 +64,7 @@ import { TestFormComponent } from './test-form/test-form.component';
     BankFormComponent,
     IncomeComponent,
     IncomeFormComponent,
-
     PickupAndDropComponent,
-
     PickupAndDropFromComponent,
     ExcellentPerformanceComponent,
     ExcellentPerformanceFormComponent,
@@ -89,20 +84,20 @@ import { TestFormComponent } from './test-form/test-form.component';
   providers: [
     MessageService,
     EventService,
-     SponsorAndGuestService,
-     BankTypeService,
+    SponsorAndGuestService,
+    BankTypeService,
     HotelService,
-  BankService,
-  pickUpAndDropService,
-     EmployeeService,
-     BankService,
-     IncomeService,
-     ExcellentPerformanceService,
+    BankService,
+    pickUpAndDropService,
+    EmployeeService,
+    BankService,
+    IncomeService,
+    ExcellentPerformanceService,
     HotelService,
-  BankService,
-     BankService,
-     IncomeService,
-     TechnologyDetailsService],
-  bootstrap: [AppComponent]
+    BankService,
+    BankService,
+    IncomeService,
+    TechnologyDetailsService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
