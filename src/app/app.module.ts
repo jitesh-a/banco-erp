@@ -42,6 +42,7 @@ import { DemoComponent } from './demo/demo.component';
 import { TechnologyDetailsComponent } from './technology-details/technology-details.component';
 import { TechnologyDetailsService } from './technology-details.service';
 import { TestFormComponent } from './test-form/test-form.component';
+import { TechnologyDetailsFormComponent } from './technology-details-form/technology-details-form.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { TestFormComponent } from './test-form/test-form.component';
     DemoComponent,
     TechnologyDetailsComponent,
     TestFormComponent,
+    TechnologyDetailsFormComponent,
 
   ],
   imports: [
