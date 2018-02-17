@@ -17,6 +17,10 @@ import { IncomeComponent } from "./income/income.component";
 import { IncomeFormComponent } from "./income-form/income-form.component";
 import {  PickupAndDropComponent} from "./pickup-and-drop/pickup-and-drop.component";
 import {PickupAndDropFromComponent  } from "./pickup-and-drop-from/pickup-and-drop-from.component";
+import { ExcellentPerformanceComponent } from "./excellent-performance/excellent-performance.component";
+import { ExcellentPerformanceFormComponent } from "./excellent-performance-form/excellent-performance-form.component";
+import { ExcellentPerformance } from '../models/excellentPerformance.model';
+
 
 
 const routes: Routes = [
@@ -38,6 +42,8 @@ const routes: Routes = [
   {path:'incomeform',component:IncomeFormComponent},
   {path: 'pickupdrop',component:PickupAndDropComponent},
   {path: 'pickupanddropform',component:PickupAndDropFromComponent},
+  {path: 'excellentperformance',component:ExcellentPerformance},
+  {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent}
 ];
 
 @NgModule({
