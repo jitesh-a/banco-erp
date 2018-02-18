@@ -1,14 +1,56 @@
-<div class="row">
-  <div class="col-md-3">
-
+<form (ngSubmit)="onSubmit()" #ExcellentPerformanceForm="ngForm">
+  <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
+                <input type="text" class="form-control" id=" NetWorthPreviousYrInPercentage "
+                      required
+                      [(ngModel)]="excelperfform.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
+                      #NetWorthPreviousYrInPercentage="ngModel">
+                <div [hidden]=" NetWorthPreviousYrInPercentage .valid ||  NetWorthPreviousYrInPercentage.pristine"
+                    class="alert alert-danger">
+                    Net Worth Previous Year In Percentage is required
+                </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>
+                  <input type="text" class="form-control" id=" NetWorthCurrentYrInPercentage"
+                        required
+                        [(ngModel)]="excelperfform. NetWorthCurrentYrInPercentage" name=" NetWorthCurrentYrInPercentage"
+                        #NetWorthCurrentYrInPercentage="ngModel">
+                  <div [hidden]=" NetWorthCurrentYrInPercentage.valid ||  NetWorthCurrentYrInPercentage.pristine"
+                      class="alert alert-danger">
+                      Net Worth in Current Year In Percentage is required
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label for=" NetWorthOverPreviousYrInPercentage">Net Worth Over Previous Year In Percentage </label>
+                  <input type="text" class="form-control" id="NetWorthOverPreviousYrInPercentage "
+                        required
+                        [(ngModel)]="excelperfform.NetWorthOverPreviousYrInPercentage " name=" NetWorthOverPreviousYrInPercentage"
+                        #NetWorthOverPreviousYrInPercentage="ngModel">
+                  <div [hidden]="NetWorthOverPreviousYrInPercentage .valid || NetWorthOverPreviousYrInPercentage.pristine"
+                      class="alert alert-danger">
+                      Net Worth Over Previous Year In Percentage is required
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label for=" CRARCurrentYrInPercentage"> CRAR Current Year In Percentage</label>
+                  <input type="text" class="form-control" id="CRARCurrentYrInPercentage "
+                        required
+                        [(ngModel)]="excelperfform. CRARCurrentYrInPercentage" name="CRARCurrentYrInPercentage "
+                        #CRARCurrentYrInPercentage="ngModel">
+                  <div [hidden]=" CRARCurrentYrInPercentage.valid ||CRARCurrentYrInPercentage .pristine"
+                      class="alert alert-danger">
+                      CRAR Current Year In Percentage is required
+                  </div>
+                </div>
+          </div>
   </div>
-  <div class="col-md-3">
-
-  </div>
-  <div class="col-md-3">
-
-  </div>
-  <div class="col-md-3">
-
-  </div>
-</div>
+</form>
