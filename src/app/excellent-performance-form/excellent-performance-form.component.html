@@ -150,14 +150,14 @@
           </div>
 
           <div class="form-group">
-            <label for="  GrossNPAInCurrentYr ">  Gross NPA InCurrent Year</label>
+            <label for="  GrossNPAInCurrentYr ">  Gross NPA In Current Year</label>
             <input type="text" class="form-control" id=" GrossNPAInCurrentYr"
                    required
                    [(ngModel)]="excelperfform. GrossNPAInCurrentYr" name=" GrossNPAInCurrentYr "
                    #Name="ngModel">
             <div [hidden]=" GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
                  class="alert alert-danger">
-                 Gross NPA InCurrent Year is required
+                 Gross NPA In Current Year is required
             </div>
           </div>
 
@@ -330,55 +330,33 @@
           </div>
 
           <div class="form-group">
-            <label for="CRROrSLROccuredDuringCurrentYr  "> CRROrSLROccuredDuringCurrentYr</label>
+            <label for="CRROrSLROccuredDuringCurrentYr  "> Whether CRR/SLR default ocurred During Current Year</label>
             <input type="text" class="form-control" id="CRROrSLROccuredDuringCurrentYr"
                    required
                    [(ngModel)]="excelperfform.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
                    #Name="ngModel">
             <div [hidden]="CRROrSLROccuredDuringCurrentYr.valid ||CRROrSLROccuredDuringCurrentYr.pristine"
                  class="alert alert-danger">
-                 CRROrSLROccuredDuringCurrentYr is required
+                 CRR Or SLR Occured During Current Year is required
             </div>
           </div>
 
           <div class="form-group">
-            <label for=" CRROrSLROccuredDuringPreviousYr  "> </label>
-            <input type="text" class="form-control" id=" CRROrSLROccuredDuringPreviousYr"
-                   required
-                   [(ngModel)]="excelperfform. CRROrSLROccuredDuringPreviousYr" name=" CRROrSLROccuredDuringPreviousYr "
-                   #Name="ngModel">
-            <div [hidden]=" CRROrSLROccuredDuringPreviousYr.valid || CRROrSLROccuredDuringPreviousYr.pristine"
-                 class="alert alert-danger">
-                 CRROrSLROccuredDuringPreviousYr is required
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="  RBIImposeAnyPenaltyDuringCurrentYr ">  RBIImposeAnyPenaltyDuringCurrentYr</label>
+            <label for="  RBIImposeAnyPenaltyDuringCurrentYr ">  RBI Impose Any Penalty During Current Year</label>
             <input type="text" class="form-control" id=" RBIImposeAnyPenaltyDuringCurrentYr"
                    required
                    [(ngModel)]="excelperfform. RBIImposeAnyPenaltyDuringCurrentYr" name=" RBIImposeAnyPenaltyDuringCurrentYr "
                    #Name="ngModel">
             <div [hidden]=" RBIImposeAnyPenaltyDuringCurrentYr.valid || RBIImposeAnyPenaltyDuringCurrentYr.pristine"
                  class="alert alert-danger">
-                 RBIImposeAnyPenaltyDuringCurrentYr  is required
+                 RBI Impose Any Penalty During Current Year  is required
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="  RBIImposeAnyPenaltyDuringPreviousYr "> RBIImposeAnyPenaltyDuringPreviousYr </label>
-            <input type="text" class="form-control" id=" RBIImposeAnyPenaltyDuringPreviousYr"
-                   required
-                   [(ngModel)]="excelperfform. RBIImposeAnyPenaltyDuringPreviousYr" name=" RBIImposeAnyPenaltyDuringPreviousYr "
-                   #Name="ngModel">
-            <div [hidden]=" RBIImposeAnyPenaltyDuringPreviousYr.valid || RBIImposeAnyPenaltyDuringPreviousYr.pristine"
-                 class="alert alert-danger">
-                 RBIImposeAnyPenaltyDuringPreviousYr is required
-            </div>
-          </div>
+
 
           <div class="form-group">
-            <label for=" ShowcaseNotice  "> ShowcaseNotice </label>
+            <label for=" ShowcaseNotice  "> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
             <input type="text" class="form-control" id=" ShowcaseNotice"
                    required
                    [(ngModel)]="excelperfform. ShowcaseNotice" name=" ShowcaseNotice "
@@ -390,67 +368,68 @@
           </div>
 
           <div class="form-group">
-            <label for=" EnquiryByRBI_IncomeTax ">EnquiryByRBI_IncomeTax </label>
+            <label for=" EnquiryByRBI_IncomeTax "> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
             <input type="text" class="form-control" id="EnquiryByRBI_IncomeTax"
                    required
                    [(ngModel)]="excelperfform.EnquiryByRBI_IncomeTax" name=" EnquiryByRBI_IncomeTax"
                    #Name="ngModel">
             <div [hidden]="EnquiryByRBI_IncomeTax.valid ||EnquiryByRBI_IncomeTax.pristine"
                  class="alert alert-danger">
-                 EnquiryByRBI_IncomeTax  is required
+                 Enquiry By RBI Income Tax  is required
             </div>
           </div>
           
           <div class="form-group">
-            <label for=" UPIorCKYCImplemented  ">  UPIorCKYCImplemented</label>
+            <label for=" UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
             <input type="text" class="form-control" id= UPIorCKYCImplemented""
                    required
                    [(ngModel)]="excelperfform. UPIorCKYCImplemented" name=" UPIorCKYCImplemented "
                    #Name="ngModel">
             <div [hidden]=" UPIorCKYCImplemented.valid || UPIorCKYCImplemented.pristine"
                  class="alert alert-danger">
-                 UPIorCKYCImplemented is required
+                 UPI or CKYC Implemented is required
             </div>
           </div>
 
           <div class="form-group">
-            <label for="KYCImplementationWithAML  "> KYCImplementationWithAML</label>
+            <label for="KYCImplementationWithAML  ">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
             <input type="text" class="form-control" id="KYCImplementationWithAML"
                    required
                    [(ngModel)]="excelperfform.KYCImplementationWithAML" name="KYCImplementationWithAML "
                    #Name="ngModel">
             <div [hidden]="KYCImplementationWithAML.valid ||KYCImplementationWithAML.pristine"
                  class="alert alert-danger">
-                 KYCImplementationWithAML is required
+                 KYC Implementation With AML is required
             </div>
           </div>
 
           <div class="form-group">
-            <label for="  BorrowerRatings "> BorrowerRatings </label>
+            <label for="  BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
+              for determining interest rates to large borrowers. </label>
             <input type="text" class="form-control" id=" BorrowerRatings"
                    required
                    [(ngModel)]="excelperfform. BorrowerRatings" name=" BorrowerRatings "
                    #Name="ngModel">
             <div [hidden]=" BorrowerRatings.valid || BorrowerRatings.pristine"
                  class="alert alert-danger">
-                 BorrowerRatings  is required
+                 Borrower Ratings  is required
             </div>
           </div>
 
           <div class="form-group">
-            <label for="PermissionToOpenBranchesInPreviousYr  "> PermissionToOpenBranchesInPreviousYr</label>
+            <label for="PermissionToOpenBranchesInPreviousYr  ">Whether bank has  beeb granted permission to open branches in previous year</label>
             <input type="text" class="form-control" id="PermissionToOpenBranchesInPreviousYr"
                    required
                    [(ngModel)]="excelperfform.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
                    #Name="ngModel">
             <div [hidden]="PermissionToOpenBranchesInPreviousYr.valid ||PermissionToOpenBranchesInPreviousYr.pristine"
                  class="alert alert-danger">
-                 PermissionToOpenBranchesInPreviousYr is required
+                 Permission To Open  Branches In Previous Year is required
             </div>
           </div>
 
           <div class="form-group">
-            <label for="  UniqueIdToCustomer ">  UniqueIdToCustomer</label>
+            <label for="  UniqueIdToCustomer "> Whether Unique Identification number given to customer</label>
             <input type="text" class="form-control" id=" UniqueIdToCustomer"
                    required
                    [(ngModel)]="excelperfform. UniqueIdToCustomer" name=" UniqueIdToCustomer "
@@ -462,7 +441,7 @@
           </div>
 
           <div class="form-group">
-            <label for="GotAnyAward  "> GotAnyAward</label>
+            <label for="GotAnyAward  ">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>
             <input type="text" class="form-control" id="GotAnyAward"
                    required
                    [(ngModel)]="excelperfform.GotAnyAward" name="GotAnyAward "
@@ -474,7 +453,7 @@
           </div>
         
           <div class="form-group">
-            <label for="  NetOrMobileBankingFacility "> NetOrMobileBankingFacility </label>
+            <label for="  NetOrMobileBankingFacility ">Whether net or mobile banking facility is given by bank </label>
             <input type="text" class="form-control" id=" NetOrMobileBankingFacility"
                    required
                    [(ngModel)]="excelperfform. NetOrMobileBankingFacility" name=" NetOrMobileBankingFacility "
