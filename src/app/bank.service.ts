@@ -37,10 +37,7 @@ export class BankService {
 
   /** POST: add a new event to the server */
   addBank (bank: Bank): Observable<Bank> {
-    return this.http.post<Bank>(this.apiUrl+'create', bank, httpOptions).pipe(
-      tap(res => this.log(`added bank`)),
-      catchError(this.handleError<Bank>('addEvent'))
-    );
+    return this.http.post<Bank>(this.apiUrl+'create', bank, httpOptions);
   }
 
   private log(message: string){ 
