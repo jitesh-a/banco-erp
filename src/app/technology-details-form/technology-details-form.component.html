@@ -3,7 +3,8 @@
       <h1>Technology  Details  Form</h1>
       <hr/>
       <form (ngSubmit)="onSubmit()" #TechnologyDetailsForm="ngForm">
-          <div class="form-group" *ngIf="techdetailsform.Id>0">
+          
+        <div class="form-group" *ngIf="techdetailsform.Id>0">
               <label for="">Id</label>
               <input type="text" class="form-control" id="Id"
                      required
@@ -197,7 +198,7 @@
 
             <div class="form-group">
               <label for=" CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
-              <input type="text" class="form-control" id=" CondDRDrillsFreq"
+              <input type="text" class="form-control" id=" CommiteeITBoardMeetFreq"
                      required
                      [(ngModel)]="techdetailsform.CommiteeITBoardMeetFreq" name=" CommiteeITBoardMeetFreq"
                      #Name="ngModel">
@@ -223,7 +224,7 @@
 
             <div class="form-group">
               <label for=" OutSourcedServices">What are the out source services for managing your "IT" setup?</label>
-              <input type="text" class="form-control" id=" CondDRDrillsFreq"
+              <input type="text" class="form-control" id=" OutSourcedServicesq"
                      required
                      [(ngModel)]="techdetailsform.OutSourcedServices" name=" OutSourcedServices"
                      #Name="ngModel">
@@ -307,7 +308,7 @@
             </div>
 
           </div>
-          <button type="submit" class="btn btn-success" [disabled]="!excellentperformanceform.form.valid" (click)="save()">Submit</button>
+          <button type="submit" class="btn btn-success" [disabled]="!techlogydetailsform.form.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form>
   </div>   
