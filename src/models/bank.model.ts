@@ -2,6 +2,9 @@ export class Bank{
 
     Id: number;
     EventId : number;
+    EventName : string;
+    TypeName : string;
+    TypeId : number;
     Name: string;
     Address: string;
     City: string;

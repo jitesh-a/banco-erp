@@ -1,6 +1,6 @@
 <form (ngSubmit)="onSubmit()" #ExcellentPerformanceForm="ngForm">
   <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="form-group">
                 <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
                 <input type="text" class="form-control" id=" NetWorthPreviousYrInPercentage "
@@ -13,7 +13,7 @@
                 </div>
               </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
               <div class="form-group">
                   <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>
                   <input type="text" class="form-control" id=" NetWorthCurrentYrInPercentage"
@@ -26,7 +26,7 @@
                   </div>
                 </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
               <div class="form-group">
                   <label for=" NetWorthOverPreviousYrInPercentage">Net Worth Over Previous Year In Percentage </label>
                   <input type="text" class="form-control" id="NetWorthOverPreviousYrInPercentage "
@@ -39,18 +39,6 @@
                   </div>
                 </div>
           </div>
-          <div class="col-md-3">
-              <div class="form-group">
-                  <label for=" CRARCurrentYrInPercentage"> CRAR Current Year In Percentage</label>
-                  <input type="text" class="form-control" id="CRARCurrentYrInPercentage "
-                        required
-                        [(ngModel)]="excelperfform. CRARCurrentYrInPercentage" name="CRARCurrentYrInPercentage "
-                        #CRARCurrentYrInPercentage="ngModel">
-                  <div [hidden]=" CRARCurrentYrInPercentage.valid ||CRARCurrentYrInPercentage .pristine"
-                      class="alert alert-danger">
-                      CRAR Current Year In Percentage is required
-                  </div>
-                </div>
-          </div>
+
   </div>
 </form>

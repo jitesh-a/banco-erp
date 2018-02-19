@@ -17,9 +17,9 @@
             
             <div>
               <label>Event Name</label>
-              <select class="form-control" id="EventId"
+              <select class="form-control" id="EventName"
               required
-              [(ngModel)] = "pickupdrop.EventId" name = "Name"
+              [(ngModel)] = "pickupdrop.EventId" name = "EventName"
               #EventId="ngModel">
                 <option *ngFor = "let e of events" (click)="getBanks(e.Id)" [value]="e.Id">
                   {{e.Name}}
@@ -33,15 +33,16 @@
 
             <div>
               <label>Bank Name</label>
-              <select class="form-control" id="BankId"
+              <select class="form-control" id="BankName"
               required
-              [(ngModel)] = "pickupdrop.BankId" name = "Name"
+              [(ngModel)] = "pickupdrop.BankId" name = "BankName"
               #BankId="ngModel">
                 <option *ngFor = "let b of selectedbanks" (click)="getEmployees(b.Id)" [value]="b.Id">
                   {{b.Name}}
                 </option>
               </select>
-              <div [hidden]="BankId.valid || BankId.pristine"
+              {{BankName.values}}
+              <div [hidden]="BankName.valid || BankName.pristine"
                 class="alert alert-danger">
                 Bank Name is required
               </div>
