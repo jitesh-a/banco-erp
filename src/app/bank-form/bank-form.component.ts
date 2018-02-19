@@ -16,6 +16,8 @@ export class BankFormComponent implements OnInit {
 
   bank :Bank =new Bank();
   bankTypes : BankType[] = [];
+
+
   constructor(private bankService:BankService,
               private bankTypeService:BankTypeService,
               private route:ActivatedRoute,
@@ -61,6 +63,8 @@ export class BankFormComponent implements OnInit {
           }
         ); 
     }else{
+      this.bank.EventId = 1;
+      this.bank.EventName = "test";
       this.bankService.addBank(this.bank)
         .subscribe(
           res=>{

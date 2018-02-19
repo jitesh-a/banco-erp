@@ -21,8 +21,8 @@ export class BankTypeComponent implements OnInit {
    getbanktypes(): void {
     this.banktypeService.getBankTypes()
                 .subscribe(res=>{
-                  console.log(res["BankType"]);
-                  this.banktypes=res["BankType"];
+                  console.log(res["BankTypes"]);
+                  this.banktypes=res["BankTypes"];
                   
                 });
     //.subscribe(data=>{},err=>{});
