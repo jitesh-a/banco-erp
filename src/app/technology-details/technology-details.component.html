@@ -1,6 +1,6 @@
 <div class="row" >
     <div class="col-md-6"><h1> Technology Details  </h1></div>
-    <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/technologydetails"> Questionaries 1 </a>
+    <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/technologydetailsform"> Questionaries 1 </a>
   </div>
   <hr/>
   <div class="row" >
@@ -17,7 +17,7 @@
                   <th> CBS Implanted</th> 
                   <th>CBS Completion Date</th> 
                   <th>SMS Facility</th> 
-                  <th> <a class="btn btn-sm btn-primary" href=""> View Details </a></th>
+                  <th>Actions</th>
                 </tr>
           </thead>                     
           <tbody>
@@ -30,8 +30,9 @@
               <td>{{tech.SMSFacility}}</td>
               <td>{{tech. DCOwnedBy}}</td>
               <td>{{tech.DCHostedAtIsp}}</td>
-
+               
               <td>
+                <a class="btn btn-sm btn-primary" href=""> View Details </a>
                 <a class="btn btn-sm btn-primary" href=""> Edit </a>
                 <a class="btn btn-sm btn-danger"> Delete </a>
                 
