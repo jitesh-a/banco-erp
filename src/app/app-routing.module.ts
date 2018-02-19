@@ -19,7 +19,9 @@ import {  PickupAndDropComponent} from "./pickup-and-drop/pickup-and-drop.compon
 import {PickupAndDropFromComponent  } from "./pickup-and-drop-from/pickup-and-drop-from.component";
 import { ExcellentPerformanceComponent } from "./excellent-performance/excellent-performance.component";
 import { ExcellentPerformanceFormComponent } from "./excellent-performance-form/excellent-performance-form.component";
-import { ExcellentPerformance } from '../models/excellentPerformance.model';
+import { TechnologyDetailsComponent } from "./technology-details/technology-details.component";
+import {TechnologyDetailsFormComponent  } from "./technology-details-form/technology-details-form.component";
+
 
 
 
@@ -42,8 +44,9 @@ const routes: Routes = [
   {path:'incomeform',component:IncomeFormComponent},
   {path: 'pickupdrop',component:PickupAndDropComponent},
   {path: 'pickupanddropform',component:PickupAndDropFromComponent},
-  {path: 'excellentperformance',component:ExcellentPerformance},
-  {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent}
+  {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
+  {path: 'technologydetails', component:TechnologyDetailsComponent},
+  {path:'technologydetailsform',component:TechnologyDetailsFormComponent}
 ];
 
 @NgModule({
