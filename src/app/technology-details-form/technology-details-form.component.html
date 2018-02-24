@@ -311,11 +311,13 @@
                                    required
                                    [(ngModel)]="techdetailsform.OtherInfo" name=" OtherInfo"
                                    #OtherInfo="ngModel"/>
-                            <div [hidden]="OtherInfo.valid ||OtherInfo.pristine"
+                            <div [hidden]="OtherInfo.valid ||OtherInfo.pristine">
                                  class="alert alert-danger">
                                  OtherInfo is required
                             </div>
                           </div>
                       </div>
                 </div>
+                <button type="submit" class="btn btn-success" [disabled]="!techdetailsform.form.valid" (click)="save()">Submit</button>
+                <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
 </form>
