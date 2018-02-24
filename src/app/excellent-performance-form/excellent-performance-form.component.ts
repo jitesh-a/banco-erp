@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./excellent-performance-form.component.css']
 })
 export class ExcellentPerformanceFormComponent implements OnInit {
-  excel_perf:ExcellentPerformance=new ExcellentPerformance();
+  excelperfform:ExcellentPerformance=new ExcellentPerformance();
   constructor(private excelperfservice:ExcellentPerformanceService,private route: ActivatedRoute,
     private location: Location) { }
 
@@ -24,7 +24,7 @@ export class ExcellentPerformanceFormComponent implements OnInit {
   getExcelperf(id: number): void {
     //const id = +this.route.snapshot.paramMap.get('id');
     this.excelperfservice.getexcellentPerformance(id)
-      .subscribe(res => this.excel_perf = res["data"]);
+      .subscribe(res => this.excelperfform = res["data"]);
   }
 
   goBack(): void {
@@ -32,8 +32,8 @@ export class ExcellentPerformanceFormComponent implements OnInit {
   }
 
   save(): void{
-    if(this.excel_perf.Id>0){
-      this.excelperfservice.updateexcellentPerformance(this.excel_perf)
+    if(this.excelperfform.Id>0){
+      this.excelperfservice.updateexcellentPerformance(this.excelperfform)
       .subscribe(
         res=>{
          console.log(res);
@@ -43,7 +43,7 @@ export class ExcellentPerformanceFormComponent implements OnInit {
         }
       ); 
     }else{
-      this.excelperfservice.addexcellentPerformance(this.excel_perf)
+      this.excelperfservice.addexcellentPerformance(this.excelperfform)
       .subscribe(
         res=>{
          console.log(res);
