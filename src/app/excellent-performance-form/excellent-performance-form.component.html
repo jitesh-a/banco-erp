@@ -38,7 +38,485 @@
                       Net Worth Over Previous Year In Percentage is required
                   </div>
                 </div>
-          </div>
-
+          </div>        
   </div>
+  <div class="row">
+    <div class="col-md-4">
+            <div class="form-group">
+                    <label for="DepositCurrentYr "> Deposit Current Year</label>
+                    <input type="text" class="form-control" id=" DepositCurrentYr"
+                           required
+                           [(ngModel)]="excelperfform.DepositCurrentYr" name="DepositCurrentYr "
+                           #DepositCurrentYr ="ngModel">
+                    <div [hidden]=" DepositCurrentYr.valid || DepositCurrentYr.pristine"
+                         class="alert alert-danger">
+                         Deposit Current Year is required
+                    </div>
+                  </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="DepositPreviousYr "> Deposit Previous Year</label>
+                        <input type="text" class="form-control" id=" DepositPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform.DepositPreviousYr" name="DepositPreviousYr"
+                               #DepositPreviousYr="ngModel">
+                        <div [hidden]=" DepositPreviousYr.valid ||DepositPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Deposit Previous Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalDepositOverPreviousYrInPercentage ">  Total Deposit Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id="  TotalDepositOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform.  TotalDepositOverPreviousYrInPercentage" name=" TotalDepositOverPreviousYrInPercentage "
+                               #TotalDepositOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]="  TotalDepositOverPreviousYrInPercentage.valid || TotalDepositOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Deposit Over Previous Year In Percentage is required
+                        </div>
+                      </div>
+            
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
+                        <input type="text" class="form-control" id="  TotalAdvancesCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform. TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
+                               #TotalAdvancesCurrentYr="ngModel">
+                        <div [hidden]="  TotalAdvancesCurrentYr.valid || TotalAdvancesCurrentYr.pristine"
+                             class="alert alert-danger">
+                             Total Advances Current Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
+                        <input type="text" class="form-control" id=" TotalAdvancesPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform. TotalAdvancesPreviousYr" name=" TotalAdvancesPreviousYr "
+                               #TotalAdvancesPreviousYr="ngModel">
+                        <div [hidden]="  TotalAdvancesPreviousYr.valid || TotalAdvancesPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Total Advances Previous Year is required
+                        </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform. TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage "
+                               #TotalAdvancesOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]="  TotalAdvancesOverPreviousYrInPercentage.valid || TotalAdvancesOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Advances Over Previous Year In Percentage is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  GrossNPAInCurrentYr ">  Gross NPA In Current Year</label>
+                        <input type="text" class="form-control" id=" GrossNPAInCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform. GrossNPAInCurrentYr" name=" GrossNPAInCurrentYr "
+                               #GrossNPAInCurrentYr="ngModel">
+                        <div [hidden]=" GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
+                             class="alert alert-danger">
+                             Gross NPA In Current Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" GrossNPAInPreviousYr ">Gross NPA In Previous Year </label>
+                        <input type="text" class="form-control" id="GrossNPAInPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
+                               #GrossNPAInPreviousYr="ngModel">
+                        <div [hidden]="GrossNPAInPreviousYr.valid ||GrossNPAInPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Gross NPA In Previous Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
+                               #TotalGrossNPAOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]="TotalGrossNPAOverPreviousYrInPercentage.valid ||TotalGrossNPAOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Gross NPA Over Previous Year In Percentage is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" NetNPACurrentYr "> Net NPA Current Year</label>
+                        <input type="text" class="form-control" id="NetNPACurrentYr"
+                               required
+                               [(ngModel)]="excelperfform.NetNPACurrentYr" name="NetNPACurrentYr "
+                               #NetNPACurrentYr="ngModel">
+                        <div [hidden]="NetNPACurrentYr.valid ||NetNPACurrentYr.pristine"
+                             class="alert alert-danger">
+                             Net NPA Current Year is required
+                        </div>
+                      </div>
+            
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="NetNPAPreviousYr  "> Net NPA Previous Year</label>
+                        <input type="text" class="form-control" id="NetNPAPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform.NetNPAPreviousYr" name="NetNPAPreviousYr "
+                               #NetNPAPreviousYr="ngModel">
+                        <div [hidden]="NetNPAPreviousYr.valid ||NetNPAPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Net NPA Previous Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id=" TotalNetNPAOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform. TotalNetNPAOverPreviousYrInPercentage" name="  TotalNetNPAOverPreviousYrInPercentage"
+                               #TotalNetNPAOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]=" TotalNetNPAOverPreviousYrInPercentage.valid || TotalNetNPAOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Net NPA Over Previous Year In Percentage  is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="   ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>
+                        <input type="text" class="form-control" id=" ReturnOnAssetsInCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform. ReturnOnAssetsInCurrentYr" name="  ReturnOnAssetsInCurrentYr"
+                               #ReturnOnAssetsInCurrentYr="ngModel">
+                        <div [hidden]=" ReturnOnAssetsInCurrentYr.valid || ReturnOnAssetsInCurrentYr.pristine"
+                             class="alert alert-danger">
+                             Return On Assets In Current Year   is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4"><div class="form-group">
+                <label for="  ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
+                <input type="text" class="form-control" id=" ReturnOnAssetsInPerviousYr"
+                       required
+                       [(ngModel)]="excelperfform. ReturnOnAssetsInPerviousYr" name="  ReturnOnAssetsInPerviousYr"
+                       #ReturnOnAssetsInPerviousYr="ngModel">
+                <div [hidden]=" ReturnOnAssetsInPerviousYr.valid || ReturnOnAssetsInPerviousYr.pristine"
+                     class="alert alert-danger">
+                     Return On Assets In Pervious Year is required
+                </div>
+              </div>
+    </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id=" TotalReturnOnAssetsOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform. TotalReturnOnAssetsOverPreviousYrInPercentage" name=" TotalReturnOnAssetsOverPreviousYrInPercentage "
+                               #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]=" TotalReturnOnAssetsOverPreviousYrInPercentage.valid || TotalReturnOnAssetsOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Return On Assets Over Previous Year In Percentage  is required
+                        </div>
+                      </div>
+            
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="PerEmpBusinessCurrentYr  ">Per Employee Business Current Year </label>
+                        <input type="text" class="form-control" id="PerEmpBusinessCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
+                               #PerEmpBusinessCurrentYr="ngModel">
+                        <div [hidden]="PerEmpBusinessCurrentYr.valid ||PerEmpBusinessCurrentYr.pristine"
+                             class="alert alert-danger">
+                             Per Employee Business Current Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="PerEmpBusinessPreviousYr  "> Per Employee Business Previous Year</label>
+                        <input type="text" class="form-control" id="PerEmpBusinessPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
+                               #PerEmpBusinessPreviousYr="ngModel">
+                        <div [hidden]="PerEmpBusinessPreviousYr.valid ||PerEmpBusinessPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Per Employee Business Previous Year is required
+                        </div>
+                      </div>
+            
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
+                               #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]="TotalPerEmpBusinessOverPreviousYrInPercentage.valid ||TotalPerEmpBusinessOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             Total Per Employee Business Over Previous Year In Percentage is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
+                        <input type="text" class="form-control" id=" NetProfitToTotalAssetsCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform. NetProfitToTotalAssetsCurrentYr" name="  NetProfitToTotalAssetsCurrentYr"
+                               #NetProfitToTotalAssetsCurrentYr="ngModel">
+                        <div [hidden]=" NetProfitToTotalAssetsCurrentYr.valid || NetProfitToTotalAssetsCurrentYr.pristine"
+                             class="alert alert-danger">
+                             Net Profit To Total Assets Current Year  is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" NetProfitToTotalAssetsPreviousYr  "> Net Profit To Total Assets Previous Year </label>
+                        <input type="text" class="form-control" id=" NetProfitToTotalAssetsPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform. NetProfitToTotalAssetsPreviousYr" name="  NetProfitToTotalAssetsPreviousYr"
+                               #NetProfitToTotalAssetsPreviousYr="ngModel">
+                        <div [hidden]=" NetProfitToTotalAssetsPreviousYr.valid || NetProfitToTotalAssetsPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Net Profit To Total Assets Previous Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage  ">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excelperfform.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
+                               #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel">
+                        <div [hidden]="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.valid ||TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             TotalNetProfitToTotalAssetsOverPreviousYrInPercentage is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="CRROrSLROccuredDuringCurrentYr  "> Whether CRR/SLR default ocurred During Current Year</label>
+                        <input type="text" class="form-control" id="CRROrSLROccuredDuringCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
+                               #CRROrSLROccuredDuringCurrentYr="ngModel">
+                        <div [hidden]="CRROrSLROccuredDuringCurrentYr.valid ||CRROrSLROccuredDuringCurrentYr.pristine"
+                             class="alert alert-danger">
+                             CRR Or SLR Occured During Current Year is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  RBIImposeAnyPenaltyDuringCurrentYr ">  RBI Impose Any Penalty During Current Year</label>
+                        <input type="text" class="form-control" id=" RBIImposeAnyPenaltyDuringCurrentYr"
+                               required
+                               [(ngModel)]="excelperfform. RBIImposeAnyPenaltyDuringCurrentYr" name=" RBIImposeAnyPenaltyDuringCurrentYr "
+                               #RBIImposeAnyPenaltyDuringCurrentYr="ngModel">
+                        <div [hidden]=" RBIImposeAnyPenaltyDuringCurrentYr.valid || RBIImposeAnyPenaltyDuringCurrentYr.pristine"
+                             class="alert alert-danger">
+                             RBI Impose Any Penalty During Current Year  is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" ShowcaseNotice  "> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
+                        <input type="text" class="form-control" id=" ShowcaseNotice"
+                               required
+                               [(ngModel)]="excelperfform. ShowcaseNotice" name=" ShowcaseNotice "
+                               #ShowcaseNotice="ngModel">
+                        <div [hidden]=" ShowcaseNotice.valid || ShowcaseNotice.pristine"
+                             class="alert alert-danger">
+                             ShowcaseNotice is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" EnquiryByRBI_IncomeTax "> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
+                        <input type="text" class="form-control" id="EnquiryByRBI_IncomeTax"
+                               required
+                               [(ngModel)]="excelperfform.EnquiryByRBI_IncomeTax" name=" EnquiryByRBI_IncomeTax"
+                               #EnquiryByRBI_IncomeTax="ngModel">
+                        <div [hidden]="EnquiryByRBI_IncomeTax.valid ||EnquiryByRBI_IncomeTax.pristine"
+                             class="alert alert-danger">
+                             Enquiry By RBI Income Tax  is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for=" UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
+                        <input type="text" class="form-control" id= "UPIorCKYCImplemented"
+                               required
+                               [(ngModel)]="excelperfform. UPIorCKYCImplemented" name=" UPIorCKYCImplemented "
+                               #UPIorCKYCImplemented ="ngModel">
+                        <div [hidden]=" UPIorCKYCImplemented.valid || UPIorCKYCImplemented.pristine"
+                             class="alert alert-danger">
+                             UPI or CKYC Implemented is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="KYCImplementationWithAML  ">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
+                        <input type="text" class="form-control" id="KYCImplementationWithAML"
+                               required
+                               [(ngModel)]="excelperfform.KYCImplementationWithAML" name="KYCImplementationWithAML "
+                               #KYCImplementationWithAML="ngModel">
+                        <div [hidden]="KYCImplementationWithAML.valid ||KYCImplementationWithAML.pristine"
+                             class="alert alert-danger">
+                             KYC Implementation With AML is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
+                          for determining interest rates to large borrowers. </label>
+                        <input type="text" class="form-control" id=" BorrowerRatings"
+                               required
+                               [(ngModel)]="excelperfform.BorrowerRatings" name=" BorrowerRatings "
+                               #BorrowerRatings="ngModel">
+                        <div [hidden]=" BorrowerRatings.valid || BorrowerRatings.pristine"
+                             class="alert alert-danger">
+                             Borrower Ratings  is required
+                        </div>
+                      </div>
+            
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="PermissionToOpenBranchesInPreviousYr  ">Whether bank has  beeb granted permission to open branches in previous year</label>
+                        <input type="text" class="form-control" id="PermissionToOpenBranchesInPreviousYr"
+                               required
+                               [(ngModel)]="excelperfform.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
+                               #PermissionToOpenBranchesInPreviousYr="ngModel">
+                        <div [hidden]="PermissionToOpenBranchesInPreviousYr.valid ||PermissionToOpenBranchesInPreviousYr.pristine"
+                             class="alert alert-danger">
+                             Permission To Open  Branches In Previous Year is required
+                        </div>
+                      </div>
+            
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  UniqueIdToCustomer "> Whether Unique Identification number given to customer</label>
+                        <input type="text" class="form-control" id=" UniqueIdToCustomer"
+                               required
+                               [(ngModel)]="excelperfform.UniqueIdToCustomer" name=" UniqueIdToCustomer "
+                               #UniqueIdToCustomer="ngModel">
+                        <div [hidden]=" UniqueIdToCustomer.valid || UniqueIdToCustomer.pristine"
+                             class="alert alert-danger">
+                             UniqueIdToCustomer is required
+                        </div>
+                      </div>
+        </div>
+  </div>
+
+  <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="GotAnyAward  ">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>
+                        <input type="text" class="form-control" id="GotAnyAward"
+                               required
+                               [(ngModel)]="excelperfform.GotAnyAward" name="GotAnyAward"
+                               #GotAnyAward="ngModel">
+                        <div [hidden]="GotAnyAward.valid ||GotAnyAward.pristine"
+                             class="alert alert-danger">
+                             GotAnyAward is required
+                        </div>
+                      </div>
+        </div>
+
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="  NetOrMobileBankingFacility ">Whether net or mobile banking facility is given by bank </label>
+                        <input type="text" class="form-control" id=" NetOrMobileBankingFacility"
+                               required
+                               [(ngModel)]="excelperfform.NetOrMobileBankingFacility" name=" NetOrMobileBankingFacility "
+                               #NetOrMobileBankingFacility="ngModel">
+                        <div [hidden]=" NetOrMobileBankingFacility.valid || NetOrMobileBankingFacility.pristine"
+                             class="alert alert-danger">
+                             Net Or Mobile Banking Facility  is required
+                        </div>
+                      </div>
+                    
+        </div>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!excellentperformanceform.form.valid" (click)="save()">Submit</button>
+  <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
 </form>
