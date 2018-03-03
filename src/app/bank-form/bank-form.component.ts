@@ -16,7 +16,8 @@ export class BankFormComponent implements OnInit {
 
   bank :Bank =new Bank();
   bankTypes : BankType[] = [];
-
+  id: number;
+  name:string;
 
   constructor(private bankService:BankService,
               private bankTypeService:BankTypeService,
@@ -25,11 +26,12 @@ export class BankFormComponent implements OnInit {
 
   ngOnInit() {
     
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.name = this.route.snapshot.paramMap.get('name');
+    console.log(this.id);
+    console.log(name);
     this.getBankTypes();
-    if(id>0){
-      this.getBank(id);
-    }
+    this.bank.EventId= this.id;
   }
     
   getBankTypes():void{

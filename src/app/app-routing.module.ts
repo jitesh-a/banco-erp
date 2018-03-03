@@ -46,7 +46,8 @@ const routes: Routes = [
   {path: 'pickupanddropform',component:PickupAndDropFromComponent},
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
   {path: 'technologydetails', component:TechnologyDetailsComponent},
-  {path:'technologydetailsform',component:TechnologyDetailsFormComponent}
+  {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
+  { path: 'fillform/:id/:name', component: BankFormComponent}
 ];
 
 @NgModule({
