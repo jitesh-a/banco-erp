@@ -2,7 +2,7 @@
   <div class="col-md-12">
       <h1>Employee Form</h1>
       <hr/>
-      <form (ngSubmit)="onSubmit()" #EmployeeForm="ngForm">
+      <form (ngSubmit)="onSubmit" #EmployeeForm="ngForm">
           <div class="form-group" *ngIf="employee.Id>0">
               <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"
@@ -26,6 +26,17 @@
             </div>
           </div>
           <div class="form-group">
+            <label for="Gender">Gender:</label>
+            <mat-radio-group class="example-radio-group" name="Gender" #Gender="ngModel" [(ngModel)]="employee.Gender">
+              <mat-radio-button class="example-radio-button" [value]= true >Male</mat-radio-button>
+              <mat-radio-button class="example-radio-button"[value]= false>Female</mat-radio-button>
+            </mat-radio-group>
+            <div [hidden]="Gender.valid || Gender.pristine"
+                 class="alert alert-danger">
+                 Gender is required
+            </div>
+          </div>
+          <div class="form-group">
               <label for="Description">Description</label>
               <textarea type="text" class="form-control" id="Description"
                      required
@@ -38,10 +49,10 @@
             </div>
             <div class="form-group">
               <label for="Contact">Contact</label>
-              <textarea type="text" class="form-control" id="Contact"
+              <input type="text" class="form-control" id="Contact"
                      required
                      [(ngModel)]="employee.Contact" name="Contact"
-                     #Contact="ngModel"></textarea>
+                     #Contact="ngModel"/>
               <div [hidden]="Contact.valid || Contact.pristine"
                    class="alert alert-danger">
                    Contact is required
@@ -49,28 +60,13 @@
             </div>
             <div class="form-group">
               <label for="EmployeeNumber">Employee Number</label>
-              <textarea type="number" class="form-control" id="EmployeeNumber"
+              <input type="number" class="form-control" id="EmployeeNumber"
                      required
-                     [(ngModel)]="employee.EmployeeNumber" name="EmployeeNumber"
-                     #EmployeeNumber="ngModel"></textarea>
-              <div [hidden]="EmployeeNumber.valid || EmployeeNumber.pristine"
+                     [(ngModel)]="employee.EmployeeNumber" name="EmpNumber"
+                     #EmpNumber="ngModel"/>
+              <div [hidden]="EmpNumber.valid || EmpNumber.pristine"
                    class="alert alert-danger">
-                   EmployeeNumber is required
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="Gender">Gender</label>
-                 female<input type="radio"  id="Gender"
-                  required
-                     [(ngModel)]="employee.Gender" name="Gender"
-                     #Gender="ngModel">
-                     Male<input type="radio"  id="Gender"
-                     required
-                        [(ngModel)]="employee.Gender" name="Gender"
-                        #Gender="ngModel">
-              <div [hidden]="Gender.valid || Gender.pristine"
-                   class="alert alert-danger">
-                   Gender is required
+                   Employee Number is required
               </div>
             </div>
             <div class="form-group">
@@ -84,7 +80,23 @@
                    IDProof is required
               </div>
             </div>
-          <button type="submit" class="btn btn-success" [disabled]="!employeeForm.form.valid" (click)="save()">Submit</button>
+            <div class="form-group">
+              <label for="BankId">Bank</label>
+              <select class="form-control" id="Bank"
+              required
+              [(ngModel)] = "employee.BankId" name = "Bank"
+              #Bank="ngModel">
+                <option *ngFor="let b of banks" [value]="b.Id">
+                  {{b.Name}}
+                </option>
+              </select>
+              <div [hidden]="Bank.valid || Bank.pristine"
+                   class="alert alert-danger">
+                   Type is required
+            </div>
+          </div>
+           
+          <button type="submit" class="btn btn-success" [disabled]="!EmployeeForm.form.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form>
   </div>   

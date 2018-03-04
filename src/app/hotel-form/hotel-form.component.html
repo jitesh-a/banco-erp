@@ -2,7 +2,7 @@
   <div class="col-md-12">
       <h1>Hotel Form</h1>
       <hr/>
-      <form (ngSubmit)="onSubmit()" #hotelForm="ngForm">
+      <form (ngSubmit)="onSubmit" #hotelForm="ngForm">
         <div class="form-group" *ngIf="hotel.Id>0">
           <label for="Id">Id</label>
           <input type="text" class="form-control" id="Id"
