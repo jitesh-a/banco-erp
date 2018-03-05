@@ -2,7 +2,7 @@
   <div class="col-md-12">
       <h1>Sponsor And Guest Form</h1>
       <hr/>
-      <form (ngSubmit)="onSubmit()" #sponsorandguestForm="ngForm">
+      <form (ngSubmit)="onSubmit" #sponsorandguestForm="ngForm">
           <div class="form-group" *ngIf="sponsorandguest.Id>0">
               <label for="Id">Id</label>
               <input type="number" class="form-control" id="Id"

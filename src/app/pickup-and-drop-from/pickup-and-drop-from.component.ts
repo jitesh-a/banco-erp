@@ -51,7 +51,7 @@ export class PickupAndDropFromComponent implements OnInit {
 
     getBanks(id : number) : void {
 
-     
+     console.log("get banks");
       this.bankService.getBanks()
                   .subscribe(res=>{ 
                     console.log(res["banks"])

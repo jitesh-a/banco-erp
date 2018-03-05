@@ -1,5 +1,5 @@
 <h1>Technology  Details  Form</h1>
-<form (ngSubmit)="onSubmit()" #TechnologyDetailsForm="ngForm">  
+<form (ngSubmit)="onSubmit" #TechnologyDetailsForm="ngForm">  
 <div class="row">
       <div class="col-md-4">
       <div class="form-group">
@@ -20,7 +20,7 @@
               <input type="text" class="form-control" id="CBSCompletionDate "
                      required
                      [(ngModel)]="techdetailsform.CBSCompletionDate" name="CBSCompletionDate "
-                     #CBSCompletionDate="ngModel">
+                     type="date" #CBSCompletionDate="ngModel">
               <div [hidden]=" CBSCompletionDate.valid ||CBSCompletionDate .pristine"
                    class="alert alert-danger">
                    CBS Completion Date is required
@@ -311,13 +311,14 @@
                                    required
                                    [(ngModel)]="techdetailsform.OtherInfo" name=" OtherInfo"
                                    #OtherInfo="ngModel"/>
-                            <div [hidden]="OtherInfo.valid ||OtherInfo.pristine">
+                            <div [hidden]="OtherInfo.valid ||OtherInfo.pristine"
                                  class="alert alert-danger">
                                  OtherInfo is required
                             </div>
                           </div>
                       </div>
                 </div>
-                <button type="submit" class="btn btn-success" [disabled]="!techdetailsform.form.valid" (click)="save()">Submit</button>
+                <button type="submit" class="btn btn-success" [disabled]="!TechnologyDetailsForm.form.valid" (click)="save()">Submit</button>
                 <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
+                
 </form>

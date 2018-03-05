@@ -3,7 +3,7 @@
   <div class="col-md-12">
       <h1>Income Form</h1>
       <hr/>
-      <form (ngSubmit)="onSubmit()" #incomeForm="ngForm">
+      <form (ngSubmit)="onSubmit" #incomeForm="ngForm">
           <div class="form-group" *ngIf="event.Id>0">
               <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"

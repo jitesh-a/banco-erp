@@ -76,7 +76,7 @@ export class EventService {
   /** DELETE: delete the event from the server */
   deleteEvent (event: Event | number): Observable<Event> {
     const Id = typeof event === 'number' ? event : event.Id;
-    const url = `${this.apiUrl}delete/${Id}`;
+    const url = `${this.apiUrl}Delete/${Id}`;
 
     return this.http.delete<Event>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted event Id=${Id}`)),

@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class TechnologyDetailsService {
 
-  private apiUrl='http://localhost:7888/technologicaldetails/';
+  private apiUrl='http://localhost:7888/technologydetails/';
 
   constructor(private messageService: MessageService,private http:HttpClient) { }
 

@@ -23,8 +23,6 @@ import { TechnologyDetailsComponent } from "./technology-details/technology-deta
 import {TechnologyDetailsFormComponent  } from "./technology-details-form/technology-details-form.component";
 
 
-
-
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
