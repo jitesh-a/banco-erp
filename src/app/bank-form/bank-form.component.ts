@@ -5,6 +5,7 @@ import { BankType } from "../../models/bankType.model";
 import { BankTypeService } from "../bank-type.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-bank-form',
@@ -22,7 +23,8 @@ export class BankFormComponent implements OnInit {
   constructor(private bankService:BankService,
               private bankTypeService:BankTypeService,
               private route:ActivatedRoute,
-              private location:Location) { }
+              private location:Location,
+            private router:Router) { }
 
   ngOnInit() {
     
@@ -59,6 +61,8 @@ export class BankFormComponent implements OnInit {
       .subscribe(
           res=>{
              console.log(res);
+             alert("data saved successfully");
+             this.router.navigate( ['/questionary1', {id: this.id, name: this.name}]);
           },
           err=>{
              console.error(err);

@@ -45,7 +45,7 @@ export class BancoEventComponent implements OnInit {
 
   //delete
   delete(event: Event): void {
-    this.events = this.events.filter(h => h !== event);
+    this.events = this.events.filter(h => h != event);
     this.eventService.deleteEvent(event).subscribe(
       res=>{
         console.log(res);
