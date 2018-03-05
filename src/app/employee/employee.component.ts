@@ -7,22 +7,22 @@ import { EmployeeService } from "../employee.service";
 })
 export class EmployeeComponent implements OnInit {
  
-  employee :Employee[]=[];
+  employees :Employee[]=[];
   dataLoaded: boolean;
   constructor(private employeeService :EmployeeService) { }
 
   ngOnInit() {
     this.dataLoaded=false;
-    this.getemployee();
+    this.getemployees();
     this.dataLoaded=true;
   }
 
    //get
-   getemployee(): void {
+   getemployees(): void {
     this.employeeService.getEmployee()
                 .subscribe(res=>{
-                  console.log(res["Employee"]);
-                  this.employee=res["Employee"];
+                  console.log(res);
+                  this.employees=res["employees"];
                   
                 });
     //.subscribe(data=>{},err=>{});
@@ -30,7 +30,7 @@ export class EmployeeComponent implements OnInit {
 
   //delete
   delete(employee: Employee): void {
-    this.employee = this.employee.filter(h => h !==employee);
+    this.employees = this.employees.filter(h => h !==employee);
     this.employeeService.deleteemployee(employee).subscribe(
       res=>{
         console.log(res);

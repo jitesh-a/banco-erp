@@ -44,6 +44,7 @@ import { TechnologyDetailsService } from './technology-details.service';
 import { TestFormComponent } from './test-form/test-form.component';
 import { TechnologyDetailsFormComponent } from './technology-details-form/technology-details-form.component';
 import { TechDetailsViewComponent } from './tech-details-view/tech-details-view.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { TechDetailsViewComponent } from './tech-details-view/tech-details-view.
     CustomMaterialModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   providers: [
     MessageService,
