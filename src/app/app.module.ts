@@ -45,6 +45,7 @@ import { TestFormComponent } from './test-form/test-form.component';
 import { TechnologyDetailsFormComponent } from './technology-details-form/technology-details-form.component';
 import { TechDetailsViewComponent } from './tech-details-view/tech-details-view.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { MatRadioModule } from '@angular/material/radio';
     TestFormComponent,
     TechnologyDetailsFormComponent,
     TechDetailsViewComponent,
+    LoginComponent,
 
   ],
   imports: [
