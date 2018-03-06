@@ -25,7 +25,7 @@
                  Password is required
             </div>
           </div>
-          <button type="submit" class="btn btn-success" (click)="checkCredential()">Login</button>
+          <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid" (click)="checkCredential()">Login</button>
           <button type="reset" class="btn btn-success">Reset</button>
         </form>
       </div>   
