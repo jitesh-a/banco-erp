@@ -21,6 +21,7 @@ import { ExcellentPerformanceComponent } from "./excellent-performance/excellent
 import { ExcellentPerformanceFormComponent } from "./excellent-performance-form/excellent-performance-form.component";
 import { TechnologyDetailsComponent } from "./technology-details/technology-details.component";
 import {TechnologyDetailsFormComponent  } from "./technology-details-form/technology-details-form.component";
+import { Login } from '../models/login.model';
 
 
 const routes: Routes = [
@@ -44,7 +45,8 @@ const routes: Routes = [
   {path: 'pickupanddropform',component:PickupAndDropFromComponent},
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
   {path: 'technologydetails', component:TechnologyDetailsComponent},
-  {path:'technologydetailsform',component:TechnologyDetailsFormComponent}
+  {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
+  {path:'loginapi',component:Login}
 ];
 
 @NgModule({
