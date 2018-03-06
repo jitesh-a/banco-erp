@@ -1,6 +1,6 @@
 <div class="row" >
   <div class="col-md-6"><h1> Excellent Performance </h1></div>
-  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/employeeform/0"> Employee details </a></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/excellentperformanceform/0"> Quentionaries 2 </a></div>
 </div>
 <hr/>
 <div class="row" >
@@ -12,20 +12,27 @@
         <thead>
               <tr>
                 <th>Id</th>
-                <th>Name</th>
                 <th>Status</th>
-                
+                <th>Net worth current year</th>
+                <th>Net worth previous year</th>
+                <th>Net worth over previous year</th>
+                <th>CRAR current year</th>
+                <th>CRAR previous year</th>
+                <th>Actions</th>
               </tr>
         </thead> 
         <tbody>
-          <tr *ngFor="let e of employees">
-            <td>{{e.Id}}</td>
-            <td>{{e.Name}}</td>
-            <td>{{e.Status}}</td>
-            
+          <tr *ngFor="let excel of excellentperformance">
+            <td>{{excel.Id}}</td>
+            <td>{{excel.Status}}</td>
+            <td>{{excel.NetWorthCurrentYrInPercentage}}</td>
+            <td>{{excel. NetWorthPreviousYrInPercentage}}</td>
+            <td>{{excel. CRARCurrentYrInPercentage}}</td>
+            <td>{{excel.CRARPreviousYrInPercentage}}</td>
             <td>
-              <a class="btn btn-sm btn-primary" href="/employeeform/{{e.Id}}"> View </a>
-              
+              <a class="btn btn-sm btn-primary" href=""> View Details </a>
+              <a class="btn btn-sm btn-primary" href=""> Edit </a>
+              <a class="btn btn-sm btn-danger"> Delete </a>
               
             </td>
           </tr>
