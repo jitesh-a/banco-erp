@@ -47,12 +47,9 @@ const routes: Routes = [
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
   {path: 'technologydetails', component:TechnologyDetailsComponent},
   {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
-<<<<<<< HEAD
   { path: 'fillform/:id/:name', component: BankFormComponent},
-  {path : 'questionary1', component: ExcellentPerformanceFormComponent}
-=======
+  {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login}
->>>>>>> 07b5ce802f7c6190faf89dd6a26b41eb1f4c748b
 ];
 
 @NgModule({

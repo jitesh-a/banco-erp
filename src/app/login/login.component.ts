@@ -16,6 +16,19 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+    this.checkCredintail(this.login);
   }
+  checkCredintail(login:Login):void
+  {
+    this.loginService.checkCredential(login)
+    .subscribe(
+      res=>{
+       console.log(res);
+      },
+      err=>{
+       console.error(err);
+      }
+    );
+  }  
 
 }
