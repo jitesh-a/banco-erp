@@ -40,7 +40,7 @@ export class BankTypeFormComponent implements OnInit {
       this.banktypeService.updateBankType(this.banktype)
       .subscribe(
         res=>{
-         console.log(res);
+         console.log("successfully inserted ");
         },
         err=>{
          console.error(err);

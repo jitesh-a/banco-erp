@@ -21,7 +21,7 @@ export class ExcellentPerformance {
     TotalNetNPAOverPreviousYrInPercentage: string;
     ReturnOnAssetsInCurrentYr: number;
     ReturnOnAssetsInPerviousYr: number;
-    TotalReturnOnAssetsOverPreviousYrInPercentage: string;
+    TotalReturnOnAssetsOverPreviousYrInPercentage: string; 
     PerEmpBusinessCurrentYr: number;
     PerEmpBusinessPreviousYr: number;
     TotalPerEmpBusinessOverPreviousYrInPercentage: string;

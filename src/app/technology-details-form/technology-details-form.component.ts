@@ -9,7 +9,7 @@ import { TechnologyDetailsService } from "./../technology-details.service";
   styleUrls: ['./technology-details-form.component.css']
 })
 export class TechnologyDetailsFormComponent implements OnInit {
-  techdetailsform:TechnologyDetails=new TechnologyDetails();
+  techdetails:TechnologyDetails=new TechnologyDetails();
   constructor(private technologydetailService:TechnologyDetailsService,private route:ActivatedRoute,
     private location:Location) { }
   
@@ -23,7 +23,7 @@ export class TechnologyDetailsFormComponent implements OnInit {
       getTechnologyDetails(id: number): void {
         //const id = +this.route.snapshot.paramMap.get('id');
         this.technologydetailService.getTechnologyDetail(id)
-          .subscribe(res => this.techdetailsform = res["data"]);
+          .subscribe(res => this.techdetails = res["data"]);
       }
       
       goBack(): void {
@@ -31,8 +31,8 @@ export class TechnologyDetailsFormComponent implements OnInit {
       }
   
       save(): void{
-        if(this.techdetailsform.Id>0){
-          this.technologydetailService.updateTechnologyDetails(this.techdetailsform)
+        if(this.techdetails.Id>0){
+          this.technologydetailService.updateTechnologyDetails(this.techdetails)
           .subscribe(
             res=>{
              console.log(res);
@@ -42,7 +42,7 @@ export class TechnologyDetailsFormComponent implements OnInit {
             }
           ); 
         }else{
-          this.technologydetailService.addTechnologyDetails(this.techdetailsform)
+          this.technologydetailService.addTechnologyDetails(this.techdetails)
           .subscribe(
             res=>{
              console.log(res);
