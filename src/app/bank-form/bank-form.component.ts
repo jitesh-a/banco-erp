@@ -61,9 +61,7 @@ export class BankFormComponent implements OnInit {
       .subscribe(
           res=>{
              console.log(res);
-             alert("data saved successfully");
-             this.router.navigate( ['/questionary1', {id: this.id, name: this.name}]);
-          },
+             },
           err=>{
              console.error(err);
           }
@@ -75,6 +73,9 @@ export class BankFormComponent implements OnInit {
         .subscribe(
           res=>{
             console.log(res);
+            alert("data saved successfully");
+            this.router.navigate( ['/questionary1', {id: this.id, name: this.name}]);
+         
           },
           err=>{
              console.error(err);
