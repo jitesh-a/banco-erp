@@ -22,6 +22,7 @@ import { ExcellentPerformanceFormComponent } from "./excellent-performance-form/
 import { TechnologyDetailsComponent } from "./technology-details/technology-details.component";
 import {TechnologyDetailsFormComponent  } from "./technology-details-form/technology-details-form.component";
 import { Login } from '../models/login.model';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -46,7 +47,7 @@ const routes: Routes = [
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
   {path: 'technologydetails', component:TechnologyDetailsComponent},
   {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
-  {path:'loginapi',component:Login}
+  {path:'loginapi',component:LoginComponent}
 ];
 
 @NgModule({

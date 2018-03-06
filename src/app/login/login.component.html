@@ -1,4 +1,3 @@
-
 <div class="row">
   <div class="col-md-12">
       <h1>Login Form</h1>
@@ -9,7 +8,7 @@
               <input type="email" class="form-control" id="Email"
                      required
                      [(ngModel)]="login.Email" name="Email"
-                     #Email="ngModel" readonly> 
+                     #Email="ngModel"> 
                 <div [hidden]="Email.valid || Email.pristine"
                      class="alert alert-danger">
                  Email is required
@@ -26,7 +25,7 @@
                  Password is required
             </div>
           </div>
-          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success" (click)="checkCredential()">Login</button>
           <button type="reset" class="btn btn-success">Reset</button>
         </form>
       </div>   
