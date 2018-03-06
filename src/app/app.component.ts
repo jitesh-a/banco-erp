@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestingService } from "../app/testing.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Banco ERP';
+ 
+  constructor(public testingservice : TestingService) {
+    
+   }
+
+  ngOnInit() {
+    this.showStatus();
+  }
+
+  showStatus():void{
+    console.log("Login Status : "+this.testingservice.isAdmin);
+
+  }
 }
