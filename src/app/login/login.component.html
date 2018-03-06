@@ -1,4 +1,33 @@
-<div class="row" >
-  <div class="col-md-6"><h1> Login Here </h1></div>
-  
-</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <h1>Login Form</h1>
+      <hr/>
+      <form (ngSubmit)="onSubmit" #loginForm="ngForm">
+          <div class="form-group">
+              <label for="Email">Email</label>
+              <input type="email" class="form-control" id="Email"
+                     required
+                     [(ngModel)]="login.Email" name="Email"
+                     #Email="ngModel" readonly> 
+                <div [hidden]="Email.valid || Email.pristine"
+                     class="alert alert-danger">
+                 Email is required
+                </div>            
+              </div>
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" id="Password"
+                   required
+                   [(ngModel)]="login.Password" name="Password"
+                   #Password="ngModel">
+            <div [hidden]="Password.valid || Password.pristine"
+                 class="alert alert-danger">
+                 Password is required
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="reset" class="btn btn-success">Reset</button>
+        </form>
+      </div>   
+    </div>
