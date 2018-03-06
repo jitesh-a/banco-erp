@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestingService } from "../testing.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testingservice : TestingService) { }
 
   ngOnInit() {
+    this.show();
   }
 
+  show():void{
+    console.log("Login Status : "+this.testingservice.isAdmin);
+  }
 }

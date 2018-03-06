@@ -45,6 +45,8 @@ import { TestFormComponent } from './test-form/test-form.component';
 import { TechnologyDetailsFormComponent } from './technology-details-form/technology-details-form.component';
 import { TechDetailsViewComponent } from './tech-details-view/tech-details-view.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { TestingService } from './testing.service';
+import { LoginService } from './login.service';
 
 @NgModule({
   declarations: [
@@ -103,7 +105,9 @@ import { MatRadioModule } from '@angular/material/radio';
     BankService,
     BankService,
     IncomeService,
-    TechnologyDetailsService],
+    TechnologyDetailsService,
+    TestingService,
+    LoginService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
