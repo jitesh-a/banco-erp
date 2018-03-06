@@ -8,8 +8,7 @@ import { TestingService } from "../app/testing.service";
 })
 export class AppComponent {
   title = 'Banco ERP';
-  login : boolean;
-  usertype : string;
+ 
   constructor(public testingservice : TestingService) {
     
    }
