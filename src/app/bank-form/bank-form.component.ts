@@ -73,8 +73,9 @@ export class BankFormComponent implements OnInit {
         .subscribe(
           res=>{
             console.log(res);
+            console.log(res["id"]);
             alert("data saved successfully");
-            this.router.navigate( ['/questionary1', {id: this.id, name: this.name}]);
+            this.router.navigate( ['/questionary1', {id: res["id"], name: this.name}]);
          
           },
           err=>{
