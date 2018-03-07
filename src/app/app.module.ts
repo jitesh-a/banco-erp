@@ -48,6 +48,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { TestingService } from './testing.service';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
+import { CustomFormsModule } from 'ng4-validators';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    MatRadioModule
+    MatRadioModule,
+    CustomFormsModule
   ],
   providers: [
     MessageService,
@@ -109,6 +111,7 @@ import { LoginComponent } from './login/login.component';
     IncomeService,
     TechnologyDetailsService,
     TestingService,
+    
     LoginService],
     bootstrap: [AppComponent]
 })

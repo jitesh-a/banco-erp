@@ -43,13 +43,14 @@
               <input type="number" class="form-control" id="Amount"
                      required
                      [(ngModel)]="income.Amount" name="Amount"
-                     #Amount="ngModel" type="number">
+                     #Amount="ngModel" type="number" digits >
               <div [hidden]="Amount.valid || Amount.pristine"
                    class="alert alert-danger">
                    Amount is required
               </div>
+              <p *ngIf="Ammount.errors?.digits">error message</p>
             </div>  
-            
+
      
           <button type="submit" class="btn btn-success" [disabled]="!incomeForm.form.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>

@@ -4,10 +4,10 @@
       <div class="col-md-4">
       <div class="form-group">
           <label for=" branches">  Number of branches of the banks </label>
-          <input type="text" class="form-control" id=" branches "
+          <input type="number" class="form-control" id=" branches "
                  required
                  [(ngModel)]="techdetailsform.branches" name=" branches "
-                 #branches="ngModel">
+                 #branches="ngModel" digits/>
           <div [hidden]=" branches .valid ||  branches.pristine"
                class="alert alert-danger">
                branches are required

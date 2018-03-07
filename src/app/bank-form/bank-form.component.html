@@ -21,7 +21,7 @@
               <input type="text" class="form-control" id="Name"
                      required
                      [(ngModel)]="bank.Name" name="Name"
-                     #Name="ngModel">
+                     #Name="ngModel" pattern="[a-zA-Z ]*">
               <div [hidden]="Name.valid || Name.pristine"
                    class="alert alert-danger">
                    Name is required
@@ -35,7 +35,7 @@
                       <input type="text" class="form-control" id="City"
                              required
                              [(ngModel)]="bank.City" name="City"
-                             #City="ngModel">
+                             #City="ngModel" pattern="[a-zA-Z ]*">
                       <div [hidden]="City.valid || City.pristine"
                            class="alert alert-danger">
                            City is required
@@ -48,7 +48,7 @@
                       <input type="text" class="form-control" id="District"
                              required
                              [(ngModel)]="bank.District" name="District"
-                             #District="ngModel">
+                             #District="ngModel" pattern="[a-zA-Z ]*">
                       <div [hidden]="District.valid || District.pristine"
                            class="alert alert-danger">
                            District is required
@@ -61,7 +61,7 @@
                       <input type="text" class="form-control" id="State"
                              required
                              [(ngModel)]="bank.State" name="State"
-                             #State="ngModel">
+                             #State="ngModel" pattern="[a-zA-Z ]*">
                       <div [hidden]="State.valid || State.pristine"
                            class="alert alert-danger">
                            State is required
@@ -125,7 +125,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="emailid_bank">email id of bank</label>
-                        <input type="text" class="form-control" id="emailid_bank"
+                        <input type="email" class="form-control" id="emailid_bank"
                                required
                                [(ngModel)]="bank.emailid_bank" name="emailid_bank"
                                #emailid_bank="ngModel">
@@ -141,7 +141,7 @@
               <input type="text" class="form-control" id="Website"
                      required
                      [(ngModel)]="bank.Website" name="Website"
-                     #Website="ngModel">
+                     #Website="ngModel" url>
               <div [hidden]="Website.valid || Website.pristine"
                    class="alert alert-danger">
                    Website is required
@@ -156,7 +156,7 @@
                         <input type="text" class="form-control" id="Chairman_name"
                               required
                               [(ngModel)]="bank.Chairman_name" name="Chairman_name"
-                              #Chairman_name="ngModel">
+                              #Chairman_name="ngModel" pattern="[a-zA-Z ]*">
                         <div [hidden]="Chairman_name.valid ||Chairman_name.pristine"
                             class="alert alert-danger">
                             Chairman_name is required
@@ -166,7 +166,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="Chairman_emailid">Chairman email id</label>
-                        <input type="text" class="form-control" id="Chairman_emailid"
+                        <input type="email" class="form-control" id="Chairman_emailid"
                               required
                               [(ngModel)]="bank.Chairman_emailid" name="Chairman_emailid"
                               #Chairman_emailid="ngModel">
@@ -179,10 +179,10 @@
                   <div class="col-md-4">
                       <div class="form-group">
                           <label for="Chairman_mobile">Chairman mobile number</label>
-                          <input type="text" class="form-control" id="Chairman_mobile"
+                          <input type="number" class="form-control" id="Chairman_mobile"
                                  required
                                  [(ngModel)]="bank.Chairman_mobile" name="Chairman_mobile"
-                                 #Chairman_mobile="ngModel">
+                                 #Chairman_mobile="ngModel" minlength="10" digits>
                           <div [hidden]="Chairman_mobile.valid ||Chairman_mobile.pristine"
                                class="alert alert-danger">
                                Chairman mobile number is required
@@ -197,7 +197,7 @@
                       <input type="text" class="form-control" id="MD_CEO_GM_name"
                              required
                              [(ngModel)]="bank.MD_CEO_GM_name" name="MD_CEO_GM_name"
-                             #MD_CEO_GM_name="ngModel">
+                             #MD_CEO_GM_name="ngModel" pattern="[a-zA-Z ]*" >
                       <div [hidden]="MD_CEO_GM_name.valid ||MD_CEO_GM_name.pristine"
                            class="alert alert-danger">
                            MD/CEO/GM name is required
@@ -207,10 +207,10 @@
               <div class="col-md-6">
                   <div class="form-group">
                       <label for="MD_CEO_GM_mobile">MD_CEO_GM_mobile</label>
-                      <input type="text" class="form-control" id="MD_CEO_GM_mobile"
+                      <input type="number" class="form-control" id="MD_CEO_GM_mobile"
                              required
                              [(ngModel)]="bank.MD_CEO_GM_mobile" name="MD_CEO_GM_mobile"
-                             #MD_CEO_GM_mobile="ngModel">
+                             #MD_CEO_GM_mobile="ngModel" minlength="10" digits >
                       <div [hidden]="MD_CEO_GM_mobile.valid ||MD_CEO_GM_mobile.pristine"
                            class="alert alert-danger">
                            MD/CEO/GM mobile number is required
@@ -225,7 +225,7 @@
                       <input type="text" class="form-control" id=" IT_head_name"
                              required
                              [(ngModel)]="bank.IT_head_name" name=" IT_head_name"
-                             #IT_head_name="ngModel">
+                             #IT_head_name="ngModel" pattern="[a-zA-Z ]*">
                       <div [hidden]=" IT_head_name.valid || IT_head_name.pristine"
                            class="alert alert-danger">
                            IT head name is required
@@ -235,10 +235,10 @@
               <div class="col-md-6">
                   <div class="form-group">
                       <label for=" IT_head_mobile">IT head mobile number</label>
-                      <input type="text" class="form-control" id=" IT_head_mobile"
+                      <input type="number" class="form-control" id=" IT_head_mobile"
                              required
                              [(ngModel)]="bank.IT_head_mobile" name=" IT_head_mobile"
-                             #IT_head_mobile="ngModel">
+                             #IT_head_mobile="ngModel"  minlength="10" digits>
                       <div [hidden]=" IT_head_mobile.valid || IT_head_mobile.pristine"
                            class="alert alert-danger">
                            IT head mobile number is required
@@ -263,7 +263,7 @@
                 <input type="number" class="form-control" id="Contact"
                        required
                        [(ngModel)]="bank.contact" name="Contact"
-                       #Contact="ngModel" type="number">
+                       #Contact="ngModel"  minlength="10" digits>
                 <div [hidden]="Contact.valid || Contact.pristine"
                      class="alert alert-danger">
                      Contact is required
@@ -289,7 +289,7 @@
                   <input type="number" class="form-control" id="Payment"
                          required
                          [(ngModel)]="bank.Payment" name="Payment"
-                         #Payment="ngModel" type="number">
+                         #Payment="ngModel" digits>
                   <div [hidden]="Payment.valid || Payment.pristine"
                        class="alert alert-danger">
                        Payment is required
