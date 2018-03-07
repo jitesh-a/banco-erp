@@ -100,10 +100,10 @@
                         <input type="text" class="form-control" id="Pincode"
                                required
                                [(ngModel)]="bank.Pincode" name="Pincode"
-                               #Pincode="ngModel">
+                               #Pincode="ngModel" [rangeLength]="[6, 6]">
                         <div [hidden]="Pincode.valid ||Pincode.pristine"
                              class="alert alert-danger">
-                             Pincode is required
+                             Inappropriate Pincode
                         </div>
                       </div>
                 </div>
@@ -141,7 +141,7 @@
               <input type="text" class="form-control" id="Website"
                      required
                      [(ngModel)]="bank.Website" name="Website"
-                     #Website="ngModel">
+                     #Website="ngModel" url>
               <div [hidden]="Website.valid || Website.pristine"
                    class="alert alert-danger">
                    Website is required

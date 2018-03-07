@@ -3,6 +3,7 @@ import { Event } from "../../models/event.model";
 import { EventService } from "./../event.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   
@@ -14,7 +15,8 @@ export class EventFormComponent implements OnInit {
   event:Event=new Event();
 
   constructor(private eventService:EventService,private route: ActivatedRoute,
-    private location: Location) { }
+    private location: Location,
+    private router:Router) { }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -40,6 +42,8 @@ export class EventFormComponent implements OnInit {
       .subscribe(
         res=>{
          console.log(res);
+         alert("data Changed successfully");
+         this.router.navigate( ['/events']);
         },
         err=>{
          console.error(err);

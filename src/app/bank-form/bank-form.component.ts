@@ -24,7 +24,7 @@ export class BankFormComponent implements OnInit {
               private bankTypeService:BankTypeService,
               private route:ActivatedRoute,
               private location:Location,
-            private router:Router) { }
+              private router:Router) { }
 
   ngOnInit() {
     
@@ -73,8 +73,9 @@ export class BankFormComponent implements OnInit {
         .subscribe(
           res=>{
             console.log(res);
+            console.log("Id : "+res["id"]);
             alert("data saved successfully");
-            this.router.navigate( ['/questionary1', {id: this.id, name: this.name}]);
+            this.router.navigate( ['/questionary1', {id: res["id"], name: this.name}]);
          
           },
           err=>{

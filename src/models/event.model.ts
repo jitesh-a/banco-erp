@@ -6,5 +6,6 @@ export class Event{
     StartDate: Date;
     EndDate: Date;
     Location: string;
+    CreatedOnUtc : Date;
     
 }

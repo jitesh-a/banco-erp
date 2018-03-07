@@ -4,6 +4,7 @@
       <h1>Event Form</h1>
       <hr/>
       <form (ngSubmit)="onSubmit" #eventForm="ngForm">
+        <input type="hidden" value="event.CreatedOnUtc" name="CreatedOnUtc" [(ngModel)]="event.CreatedOnUtc">
           <div class="form-group" *ngIf="event.Id>0">
               <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"
@@ -58,6 +59,7 @@
                        class="alert alert-danger">
                        EndDate is required
                   </div>
+                  <p *ngIf="EndDate.errors?.minDate">error message</p>
                 </div>
      
           <button type="submit" class="btn btn-success" [disabled]="!eventForm.form.valid" (click)="save()">Submit</button>
