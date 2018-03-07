@@ -1,7 +1,8 @@
 export class ExcellentPerformance {
 
     Id: number;
-    status: boolean;
+    BankId: number;
+    Status: boolean;
     NetWorthCurrentYrInPercentage: string;
     NetWorthPreviousYrInPercentage: string;
     NetWorthOverPreviousYrInPercentage: string;
