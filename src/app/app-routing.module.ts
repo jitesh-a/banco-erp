@@ -23,6 +23,7 @@ import { TechnologyDetailsComponent } from "./technology-details/technology-deta
 import {TechnologyDetailsFormComponent  } from "./technology-details-form/technology-details-form.component";
 import { ExcellentPerformance } from '../models/excellentPerformance.model';
 import { Login } from '../models/login.model';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},
   {path: 'technologydetails', component:TechnologyDetailsComponent},
   {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
+  {path:'loginapi',component:LoginComponent},
   { path: 'fillform/:id/:name', component: BankFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login}

@@ -16,6 +16,20 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
+ 
+    
   }
+
+  checkCredential(): void {
+    this.loginService.checkCredential(this.login)
+      .subscribe(
+        res=>{
+            if(!res["success"]){
+              alert("Invalid Credentials");
+            }
+        }
+      ); 
+  }
+
 
 }

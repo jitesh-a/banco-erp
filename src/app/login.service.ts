@@ -19,7 +19,7 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   checkCredential (login : Login): Observable<Login> {
-    return this.http.post<any>(this.apiUrl+'login',login,httpOptions);
+    return this.http.post<any>(this.apiUrl+'loginapi',login,httpOptions);
   }
 
   
