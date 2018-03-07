@@ -22,6 +22,7 @@ export class PickupAndDropFromComponent implements OnInit {
   banks : Bank[] =[];
   employees : Employee[] = [];
   selectedbanks : Bank[] = [];
+  type : number;
 
   constructor(private pickdropService:pickUpAndDropService,
               private route:ActivatedRoute,
@@ -39,6 +40,13 @@ export class PickupAndDropFromComponent implements OnInit {
       }
     }
   
+    typeChange():void{
+
+      if(this.type == 3){
+        console.log(this.pickupdrop.EventId);
+        this.getBanks(this.pickupdrop.EventId);
+      }
+    }
     getEvents() : void{
 
       this.eventService.getEvents()

@@ -33,23 +33,115 @@
               <label for="Type">Type</label>
               <select class="form-control" id="Type"
               required
-              [(ngModel)]="sponsorandguest.Type" name="Type"
-              #Type="ngModel">
-                <option value="sponsor">
+              [(ngModel)]="type" name="Type"
+              #Type="ngModel"
+              (change)="typeChange()">
+                <option [value]=0>
                   Sponsor
                 </option>
-                <option value="guest">
+                <option [value]=1>
                   Guest
                 </option>
+                <option [value]=2>
+                  Employee
+                </option>
               </select>
+              <div [hidden]="Type.valid || Type.pristine"
+                class="alert alert-danger">
+                Type is required
+              </div>
+            </div>
+            <div class="form-group" *ngIf="type==2">
+              <label>Bank Name</label>
+              <select class="form-control" id="BankName"
+              required
+              [(ngModel)] = "pickupdrop.BankId" name = "BankName"
+              #BankName="ngModel">
+                <option *ngFor = "let b of selectedbanks"  [value]="b.Id">
+                  {{b.Name}}
+                </option>
+              </select>
+              <div [hidden]="BankName.valid || BankName.pristine"
+                class="alert alert-danger">
+                Bank Name is required
+              </div>
             </div>
 
+            <div class="form-group" *ngIf="type==2">
+              <label>Employee Name</label>
+              <select class="form-control" id="EmployeeName"
+              required
+              [(ngModel)] = "pickupdrop.EmployeeId" name = "EmployeeName"
+              #EmployeeName="ngModel">
+                <option *ngFor = "let emp of employees"  [value]="emp.Id">
+                  {{emp.Name}}
+                </option>
+              </select>
+              <div [hidden]="EmployeeName.valid || EmployeeName.pristine"
+                class="alert alert-danger">
+                Employee Name is required
+              </div>
+            </div>
 
-
-
-
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="PickUpTime">Pick Up Time</label>
+                  <input type="text" class="form-control" id="PickUpTime"
+                         required
+                         [(ngModel)]="pickupdrop.PickUpTime" name="PickUpTime"
+                         #PickUpTime="ngModel" type="date">
+                  <div [hidden]="PickUpTime.valid || PickUpTime.pristine"
+                       class="alert alert-danger">
+                       Pick Up Time is required
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="PickUpPlace">Pick Up Place</label>
+                  <input type="text" class="form-control" id="PickUpPlace"
+                         required
+                         [(ngModel)]="pickupdrop.PickUpPlace" name="PickUpPlace"
+                         #PickUpPlace="ngModel" >
+                  <div [hidden]="PickUpPlace.valid || PickUpPlace.pristine"
+                       class="alert alert-danger">
+                       Pick Up Place is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="DropTime">Drop Time</label>
+                  <input type="text" class="form-control" id="DropTime"
+                         required
+                         [(ngModel)]="pickupdrop.DropTime" name="DropTime"
+                         #DropTime="ngModel" type="date">
+                  <div [hidden]="DropTime.valid || DropTime.pristine"
+                       class="alert alert-danger">
+                       Drop Time is required
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="DropPlace">Drop Place</label>
+                  <input type="text" class="form-control" id="DropPlace"
+                         required
+                         [(ngModel)]="pickupdrop.DropPlace" name="DropPlace"
+                         #DropPlace="ngModel" >
+                  <div [hidden]="DropPlace.valid || DropPlace.pristine"
+                       class="alert alert-danger">
+                       Drop Place is required
+                  </div>
+                </div>                
+              </div>
+            </div>
           <button type="submit" class="btn btn-success" [disabled]="!pickupanddropform.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
-        </form>
+        </form> 
   </div>   
 </div>
