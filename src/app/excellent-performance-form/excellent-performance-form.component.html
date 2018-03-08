@@ -3,10 +3,10 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
-                <input type="text" class="form-control" id=" NetWorthPreviousYrInPercentage "
+                <input type="number" class="form-control" id=" NetWorthPreviousYrInPercentage "
                       required
                       [(ngModel)]="excelperfform.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
-                      #NetWorthPreviousYrInPercentage="ngModel">
+                      #NetWorthPreviousYrInPercentage="ngModel" digits>
                 <div [hidden]=" NetWorthPreviousYrInPercentage .valid ||  NetWorthPreviousYrInPercentage.pristine"
                     class="alert alert-danger">
                     Net Worth Previous Year In Percentage is required
@@ -16,10 +16,10 @@
           <div class="col-md-4">
               <div class="form-group">
                   <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>
-                  <input type="text" class="form-control" id=" NetWorthCurrentYrInPercentage"
+                  <input type="number" class="form-control" id=" NetWorthCurrentYrInPercentage"
                         required
                         [(ngModel)]="excelperfform. NetWorthCurrentYrInPercentage" name=" NetWorthCurrentYrInPercentage"
-                        #NetWorthCurrentYrInPercentage="ngModel">
+                        #NetWorthCurrentYrInPercentage="ngModel" digits>
                   <div [hidden]=" NetWorthCurrentYrInPercentage.valid ||  NetWorthCurrentYrInPercentage.pristine"
                       class="alert alert-danger">
                       Net Worth in Current Year In Percentage is required
@@ -29,10 +29,10 @@
           <div class="col-md-4">
               <div class="form-group">
                   <label for=" NetWorthOverPreviousYrInPercentage">Net Worth Over Previous Year In Percentage </label>
-                  <input type="text" class="form-control" id="NetWorthOverPreviousYrInPercentage "
+                  <input type="number" class="form-control" id="NetWorthOverPreviousYrInPercentage "
                         required
                         [(ngModel)]="excelperfform.NetWorthOverPreviousYrInPercentage " name=" NetWorthOverPreviousYrInPercentage"
-                        #NetWorthOverPreviousYrInPercentage="ngModel">
+                        #NetWorthOverPreviousYrInPercentage="ngModel" digits>
                   <div [hidden]="NetWorthOverPreviousYrInPercentage .valid || NetWorthOverPreviousYrInPercentage.pristine"
                       class="alert alert-danger">
                       Net Worth Over Previous Year In Percentage is required
@@ -44,10 +44,10 @@
     <div class="col-md-4">
             <div class="form-group">
                     <label for="DepositCurrentYr "> Deposit Current Year</label>
-                    <input type="text" class="form-control" id=" DepositCurrentYr"
+                    <input type="number" class="form-control" id=" DepositCurrentYr"
                            required
                            [(ngModel)]="excelperfform.DepositCurrentYr" name="DepositCurrentYr "
-                           #DepositCurrentYr ="ngModel">
+                           #DepositCurrentYr ="ngModel" digits>
                     <div [hidden]=" DepositCurrentYr.valid || DepositCurrentYr.pristine"
                          class="alert alert-danger">
                          Deposit Current Year is required
@@ -58,10 +58,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="DepositPreviousYr "> Deposit Previous Year</label>
-                        <input type="text" class="form-control" id=" DepositPreviousYr"
+                        <input type="number" class="form-control" id=" DepositPreviousYr"
                                required
                                [(ngModel)]="excelperfform.DepositPreviousYr" name="DepositPreviousYr"
-                               #DepositPreviousYr="ngModel">
+                               #DepositPreviousYr="ngModel" digits>
                         <div [hidden]=" DepositPreviousYr.valid ||DepositPreviousYr.pristine"
                              class="alert alert-danger">
                              Deposit Previous Year is required
@@ -72,10 +72,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalDepositOverPreviousYrInPercentage ">  Total Deposit Over Previous Year In Percentage</label>
-                        <input type="text" class="form-control" id="  TotalDepositOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id="  TotalDepositOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform.  TotalDepositOverPreviousYrInPercentage" name=" TotalDepositOverPreviousYrInPercentage "
-                               #TotalDepositOverPreviousYrInPercentage="ngModel">
+                               #TotalDepositOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="  TotalDepositOverPreviousYrInPercentage.valid || TotalDepositOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Deposit Over Previous Year In Percentage is required
@@ -89,10 +89,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
-                        <input type="text" class="form-control" id="  TotalAdvancesCurrentYr"
+                        <input type="number" class="form-control" id="  TotalAdvancesCurrentYr"
                                required
                                [(ngModel)]="excelperfform. TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
-                               #TotalAdvancesCurrentYr="ngModel">
+                               #TotalAdvancesCurrentYr="ngModel" digits>
                         <div [hidden]="  TotalAdvancesCurrentYr.valid || TotalAdvancesCurrentYr.pristine"
                              class="alert alert-danger">
                              Total Advances Current Year is required
@@ -103,10 +103,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
-                        <input type="text" class="form-control" id=" TotalAdvancesPreviousYr"
+                        <input type="number" class="form-control" id=" TotalAdvancesPreviousYr"
                                required
                                [(ngModel)]="excelperfform. TotalAdvancesPreviousYr" name=" TotalAdvancesPreviousYr "
-                               #TotalAdvancesPreviousYr="ngModel">
+                               #TotalAdvancesPreviousYr="ngModel" digits>
                         <div [hidden]="  TotalAdvancesPreviousYr.valid || TotalAdvancesPreviousYr.pristine"
                              class="alert alert-danger">
                              Total Advances Previous Year is required
@@ -117,10 +117,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>
-                        <input type="text" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform. TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage "
-                               #TotalAdvancesOverPreviousYrInPercentage="ngModel">
+                               #TotalAdvancesOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="  TotalAdvancesOverPreviousYrInPercentage.valid || TotalAdvancesOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Advances Over Previous Year In Percentage is required
@@ -133,10 +133,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="  GrossNPAInCurrentYr ">  Gross NPA In Current Year</label>
-                        <input type="text" class="form-control" id=" GrossNPAInCurrentYr"
+                        <input type="number" class="form-control" id=" GrossNPAInCurrentYr"
                                required
                                [(ngModel)]="excelperfform. GrossNPAInCurrentYr" name=" GrossNPAInCurrentYr "
-                               #GrossNPAInCurrentYr="ngModel">
+                               #GrossNPAInCurrentYr="ngModel" digits>
                         <div [hidden]=" GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
                              class="alert alert-danger">
                              Gross NPA In Current Year is required
@@ -147,10 +147,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" GrossNPAInPreviousYr ">Gross NPA In Previous Year </label>
-                        <input type="text" class="form-control" id="GrossNPAInPreviousYr"
+                        <input type="number" class="form-control" id="GrossNPAInPreviousYr"
                                required
                                [(ngModel)]="excelperfform.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
-                               #GrossNPAInPreviousYr="ngModel">
+                               #GrossNPAInPreviousYr="ngModel" digits>
                         <div [hidden]="GrossNPAInPreviousYr.valid ||GrossNPAInPreviousYr.pristine"
                              class="alert alert-danger">
                              Gross NPA In Previous Year is required
@@ -161,10 +161,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
-                        <input type="text" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
-                               #TotalGrossNPAOverPreviousYrInPercentage="ngModel">
+                               #TotalGrossNPAOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="TotalGrossNPAOverPreviousYrInPercentage.valid ||TotalGrossNPAOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Gross NPA Over Previous Year In Percentage is required
@@ -177,10 +177,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" NetNPACurrentYr "> Net NPA Current Year</label>
-                        <input type="text" class="form-control" id="NetNPACurrentYr"
+                        <input type="number" class="form-control" id="NetNPACurrentYr"
                                required
                                [(ngModel)]="excelperfform.NetNPACurrentYr" name="NetNPACurrentYr "
-                               #NetNPACurrentYr="ngModel">
+                               #NetNPACurrentYr="ngModel" digits>
                         <div [hidden]="NetNPACurrentYr.valid ||NetNPACurrentYr.pristine"
                              class="alert alert-danger">
                              Net NPA Current Year is required
@@ -192,10 +192,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="NetNPAPreviousYr  "> Net NPA Previous Year</label>
-                        <input type="text" class="form-control" id="NetNPAPreviousYr"
+                        <input type="number" class="form-control" id="NetNPAPreviousYr"
                                required
                                [(ngModel)]="excelperfform.NetNPAPreviousYr" name="NetNPAPreviousYr "
-                               #NetNPAPreviousYr="ngModel">
+                               #NetNPAPreviousYr="ngModel" digits>
                         <div [hidden]="NetNPAPreviousYr.valid ||NetNPAPreviousYr.pristine"
                              class="alert alert-danger">
                              Net NPA Previous Year is required
@@ -206,10 +206,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="  TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
-                        <input type="text" class="form-control" id=" TotalNetNPAOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id=" TotalNetNPAOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform. TotalNetNPAOverPreviousYrInPercentage" name="  TotalNetNPAOverPreviousYrInPercentage"
-                               #TotalNetNPAOverPreviousYrInPercentage="ngModel">
+                               #TotalNetNPAOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]=" TotalNetNPAOverPreviousYrInPercentage.valid || TotalNetNPAOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Net NPA Over Previous Year In Percentage  is required
@@ -221,11 +221,11 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="   ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>
-                        <input type="text" class="form-control" id=" ReturnOnAssetsInCurrentYr"
+                        <label for="ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>
+                        <input type="number" class="form-control" id=" ReturnOnAssetsInCurrentYr"
                                required
                                [(ngModel)]="excelperfform. ReturnOnAssetsInCurrentYr" name="  ReturnOnAssetsInCurrentYr"
-                               #ReturnOnAssetsInCurrentYr="ngModel">
+                               #ReturnOnAssetsInCurrentYr="ngModel" digits>
                         <div [hidden]=" ReturnOnAssetsInCurrentYr.valid || ReturnOnAssetsInCurrentYr.pristine"
                              class="alert alert-danger">
                              Return On Assets In Current Year   is required
@@ -235,10 +235,10 @@
 
         <div class="col-md-4"><div class="form-group">
                 <label for="  ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
-                <input type="text" class="form-control" id=" ReturnOnAssetsInPerviousYr"
+                <input type="number" class="form-control" id=" ReturnOnAssetsInPerviousYr"
                        required
                        [(ngModel)]="excelperfform. ReturnOnAssetsInPerviousYr" name="  ReturnOnAssetsInPerviousYr"
-                       #ReturnOnAssetsInPerviousYr="ngModel">
+                       #ReturnOnAssetsInPerviousYr="ngModel" digits>
                 <div [hidden]=" ReturnOnAssetsInPerviousYr.valid || ReturnOnAssetsInPerviousYr.pristine"
                      class="alert alert-danger">
                      Return On Assets In Pervious Year is required
@@ -249,10 +249,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="  TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
-                        <input type="text" class="form-control" id=" TotalReturnOnAssetsOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id=" TotalReturnOnAssetsOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform. TotalReturnOnAssetsOverPreviousYrInPercentage" name=" TotalReturnOnAssetsOverPreviousYrInPercentage "
-                               #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel">
+                               #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]=" TotalReturnOnAssetsOverPreviousYrInPercentage.valid || TotalReturnOnAssetsOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Return On Assets Over Previous Year In Percentage  is required
@@ -266,10 +266,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="PerEmpBusinessCurrentYr  ">Per Employee Business Current Year </label>
-                        <input type="text" class="form-control" id="PerEmpBusinessCurrentYr"
+                        <input type="number" class="form-control" id="PerEmpBusinessCurrentYr"
                                required
                                [(ngModel)]="excelperfform.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
-                               #PerEmpBusinessCurrentYr="ngModel">
+                               #PerEmpBusinessCurrentYr="ngModel" digits>
                         <div [hidden]="PerEmpBusinessCurrentYr.valid ||PerEmpBusinessCurrentYr.pristine"
                              class="alert alert-danger">
                              Per Employee Business Current Year is required
@@ -279,11 +279,11 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PerEmpBusinessPreviousYr  "> Per Employee Business Previous Year</label>
-                        <input type="text" class="form-control" id="PerEmpBusinessPreviousYr"
+                        <label for="number"  >Per Employee Business Previous Year</label>
+                        <input type="number" class="form-control" id="PerEmpBusinessPreviousYr"
                                required
                                [(ngModel)]="excelperfform.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
-                               #PerEmpBusinessPreviousYr="ngModel">
+                               #PerEmpBusinessPreviousYr="ngModel" digits/>
                         <div [hidden]="PerEmpBusinessPreviousYr.valid ||PerEmpBusinessPreviousYr.pristine"
                              class="alert alert-danger">
                              Per Employee Business Previous Year is required
@@ -295,10 +295,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
-                        <input type="text" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
-                               #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel">
+                               #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="TotalPerEmpBusinessOverPreviousYrInPercentage.valid ||TotalPerEmpBusinessOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Per Employee Business Over Previous Year In Percentage is required
@@ -311,10 +311,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="  NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
-                        <input type="text" class="form-control" id=" NetProfitToTotalAssetsCurrentYr"
+                        <input type="number" class="form-control" id=" NetProfitToTotalAssetsCurrentYr"
                                required
                                [(ngModel)]="excelperfform. NetProfitToTotalAssetsCurrentYr" name="  NetProfitToTotalAssetsCurrentYr"
-                               #NetProfitToTotalAssetsCurrentYr="ngModel">
+                               #NetProfitToTotalAssetsCurrentYr="ngModel" digits>
                         <div [hidden]=" NetProfitToTotalAssetsCurrentYr.valid || NetProfitToTotalAssetsCurrentYr.pristine"
                              class="alert alert-danger">
                              Net Profit To Total Assets Current Year  is required
@@ -325,10 +325,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for=" NetProfitToTotalAssetsPreviousYr  "> Net Profit To Total Assets Previous Year </label>
-                        <input type="text" class="form-control" id=" NetProfitToTotalAssetsPreviousYr"
+                        <input type="number" class="form-control" id=" NetProfitToTotalAssetsPreviousYr"
                                required
                                [(ngModel)]="excelperfform. NetProfitToTotalAssetsPreviousYr" name="  NetProfitToTotalAssetsPreviousYr"
-                               #NetProfitToTotalAssetsPreviousYr="ngModel">
+                               #NetProfitToTotalAssetsPreviousYr="ngModel" digits>
                         <div [hidden]=" NetProfitToTotalAssetsPreviousYr.valid || NetProfitToTotalAssetsPreviousYr.pristine"
                              class="alert alert-danger">
                              Net Profit To Total Assets Previous Year is required
@@ -339,10 +339,10 @@
         <div class="col-md-4">
                 <div class="form-group">
                         <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage  ">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
-                        <input type="text" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
+                        <input type="number" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
                                required
                                [(ngModel)]="excelperfform.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
-                               #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel">
+                               #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.valid ||TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              TotalNetProfitToTotalAssetsOverPreviousYrInPercentage is required

@@ -74,6 +74,7 @@ export class BankFormComponent implements OnInit {
           res=>{
             console.log(res);
             console.log("Id : "+res["id"]);
+            console.log(res["id"]);
             alert("data saved successfully");
             this.router.navigate( ['/questionary1', {id: res["id"], name: this.name}]);
          

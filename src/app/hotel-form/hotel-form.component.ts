@@ -18,9 +18,13 @@ export class HotelFormComponent implements OnInit {
     private location: Location,private eventService:EventService) { }
   ngOnInit() {
     this.getEvents();
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if(id>0){
+      this.getHotel(id);
+    }
   }
 
-  getHotels(id: number) : void{
+  getHotel(id: number) : void{
 
     this.hotelService.getHotel(id)
       .subscribe(res=> this.hotel = res["data"]);

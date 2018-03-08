@@ -19,7 +19,7 @@
         <input type="text" class="form-control" id="Name"
                required
                [(ngModel)]="hotel.Name" name="Name"
-               #Name="ngModel">
+               #Name="ngModel" pattern="[a-zA-Z ]*"/>
         <div [hidden]="Name.valid || Name.pristine"
              class="alert alert-danger">
           Name is required
@@ -52,7 +52,7 @@
         <input type="text" class="form-control" id="Location"
                required
                [(ngModel)]="hotel.Location" name="Location"
-               #Location="ngModel">
+               #Location="ngModel" pattern="[a-zA-Z ]*"/>
         <div [hidden]="Location.valid || Location.pristine"
              class="alert alert-danger">
              Location is required
@@ -63,7 +63,7 @@
         <input type="number" class="form-control" id="NumberOfRooms"
                required
                [(ngModel)]="hotel.NumberOfRooms" name="NumberOfRooms"
-               #NumberOfRooms="ngModel">
+               #NumberOfRooms="ngModel" digits>
         <div [hidden]="NumberOfRooms.valid || NumberOfRooms.pristine"
              class="alert alert-danger">
              Number Of Rooms is required
@@ -74,7 +74,7 @@
         <input type="number" class="form-control" id="Amount"
                required
                [(ngModel)]="hotel.Amount" name="Amount"
-               #Amount="ngModel" type="number">
+               #Amount="ngModel" digits>
         <div [hidden]="Amount.valid || Amount.pristine"
              class="alert alert-danger">
              Amount is required

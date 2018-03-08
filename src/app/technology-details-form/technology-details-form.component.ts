@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { TechnologyDetails } from "../../models/technologyDetails.model";
 import { TechnologyDetailsService } from "./../technology-details.service";
+import { Router } from "@angular/router";
+
 @Component({
   selector: 'app-technology-details-form',
   templateUrl: './technology-details-form.component.html',
@@ -10,13 +12,16 @@ import { TechnologyDetailsService } from "./../technology-details.service";
 })
 export class TechnologyDetailsFormComponent implements OnInit {
   techdetails:TechnologyDetails=new TechnologyDetails();
+  
   constructor(private technologydetailService:TechnologyDetailsService,private route:ActivatedRoute,
-    private location:Location) { }
+    private location:Location,private router:Router) { }
   
     ngOnInit() {
       const id = Number(this.route.snapshot.paramMap.get('id'));
       if(id>0){
         this.getTechnologyDetails(id);
+        this.techdetails.Id = Number(this.route.snapshot.paramMap.get('id'));
+        console.log("test data"+this.techdetails.Id);
       }
     }
   

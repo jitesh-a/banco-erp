@@ -36,6 +36,15 @@ export class EventFormComponent implements OnInit {
     this.location.back();
   }
 
+  checkDate():void
+  {
+    if(this.event.StartDate>this.event.EndDate)
+    {
+      alert("start date must be less than end date");
+      return ;
+    }
+  }
+
   save(): void{
     if(this.event.Id>0){
       this.eventService.updateEvent(this.event)

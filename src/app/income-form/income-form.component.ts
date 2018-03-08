@@ -11,7 +11,8 @@ import { IncomeService } from "./../income.service";
   styleUrls: ['./income-form.component.css']
 })
 export class IncomeFormComponent implements OnInit {
- income:Income=new Income(); 
+ 
+  income: Income = new Income(); 
   constructor(private incomeService:IncomeService,private route:ActivatedRoute,
   private location:Location) { }
 

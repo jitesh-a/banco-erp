@@ -15,11 +15,11 @@
               </div>            
           </div>
           <div class="form-group">
-            <label for="Description">Type</label>
+            <label for="Type">Type</label>
             <input type="text" class="form-control" id="Type"
                    required
                    [(ngModel)]="banktype.Type" name="Type"
-                   #Type="ngModel"/>
+                   #Type="ngModel" pattern="[a-zA-Z ]*"/>
             <div [hidden]="Type.valid || Type.pristine"
                  class="alert alert-danger">
                  Type is required

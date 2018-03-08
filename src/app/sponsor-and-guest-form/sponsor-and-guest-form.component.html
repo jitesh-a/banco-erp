@@ -19,7 +19,7 @@
             <input type="text" class="form-control" id="Name"
                    required
                    [(ngModel)]="sponsorandguest.Name" name="Name"
-                   #Name="ngModel">
+                   #Name="ngModel"  pattern="[a-zA-Z ]*"/>
             <div [hidden]="Name.valid || Name.pristine"
                  class="alert alert-danger">
               Name is required
@@ -41,7 +41,7 @@
                 <input type="number" class="form-control" id="Contact"
                        required
                        [(ngModel)]="sponsorandguest.contact" name="Contact"
-                       #Contact="ngModel" type="number">
+                       #Contact="ngModel" minlength="10" digits>
                 <div [hidden]="Contact.valid || Contact.pristine"
                      class="alert alert-danger">
                      Contact is required
@@ -52,7 +52,7 @@
                   <input type="number" class="form-control" id="Amount"
                          required
                          [(ngModel)]="sponsorandguest.Amount" name="Amount"
-                         #Amount="ngModel" type="number">
+                         #Amount="ngModel" digits>
                   <div [hidden]="Amount.valid || Amount.pristine"
                        class="alert alert-danger">
                        Amount is required
@@ -63,7 +63,7 @@
                   <input type="text" class="form-control" id="Topic"
                          required
                          [(ngModel)]="sponsorandguest.Topic" name="Topic"
-                         #Topic="ngModel" type="text">
+                         #Topic="ngModel" pattern="[a-zA-Z ]*"/>
                   <div [hidden]="Topic.valid || Topic.pristine"
                        class="alert alert-danger">
                        Topic is required
