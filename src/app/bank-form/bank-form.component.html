@@ -97,13 +97,13 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="Pincode">Pincode</label>
-                        <input type="text" class="form-control" id="Pincode"
+                        <input type="number" class="form-control" id="Pincode"
                                required
                                [(ngModel)]="bank.Pincode" name="Pincode"
-                               #Pincode="ngModel">
+                               #Pincode="ngModel" pattern="^[1-9][0-9]{5}$">
                         <div [hidden]="Pincode.valid ||Pincode.pristine"
                              class="alert alert-danger">
-                             Pincode is required
+                             Enter valid pincode 
                         </div>
                       </div>
                 </div>
@@ -112,7 +112,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="Establishment_no">Establishment number</label>
-                        <input type="text" class="form-control" id="Establishment_no"
+                        <input type="number" class="form-control" id="Establishment_no"
                                required
                                [(ngModel)]="bank.Establishment_no" name="Establishment_no"
                                #Establishment_no="ngModel">
@@ -182,10 +182,10 @@
                           <input type="number" class="form-control" id="Chairman_mobile"
                                  required
                                  [(ngModel)]="bank.Chairman_mobile" name="Chairman_mobile"
-                                 #Chairman_mobile="ngModel" minlength="10" digits>
+                                 #Chairman_mobile="ngModel" pattern="[7-9]{1}[0-9]{9}" digits>
                           <div [hidden]="Chairman_mobile.valid ||Chairman_mobile.pristine"
                                class="alert alert-danger">
-                               Chairman mobile number is required
+                               Enter valid mobile number
                           </div>
                         </div>
                   </div>
@@ -210,7 +210,7 @@
                       <input type="number" class="form-control" id="MD_CEO_GM_mobile"
                              required
                              [(ngModel)]="bank.MD_CEO_GM_mobile" name="MD_CEO_GM_mobile"
-                             #MD_CEO_GM_mobile="ngModel" minlength="10" digits >
+                             #MD_CEO_GM_mobile="ngModel" pattern="[7-9]{1}[0-9]{9}" digits >
                       <div [hidden]="MD_CEO_GM_mobile.valid ||MD_CEO_GM_mobile.pristine"
                            class="alert alert-danger">
                            MD/CEO/GM mobile number is required
@@ -238,7 +238,7 @@
                       <input type="number" class="form-control" id=" IT_head_mobile"
                              required
                              [(ngModel)]="bank.IT_head_mobile" name=" IT_head_mobile"
-                             #IT_head_mobile="ngModel"  minlength="10" digits>
+                             #IT_head_mobile="ngModel"  pattern="[7-9]{1}[0-9]{9}" digits>
                       <div [hidden]=" IT_head_mobile.valid || IT_head_mobile.pristine"
                            class="alert alert-danger">
                            IT head mobile number is required
@@ -263,7 +263,7 @@
                 <input type="number" class="form-control" id="Contact"
                        required
                        [(ngModel)]="bank.contact" name="Contact"
-                       #Contact="ngModel"  minlength="10" digits>
+                       #Contact="ngModel"  pattern="[7-9]{1}[0-9]{9}" digits>
                 <div [hidden]="Contact.valid || Contact.pristine"
                      class="alert alert-danger">
                      Contact is required
