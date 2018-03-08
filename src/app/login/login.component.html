@@ -8,7 +8,7 @@
               <input type="email" class="form-control" id="Email"
                      required
                      [(ngModel)]="login.Email" name="Email"
-                     #Email="ngModel"> 
+                     #Email="ngModel" type="email"> 
                 <div [hidden]="Email.valid || Email.pristine"
                      class="alert alert-danger">
                  Email is required
