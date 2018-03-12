@@ -25,8 +25,8 @@ export class SponsorAndGuestFormComponent implements OnInit {
   }
 
 
-  getSponsorAndGuests():void{
-  this.sponsorandguestService.getSponsorAndGuests()
+  getSponsorAndGuests( id: number):void{
+  this.sponsorandguestService.getSponsorAndGuest(id)
   .subscribe(res=> this.sponsorandguest = res["data"]);
   }
 
@@ -36,7 +36,11 @@ export class SponsorAndGuestFormComponent implements OnInit {
                   .subscribe(res=>{
                     console.log(res["events"]);
                     this.events=res["events"];
-                    
+                    const id = Number(this.route.snapshot.paramMap.get('id'));
+                    console.log(id);
+                    if(id>0){
+                      this.getSponsorAndGuests(id);
+                    }
                   });
       //.subscribe(data=>{},err=>{});
     }

@@ -39,7 +39,7 @@ export class ExcellentPerformanceFormComponent implements OnInit {
         res=>{
          console.log(res);
          console.log(res["id"]);
-         alert("data saved successfully");
+         //alert("data saved successfully");
          this.router.navigate( ['/technologydetailsform', {id: this.id, name: this.name}]);
         },
         err=>{

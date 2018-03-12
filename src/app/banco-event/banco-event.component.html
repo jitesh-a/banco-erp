@@ -6,9 +6,9 @@
 <div class="row" >
 <div class="col-md-12">
     
-    <img class = "centered" src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
+    <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
     
-    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="table_events">
         <thead>
               <tr>
                 <th>Id</th>
@@ -28,8 +28,9 @@
             <td>{{e.EndDate}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/eventform/{{e.Id}}"> Edit </a>
-              <a class="btn btn-sm btn-danger" (click)="delete(e.Id)"> Delete </a>
-              <a class="btn btn-sm btn-success" href="/fillform/{{e.Id}}/{{e.Name}}">generate link</a>
+              <a class="btn btn-sm btn-danger"> Delete </a>
+              <a class="btn btn-sm btn-success" href="/fillform/{{e.Id}}/{{e.Name}}"> Generate Link </a>
+              
             </td>
           </tr>
         </tbody>
