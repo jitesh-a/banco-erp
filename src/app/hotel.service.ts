@@ -29,8 +29,8 @@ export class HotelService {
   }
 
   updateHotel(hotel: Hotel): Observable<any>{
-    //console.log(event);
-    return this.http.put<Hotel>(this.apiUrl+`edit/${hotel.Id}`, hotel, httpOptions)
+    console.log(hotel);
+    return this.http.post<Hotel>(this.apiUrl+`edit/${hotel.Id}`,hotel, httpOptions)
             .pipe(
               tap(_=>this.log(`Updated hotel : ${hotel.Id}`)),
               catchError(this.handleError<any>(`update event Id=${hotel.Id}`))

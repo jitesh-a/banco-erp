@@ -25,7 +25,7 @@ export class BancoEventComponent implements OnInit {
   getEvents(): void {
     this.eventService.getEvents()
                 .subscribe(res=>{
-                  console.log(res["events"]);
+                  console.log(res);
                   this.events=res["events"];
                   
                 });

@@ -14,8 +14,10 @@ export class HotelFormComponent implements OnInit {
 
  events : Event[] = [];
   hotel:Hotel = new Hotel(); 
+
   constructor(private hotelService:HotelService,private route:ActivatedRoute,
     private location: Location,private eventService:EventService) { }
+    
   ngOnInit() {
     this.getEvents();
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -47,6 +49,7 @@ export class HotelFormComponent implements OnInit {
 
   save(): void{
     if(this.hotel.Id>0){
+      console.log("Hotel data : "+this.hotel)
       this.hotelService.updateHotel(this.hotel)
       .subscribe(
         res=>{

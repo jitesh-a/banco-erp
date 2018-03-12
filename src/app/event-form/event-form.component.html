@@ -43,7 +43,7 @@
                 <input type="text" class="form-control" id="StartDate"
                        required
                        [(ngModel)]="event.StartDate" name="StartDate"
-                       #StartDate="ngModel" type="date">
+                       #StartDate="ngModel" type="date" >
                 <div [hidden]="StartDate.valid || StartDate.pristine"
                      class="alert alert-danger">
                      StartDate is required
