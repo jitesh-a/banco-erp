@@ -52,7 +52,7 @@
               <input type="number" class="form-control" id="Contact"
                      required
                      [(ngModel)]="employee.Contact" name="Contact"
-                     #Contact="ngModel" minlength="10" digits/>
+                     #Contact="ngModel"  pattern="[7-9]{1}[0-9]{9}" digits/>
               <div [hidden]="Contact.valid || Contact.pristine"
                    class="alert alert-danger">
                    Contact is required (enter only numbers)

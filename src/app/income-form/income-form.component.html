@@ -19,7 +19,11 @@
             <input type="text" class="form-control" id="Name"
                    required
                    [(ngModel)]="income.Name" name="Name"
+<<<<<<< HEAD
                    #Name="ngModel"/>
+=======
+                   #Name="ngModel" pattern="[a-zA-Z ]*"/>
+>>>>>>> 52707d398e931aa05c86470d8e85fb6799e4fc4e
             <div [hidden]="Name.valid || Name.pristine"
                  class="alert alert-danger">
               Name is required
