@@ -30,8 +30,7 @@ export class BankTypeService{
 
   updateBankType(banktype: BankType): Observable<any>{
     //console.log(banktype);
-    return this.http.put<BankType>(this.apiUrl+`edit/${banktype.Id}`, banktype, httpOptions)
-            ;
+    return this.http.post<BankType>(this.apiUrl+`edit/${banktype.Id}`, banktype, httpOptions);
   }
 
    /** GET banktype by id. Will 404 if id not found */

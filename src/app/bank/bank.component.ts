@@ -4,6 +4,8 @@ import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import {Bank  } from "../../models/bank.model";
 import { BankService } from "../bank.service";
 
+declare const $;
+
 
 @Component({
  templateUrl: './bank.component.html',
@@ -28,6 +30,16 @@ export class BankComponent implements OnInit {
                 .subscribe(res=>{
                   console.log(res["bank"]);
                   this.banks=res["banks"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    //alert('test');
+                    $('#Bank').DataTable( {
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
                   
                 });
     //.subscribe(data=>{},err=>{});

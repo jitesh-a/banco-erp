@@ -30,7 +30,7 @@ export class SponsorAndGuestService {
 
   updateSponsorAndGuest(sponsorandguest: SponsorAndGuest): Observable<any>{
     //console.log(sponsorandguest);
-    return this.http.put<SponsorAndGuest>(this.apiUrl+`edit/${sponsorandguest.Id}`, sponsorandguest, httpOptions)
+    return this.http.post<SponsorAndGuest>(this.apiUrl+`edit/${sponsorandguest.Id}`, sponsorandguest, httpOptions)
             .pipe(
               tap(_=>this.log(`Updated sponsorandguest : ${sponsorandguest.Id}`)),
               catchError(this.handleError<any>(`update sponsorandguest Id=${sponsorandguest.Id}`))

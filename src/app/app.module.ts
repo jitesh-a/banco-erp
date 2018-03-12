@@ -48,7 +48,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { TestingService } from './testing.service';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
-import { CustomFormsModule } from 'ng4-validators';
+import { CustomFormsModule } from 'ng4-validators'
 
 @NgModule({
   declarations: [
