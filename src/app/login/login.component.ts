@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   login:Login=new Login(); 
   constructor(private loginService:LoginService,private route:ActivatedRoute,
-  private location:Location, private router: Router) { }
+  private location:Location,
+  private router : Router) { }
 
 
   ngOnInit() {
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
             else{
               this.router.navigate( ['/events']);
             }
+            this.router.navigate(['/events']);
         }
       ); 
   }

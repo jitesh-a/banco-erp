@@ -1,15 +1,14 @@
-
 <div class="row">
   <div class="col-md-12">
       <h1>Income Form</h1>
       <hr/>
       <form (ngSubmit)="onSubmit" #incomeForm="ngForm">
-          <div class="form-group" *ngIf="event.Id>0">
+          <div class="form-group" *ngIf="income.Id>0">
               <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"
                      required
                      [(ngModel)]="income.Id" name="Id"
-                     #Id="ngModel" readonly> 
+                     #Id="ngModel" readonly/> 
                 <div [hidden]="Id.valid || Id.pristine"
                      class="alert alert-danger">
                   Id is required
@@ -20,7 +19,11 @@
             <input type="text" class="form-control" id="Name"
                    required
                    [(ngModel)]="income.Name" name="Name"
+<<<<<<< HEAD
+                   #Name="ngModel"/>
+=======
                    #Name="ngModel" pattern="[a-zA-Z ]*"/>
+>>>>>>> 52707d398e931aa05c86470d8e85fb6799e4fc4e
             <div [hidden]="Name.valid || Name.pristine"
                  class="alert alert-danger">
               Name is required
@@ -37,21 +40,18 @@
                    Description is required
               </div>
             </div>
-
             <div class="form-group">
               <label for="Amount">Amount</label>
               <input type="number" class="form-control" id="Amount"
                      required
                      [(ngModel)]="income.Amount" name="Amount"
-                     #Amount="ngModel" type="number" digits >
+                     #Amount="ngModel" digits />
               <div [hidden]="Amount.valid || Amount.pristine"
                    class="alert alert-danger">
                    Amount is required
               </div>
-              <p *ngIf="Ammount.errors?.digits">error message</p>
-            </div>  
-
-     
+             
+            </div> 
           <button type="submit" class="btn btn-success" [disabled]="!incomeForm.form.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form>

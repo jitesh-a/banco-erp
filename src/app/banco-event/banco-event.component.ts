@@ -26,7 +26,7 @@ dataLoaded: boolean;
   getEvents(): void {
     this.eventService.getEvents()
                 .subscribe(res=>{
-                  console.log(res["events"]);
+                  console.log(res);
                   this.events=res["events"];
                   this.dataLoaded=true;
                   $(function(){

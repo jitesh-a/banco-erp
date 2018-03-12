@@ -30,8 +30,8 @@ export class EventService {
   }
 
   updateEvent(event: Event): Observable<any>{
-    //console.log(event);
-    return this.http.put<Event>(this.apiUrl+`edit/${event.Id}`, event, httpOptions)
+    console.log(event);
+    return this.http.post<Event>(this.apiUrl+`edit/${event.Id}`,event,httpOptions)
             .pipe(
               tap(_=>this.log(`Updated event : ${event.Id}`)),
               catchError(this.handleError<any>(`update event Id=${event.Id}`))

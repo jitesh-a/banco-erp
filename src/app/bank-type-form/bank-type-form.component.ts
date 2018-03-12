@@ -3,6 +3,7 @@ import { BankType } from "../../models/bankType.model";
 import { BankTypeService } from "./../bank-type.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-bank-type-form',
@@ -14,13 +15,14 @@ export class BankTypeFormComponent implements OnInit {
   banktype : BankType = new BankType();
 
   constructor(private banktypeService:BankTypeService,private route: ActivatedRoute,
-    private location: Location ) { }
+    private location: Location,
+    private router: Router ) { }
 
   ngOnInit() {
 
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if(id>0){
-      
+      this.getBankType(id);
     }
   }
 
@@ -41,6 +43,8 @@ export class BankTypeFormComponent implements OnInit {
       .subscribe(
         res=>{
          console.log("successfully inserted ");
+         alert("data Changed successfully");
+         this.router.navigate( ['/banktype']);
         },
         err=>{
          console.error(err);
