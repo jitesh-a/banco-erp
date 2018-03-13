@@ -25,6 +25,7 @@ import { ExcellentPerformance } from '../models/excellentPerformance.model';
 import { Login } from '../models/login.model';
 import { LoginComponent } from './login/login.component';
 import { TechDetailsViewComponent } from "./tech-details-view/tech-details-view.component";
+import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-view.component";
 
 
 const routes: Routes = [
@@ -55,7 +56,8 @@ const routes: Routes = [
   { path:'fillform/:id/:name', component: BankFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
-  {path: 'techdetailsview',component:TechDetailsViewComponent}
+  {path: 'techdetailsview',component:TechDetailsViewComponent},
+  {path:'exelperformview/:id',component:ExcelPerformViewComponent}
 ];
 
 @NgModule({
