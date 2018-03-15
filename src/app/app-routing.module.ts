@@ -56,7 +56,7 @@ const routes: Routes = [
   { path:'fillform/:id/:name', component: BankFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
-  {path: 'techdetailsview',component:TechDetailsViewComponent},
+  {path: 'techdetailsview/:id',component:TechDetailsViewComponent},
   {path:'exelperformview/:id',component:ExcelPerformViewComponent}
 ];
 
