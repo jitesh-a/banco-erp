@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BankType } from "../../models/bankType.model";
 import { BankTypeService } from "../bank-type.service";
+
+declare const $;
 @Component({
   templateUrl: './bank-type.component.html',
   styleUrls: ['./bank-type.component.css']

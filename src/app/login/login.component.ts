@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
             if(!res["success"]){
               alert("Invalid Credentials");
             }
+            else{
+              this.router.navigate( ['/events']);
+            }
             this.router.navigate(['/events']);
         }
       ); 
