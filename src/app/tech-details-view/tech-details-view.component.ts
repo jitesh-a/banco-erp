@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { TechnologyDetails } from "../../models/technologyDetails.model";
 import { TechnologyDetailsComponent } from "../technology-details/technology-details.component";
 import { TechnologyDetailsService } from "../technology-details.service";
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-tech-details-view',
@@ -10,36 +13,24 @@ import { TechnologyDetailsService } from "../technology-details.service";
 })
 export class TechDetailsViewComponent implements OnInit {
   
-  techdetails: TechnologyDetails[] = [];
-  dataLoaded: boolean;
-  constructor(private techdetailsService:TechnologyDetailsService) { }
+
+  id: number;
+  model: TechnologyDetails=new TechnologyDetails();
+  constructor(private techdetailsService:TechnologyDetailsService ,private route: ActivatedRoute,
+    private location: Location,private router:Router) { }
 
   ngOnInit() {
-    this.dataLoaded=false;
-    this.getTechnologyDetail();
-    this.dataLoaded=true;
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
   }
-  getTechnologyDetail():void{
-    this.techdetailsService.getTechnologyDetails()
+   //fetch model
+   fetchModel(id: number): void{
+    this.techdetailsService.getTechnologyDetail(id)
     .subscribe(res=>{
-      console.log(res["TechnologyDetails"]);
-      this.techdetails=res["TechnologyDetails"];
-    });  
-  }
-    delete(techdetails:TechnologyDetails):void {
-      
-          this.techdetails = this.techdetails.filter(h=> h!== techdetails);
-          this.techdetailsService.deleteTechnologyDetail(techdetails).subscribe(
-            res =>{
-              console.log(res);
-            },
-            err =>{
-              console.error(err);
-            }
-      
-          );
-        
-
+      this.model=res["data"];
+    },
+    err=>{
+      console.error(err);
+    })
   }
 
 }
