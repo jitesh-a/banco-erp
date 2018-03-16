@@ -21,14 +21,13 @@ export class SponsorAndGuestFormComponent implements OnInit {
   ngOnInit() {
    
     this.getEvents();
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if(id>0){
+      this.getSponsorOrGuets(id);
+    }
     
   }
 
-
-  getSponsorAndGuests():void{
-  this.sponsorandguestService.getSponsorAndGuests()
-  .subscribe(res=> this.sponsorandguest = res["data"]);
-  }
 
     //get
     getEvents(): void {
@@ -36,12 +35,20 @@ export class SponsorAndGuestFormComponent implements OnInit {
                   .subscribe(res=>{
                     console.log(res["events"]);
                     this.events=res["events"];
-                    
+                   
                   });
       //.subscribe(data=>{},err=>{});
     }
 
-    goBack(): void {
+    getSponsorOrGuets(id : number):void{
+      
+          this.sponsorandguestService.getSponsorAndGuest(id)
+            .subscribe(res=> this.sponsorandguest = res["data"],
+          err=>console.error(err));
+      
+    }
+      
+    goBack() :void{
       this.location.back();
     }
   
