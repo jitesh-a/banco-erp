@@ -21,9 +21,19 @@ export class SponsorAndGuestFormComponent implements OnInit {
   ngOnInit() {
    
     this.getEvents();
-    
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if(id>0){
+      this.getSponsorAndGuest(id);
+    }
   }
 
+  getSponsorAndGuest(id: number): void {
+    //const id = +this.route.snapshot.paramMap.get('id');
+    this.sponsorandguestService.getSponsorAndGuest(id)
+      .subscribe(res => {
+                this.sponsorandguest =  res["data"];
+                console.log(res)});
+  }
 
   getSponsorAndGuests():void{
   this.sponsorandguestService.getSponsorAndGuests()

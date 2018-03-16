@@ -49,7 +49,8 @@ import { TestingService } from './testing.service';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { CustomFormsModule } from 'ng4-validators';
-import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-view.component'
+import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-view.component';
+import { BankDetailsComponent } from './bank-details/bank-details.component'
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-vi
     TechDetailsViewComponent,
     LoginComponent,
     ExcelPerformViewComponent,
+    BankDetailsComponent,
 
   ],
   imports: [
