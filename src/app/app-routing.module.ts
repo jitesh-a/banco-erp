@@ -48,6 +48,7 @@ const routes: Routes = [
   {path: 'bankform',component:BankFormComponent},
   {path: 'income' , component:IncomeComponent},
   {path:'incomeform',component:IncomeFormComponent},
+  {path:'incomeform/:id',component:IncomeFormComponent},
   {path: 'pickupdrop',component:PickupAndDropComponent},
   {path: 'pickupanddropform',component:PickupAndDropFromComponent},
   {path: 'excellentperformanceform',component:ExcellentPerformanceFormComponent},

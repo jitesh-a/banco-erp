@@ -8,28 +8,28 @@ import { IncomeService } from '../income.service';
   styleUrls: ['./income.component.css']
 })
 export class IncomeComponent implements OnInit {
-  income: Income[]=[];
+  incomes: Income[]=[];
   dataLoaded:boolean;
   constructor(private incomeService: IncomeService) { }
 
   ngOnInit() {
     this.dataLoaded=false;
-    this.getIncome();
+    this.getIncomes();
     this.dataLoaded=true;
   }
 
   //get
-  getIncome(): void {
+  getIncomes(): void {
     this.incomeService.getIncomes()
                 .subscribe(res=>{
-                  console.log(res["income"]);
-                  this.income=res["income"];
+                  console.log("Data :"+res["incomeandexpenses"]);
+                  this.incomes=res["incomeandexpenses"];
                   
                 });
     //.subscribe(data=>{},err=>{});
   }
   delete(income: Income): void {
-    this.income = this.income.filter(h => h !== income);
+    this.incomes = this.incomes.filter(h => h !== income);
     this.incomeService.deleteIncome(income).subscribe(
       res=>{
         console.log(res);
