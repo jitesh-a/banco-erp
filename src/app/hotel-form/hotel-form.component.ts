@@ -5,6 +5,7 @@ import { Event } from "../../models/event.model";
 import { EventService } from "./../event.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: './hotel-form.component.html',
@@ -16,7 +17,9 @@ export class HotelFormComponent implements OnInit {
   hotel:Hotel = new Hotel(); 
 
   constructor(private hotelService:HotelService,private route:ActivatedRoute,
-    private location: Location,private eventService:EventService) { }
+    private location: Location,
+    private eventService:EventService,
+    private router:Router) { }
     
   ngOnInit() {
     this.getEvents();
@@ -54,9 +57,12 @@ export class HotelFormComponent implements OnInit {
       .subscribe(
         res=>{
          console.log(res);
+         alert("Data updated successfully");
+         this.router.navigate( ['/hotel']);
         },
         err=>{
          console.error(err);
+         this.router.navigate( ['/hotel']);
         }
       ); 
     }else{
@@ -64,9 +70,12 @@ export class HotelFormComponent implements OnInit {
       .subscribe(
         res=>{
          console.log(res);
+         alert("Data added successfully");
+         this.router.navigate( ['/hotel']);
         },
         err=>{
          console.error(err);
+         this.router.navigate( ['/hotel']);
         }
       ); 
     }

@@ -50,7 +50,7 @@ export class BankFormComponent implements OnInit {
     this.bankService.getBank(id)
         .subscribe(res=> this.bank = res["data"])
   }
-    
+  
   goBack() :void{
     this.location.back();
   }

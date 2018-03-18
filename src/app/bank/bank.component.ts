@@ -15,6 +15,7 @@ export class BankComponent implements OnInit {
 
   banks: Bank[]=[];
   dataLoaded: boolean;
+  changeview : boolean;
   
   constructor(private bankService: BankService) { }
 
@@ -22,9 +23,11 @@ export class BankComponent implements OnInit {
     this.dataLoaded=false;
     this.getBank();
     this.dataLoaded=true;
+    this.changeview=false;
+
   }
 
-  //get
+
   getBank(): void {
     this.bankService.getBanks()
                 .subscribe(res=>{
