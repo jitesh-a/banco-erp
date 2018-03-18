@@ -40,7 +40,7 @@
                 <label for="Contact">Contact</label>
                 <input type="number" class="form-control" id="Contact"
                        required
-                       [(ngModel)]="sponsorandguest.contact" name="Contact"
+                       [(ngModel)]="sponsorandguest.Contact" name="Contact"
                        #Contact="ngModel" pattern="[7-9]{1}[0-9]{9}" digits>
                 <div [hidden]="Contact.valid || Contact.pristine"
                      class="alert alert-danger">
@@ -89,7 +89,7 @@
                   <select  class="form-control" id="EventName"
                   required
                   [(ngModel)]="sponsorandguest.EventId" name="EventId"
-                  #Type="ngModel">
+                  #EventId="ngModel">
                     <option *ngFor="let e of events" [value]="e.Id">
                       {{e.Name}}
                     </option>

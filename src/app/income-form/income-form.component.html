@@ -19,7 +19,6 @@
             <input type="text" class="form-control" id="Name"
                    required
                    [(ngModel)]="income.Name" name="Name"
-                   #Name="ngModel"/>
                    #Name="ngModel" pattern="[a-zA-Z ]*"/>
             <div [hidden]="Name.valid || Name.pristine"
                  class="alert alert-danger">

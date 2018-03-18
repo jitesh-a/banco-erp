@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class SponsorAndGuestService {
 
-  private apiUrl='http://localhost:7888/sponsororguest/';
+  private apiUrl='http://localhost:7888/SponsorOrGuest/';
 
   constructor(private messageService: MessageService,private http:HttpClient) { }
 
@@ -29,12 +29,9 @@ export class SponsorAndGuestService {
   }
 
   updateSponsorAndGuest(sponsorandguest: SponsorAndGuest): Observable<any>{
-    //console.log(sponsorandguest);
-    return this.http.post<SponsorAndGuest>(this.apiUrl+`edit/${sponsorandguest.Id}`, sponsorandguest, httpOptions)
-            .pipe(
-              tap(_=>this.log(`Updated sponsorandguest : ${sponsorandguest.Id}`)),
-              catchError(this.handleError<any>(`update sponsorandguest Id=${sponsorandguest.Id}`))
-            );
+    console.log(sponsorandguest);
+    return this.http.post<SponsorAndGuest>(this.apiUrl+`edit`, sponsorandguest, httpOptions)
+            
   }
 
    /** GET sponsorandguest by id. Will 404 if id not found */

@@ -27,14 +27,6 @@ export class BankComponent implements OnInit {
 
   }
 
-  //get
-  changeView():void {
-    console.log(this.changeview);
-   this.changeview = true;
-   console.log(this.changeview);
-   window.location.reload();
-    console.log(this.changeview);
-  }
 
   getBank(): void {
     this.bankService.getBanks()
