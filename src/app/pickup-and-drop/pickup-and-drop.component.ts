@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import { PickUpAndDrop } from '../../models/pickUpAndDrop.model';
 import { pickUpAndDropService } from "../pickup-and-drop.service";
+
+declare const $;
 @Component({
   selector: 'app-pickup-and-drop',
   templateUrl: './pickup-and-drop.component.html',
@@ -25,6 +27,16 @@ getPickupDrop(): void{
   .subscribe(res=>{
     console.log(res["pickupdrop"]);
     this.pickdrops=res["pickupdrop"];
+    this.dataLoaded=true;
+    $(function(){
+      //alert('test');
+      $('#Pick').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+        } );
+    })
   });
 }
 

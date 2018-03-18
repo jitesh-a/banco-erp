@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import { Hotel } from "../../models/hotel.model";
 import { HotelService } from "../hotel.service";
-
+declare const $;
 @Component({
  
   templateUrl: './hotel.component.html',
@@ -27,6 +27,16 @@ export class HotelComponent implements OnInit {
                 .subscribe(res=>{
                   console.log(res["hotels"]);
                   this.hotels=res["hotels"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    //alert('test');
+                    $('#Hotel').DataTable( {
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
                 });    
 
   } 

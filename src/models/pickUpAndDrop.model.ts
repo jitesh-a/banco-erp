@@ -9,6 +9,7 @@ export class PickUpAndDrop{
     PickUpPlace: string;
     DropTime: Date;
     DropPlace: string;
+    Wayoftransport: string;
     EmployeeId: number;
     EmployeeName: string;
     GuestOrSponsorId : number;

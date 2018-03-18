@@ -8,25 +8,24 @@
     
     <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
     
-    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="#Banktype">
         <thead>
               <tr>
                 <th>Id</th>
                 <th>Type</th>
-                <th>Description</th>               
+                <th>Description</th>   
+                <th>Actions</th>             
               </tr>
         </thead> 
         <tbody>
           <tr *ngFor="let bt of banktypes">
             <td>{{bt.Id}}</td>
             <td>{{bt.Type}}</td>
-            <td>{{bt.Description}}</td>         
+            <td>{{bt.Description}}</td> 
+               
             <td>
-<<<<<<< HEAD
               <a class="btn btn-sm btn-primary" href="/banktypeform/{{bt.Id}}"> Edit </a>
-=======
-              <a class="btn btn-sm btn-primary" href="banktypeform/{{bt.Id}}"> Edit </a>
->>>>>>> 981a9dab3d0e9c8aa82baefb924fed7606eb1898
+              
               <a class="btn btn-sm btn-danger"> Delete </a>
               
             </td>

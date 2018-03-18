@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from "../../models/employee.model";
 import { EmployeeService } from "../employee.service";
+declare const $;
 @Component({
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
@@ -23,6 +24,16 @@ export class EmployeeComponent implements OnInit {
                 .subscribe(res=>{
                   console.log(res);
                   this.employees=res["employees"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    //alert('test');
+                    $('#Employee').DataTable( {
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
                   
                 });
     //.subscribe(data=>{},err=>{});

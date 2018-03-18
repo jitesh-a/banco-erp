@@ -4,4 +4,5 @@ export class Income{
     Name: string;
     Description: string;
     Amount: number;
+
 }
