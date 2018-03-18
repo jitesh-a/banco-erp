@@ -28,7 +28,6 @@ import { TechDetailsViewComponent } from "./tech-details-view/tech-details-view.
 import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-view.component";
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 
-
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
