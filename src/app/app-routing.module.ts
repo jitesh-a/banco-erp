@@ -27,7 +27,6 @@ import { LoginComponent } from './login/login.component';
 import { TechDetailsViewComponent } from "./tech-details-view/tech-details-view.component";
 import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-view.component";
 
-
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
@@ -57,7 +56,8 @@ const routes: Routes = [
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
   {path: 'techdetailsview/:id',component:TechDetailsViewComponent},
-  {path:'exelperformview/:id',component:ExcelPerformViewComponent}
+  {path:'exelperformview/:id',component:ExcelPerformViewComponent},
+  
 ];
 
 @NgModule({
