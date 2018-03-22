@@ -21,7 +21,7 @@ dataLoaded: boolean;
     this.getEvents();
     this.dataLoaded=true;
   }
-
+  
   //get
   getEvents(): void {
     this.eventService.getEvents()

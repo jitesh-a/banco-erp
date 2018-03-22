@@ -1,3 +1,486 @@
-<p>
-  tech-details-view works!
-</p>
+<h1>View Details </h1>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Technology Details</h5>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="form-group">
+            <label for=" branches">  Number of branches of the banks </label>
+         </div>
+      </div>
+         <div class="col-md-5">
+            <div class="form-group">
+                <input type="number" class="form-control" id=" branches "
+                required
+                [(ngModel)]="techdetailsform.branches" name=" branches "
+                #branches="ngModel" digits/>
+             </div>
+            </div>
+             <div class="col-md-2">
+                <div class="form-group">
+                   <input type="number" class="form-control" placeholder="marks"/>
+                 </div>
+           </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+          <div class="form-group">
+              <label for=" CBSCompletionDate">  Date on which  CBS Completed</label>
+           </div>
+        </div>
+           <div class="col-md-5">
+              <div class="form-group">
+                <input type="text" class="form-control" id="CBSCompletionDate "
+                required
+                [(ngModel)]="techdetailsform.CBSCompletionDate" name="CBSCompletionDate "
+                type="date" #CBSCompletionDate="ngModel">
+               </div>
+              </div>
+               <div class="col-md-2">
+                  <div class="form-group">
+                     <input type="number" class="form-control" placeholder="marks"/>
+                   </div>
+             </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-5">
+            <div class="form-group">
+                <label for=" SMSFacility">  Whether SMS Facility is in place </label>
+             </div>
+          </div>
+             <div class="col-md-5">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="  SMSFacility"
+                  required
+                  [(ngModel)]="techdetailsform. SMSFacility" name=" SMSFacility "
+                  #SMSFacility="ngModel">
+                 </div>
+                </div>
+                 <div class="col-md-2">
+                    <div class="form-group">
+                       <input type="text" class="form-control" placeholder="marks"/>
+                     </div>
+               </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                  <label for=" DCOwnedBy"> Whether Data Centre Owned By bank </label>
+               </div>
+            </div>
+               <div class="col-md-5">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id=" DCOwnedBy"
+                    required
+                    [(ngModel)]="techdetailsform. DCOwnedBy" name=" DCOwnedBy"
+                    #DCOwnedBy="ngModel">
+                   </div>
+                  </div>
+                   <div class="col-md-2">
+                      <div class="form-group">
+                         <input type="text" class="form-control" placeholder="marks"/>
+                       </div>
+                 </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                    <label for=" DCHostedAtIsp"> Data Centre is  Hosted At ISP </label>
+                 </div>
+              </div>
+                 <div class="col-md-5">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id=" DCHostedAtIsp"
+                      required
+                      [(ngModel)]="techdetailsform.DCHostedAtIsp" name=" DCHostedAtIsp"
+                      #DCHostedAtIsp="ngModel">
+                     </div>
+                    </div>
+                     <div class="col-md-2">
+                        <div class="form-group">
+                           <input type="text" class="form-control" placeholder="marks"/>
+                         </div>
+                   </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                      <label for="DRSiteInPlace">Whether DR Site  Is In Place  </label>
+                   </div>
+                </div>
+                   <div class="col-md-5">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id=" DRSiteInPlace"
+                        required
+                        [(ngModel)]="techdetailsform.DRSiteInPlace" name=" DRSiteInPlace"
+                        #DRSiteInPlace="ngModel">
+                       </div>
+                      </div>
+                       <div class="col-md-2">
+                          <div class="form-group">
+                             <input type="text" class="form-control" placeholder="marks"/>
+                           </div>
+                     </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="DRSiteOnSharing">Whether DR Site On Sharing Basis  </label>
+                     </div>
+                  </div>
+                     <div class="col-md-5">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id=" DRSiteOnSharing"
+                          required
+                          [(ngModel)]="techdetailsform.DRSiteOnSharing" name=" DRSiteOnSharing"
+                          #DRSiteOnSharing="ngModel">
+                         </div>
+                        </div>
+                         <div class="col-md-2">
+                            <div class="form-group">
+                               <input type="text" class="form-control" placeholder="marks"/>
+                             </div>
+                       </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group">
+                          <label for="DRImplemented"> Whether DR Plan Is Implemented </label>
+                       </div>
+                    </div>
+                       <div class="col-md-5">
+                          <div class="form-group">
+                            <input type="text" class="form-control" id=" DRImplemented"
+                            required
+                            [(ngModel)]="techdetailsform.DRImplemented" name=" DRImplemented"
+                            #DRImplemented="ngModel">
+                           </div>
+                          </div>
+                           <div class="col-md-2">
+                              <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="marks"/>
+                               </div>
+                         </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="DRSiteInSeismicZone "> DR Site In  Different Seismic Zone </label>
+                         </div>
+                      </div>
+                         <div class="col-md-5">
+                            <div class="form-group">
+                              <input type="text" class="form-control" id=" DRSiteInSeismicZone"
+                              required
+                              [(ngModel)]="techdetailsform.DRSiteInSeismicZone" name=" DRSiteInSeismicZone"
+                              #DRSiteInSeismicZone="ngModel">
+                             </div>
+                            </div>
+                             <div class="col-md-2">
+                                <div class="form-group">
+                                   <input type="text" class="form-control" placeholder="marks"/>
+                                 </div>
+                           </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group">
+                              <label for="ProvisionInDisaster">  Whether There Is Standard Operating Procedure In Case Disaster </label>
+                           </div>
+                        </div>
+                           <div class="col-md-5">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id=" ProvisionInDisastere"
+                                required
+                                [(ngModel)]="techdetailsform.ProvisionInDisaster" name=" ProvisionInDisaster"
+                                #ProvisionInDisaster="ngModel"/>
+                               </div>
+                              </div>
+                               <div class="col-md-2">
+                                  <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="marks"/>
+                                   </div>
+                             </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="BackupInCaseDisaster"> Please inform the sequence of events neccessary to prepare the backup site if disaster take place[Not more than 100 words] </label>
+                             </div>
+                          </div>
+                             <div class="col-md-5">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id=" BackupInCaseDisaster"
+                                  required
+                                  [(ngModel)]="techdetailsform.BackupInCaseDisaster" name="BackupInCaseDisaster"
+                                  #BackupInCaseDisaster="ngModel"/>
+                                 </div>
+                                </div>
+                                 <div class="col-md-2">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" placeholder="marks"/>
+                                     </div>
+                               </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                  <label for="PaymentGatewayServices">Whether the bank  is providing Payment Gateway Services like POS , NetBanking ,E-commerce, utility bill payments etc ...? If yes ..please mention list of services..  </label>
+                               </div>
+                            </div>
+                               <div class="col-md-5">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id=" PaymentGatewayServices"
+                                    required
+                                    [(ngModel)]="techdetailsform.PaymentGatewayServices" name=" PaymentGatewayServices"
+                                    #PaymentGatewayServices="ngModel">
+                                   </div>
+                                  </div>
+                                   <div class="col-md-2">
+                                      <div class="form-group">
+                                         <input type="text" class="form-control" placeholder="marks"/>
+                                       </div>
+                                 </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-5">
+                                <div class="form-group">
+                                  <label for=" CondDRDrillsFreq "> Does your bank conducts DR drills and with what frequency</label>                                  
+                                 </div>
+                              </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id=" CondDRDrillsFreq"
+                                      required
+                                      [(ngModel)]="techdetailsform.CondDRDrillsFreq" name=" CondDRDrillsFreq"
+                                      #CondDRDrillsFreq="ngModel">
+                                     </div>
+                                    </div>
+                                     <div class="col-md-2">
+                                        <div class="form-group">
+                                           <input type="text" class="form-control" placeholder="marks"/>
+                                         </div>
+                                   </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                  <div class="form-group">
+                                    <label for=" ITStrategyPolicyDoc">Whether  you have "IT" strategy and policy duly documented ?</label>                                   
+                                   </div>
+                                </div>
+                                   <div class="col-md-5">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id=" ITStrategyPolicyDoc"
+                                        required
+                                        [(ngModel)]="techdetailsform.ITStrategyPolicyDoc" name=" ITStrategyPolicyDoc"
+                                        #ITStrategyPolicyDoc="ngModel">
+                                       </div>
+                                      </div>
+                                       <div class="col-md-2">
+                                          <div class="form-group">
+                                             <input type="text" class="form-control" placeholder="marks"/>
+                                           </div>
+                                     </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-5">
+                                    <div class="form-group">
+                                      <label for=" CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
+                                      
+                                     </div>
+                                  </div>
+                                     <div class="col-md-5">
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id=" CommiteeITBoardMeetFreq"
+                                          required
+                                          [(ngModel)]="techdetailsform.CommiteeITBoardMeetFreq" name=" CommiteeITBoardMeetFreq"
+                                          #CommiteeITBoardMeetFreq="ngModel">
+                       
+                                         </div>
+                                        </div>
+                                         <div class="col-md-2">
+                                            <div class="form-group">
+                                               <input type="text" class="form-control" placeholder="marks"/>
+                                             </div>
+                                       </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" ConductionITSystemAudit "> Does your bank Conduct "IT" or "Systems Audit" ? When was such audit done?</label>
+                                        
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" ConductionITSystemAudit"
+                                            required
+                                            [(ngModel)]="techdetailsform.ConductionITSystemAudit" name=" ConductionITSystemAudit"
+                                            #ConductionITSystemAudit="ngModel"/>
+                                   
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" OutSourcedServices">What are the out source services for managing your "IT" setup?</label>
+                                        
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" OutSourcedServices"
+                                            required
+                                            [(ngModel)]="techdetailsform.OutSourcedServices" name=" OutSourcedServices"
+                                            #OutSourcedServices="ngModel"/>
+                                  
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" ServicesCustomerDueCBS "> Give briefly the list of Services/Facilities provided to customer due to CBS</label>
+                                        
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" ServicesCustomerDueCBS"
+                                            required
+                                            [(ngModel)]="techdetailsform.ServicesCustomerDueCBS" name=" ServicesCustomerDueCBS"
+                                            #ServicesCustomerDueCBS="ngModel"/>
+      
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" ATM_ConnectedNFSOther "> Whether you have "ATM" and whether it is connected to NFS or otherwise</label>
+                                        
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
+                                            required
+                                            [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
+                                            #ATM_ConnectedNFSOther="ngModel"/>
+                       
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" UptimeITServicesInP ">What is the up time of "IT" services? Please respond in % terms</label>                                       
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" UptimeITServicesInP"
+                                            required
+                                            [(ngModel)]="techdetailsform.UptimeITServicesInP" name=" UptimeITServicesInP"
+                                            #UptimeITServicesInP="ngModel"/>
+                                    
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-5">
+                                      <div class="form-group">
+                                        <label for=" ServiceLevelAgreements ">Whether all Service level Agreements in lace and renewed?</label>
+                                        
+                                       </div>
+                                    </div>
+                                       <div class="col-md-5">
+                                          <div class="form-group">
+                                            <input type="text" class="form-control" id=" ServiceLevelAgreements"
+                                            required
+                                            [(ngModel)]="techdetailsform.ServiceLevelAgreements" name=" ServiceLevelAgreements"
+                                            #ServiceLevelAgreements="ngModel"/>
+                                    
+                                           </div>
+                                          </div>
+                                           <div class="col-md-2">
+                                              <div class="form-group">
+                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                               </div>
+                                         </div>
+
+                                         <div class="row">
+                                          <div class="col-md-5">
+                                            <div class="form-group">
+                                              <label for=" ATM_ConnectedNFSOther ">Whether your bank conducted any Business Process Engineering after implementation of CBS</label>
+                                              
+                                             </div>
+                                          </div>
+                                             <div class="col-md-5">
+                                                <div class="form-group">
+                                                  <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
+                                                  required
+                                                  [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
+                                                  #ATM_ConnectedNFSOther="ngModel"/>
+                                                 </div>
+                                                </div>
+                                                 <div class="col-md-2">
+                                                    <div class="form-group">
+                                                       <input type="text" class="form-control" placeholder="marks"/>
+                                                     </div>
+                                               </div>
+                                               <div class="row">
+                                                <div class="col-md-5">
+                                                  <div class="form-group">
+                                                    <label for=" OtherInfo ">Any other information that may be fpund necessary of assessment not covered by above questionarie may be given.</label>
+                                                    
+                                                   </div>
+                                                </div>
+                                                   <div class="col-md-5">
+                                                      <div class="form-group">
+                                                        <input type="text" class="form-control" id="OtherInfo"
+                                                        required
+                                                        [(ngModel)]="techdetailsform.OtherInfo" name=" OtherInfo"
+                                                        #OtherInfo="ngModel"/>                                             
+                                                       </div>
+                                                      </div>
+                                                       <div class="col-md-2">
+                                                          <div class="form-group">
+                                                             <input type="text" class="form-control" placeholder="marks"/>
+                                                           </div>
+                                                     </div>
+                                  </div>
+
+
+  
+</div>
+</div>

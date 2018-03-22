@@ -1,0 +1,64 @@
+<h1>sponser and guest Details </h1>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"> {{sponser.Name}} Details</h5>
+    <hr/>
+
+      <table class="table table-striped"  id="table_events">
+          <tbody>
+            <tr>
+              <td> <label>Description :</label></td>
+              <td>{{sponser.Description}} </td>
+            </tr>
+            <tr>
+              <td><label>Contact :</label></td>
+              <td> {{sponser.Contact}}</td>
+            </tr>
+            <tr>
+                <td><label>Amount :</label></td>
+                <td>{{sponser.Amount}}</td>
+              </tr>
+              <tr>
+                  <td> <label>details:</label></td>
+                  <td>{{sponser.Topic}}</td>
+                </tr>
+                <tr>
+                    <td><label>sponser or guest?? :</label></td>
+                    <td>{{sponser.Type}}</td>
+                  </tr> 
+                  <tr>
+                      <td><label>Event name :</label></td>
+                      <td>{{sponser.EventName}}</td>
+                    </tr>
+
+                    <tr>
+                      <td><label>Pick up time :</label></td>
+                      <td>{{ pickupdrop.PickUpTime}}</td>
+                    </tr>
+
+                    <tr>
+                      <td><label>Pick up place:</label></td>
+                      <td>{{ pickupdrop.PickUpPlace}}</td>
+                    </tr>
+
+                    <tr>
+                      <td><label>Drop time :</label></td>
+                      <td>{{ pickupdrop. DropTime}}</td>
+                    </tr>
+
+                    <tr>
+                      <td><label>Drop place :</label></td>
+                      <td>{{ pickupdrop. DropPlace}}</td>
+                    </tr>
+
+                    <tr>
+                      <td><label>Way of transport :</label></td>
+                      <td>{{ pickupdrop.Wayoftransport}}</td>
+                    </tr>
+
+
+            
+          </tbody>
+        </table>
+  </div>
+</div>

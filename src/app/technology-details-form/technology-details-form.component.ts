@@ -35,32 +35,11 @@ export class TechnologyDetailsFormComponent implements OnInit {
         this.location.back();
       }
   
-      save(): void{
-        if(this.techdetails.Id>0){
-          this.technologydetailService.updateTechnologyDetails(this.techdetails)
-          .subscribe(
-            res=>{
-             console.log(res);
-            },
-            err=>{
-             console.error(err);
-            }
-          ); 
-        }else{
-          this.technologydetailService.addTechnologyDetails(this.techdetails)
-          .subscribe(
-            res=>{
-             console.log(res);
-            },
-            err=>{
-             console.error(err);
-            }
-          ); 
-        }
+      
          
       }
   
-    }
+    
   
 
  
