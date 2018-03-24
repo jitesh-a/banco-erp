@@ -53,6 +53,12 @@ export class BankComponent implements OnInit {
     this.bankService.deleteBank(bank).subscribe(
       res=>{
         console.log(res);
+        if(res["success"]){
+          alert("Deleted Successfully");
+        }
+        else{
+          alert("Cannot delete , refering in another field");
+        }
       },
       err => {
         console.error(err);

@@ -46,7 +46,7 @@ export class HotelComponent implements OnInit {
     this.hotels = this.hotels.filter(h=> h!== hotel);
     this.hotelService.deleteHotel(hotel).subscribe(
       res =>{
-        console.log(res);
+        console.log(res);      
       },
       err =>{
         console.error(err);
