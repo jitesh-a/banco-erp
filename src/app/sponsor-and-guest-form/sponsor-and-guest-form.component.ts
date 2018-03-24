@@ -25,6 +25,7 @@ export class SponsorAndGuestFormComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if(id>0){
       this.getSponsorOrGuets(id);
+      //new DateTime
     }
     
   }

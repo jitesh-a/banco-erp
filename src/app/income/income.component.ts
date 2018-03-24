@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Income } from '../../models/income.model';
 import { IncomeService } from '../income.service';
-
+declare const $;
 @Component({
   selector: 'app-income',
   templateUrl: './income.component.html',
@@ -22,8 +22,18 @@ export class IncomeComponent implements OnInit {
   getIncomes(): void {
     this.incomeService.getIncomes()
                 .subscribe(res=>{
-                  console.log("Data :"+res["incomeandexpenses"]);
-                  this.incomes=res["incomeandexpenses"];
+                  console.log(res["income"]);
+                  this.incomes=res["income"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    //alert('test');
+                    $('#Income').DataTable( {
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
                   
                 });
     //.subscribe(data=>{},err=>{});

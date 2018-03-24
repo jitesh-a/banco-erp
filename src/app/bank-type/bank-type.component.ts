@@ -25,6 +25,16 @@ export class BankTypeComponent implements OnInit {
                 .subscribe(res=>{
                   console.log(res["BankTypes"]);
                   this.banktypes=res["BankTypes"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    alert('test');
+                    $('#Banktype').DataTable({
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
                   
                 });
     //.subscribe(data=>{},err=>{});

@@ -3,6 +3,8 @@ import { SponsorAndGuest } from "../../models/sponsorAndGuest.model";
 import { SponsorAndGuestService } from "../sponsor-and-guest.service";
 import { EventService } from "../event.service";
 
+declare const $;
+
 @Component({
   selector: 'app-sponsor-and-guest',
   templateUrl: './sponsor-and-guest.component.html',
@@ -42,8 +44,20 @@ export class SponsorAndGuestComponent implements OnInit {
                 .subscribe(res=>{
                   console.log(res["events"]);
                   this.events=res["events"];
+                  this.dataLoaded=true;
+                  $(function(){
+                    //alert('test');
+                    $('#Sponser').DataTable( {
+                      dom: 'Bfrtip',
+                      buttons: [
+                          'copy', 'csv', 'excel', 'pdf', 'print'
+                      ]
+                      } );
+                  })
+                  
                   
                 });
+               
     //.subscribe(data=>{},err=>{});
   }
 

@@ -7,4 +7,5 @@ export class Income{
     Type: string;
     Description: string;
     Amount: number;
+
 }
