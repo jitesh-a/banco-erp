@@ -16,7 +16,7 @@ const httpOptions = {
 @Injectable()
 export class pickUpAndDropService {
 
-  private apiUrl='http://localhost:7888/pickupanddrop/';
+  private apiUrl='http://localhost:7888/pickanddrop/';
 
   constructor(private messageService: MessageService,private http:HttpClient) { }
 
