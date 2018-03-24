@@ -49,7 +49,10 @@ import { TestingService } from './testing.service';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { CustomFormsModule } from 'ng4-validators';
-import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-view.component'
+import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-view.component';
+import { BankDetailsComponent } from './bank-details/bank-details.component';
+import { sponserviewComponent } from './sponserview/sponserview.component';
+import { EmployeeviewComponent } from './employeeview/employeeview.component'
 
 @NgModule({
   declarations: [
@@ -83,6 +86,9 @@ import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-vi
     TechDetailsViewComponent,
     LoginComponent,
     ExcelPerformViewComponent,
+    BankDetailsComponent,
+    sponserviewComponent,
+    EmployeeviewComponent,
 
   ],
   imports: [

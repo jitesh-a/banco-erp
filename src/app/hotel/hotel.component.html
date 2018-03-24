@@ -8,11 +8,12 @@
     
     <img class = "centered" src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
     
-    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="#Hotel">
         <thead>
               <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Event Name</th>
                 <th>Description</th>
                 <th>Location</th>
                 <th>Number Of Rooms</th>
@@ -24,6 +25,7 @@
           <tr *ngFor="let h of hotels">
             <td>{{h.Id}}</td>
             <td>{{h.Name}}</td>
+            <td>{{h.EventName}}</td>
             <td>{{h.Description}}</td>
             <td>{{h.Location}}</td>
             <td>{{h.NumberOfRooms}}</td>

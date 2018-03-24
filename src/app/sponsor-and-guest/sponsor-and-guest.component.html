@@ -8,7 +8,7 @@
     
     <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
     
-    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true">
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="Sponser">
         <thead>
               <tr>
                 <th>Id</th>
@@ -34,8 +34,9 @@
             <td>{{sg.Type}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/spandgstform/{{sg.Id}}"> Edit </a>
+
               <a class="btn btn-sm btn-danger"> Delete </a>
-              
+              <a class="btn btn-sm btn-primary" href="/sponserview/{{sg.Id}}"> View details </a>
             </td>
           </tr>
         </tbody>

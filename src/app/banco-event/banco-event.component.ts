@@ -19,9 +19,9 @@ dataLoaded: boolean;
   ngOnInit() {
     this.dataLoaded=false;
     this.getEvents();
-    
+    this.dataLoaded=true;
   }
-
+  
   //get
   getEvents(): void {
     this.eventService.getEvents()

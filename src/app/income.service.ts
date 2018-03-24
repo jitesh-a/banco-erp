@@ -30,7 +30,7 @@ export class IncomeService {
   
     updateIncome(income: Income): Observable<any>{
       //console.log(event);
-      return this.http.put<Income>(this.apiUrl+`edit/${income.Id}`, event, httpOptions)
+      return this.http.post<Income>(this.apiUrl+`edit/${income.Id}`,income, httpOptions)
               .pipe(
                 tap(_=>this.log(`Updated income : ${income.Id}`)),
                 catchError(this.handleError<any>(`update income Id=${income.Id}`))

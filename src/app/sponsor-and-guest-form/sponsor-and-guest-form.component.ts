@@ -5,7 +5,7 @@ import { Event } from "../../models/event.model";
 import { EventService } from "./../event.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-sponsor-and-guest-form',
@@ -16,7 +16,8 @@ export class SponsorAndGuestFormComponent implements OnInit {
 
   events: Event[]=[];
   sponsorandguest:SponsorAndGuest=new SponsorAndGuest();
-  constructor(private sponsorandguestService:SponsorAndGuestService,private route:ActivatedRoute,private location:Location,private eventService:EventService) { }
+  constructor(private sponsorandguestService:SponsorAndGuestService,private route:ActivatedRoute,private location:Location,private eventService:EventService,
+              private router : Router) { }
 
   ngOnInit() {
    
@@ -29,6 +30,13 @@ export class SponsorAndGuestFormComponent implements OnInit {
     
   }
 
+  getSponsorAndGuest(id: number): void {
+    //const id = +this.route.snapshot.paramMap.get('id');
+    this.sponsorandguestService.getSponsorAndGuest(id)
+      .subscribe(res => {
+                this.sponsorandguest =  res["data"];
+                console.log(res)});
+  }
 
     //get
     getEvents(): void {
@@ -59,9 +67,13 @@ export class SponsorAndGuestFormComponent implements OnInit {
         .subscribe(
           res=>{
            console.log(res);
+           alert("Data updated successfully");
+           this.router.navigate( ['/spandgst']);
           },
           err=>{
            console.error(err);
+           alert("Error occured");
+           this.router.navigate( ['/spandgst']);
           }
         ); 
       }else{
@@ -69,12 +81,16 @@ export class SponsorAndGuestFormComponent implements OnInit {
         .subscribe(
           res=>{
            console.log(res);
+           alert("Data added successfully");
+           this.router.navigate( ['/spandgst']);
           },
           err=>{
            console.error(err);
+           alert("Error occured");
+           this.router.navigate( ['/spandgst']);
           }
         ); 
       }
-       
+      
     }
 }
