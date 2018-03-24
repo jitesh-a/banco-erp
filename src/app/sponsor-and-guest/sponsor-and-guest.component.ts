@@ -61,4 +61,15 @@ export class SponsorAndGuestComponent implements OnInit {
     //.subscribe(data=>{},err=>{});
   }
 
+  delete(sponsorandguest: SponsorAndGuest): void {
+    this.sponsorAndGuests = this.sponsorAndGuests.filter(sg => sg !== sponsorandguest);
+    this.sponsorAndGuestService.deleteSponsorAndGuest(sponsorandguest).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err => {
+        console.error(err);
+      }
+    );
+  }
 }

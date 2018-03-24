@@ -34,8 +34,7 @@
             <td>{{sg.Type}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/spandgstform/{{sg.Id}}"> Edit </a>
-
-              <a class="btn btn-sm btn-danger"> Delete </a>
+              <button type="button" class="btn btn-default" (click)="delete(sg)">Delete</button>
               <a class="btn btn-sm btn-primary" href="/sponserview/{{sg.Id}}"> View details </a>
             </td>
           </tr>

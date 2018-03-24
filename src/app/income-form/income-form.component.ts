@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Income } from "../../models/income.model";
 import { IncomeService } from "./../income.service";
 import { EventService } from "./../event.service";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -17,7 +18,8 @@ export class IncomeFormComponent implements OnInit {
   income: Income = new Income(); 
   constructor(private incomeService:IncomeService,private route:ActivatedRoute,
   private location:Location,
-  private eventService:EventService) { }
+  private eventService:EventService,
+  private router : Router ) { }
 
   ngOnInit() {
     this.getEvents();
@@ -54,6 +56,9 @@ export class IncomeFormComponent implements OnInit {
         .subscribe(
           res=>{
            console.log(res);
+           alert("Data Added Successfully...");
+           this.router.navigate( ['/income']);
+
           },
           err=>{
            console.error(err);

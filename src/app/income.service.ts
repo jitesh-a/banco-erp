@@ -77,7 +77,7 @@ export class IncomeService {
       const Id = typeof income === 'number' ? income : income.Id;
       const url = `${this.apiUrl}delete/${Id}`;
   
-      return this.http.delete<Income>(url, httpOptions).pipe(
+      return this.http.post<Income>(url, httpOptions).pipe(
         tap(_ => this.log(`deleted income Id=${Id}`)),
         catchError(this.handleError<Income>('deleteIncome'))
       );
