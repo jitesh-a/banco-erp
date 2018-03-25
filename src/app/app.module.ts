@@ -52,7 +52,8 @@ import { CustomFormsModule } from 'ng4-validators';
 import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-view.component';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from './sponserview/sponserview.component';
-import { EmployeeviewComponent } from './employeeview/employeeview.component'
+import { EmployeeviewComponent } from './employeeview/employeeview.component';
+import { ViewResultComponent } from './view-result/view-result.component'
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { EmployeeviewComponent } from './employeeview/employeeview.component'
     BankDetailsComponent,
     sponserviewComponent,
     EmployeeviewComponent,
+    ViewResultComponent,
 
   ],
   imports: [

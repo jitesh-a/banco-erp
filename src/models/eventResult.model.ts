@@ -1,9 +1,9 @@
 export class EventResult 
 {
-    BankId:number;
-    BankName:string;
-    Name:string;
     Id:number;
+    Name:string;
+    BankId:number;
+    BankName:string;  
     FinancialMarks:number;
     TechnologicalMarks:number;
 
