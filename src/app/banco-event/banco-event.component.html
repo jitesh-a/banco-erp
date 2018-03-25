@@ -28,7 +28,7 @@
             <td>{{e.EndDate}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/eventform/{{e.Id}}"> Edit </a>
-              <a class="btn btn-sm btn-danger"> Delete </a>
+              <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>
               <a class="btn btn-sm btn-success" href="/fillform/{{e.Id}}/{{e.Name}}"> Generate Link </a>
             </td>
           </tr>

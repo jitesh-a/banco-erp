@@ -39,7 +39,7 @@ export class IncomeComponent implements OnInit {
     //.subscribe(data=>{},err=>{});
   }
   delete(income: Income): void {
-    this.incomes = this.incomes.filter(h => h !== income);
+    this.incomes = this.incomes.filter(i => i !== income);
     this.incomeService.deleteIncome(income).subscribe(
       res=>{
         console.log(res);

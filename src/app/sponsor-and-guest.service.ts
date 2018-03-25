@@ -74,7 +74,7 @@ export class SponsorAndGuestService {
     const Id = typeof sponsorandguest === 'number' ? sponsorandguest : sponsorandguest.Id;
     const url = `${this.apiUrl}delete/${Id}`;
 
-    return this.http.delete<SponsorAndGuest>(url, httpOptions).pipe(
+    return this.http.post<SponsorAndGuest>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted sponsorandguest Id=${Id}`)),
       catchError(this.handleError<SponsorAndGuest>('deleteSponsorAndGuest'))
     );
