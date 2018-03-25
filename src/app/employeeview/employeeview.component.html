@@ -1,3 +1,54 @@
-<p>
-  employeeview works!
-</p>
+<h1>Employee Details View </h1>
+<div class="card">
+  <div class="card-body">
+   
+    <h5 class="card-title"> {{emp.BankName}}  employee Details</h5>
+    <hr/>
+    <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
+
+      <table class="table table-striped"  *ngIf="dataLoaded==true"  id="emp_table">
+          <tbody>
+            <tr>
+              <td> <label> Number of employees participating in event:</label></td>
+              <td>{{emp.Counts}} </td>
+            </tr>
+            <tr>
+              <td><label>Name :</label></td>
+              <td> {{emp.Name}}</td>
+            </tr>
+
+            <tr>
+              <td><label>Description:</label></td>
+              <td>{{emp.Description}}</td>
+            </tr> 
+
+            <tr>
+                <td><label>Contact:</label></td>
+                <td>{{emp.Contact}}</td>
+              </tr>
+              <tr>
+                  <td> <label>Employee Number:</label></td>
+                  <td>{{emp.EmployeeNumber}}</td>
+                </tr>
+                <tr>
+                    <td><label>Gender :</label></td>
+                    <td>{{emp.Gender}}</td>
+                  </tr> 
+                  <tr>
+                      <td><label>Aadhar card number :</label></td>
+                      <td>{{emp.IDProof}}</td>
+                    </tr>
+            <tr>
+              <td> <label>BankName :</label></td>
+              <td>  {{emp.BankName}}</td>
+            </tr>
+            
+
+
+
+            <h5 class="card-title"> {{bank.Name}} Details</h5>
+            <hr/>
+          </tbody>
+        </table>
+  </div>
+</div>

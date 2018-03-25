@@ -28,6 +28,7 @@ import { TechDetailsViewComponent } from "./tech-details-view/tech-details-view.
 import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-view.component";
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from "./sponserview/sponserview.component";
+import { EmployeeviewComponent  } from "./employeeview/employeeview.component";
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
@@ -55,12 +56,14 @@ const routes: Routes = [
   {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
   {path:'loginapi',component:LoginComponent},
   { path:'fillform/:id/:name', component: BankFormComponent},
+  { path:'fillformemployee/:id/:name', component: EmployeeFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
   {path: 'techdetailsview',component:TechDetailsViewComponent},
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
-  {path: 'sponserview/:id', component:sponserviewComponent}
+  {path: 'sponserview/:id', component:sponserviewComponent},
+  {path:'employeedetails/:id' , component: EmployeeviewComponent }
 ];
 
 @NgModule({
