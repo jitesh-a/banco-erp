@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EventResult  } from "../../models/eventResult.model";
-import { BankService } from "../bank.service";
+import { EventService } from "../event.service";
 
 @Component({
   selector: 'app-view-result',
@@ -8,10 +8,21 @@ import { BankService } from "../bank.service";
   styleUrls: ['./view-result.component.css']
 })
 export class ViewResultComponent implements OnInit {
-
-  constructor() { }
+  result: EventResult[]=[];
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
   }
-
+ //get results 
+  getResults(id):void
+  {
+    this.eventService.eventResult(id).subscribe(
+      res=>{
+        console.log(res);
+      },
+      err => {
+        console.error(err);
+      }
+    );
+  }
 }

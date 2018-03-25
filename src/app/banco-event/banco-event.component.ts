@@ -42,16 +42,7 @@ dataLoaded: boolean;
     //.subscribe(data=>{},err=>{});
   }
 
-  //add
-  /*add(Name: string,Description): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.eventService.addEvent({ name, } as Event)
-      .subscribe(res => {
-        this.events.push(res["event"]);
-        console.log(res);
-      });
-  }*/
+ 
 
   //delete
   delete(event: Event): void {

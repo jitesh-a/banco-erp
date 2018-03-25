@@ -29,6 +29,9 @@ import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-vi
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from "./sponserview/sponserview.component";
 import { EmployeeviewComponent  } from "./employeeview/employeeview.component";
+import { ViewResultComponent } from "./view-result/view-result.component";
+import { EventResult } from "../models/eventResult.model";
+
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
@@ -63,7 +66,8 @@ const routes: Routes = [
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent},
-  {path:'employeedetails/:id' , component: EmployeeviewComponent }
+  {path:'employeedetails/:id' , component: EmployeeviewComponent },
+  {path:'viewresult/:id/:name',component:EventResult}
 ];
 
 @NgModule({
