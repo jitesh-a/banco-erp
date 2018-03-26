@@ -31,11 +31,11 @@
             <td>{{e.IDProof}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/employeeform/{{e.Id}}"> Edit </a>
-              <a class="btn btn-sm btn-danger"> Delete </a>
+              <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>           
               <a class="btn btn-sm btn-success" href="/fillformemployee/{{e.Id}}/{{e.Name}}"> Generate Link </a>
               <a class="btn btn-sm btn-success" href="/employeedetails/{{e.Id}}">View details</a>
             </td>
-              <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>            </td>
+              
           </tr>
         </tbody>
       </table>
