@@ -29,6 +29,7 @@ import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-vi
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from "./sponserview/sponserview.component";
 import { EmployeeviewComponent  } from "./employeeview/employeeview.component";
+import { PickUpAndDrop } from '../models/pickUpAndDrop.model';
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
@@ -63,7 +64,10 @@ const routes: Routes = [
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent},
-  {path:'employeedetails/:id' , component: EmployeeviewComponent }
+  {path:'nextpickup/:id' , component: PickupAndDropComponent },
+  {path:'nextpickup/:id' , component: PickupAndDropComponent },
+  {path:'nextsponser/:id' , component: PickupAndDropComponent },
+  {path: 'sponserviewdetails/:id', component:PickUpAndDrop}
 ];
 
 @NgModule({
