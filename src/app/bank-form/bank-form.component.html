@@ -153,8 +153,7 @@
                             <select class="form-control" id="District"
                                    required
                                    [(ngModel)]="bank.District" name="District"
-                                   #District="ngModel">
-                                
+                                   #District="ngModel">                                
                                 <option value="Nicobar">	Nicobar	</option>
                                 <option value="North Middle Andaman">	North Middle Andaman	</option>
                                 <option value="South Andaman">	South Andaman	</option>
@@ -257,13 +256,13 @@
                                 <option value="Samastipur">	Samastipur	</option>
                                 <option value="Saran">	Saran	</option>
                                 <option value="Sheikhpura">	Sheikhpura	</option>
-                                <option value="Sheohar">	Sheohar	</option>
-                                <option value="Sitamarhi">	Sitamarhi	</ption>
+                                <option value="Sheohar">Sheohar	</option>
+                                <option value="Sitamarhi">Sitamarhi</option>
                                 <option value="Siwan">	Siwan	</option>
                                 <option value="Supaul">	Supaul	</option>
-                                <option value="Vaishali">	Vaishali	</option>
+                                <option value="Vaishali">Vaishali</option>
                                 <option value="West Champaran">	West Champaran	</option>
-                                <option value="Chandigarh">	Chandigarh	</option>
+                                <option value="Chandigarh">Chandigarh</option>
                                 <option value="Balod">	Balod	</option>
                                 <option value="Baloda Bazar">	Baloda Bazar	</option>
                                 <option value="Balrampur">	Balrampur	</option>
@@ -590,14 +589,14 @@
                                 <option value="	Dimapur	">	Dimapur	</option>
                                 <option value="Kiphire">	Kiphire	</option>
                                 <option value="Kohima">	Kohima	</option>
-                                <option value="Longleng">	Longleng	</option>
-                                <option value="Mokokchung">	Mokokchung	</option>
-                                <option value="Mon">	Mon	</option>
-                                <option value="Peren">	Peren	</option>
-                                <option value="Phek">	Phek	</option>
-                                <option value="Tuensang">	Tuensang	</option>
-                                <option value="Wokha">	Wokha	</option>
-                                <option value="Zunheboto">	Zunheboto	</option>
+                                <option value="Longleng">Longleng</option>
+                                <option value="Mokokchung">Mokokchung</option>
+                                <option value="Mon">Mon</option>
+                                <option value="Peren">Peren</option>
+                                <option value="Phek">Phek</option>
+                                <option value="Tuensang">Tuensang</option>
+                                <option value="Wokha">Wokha</option>
+                                <option value="Zunheboto">Zunheboto</option>
                                 <option value="Angul">	Angul	</option>
                                 <option value="Balangir">	Balangir	</option>
                                 <option value="Balasore">	Balasore	</option>
@@ -873,10 +872,11 @@
                                 <option value="South 24 Parganas">	South 24 Parganas	</option>
                                 <option value="Uttar Dinajpur">	Uttar Dinajpur	</option>
                                 
-                        </select>    
+                        </select>  
+                        </div>  
                    </div>
-                </div>
-            </div>
+                
+            </div><!--one row finished -->
             <div class="form-group">
                 <label for="Address">Address</label>
                 <textarea type="text" class="form-control" id="Address"
@@ -915,7 +915,7 @@
                         </div>
                       </div>
                 </div>
-            </div>          
+            </div>     <!--one row finished -->     
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -943,7 +943,7 @@
                         </div>
                       </div>
                 </div>
-            </div>
+            </div><!--one row finished -->
             <div class="form-group">
               <label for="Website">Website</label>
               <input type="text" class="form-control" id="Website"
@@ -995,7 +995,7 @@
                           </div>
                         </div>
                   </div>
-            </div>
+            </div><!--one row finished -->
             <div class="row">
               <div class="col-md-6">
                   <div class="form-group">
@@ -1023,7 +1023,7 @@
                       </div>
                     </div>
               </div>
-            </div>
+            </div><!--one row finished -->
             <div class="row">
               <div class="col-md-6">
                   <div class="form-group">
@@ -1084,12 +1084,13 @@
                     <option *ngFor="let bt of bankTypes" [value]="bt.Id">
                       {{bt.Type}}
                     </option>
-                  </select>
+                  </select>  
                   <div [hidden]="BankType.valid || BankType.pristine"
-                       class="alert alert-danger">
-                       Type is required
+                  class="alert alert-danger">
+                  Type is required
                 </div>
-                      
+           </div>           
+                  
           <button type="submit" class="btn btn-success" [disabled]="!bankForm.form.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form>
