@@ -13,7 +13,7 @@ declare const $;
 export class BancoEventComponent implements OnInit {
 events: Event[]=[];
 dataLoaded: boolean;
-  
+link : string;
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
@@ -42,7 +42,12 @@ dataLoaded: boolean;
     //.subscribe(data=>{},err=>{});
   }
 
- 
+ createLink(event: Event):void{
+
+  
+  this.link = "http://localhost:4200/fillform/"+event.Id+"/"+event.Name;
+  console.log( this.link);
+ }
 
   //delete
   delete(event: Event): void {

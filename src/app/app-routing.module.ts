@@ -66,8 +66,7 @@ const routes: Routes = [
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent},
-  
-  {path:'viewresult/:id/:name',component:EventResult}
+  {path:'viewresult/:id/:name',component:ViewResultComponent}
 ];
 
 @NgModule({
