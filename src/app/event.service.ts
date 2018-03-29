@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Event } from "../models/event.model";
+import { EventResult } from "../models/eventResult.model";
 import { Observable } from 'rxjs/Rx';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
@@ -76,11 +77,19 @@ export class EventService {
   /** DELETE: delete the event from the server */
   deleteEvent (event: Event | number): Observable<Event> {
     const Id = typeof event === 'number' ? event : event.Id;
-    const url = `${this.apiUrl}Delete/${Id}`;
+    const url = `${this.apiUrl}delete/${Id}`;
 
     return this.http.delete<Event>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted event Id=${Id}`)),
       catchError(this.handleError<Event>('deleteEvent'))
+    );
+  }
+
+  eventResult(id:number): Observable<any> {
+    const url = `${this.apiUrl}fetchResult/${id}`;
+    return this.http.get<EventResult>(url).pipe(
+      tap(_ => this.log(`fetched result id=${id}`)),
+      catchError(this.handleError<Event>(`fetch result id=${id}`))
     );
   }
 

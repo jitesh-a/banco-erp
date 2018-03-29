@@ -42,16 +42,7 @@ dataLoaded: boolean;
     //.subscribe(data=>{},err=>{});
   }
 
-  //add
-  /*add(Name: string,Description): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.eventService.addEvent({ name, } as Event)
-      .subscribe(res => {
-        this.events.push(res["event"]);
-        console.log(res);
-      });
-  }*/
+ 
 
   //delete
   delete(event: Event): void {
@@ -59,6 +50,12 @@ dataLoaded: boolean;
     this.eventService.deleteEvent(event).subscribe(
       res=>{
         console.log(res);
+        if(res["success"]){
+          alert("Deleted Successfully");
+        }
+        else{
+          alert("Cannot delete , refering in another field");
+        }
       },
       err => {
         console.error(err);

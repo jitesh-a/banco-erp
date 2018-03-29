@@ -1,6 +1,7 @@
 export class Employee{
 
     Id: number;
+    Counts: number;
     Name: string;
     Description: string;
     Contact: string;

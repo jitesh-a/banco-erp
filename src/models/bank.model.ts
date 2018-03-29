@@ -25,6 +25,6 @@ export class Bank{
     Description: string;
     Contact: string;
     QuestionarieTypeId: number;
-    Payment: number;
+   // Payment: number;
 
 }

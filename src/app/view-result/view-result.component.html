@@ -1,0 +1,33 @@
+<div class="row" >
+  <div class="col-md-6"><h1> Event Result </h1></div>
+</div>
+<hr/>
+<div class="row" >
+<div class="col-md-12">
+    
+    <img src="./assets/img/loader.gif" *ngIf="dataLoaded==false"/>
+    
+    <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="Result">
+        <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+               <th>BankId</th>
+               <th>BankName</th>
+               <th>Financial Marks</th>
+                <th>Technological Marks</th> 
+              </tr>
+        </thead> 
+        <tbody>
+          <tr *ngFor="let e of results">
+            <td>{{e.Id}}</td>
+            <td>{{e.Name}}</td>
+            <td>{{e.BankId}}</td>
+            <td>{{e.BankName}}</td>
+            <td>{{e.FinancialMarks}}</td>
+            <td>{{e.TechnologicalMarks}}</td>           
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>

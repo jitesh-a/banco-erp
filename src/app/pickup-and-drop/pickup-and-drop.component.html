@@ -27,8 +27,7 @@
             <td>{{pud.DropPlace}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/pickupdropform/{{pud.Id}}"> Edit </a>
-              <a class="btn btn-sm btn-danger"> Delete </a>
-              
+              <button type="button" class="btn btn-sm btn-danger" (click)="delete(pud)">Delete</button>              
             </td>
           </tr>
         </tbody>

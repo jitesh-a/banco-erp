@@ -22,8 +22,8 @@ export class IncomeComponent implements OnInit {
   getIncomes(): void {
     this.incomeService.getIncomes()
                 .subscribe(res=>{
-                  console.log(res["income"]);
-                  this.incomes=res["income"];
+                  console.log(res["incomeandexpenses"]);
+                  this.incomes=res["incomeandexpenses"];
                   this.dataLoaded=true;
                   $(function(){
                     //alert('test');
