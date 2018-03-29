@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./excellent-performance-form.component.css']
 })
 export class ExcellentPerformanceFormComponent implements OnInit {
-  excelperfform:ExcellentPerformance=new ExcellentPerformance();
+  
   excellentPerformance : ExcellentPerformance= new ExcellentPerformance();
   id: number;
   name : string;
@@ -34,11 +34,10 @@ export class ExcellentPerformanceFormComponent implements OnInit {
 
   save(): void{
     
-      this.excelperfservice.addexcellentPerformance(this.excelperfform)
+      this.excelperfservice.addexcellentPerformance(this.excellentPerformance)
       .subscribe(
         res=>{
          console.log(res);
-         console.log(res["id"]);
          //alert("data saved successfully");
          this.router.navigate( ['/technologydetailsform', {id: this.id, name: this.name}]);
         },

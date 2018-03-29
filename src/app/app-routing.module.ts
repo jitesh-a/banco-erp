@@ -54,10 +54,11 @@ const routes: Routes = [
   {path: 'technologydetails', component:TechnologyDetailsComponent},
   {path:'technologydetailsform',component:TechnologyDetailsFormComponent},
   {path:'loginapi',component:LoginComponent},
-  { path:'fillform/:id/:name', component: BankFormComponent},
+  {path:'fillform/:id/:name', component: BankFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
   {path: 'techdetailsview',component:TechDetailsViewComponent},
+  {path: 'techdetailsview/:id/:name',component:TechDetailsViewComponent},
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent}

@@ -2,43 +2,69 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Technology Details</h5>
+    <form (ngSubmit)="onSubmit" #TechnologyMarksForm="ngForm">  
     <div class="row">
       <div class="col-md-5">
         <div class="form-group">
-            <label for=" branches">  Number of branches of the banks </label>
+            <label for="Branches"> Number of branches of the banks </label>
          </div>
       </div>
          <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id=" branches "
+                <input type="number" class="form-control" id="Branches"
                 required
-                [(ngModel)]="techdetailsform.branches" name=" branches "
-                #branches="ngModel" digits/>
+                value= {{techdetails.Branches}} name="Branches" 
+                readonly/>
              </div>
             </div>
              <div class="col-md-2">
                 <div class="form-group">
-                   <input type="number" class="form-control" placeholder="marks"/>
+                   <input type="number" class="form-control" [(ngModel)]="techdetails.M1" name="M1" #M1="ngModel" placeholder="marks"/>
+                 </div>
+           </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="form-group">
+            <label for="CBSImplanted">CBS Implanted</label>
+         </div>
+      </div>
+         <div class="col-md-5">
+            <div class="form-group">
+              <div *ngIf="techdetails.CBSImplanted === true;then template1 else template2"></div>
+              <ng-template #template1>
+                  <input type="text" class="form-control" id="CBSImplanted"
+                  name="CBSImplanted" value="Yes" readonly>
+              </ng-template>
+              <ng-template #template2>
+                  <input type="text" class="form-control" id="CBSImplanted"
+                  name="CBSImplanted" value="No" readonly>
+              </ng-template>
+             </div>
+            </div>
+             <div class="col-md-2">
+                <div class="form-group">
+                   <input type="number" class="form-control" [(ngModel)]="techdetails.M2" name="M2" #M2="ngModel" placeholder="marks"/>
                  </div>
            </div>
     </div>
     <div class="row">
         <div class="col-md-5">
           <div class="form-group">
-              <label for=" CBSCompletionDate">  Date on which  CBS Completed</label>
+              <label for=" CBSCompletionDate">Date on which  CBS Completed</label>
            </div>
         </div>
            <div class="col-md-5">
               <div class="form-group">
                 <input type="text" class="form-control" id="CBSCompletionDate "
                 required
-                [(ngModel)]="techdetailsform.CBSCompletionDate" name="CBSCompletionDate "
-                type="date" #CBSCompletionDate="ngModel">
+                [(ngModel)]="techdetails.CBSCompletionDate" name="CBSCompletionDate "
+                type="date" #CBSCompletionDate="ngModel" readonly>
                </div>
               </div>
                <div class="col-md-2">
                   <div class="form-group">
-                     <input type="number" class="form-control" placeholder="marks"/>
+                     <input type="number" class="form-control" [(ngModel)]="techdetails.M3" name="M3" #M3="ngModel" placeholder="marks"/>
                    </div>
              </div>
       </div>
@@ -46,20 +72,25 @@
       <div class="row">
           <div class="col-md-5">
             <div class="form-group">
-                <label for=" SMSFacility">  Whether SMS Facility is in place </label>
+                <label for=" SMSFacility">Whether SMS Facility is in place </label>
              </div>
           </div>
              <div class="col-md-5">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="  SMSFacility"
-                  required
-                  [(ngModel)]="techdetailsform. SMSFacility" name=" SMSFacility "
-                  #SMSFacility="ngModel">
+                    <div *ngIf="techdetails.SMSFacility === true;then template1 else template2"></div>
+                    <ng-template #template1>
+                        <input type="text" class="form-control" id="SMSFacility"
+                        name="SMSFacility" value="Yes" readonly>
+                    </ng-template>
+                    <ng-template #template2>
+                        <input type="text" class="form-control" id="SMSFacility"
+                        name="SMSFacility" value="No" readonly>
+                    </ng-template>
                  </div>
                 </div>
                  <div class="col-md-2">
                     <div class="form-group">
-                       <input type="text" class="form-control" placeholder="marks"/>
+                       <input type="text" class="form-control" [(ngModel)]="techdetails.M4" name="M4" #M4="ngModel" placeholder="marks"/>
                      </div>
                </div>
         </div>
@@ -67,20 +98,25 @@
         <div class="row">
             <div class="col-md-5">
               <div class="form-group">
-                  <label for=" DCOwnedBy"> Whether Data Centre Owned By bank </label>
+                  <label for="DCOwnedBy"> Whether Data Centre Owned By bank </label>
                </div>
             </div>
                <div class="col-md-5">
                   <div class="form-group">
-                    <input type="text" class="form-control" id=" DCOwnedBy"
-                    required
-                    [(ngModel)]="techdetailsform. DCOwnedBy" name=" DCOwnedBy"
-                    #DCOwnedBy="ngModel">
+                      <div *ngIf="techdetails.DCOwnedBy === true;then template1 else template2"></div>
+                      <ng-template #template1>
+                          <input type="text" class="form-control" id="DCOwnedBy"
+                          name="DCOwnedBy" value="Yes" readonly>
+                      </ng-template>
+                      <ng-template #template2>
+                          <input type="text" class="form-control" id="DCOwnedBy"
+                          name="DCOwnedBy" value="No" readonly>
+                      </ng-template>
                    </div>
                   </div>
                    <div class="col-md-2">
                       <div class="form-group">
-                         <input type="text" class="form-control" placeholder="marks"/>
+                         <input type="text" class="form-control" [(ngModel)]="techdetails.M5" name="M5" #M5="ngModel" placeholder="marks"/>
                        </div>
                  </div>
           </div>
@@ -93,15 +129,20 @@
               </div>
                  <div class="col-md-5">
                     <div class="form-group">
-                      <input type="text" class="form-control" id=" DCHostedAtIsp"
-                      required
-                      [(ngModel)]="techdetailsform.DCHostedAtIsp" name=" DCHostedAtIsp"
-                      #DCHostedAtIsp="ngModel">
+                        <div *ngIf="techdetails.DCHostedAtIsp === true;then template1 else template2"></div>
+                      <ng-template #template1>
+                          <input type="text" class="form-control" id="DCHostedAtIsp"
+                          name="DCHostedAtIsp" value="Yes" readonly>
+                      </ng-template>
+                      <ng-template #template2>
+                          <input type="text" class="form-control" id="DCHostedAtIsp"
+                          name="DCHostedAtIsp" value="No" readonly>
+                      </ng-template>
                      </div>
                     </div>
                      <div class="col-md-2">
                         <div class="form-group">
-                           <input type="text" class="form-control" placeholder="marks"/>
+                           <input type="text" class="form-control" [(ngModel)]="techdetails.M6" name="M6" #M6="ngModel" placeholder="marks"/>
                          </div>
                    </div>
             </div>
@@ -113,15 +154,20 @@
                 </div>
                    <div class="col-md-5">
                       <div class="form-group">
-                        <input type="text" class="form-control" id=" DRSiteInPlace"
-                        required
-                        [(ngModel)]="techdetailsform.DRSiteInPlace" name=" DRSiteInPlace"
-                        #DRSiteInPlace="ngModel">
+                              <div *ngIf="techdetails.DRSiteInPlace === true;then template1 else template2"></div>
+                            <ng-template #template1>
+                                <input type="text" class="form-control" id="DRSiteInPlace"
+                                name="DRSiteInPlace" value="Yes" readonly>
+                            </ng-template>
+                            <ng-template #template2>
+                                <input type="text" class="form-control" id="DRSiteInPlace"
+                                name="DRSiteInPlace" value="No" readonly>
+                            </ng-template>
                        </div>
                       </div>
                        <div class="col-md-2">
                           <div class="form-group">
-                             <input type="text" class="form-control" placeholder="marks"/>
+                             <input type="text" class="form-control" [(ngModel)]="techdetails.M7" name="M7" #M7="ngModel" placeholder="marks"/>
                            </div>
                      </div>
               </div>
@@ -133,15 +179,20 @@
                   </div>
                      <div class="col-md-5">
                         <div class="form-group">
-                          <input type="text" class="form-control" id=" DRSiteOnSharing"
-                          required
-                          [(ngModel)]="techdetailsform.DRSiteOnSharing" name=" DRSiteOnSharing"
-                          #DRSiteOnSharing="ngModel">
+                            <div *ngIf="techdetails.DRSiteOnSharing === true;then template1 else template2"></div>
+                            <ng-template #template1>
+                                <input type="text" class="form-control" id="DRSiteOnSharing"
+                                name="DRSiteOnSharing" value="Yes" readonly>
+                            </ng-template>
+                            <ng-template #template2>
+                                <input type="text" class="form-control" id="DRSiteOnSharing"
+                                name="DRSiteOnSharing" value="No" readonly>
+                            </ng-template>
                          </div>
                         </div>
                          <div class="col-md-2">
                             <div class="form-group">
-                               <input type="text" class="form-control" placeholder="marks"/>
+                               <input type="text" class="form-control" [(ngModel)]="techdetails.M8" name="M8" #M8="ngModel" placeholder="marks"/>
                              </div>
                        </div>
                 </div>
@@ -153,15 +204,20 @@
                     </div>
                        <div class="col-md-5">
                           <div class="form-group">
-                            <input type="text" class="form-control" id=" DRImplemented"
-                            required
-                            [(ngModel)]="techdetailsform.DRImplemented" name=" DRImplemented"
-                            #DRImplemented="ngModel">
+                              <div *ngIf="techdetails.DRImplemented === true;then template1 else template2"></div>
+                              <ng-template #template1>
+                                  <input type="text" class="form-control" id="DRImplemented"
+                                  name="DRImplemented" value="Yes" readonly>
+                              </ng-template>
+                              <ng-template #template2>
+                                  <input type="text" class="form-control" id="DRImplemented"
+                                  name="DRImplemented" value="No" readonly>
+                              </ng-template>
                            </div>
                           </div>
                            <div class="col-md-2">
                               <div class="form-group">
-                                 <input type="text" class="form-control" placeholder="marks"/>
+                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M9" name="M9" #M9="ngModel" placeholder="marks"/>
                                </div>
                          </div>
                   </div>
@@ -173,15 +229,20 @@
                       </div>
                          <div class="col-md-5">
                             <div class="form-group">
-                              <input type="text" class="form-control" id=" DRSiteInSeismicZone"
-                              required
-                              [(ngModel)]="techdetailsform.DRSiteInSeismicZone" name=" DRSiteInSeismicZone"
-                              #DRSiteInSeismicZone="ngModel">
+                                <div *ngIf="techdetails.DRSiteInSeismicZone === true;then template1 else template2"></div>
+                                <ng-template #template1>
+                                    <input type="text" class="form-control" id="DRSiteInSeismicZone"
+                                    name="DRSiteInSeismicZone" value="Yes" readonly>
+                                </ng-template>
+                                <ng-template #template2>
+                                    <input type="text" class="form-control" id="DRSiteInSeismicZone"
+                                    name="DRSiteInSeismicZone" value="No" readonly>
+                                </ng-template>
                              </div>
                             </div>
                              <div class="col-md-2">
                                 <div class="form-group">
-                                   <input type="text" class="form-control" placeholder="marks"/>
+                                   <input type="text" class="form-control" [(ngModel)]="techdetails.M10" name="M10" #M10="ngModel" placeholder="marks"/>
                                  </div>
                            </div>
                     </div>
@@ -195,13 +256,13 @@
                               <div class="form-group">
                                 <input type="text" class="form-control" id=" ProvisionInDisastere"
                                 required
-                                [(ngModel)]="techdetailsform.ProvisionInDisaster" name=" ProvisionInDisaster"
-                                #ProvisionInDisaster="ngModel"/>
+                                [(ngModel)]="techdetails.ProvisionInDisaster" name="ProvisionInDisaster"
+                                #ProvisionInDisaster="ngModel" readonly/>
                                </div>
                               </div>
                                <div class="col-md-2">
                                   <div class="form-group">
-                                     <input type="text" class="form-control" placeholder="marks"/>
+                                     <input type="text" class="form-control" [(ngModel)]="techdetails.M11" name="M11" #M11="ngModel" placeholder="marks"/>
                                    </div>
                              </div>
                       </div>
@@ -215,13 +276,13 @@
                                 <div class="form-group">
                                   <input type="text" class="form-control" id=" BackupInCaseDisaster"
                                   required
-                                  [(ngModel)]="techdetailsform.BackupInCaseDisaster" name="BackupInCaseDisaster"
-                                  #BackupInCaseDisaster="ngModel"/>
+                                  [(ngModel)]="techdetails.BackupInCaseDisaster" name="BackupInCaseDisaster"
+                                  #BackupInCaseDisaster="ngModel" readonly/>
                                  </div>
                                 </div>
                                  <div class="col-md-2">
                                     <div class="form-group">
-                                       <input type="text" class="form-control" placeholder="marks"/>
+                                       <input type="text" class="form-control" [(ngModel)]="techdetails.M12" name="M12" #M12="ngModel" placeholder="marks"/>
                                      </div>
                                </div>
                         </div>
@@ -235,33 +296,33 @@
                                   <div class="form-group">
                                     <input type="text" class="form-control" id=" PaymentGatewayServices"
                                     required
-                                    [(ngModel)]="techdetailsform.PaymentGatewayServices" name=" PaymentGatewayServices"
-                                    #PaymentGatewayServices="ngModel">
+                                    [(ngModel)]="techdetails.PaymentGatewayServices" name=" PaymentGatewayServices"
+                                    #PaymentGatewayServices="ngModel" readonly>
                                    </div>
                                   </div>
                                    <div class="col-md-2">
                                       <div class="form-group">
-                                         <input type="text" class="form-control" placeholder="marks"/>
+                                         <input type="text" class="form-control" [(ngModel)]="techdetails.M13" name="M13" #M13="ngModel" placeholder="marks"/>
                                        </div>
                                  </div>
                           </div>
                           <div class="row">
                               <div class="col-md-5">
                                 <div class="form-group">
-                                  <label for=" CondDRDrillsFreq "> Does your bank conducts DR drills and with what frequency</label>                                  
+                                  <label for=" CondDRDrillsFreq"> Does your bank conducts DR drills and with what frequency</label>                                  
                                  </div>
                               </div>
                                  <div class="col-md-5">
                                     <div class="form-group">
                                       <input type="text" class="form-control" id=" CondDRDrillsFreq"
                                       required
-                                      [(ngModel)]="techdetailsform.CondDRDrillsFreq" name=" CondDRDrillsFreq"
-                                      #CondDRDrillsFreq="ngModel">
+                                      [(ngModel)]="techdetails.CondDRDrillsFreq" name=" CondDRDrillsFreq"
+                                      #CondDRDrillsFreq="ngModel" readonly>
                                      </div>
                                     </div>
                                      <div class="col-md-2">
                                         <div class="form-group">
-                                           <input type="text" class="form-control" placeholder="marks"/>
+                                           <input type="text" class="form-control" [(ngModel)]="techdetails.M14" name="M14" #M14="ngModel" placeholder="marks"/>
                                          </div>
                                    </div>
                             </div>
@@ -275,20 +336,20 @@
                                       <div class="form-group">
                                         <input type="text" class="form-control" id=" ITStrategyPolicyDoc"
                                         required
-                                        [(ngModel)]="techdetailsform.ITStrategyPolicyDoc" name=" ITStrategyPolicyDoc"
-                                        #ITStrategyPolicyDoc="ngModel">
+                                        [(ngModel)]="techdetails.ITStrategyPolicyDoc" name=" ITStrategyPolicyDoc"
+                                        #ITStrategyPolicyDoc="ngModel" readonly>
                                        </div>
                                       </div>
                                        <div class="col-md-2">
                                           <div class="form-group">
-                                             <input type="text" class="form-control" placeholder="marks"/>
+                                             <input type="text" class="form-control" [(ngModel)]="techdetails.M15" name="M15" #M1="ngModel" placeholder="marks"/>
                                            </div>
                                      </div>
                               </div>
                               <div class="row">
                                   <div class="col-md-5">
                                     <div class="form-group">
-                                      <label for=" CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
+                                      <label for="CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
                                       
                                      </div>
                                   </div>
@@ -296,58 +357,73 @@
                                         <div class="form-group">
                                           <input type="text" class="form-control" id=" CommiteeITBoardMeetFreq"
                                           required
-                                          [(ngModel)]="techdetailsform.CommiteeITBoardMeetFreq" name=" CommiteeITBoardMeetFreq"
-                                          #CommiteeITBoardMeetFreq="ngModel">
+                                          [(ngModel)]="techdetails.CommiteeITBoardMeetFreq" name="CommiteeITBoardMeetFreq"
+                                          #CommiteeITBoardMeetFreq="ngModel" readonly>
                        
                                          </div>
                                         </div>
                                          <div class="col-md-2">
                                             <div class="form-group">
-                                               <input type="text" class="form-control" placeholder="marks"/>
+                                               <input type="text" class="form-control" [(ngModel)]="techdetails.M16" name="M16" #M16="ngModel" placeholder="marks"/>
                                              </div>
                                        </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-5">
                                       <div class="form-group">
-                                        <label for=" ConductionITSystemAudit "> Does your bank Conduct "IT" or "Systems Audit" ? When was such audit done?</label>
+                                        <label for="ConductionITSystemAudit"> Does your bank Conduct "IT" or "Systems Audit" ? When was such audit done?</label>
                                         
                                        </div>
                                     </div>
                                        <div class="col-md-5">
                                           <div class="form-group">
-                                            <input type="text" class="form-control" id=" ConductionITSystemAudit"
+                                            <input type="text" class="form-control" id="ConductionITSystemAudit"
                                             required
-                                            [(ngModel)]="techdetailsform.ConductionITSystemAudit" name=" ConductionITSystemAudit"
-                                            #ConductionITSystemAudit="ngModel"/>
-                                   
+                                            value = {{techdetails.ConductionITSystemAudit}} name="ConductionITSystemAudit" readonly/>
                                            </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M17" name="M17" #M17="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
                                   </div>
                                   <div class="row">
+                                      <div class="col-md-5">
+                                        <div class="form-group">
+                                          <label for="AuditCompletionDate">Audit Completion Date</label>
+          
+                                         </div>
+                                      </div>
+                                         <div class="col-md-5">
+                                            <div class="form-group">
+                                              <input type="date" class="form-control" id="AuditCompletionDate"
+                                              required
+                                              value= {{techdetails.AuditCompletionDate}} name="AuditCompletionDate" readonly/>
+                                             </div>
+                                            </div>
+                                             <div class="col-md-2">
+                                                <div class="form-group">
+                                                   <input type="text" class="form-control" [(ngModel)]="techdetails.M18" name="M18" #M18="ngModel" placeholder="marks"/>
+                                                 </div>
+                                           </div>
+                                    </div>
+                                  <div class="row">
                                     <div class="col-md-5">
                                       <div class="form-group">
                                         <label for=" OutSourcedServices">What are the out source services for managing your "IT" setup?</label>
-                                        
-                                       </div>
+                                      </div>
                                     </div>
                                        <div class="col-md-5">
                                           <div class="form-group">
                                             <input type="text" class="form-control" id=" OutSourcedServices"
                                             required
-                                            [(ngModel)]="techdetailsform.OutSourcedServices" name=" OutSourcedServices"
-                                            #OutSourcedServices="ngModel"/>
-                                  
+                                            value = {{techdetails.OutSourcedServices}} name=" OutSourcedServices" readonly/>
                                            </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M19" name="M19" #M19="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
                                   </div>
@@ -355,43 +431,37 @@
                                     <div class="col-md-5">
                                       <div class="form-group">
                                         <label for=" ServicesCustomerDueCBS "> Give briefly the list of Services/Facilities provided to customer due to CBS</label>
-                                        
                                        </div>
                                     </div>
                                        <div class="col-md-5">
                                           <div class="form-group">
                                             <input type="text" class="form-control" id=" ServicesCustomerDueCBS"
                                             required
-                                            [(ngModel)]="techdetailsform.ServicesCustomerDueCBS" name=" ServicesCustomerDueCBS"
-                                            #ServicesCustomerDueCBS="ngModel"/>
-      
+                                            value = {{techdetails.ServicesCustomerDueCBS}} name=" ServicesCustomerDueCBS" readonly/>
                                            </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M20" name="M20" #M20="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-md-5">
                                       <div class="form-group">
-                                        <label for=" ATM_ConnectedNFSOther "> Whether you have "ATM" and whether it is connected to NFS or otherwise</label>
-                                        
-                                       </div>
+                                        <label for=" ATM_ConnectedNFSOther"> Whether you have "ATM" and whether it is connected to NFS or otherwise</label>
+                                      </div>
                                     </div>
                                        <div class="col-md-5">
                                           <div class="form-group">
                                             <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
                                             required
-                                            [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
-                                            #ATM_ConnectedNFSOther="ngModel"/>
-                       
+                                            value = {{techdetails.ATM_ConnectedNFSOther}} name=" ATM_ConnectedNFSOther" readonly/>
                                            </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M21" name="M21" #M21="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
                                   </div>
@@ -405,14 +475,12 @@
                                           <div class="form-group">
                                             <input type="text" class="form-control" id=" UptimeITServicesInP"
                                             required
-                                            [(ngModel)]="techdetailsform.UptimeITServicesInP" name=" UptimeITServicesInP"
-                                            #UptimeITServicesInP="ngModel"/>
-                                    
+                                            value = {{techdetails.UptimeITServicesInP}} name=" UptimeITServicesInP" readonly/>
                                            </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M22" name="M22" #M22="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
                                   </div>
@@ -420,67 +488,70 @@
                                     <div class="col-md-5">
                                       <div class="form-group">
                                         <label for=" ServiceLevelAgreements ">Whether all Service level Agreements in lace and renewed?</label>
-                                        
-                                       </div>
+                                      </div>
                                     </div>
                                        <div class="col-md-5">
                                           <div class="form-group">
                                             <input type="text" class="form-control" id=" ServiceLevelAgreements"
                                             required
-                                            [(ngModel)]="techdetailsform.ServiceLevelAgreements" name=" ServiceLevelAgreements"
-                                            #ServiceLevelAgreements="ngModel"/>
-                                    
-                                           </div>
+                                            value = {{techdetails.ServiceLevelAgreements}} name=" ServiceLevelAgreements"
+                                            readonly/>
+                                          </div>
                                           </div>
                                            <div class="col-md-2">
                                               <div class="form-group">
-                                                 <input type="text" class="form-control" placeholder="marks"/>
+                                                 <input type="text" class="form-control" [(ngModel)]="techdetails.M23" name="M23" #M23="ngModel" placeholder="marks"/>
                                                </div>
                                          </div>
-
-                                         <div class="row">
-                                          <div class="col-md-5">
-                                            <div class="form-group">
-                                              <label for=" ATM_ConnectedNFSOther ">Whether your bank conducted any Business Process Engineering after implementation of CBS</label>
-                                              
-                                             </div>
-                                          </div>
-                                             <div class="col-md-5">
-                                                <div class="form-group">
-                                                  <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
-                                                  required
-                                                  [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
-                                                  #ATM_ConnectedNFSOther="ngModel"/>
-                                                 </div>
-                                                </div>
-                                                 <div class="col-md-2">
-                                                    <div class="form-group">
-                                                       <input type="text" class="form-control" placeholder="marks"/>
-                                                     </div>
-                                               </div>
-                                               <div class="row">
-                                                <div class="col-md-5">
-                                                  <div class="form-group">
-                                                    <label for=" OtherInfo ">Any other information that may be fpund necessary of assessment not covered by above questionarie may be given.</label>
-                                                    
-                                                   </div>
-                                                </div>
-                                                   <div class="col-md-5">
-                                                      <div class="form-group">
-                                                        <input type="text" class="form-control" id="OtherInfo"
-                                                        required
-                                                        [(ngModel)]="techdetailsform.OtherInfo" name=" OtherInfo"
-                                                        #OtherInfo="ngModel"/>                                             
-                                                       </div>
-                                                      </div>
-                                                       <div class="col-md-2">
-                                                          <div class="form-group">
-                                                             <input type="text" class="form-control" placeholder="marks"/>
-                                                           </div>
-                                                     </div>
                                   </div>
-
-
-  
+                                  <div class="row">
+                                      <div class="col-md-5">
+                                        <div class="form-group">
+                                          <label for="ConductionOfDPE">Conduction Of DPE</label>
+                                        </div>
+                                      </div>
+                                         <div class="col-md-5">
+                                            <div class="form-group">
+                                              <input type="text" class="form-control" id="ConductionOfDPE"
+                                              required
+                                              value = {{techdetails.ConductionOfDPE}} name="ConductionOfDPE"
+                                              readonly/>
+                                            </div>
+                                            </div>
+                                             <div class="col-md-2">
+                                                <div class="form-group">
+                                                   <input type="text" class="form-control" [(ngModel)]="techdetails.M24" name="M24" #M24="ngModel" placeholder="marks"/>
+                                                 </div>
+                                           </div>
+                                        </div>
+                                  <div class="row">
+                                      <div class="col-md-5">
+                                        <div class="form-group">
+                                          <label for=" OtherInfo ">Any other information that may be fpund necessary of assessment not covered by above questionarie may be given.</label>
+                                         </div>
+                                      </div>
+                                         <div class="col-md-5">
+                                            <div class="form-group">
+                                              <input type="text" class="form-control" id="OtherInfo"
+                                              required
+                                              value = {{techdetails.OtherInfo}} name=" OtherInfo"
+                                              readonly/>                                             
+                                             </div>
+                                            </div>
+                                             <div class="col-md-2">
+                                                <div class="form-group">
+                                                   <input type="text" class="form-control" [(ngModel)]="techdetails.M25" name="M25" #M25="ngModel" placeholder="marks"/>
+                                                 </div>
+                                           </div>
+                        </div>   
+                        <div class="row">
+                          <div class="col-md-offset-8 col-md-2">
+                            <button type="submit" class="btn btn-success" [disabled]="!TechnologyMarksForm.form.valid" (click)="save()">Submit</button>
+                          </div>
+                          <div>
+                          
+                          </div>
+                        </div>     
+                        </form>     
 </div>
 </div>
