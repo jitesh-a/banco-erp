@@ -29,7 +29,7 @@ export class TechnologyDetailsService {
   }
 
   updateTechnologyDetails(techdetails: TechnologyDetails): Observable<any>{
-    return this.http.put<TechnologyDetails>(this.apiUrl+`edit/${techdetails.Id}`, techdetails, httpOptions)
+    return this.http.post<TechnologyDetails>(this.apiUrl+`edit/${techdetails.Id}`, techdetails, httpOptions)
             .pipe(
               tap(_=>this.log(`Updated tech details : ${techdetails.Id}`)),
               catchError(this.handleError<any>(`update tech details Id=${techdetails.Id}`))
@@ -45,6 +45,14 @@ export class TechnologyDetailsService {
     );
   }
 
+  getTechRecord(id: number): Observable<TechnologyDetails> {
+    const url = `${this.apiUrl}getTechRecord/${id}`;
+    console.log("URL :"+url);
+    return this.http.get<TechnologyDetails>(url).pipe(
+      tap(_ => this.log(`fetched Technology Details id=${id}`)),
+      catchError(this.handleError<TechnologyDetails>(`get Technology Details id=${id}`))
+    );
+  }
   /** POST: add a new sponsorandguest to the server */
   addTechnologyDetails (techdetails:TechnologyDetails): Observable<TechnologyDetails> {
     return this.http.post<TechnologyDetails>(this.apiUrl+'create', techdetails, httpOptions).pipe(

@@ -4,6 +4,8 @@ import { EventService } from "../event.service";
 import { identifierModuleUrl } from '@angular/compiler';
 import { Router } from "@angular/router";
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 declare const $;
 @Component({
   selector: 'app-view-result',
@@ -21,16 +23,18 @@ export class ViewResultComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.dataLoaded=false;
      this.getResults(id);
+     console.log(id);
     this.dataLoaded=true;
 
   }
  //get results 
-  getResults(id):void
+  getResults(id:number):void
   {
     this.eventService.eventResult(id)
     .subscribe(res=>{
-      console.log(res["result"]);
-      this.result=res["result"];
+      console.log(res);
+      this.result= res["data"];
+      console.log(this.result);
       this.dataLoaded=true;
       $(function(){
         //alert('test');

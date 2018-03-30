@@ -53,6 +53,7 @@ import { ExcelPerformViewComponent } from './excel-perform-view/excel-perform-vi
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from './sponserview/sponserview.component';
 import { ViewResultComponent } from './view-result/view-result.component';
+import { EventResult } from "../models/eventResult.model";
 
 @NgModule({
   declarations: [
@@ -88,8 +89,7 @@ import { ViewResultComponent } from './view-result/view-result.component';
     ExcelPerformViewComponent,
     BankDetailsComponent,
     sponserviewComponent,
-    ViewResultComponent,
-
+    ViewResultComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +119,6 @@ import { ViewResultComponent } from './view-result/view-result.component';
     IncomeService,
     TechnologyDetailsService,
     TestingService,
-    
     LoginService],
     bootstrap: [AppComponent]
 })

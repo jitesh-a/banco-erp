@@ -31,7 +31,7 @@ export class BankComponent implements OnInit {
   getBank(): void {
     this.bankService.getBanks()
                 .subscribe(res=>{
-                  console.log(res["bank"]);
+                  console.log("Inside Bank : "+res["bank"]);
                   this.banks=res["banks"];
                   this.dataLoaded=true;
                   $(function(){

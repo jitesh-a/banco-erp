@@ -3,6 +3,7 @@
   <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/eventform/0"> New Event </a></div>
 </div>
 <hr/>
+<h4>{{link}}</h4>
 <div class="row" >
 <div class="col-md-12">
     
@@ -29,8 +30,8 @@
             <td>
               <a class="btn btn-sm btn-primary" href="/eventform/{{e.Id}}"> Edit </a>
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>
-              <a class="btn btn-sm btn-success" href="/fillform/{{e.Id}}/{{e.Name}}"> Generate Link </a>
-              <a class="btn  btn-sm btn-success" href="/viewresult/{{e.Id}}/{{e.Name}}">View Result</a>
+              <a class="btn btn-sm btn-success" (click)="createLink(e)"> Generate Link </a>
+              <a class="btn  btn-sm btn-info" href="/viewresult/{{e.Id}}/{{e.Name}}">View Result</a>
             </td>
           </tr>
         </tbody>

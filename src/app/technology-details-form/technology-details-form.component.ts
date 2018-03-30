@@ -11,18 +11,18 @@ import { Router } from "@angular/router";
   styleUrls: ['./technology-details-form.component.css']
 })
 export class TechnologyDetailsFormComponent implements OnInit {
+
+  id: number;
+  name:string;
   techdetails:TechnologyDetails=new TechnologyDetails();
   
   constructor(private technologydetailService:TechnologyDetailsService,private route:ActivatedRoute,
     private location:Location,private router:Router) { }
   
     ngOnInit() {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
-      if(id>0){
-        this.getTechnologyDetails(id);
-        this.techdetails.Id = Number(this.route.snapshot.paramMap.get('id'));
-        console.log("test data"+this.techdetails.Id);
-      }
+      this.id = Number(this.route.snapshot.paramMap.get('id'));
+      this.name = this.route.snapshot.paramMap.get('name');
+      this.techdetails.BankId = this.id;
     }
   
       getTechnologyDetails(id: number): void {
@@ -33,6 +33,40 @@ export class TechnologyDetailsFormComponent implements OnInit {
       
       goBack(): void {
         this.location.back();
+      }
+
+      save(): void{
+        if(this.techdetails.Id>0){
+          this.technologydetailService.updateTechnologyDetails(this.techdetails)
+          .subscribe(
+            res=>{
+             console.log(res);
+             alert("Data updated successfully");
+             this.router.navigate( ['/dashboard']);
+            },
+            err=>{
+             console.error(err);
+             alert("Error occured");
+             this.router.navigate( ['/dashboard']);
+            }
+          ); 
+        }else{
+          console.log(this.techdetails.Branches);
+          this.technologydetailService.addTechnologyDetails(this.techdetails)
+          .subscribe(
+            res=>{
+             console.log(res);
+             alert("Data added successfully");
+             //this.router.navigate( ['/spandgst']);
+            },
+            err=>{
+             console.error(err);
+             alert("Error occured");
+           //  this.router.navigate( ['/spandgst']);
+            }
+          ); 
+        }
+        
       }
   
       

@@ -3,23 +3,39 @@
 <div class="row">
       <div class="col-md-4">
       <div class="form-group">
-          <label for=" branches">  Number of branches of the banks </label>
-          <input type="number" class="form-control" id=" branches "
+          <label for="Branches">  Number of the branches </label>
+          <input type="number" class="form-control" id="Branches"
                  required
-                 [(ngModel)]="techdetailsform.branches" name=" branches "
-                 #branches="ngModel" digits/>
-          <div [hidden]=" branches .valid ||  branches.pristine"
+                 [(ngModel)]="techdetails.Branches" name="Branches"
+                 #Branches="ngModel" digits/>
+          <div [hidden]="Branches.valid || Branches.pristine"
                class="alert alert-danger">
-               branches are required
+              Number Of Branches are required
           </div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <label for="CBSImplanted">CBS Implanted</label>
+            <select type="text" class="form-control" id="CBSImplanted"
+                   required
+                   [(ngModel)]="techdetails.CBSImplanted" name="CBSImplanted"
+                   #CBSImplanted="ngModel">
+                   <option [value]=true>Yes</option>
+                   <option [value]=false>No</option>
+            </select>
+            <div [hidden]="CBSImplanted.valid || CBSImplanted.pristine"
+                 class="alert alert-danger">
+                 CBS Implanted is required
+            </div>
+          </div>
+     </div>
       <div class="col-md-4">
           <div class="form-group">
               <label for=" CBSCompletionDate">Date on which  CBS Completed</label>
               <input type="text" class="form-control" id="CBSCompletionDate "
                      required
-                     [(ngModel)]="techdetailsform.CBSCompletionDate" name="CBSCompletionDate "
+                     [(ngModel)]="techdetails.CBSCompletionDate" name="CBSCompletionDate "
                      type="date" #CBSCompletionDate="ngModel">
               <div [hidden]=" CBSCompletionDate.valid ||CBSCompletionDate .pristine"
                    class="alert alert-danger">
@@ -27,30 +43,37 @@
               </div>
             </div>
       </div>
-      <div class="col-md-4">       
-          <div class="form-group">
-              <label for=" SMSFacility "> Whether SMS Facility is in place </label>
-              <input type="text" class="form-control" id="  SMSFacility"
-                     required
-                     [(ngModel)]="techdetailsform. SMSFacility" name=" SMSFacility "
-                     #SMSFacility="ngModel">
-              <div [hidden]="  SMSFacility.valid ||SMSFacility.pristine"
-                   class="alert alert-danger">
-                   SMSFacility is required
-              </div>
-            </div>
-      </div>
+     
         </div>  
         
         <div class="row">
+                <div class="col-md-4">       
+                        <div class="form-group">
+                            <label for=" SMSFacility "> Whether SMS Facility is in place </label>
+                            <select type="text" class="form-control" id="SMSFacility"
+                                   required
+                                   [(ngModel)]="techdetails.SMSFacility" name="SMSFacility"
+                                   #SMSFacility="ngModel">
+                                   <option [value]=true>Yes</option>
+                                   <option [value]=false>No</option>    
+                            </select>
+                            <div [hidden]="SMSFacility.valid || SMSFacility.pristine"
+                                 class="alert alert-danger">
+                                 SMS Facility is required
+                            </div>
+                          </div>
+                    </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for=" DCOwnedBy ">  Whether Data Centre Owned By bank</label>
-                    <input type="text" class="form-control" id=" DCOwnedBy"
+                    <select type="text" class="form-control" id="DCOwnedBy"
                            required
-                           [(ngModel)]="techdetailsform. DCOwnedBy" name=" DCOwnedBy"
+                           [(ngModel)]="techdetails.DCOwnedBy" name="DCOwnedBy"
                            #DCOwnedBy="ngModel">
-                    <div [hidden]=" DCOwnedBy.valid ||DCOwnedBy.pristine"
+                           <option [value]=true>Yes</option>
+                           <option [value]=false>No</option>    
+                    </select>
+                    <div [hidden]="DCOwnedBy.valid || DCOwnedBy.pristine"
                          class="alert alert-danger">
                          Data Centre Owned By is required
                     </div>
@@ -59,78 +82,95 @@
             <div class="col-md-4">
                   <div class="form-group">
                     <label for=" DCHostedAtIsp ">  Data Centre is  Hosted At ISP</label>
-                    <input type="text" class="form-control" id=" DCHostedAtIsp"
+                    <select type="text" class="form-control" id="DCHostedAtIsp"
                            required
-                           [(ngModel)]="techdetailsform.DCHostedAtIsp" name=" DCHostedAtIsp"
+                           [(ngModel)]="techdetails.DCHostedAtIsp" name="DCHostedAtIsp"
                            #DCHostedAtIsp="ngModel">
-                    <div [hidden]=" DCHostedAtIsp.valid ||DCHostedAtIsp.pristine"
+                           <option [value]=true>Yes</option>
+                           <option [value]=false>No</option>
+                    </select>
+                    <div [hidden]="DCHostedAtIsp.valid ||DCHostedAtIsp.pristine"
                          class="alert alert-danger">
                          Data Centre Hosted At Isp is required
                     </div>
                   </div>
            </div>
-           <div class="col-md-4">
-                  <div class="form-group">
-                    <label for=" DRSiteInPlace ">  Whether DR Site  Is In Place</label>
-                    <input type="text" class="form-control" id=" DRSiteInPlace"
-                           required
-                           [(ngModel)]="techdetailsform.DRSiteInPlace" name=" DRSiteInPlace"
-                           #DRSiteInPlace="ngModel">
-                    <div [hidden]=" DRSiteInPlace.valid ||DRSiteInPlace.pristine"
-                         class="alert alert-danger">
-                         DRSiteInPlace is required
-                    </div>
-                  </div>
-              </div>
+         
         </div>   
         <div class="row">
+                <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="DRSiteInPlace">  Whether DR Site  Is In Place</label>
+                          <select type="text" class="form-control" id="DRSiteInPlace"
+                                 required
+                                 [(ngModel)]="techdetails.DRSiteInPlace" name="DRSiteInPlace"
+                                 #DRSiteInPlace="ngModel">
+                                 <option [value]=true>Yes</option>
+                                 <option [value]=false>No</option>    
+                            </select>
+                          <div [hidden]="DRSiteInPlace.valid || DRSiteInPlace.pristine"
+                               class="alert alert-danger">
+                               DR Site In Place is required
+                          </div>
+                        </div>
+                    </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for=" DRSiteOnSharing "> Whether DR Site On Sharing Basis</label>
-                    <input type="text" class="form-control" id=" DRSiteOnSharing"
+                    <select type="text" class="form-control" id="DRSiteOnSharing"
                            required
-                           [(ngModel)]="techdetailsform.DRSiteOnSharing" name=" DRSiteOnSharing"
+                           [(ngModel)]="techdetails.DRSiteOnSharing" name="DRSiteOnSharing"
                            #DRSiteOnSharing="ngModel">
-                    <div [hidden]=" DRSiteOnSharing.valid ||DRSiteOnSharing.pristine"
+                           <option [value]=true>Yes</option>
+                           <option [value]=false>No</option>    
+                    </select>
+                    <div [hidden]=" DRSiteOnSharing.valid || DRSiteOnSharing.pristine"
                          class="alert alert-danger">
-                         DRSiteOnSharing is required
+                         DR Site On Sharing is required
                     </div>
                   </div>
             </div>
                   <div class="col-md-4">
                   <div class="form-group">
                     <label for=" DRImplemented"> Whether DR Plan Is Implemented</label>
-                    <input type="text" class="form-control" id=" DRImplemented"
+                    <select type="text" class="form-control" id="DRImplemented"
                            required
-                           [(ngModel)]="techdetailsform.DRImplemented" name=" DRImplemented"
+                           [(ngModel)]="techdetails.DRImplemented" name="DRImplemented"
                            #DRImplemented="ngModel">
+                           <option [value]=true>Yes</option>
+                           <option [value]=false>No</option>
+                    </select>
                     <div [hidden]="DRImplemented.valid ||DRImplemented.pristine"
                          class="alert alert-danger">
-                         DRImplemented is required
+                         DR Implemented is required
                     </div>
                   </div>
                   </div>
-                  <div class="col-md-4">
-                  <div class="form-group">
-                    <label for=" DRSiteInSeismicZone ">DR Site In  Different Seismic Zone</label>
-                    <input type="text" class="form-control" id=" DRSiteInSeismicZone"
-                           required
-                           [(ngModel)]="techdetailsform.DRSiteInSeismicZone" name=" DRSiteInSeismicZone"
-                           #DRSiteInSeismicZone="ngModel">
-                    <div [hidden]="DRSiteInSeismicZone.valid ||DRSiteInSeismicZone.pristine"
-                         class="alert alert-danger">
-                         DRSiteInSeismicZone is required
-                    </div>
-                  </div>
-              </div>
+               
         </div>  
         <div class="row">
+                <div class="col-md-4">
+                        <div class="form-group">
+                          <label for=" DRSiteInSeismicZone ">DR Site In  Different Seismic Zone</label>
+                          <select type="text" class="form-control" id=" DRSiteInSeismicZone"
+                                 required
+                                 [(ngModel)]="techdetails.DRSiteInSeismicZone" name=" DRSiteInSeismicZone"
+                                 #DRSiteInSeismicZone="ngModel">
+                                 <option [value]=true>Yes</option>
+                                 <option [value]=false>No</option>
+                            </select>
+                          <div [hidden]="DRSiteInSeismicZone.valid ||DRSiteInSeismicZone.pristine"
+                               class="alert alert-danger">
+                               DRSiteInSeismicZone is required
+                          </div>
+                        </div>
+                    </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for=" ProvisionInDisaster "> Whether There Is Standard Operating Procedure In Case Disaster</label>
-                    <input type="text" class="form-control" id=" ProvisionInDisastere"
+                    <input type="text" class="form-control" id="ProvisionInDisaster"
                            required
-                           [(ngModel)]="techdetailsform.ProvisionInDisaster" name=" ProvisionInDisaster"
+                           [(ngModel)]="techdetails.ProvisionInDisaster" name="ProvisionInDisaster"
                            #ProvisionInDisaster="ngModel"/>
                     <div [hidden]="ProvisionInDisaster.valid ||ProvisionInDisaster.pristine"
                          class="alert alert-danger">
@@ -140,10 +180,10 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for=" BackupInCaseDisaster ">Please inform the sequence of events neccessary to prepare the backup site if disaster take place[Not more than 100 words]</label>
-                    <input type="text" class="form-control" id=" BackupInCaseDisaster"
+                    <label for="BackupInCaseDisaster">Please inform the sequence of events neccessary to prepare the backup site if disaster take place[Not more than 100 words]</label>
+                    <input type="text" class="form-control" id="BackupInCaseDisaster"
                            required
-                           [(ngModel)]="techdetailsform.BackupInCaseDisaster" name="BackupInCaseDisaster"
+                           [(ngModel)]="techdetails.BackupInCaseDisaster" name="BackupInCaseDisaster"
                            #BackupInCaseDisaster="ngModel"/>
                     <div [hidden]="BackupInCaseDisaster.valid ||BackupInCaseDisaster.pristine"
                          class="alert alert-danger">
@@ -151,27 +191,28 @@
                     </div>
                   </div>
               </div>
-              <div class="col-md-4">
-                  <div class="form-group">
-                      <label for="PaymentGatewayServices ">Whether the bank  is providing Payment Gateway Services like POS , NetBanking ,E-commerce, utility bill payments etc ...? If yes ..please mention list of services..</label>
-                      <input type="text" class="form-control" id=" PaymentGatewayServices"
-                             required
-                             [(ngModel)]="techdetailsform.PaymentGatewayServices" name=" PaymentGatewayServices"
-                             #PaymentGatewayServices="ngModel">
-                      <div [hidden]="PaymentGatewayServices.valid ||PaymentGatewayServices.pristine"
-                           class="alert alert-danger">
-                           PaymentGatewayServices is required
-                      </div>
-                    </div>       
-                </div>
+             
         </div>
         <div class="row">
                 <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="PaymentGatewayServices">Whether the bank  is providing Payment Gateway Services like POS , NetBanking ,E-commerce, utility bill payments etc ...? If yes ..please mention list of services..</label>
+                            <input type="text" class="form-control" id="PaymentGatewayServices"
+                                   required
+                                   [(ngModel)]="techdetails.PaymentGatewayServices" name="PaymentGatewayServices"
+                                   #PaymentGatewayServices="ngModel">
+                            <div [hidden]="PaymentGatewayServices.valid ||PaymentGatewayServices.pristine"
+                                 class="alert alert-danger">
+                                 PaymentGatewayServices is required
+                            </div>
+                          </div>       
+                      </div>
+                <div class="col-md-4">
                     <div class="form-group">
                         <label for=" CondDRDrillsFreq "> Does your bank conducts DR drills and with what frequency</label>
-                        <input type="text" class="form-control" id=" CondDRDrillsFreq"
+                        <input type="text" class="form-control" id="CondDRDrillsFreq"
                                required
-                               [(ngModel)]="techdetailsform.CondDRDrillsFreq" name=" CondDRDrillsFreq"
+                               [(ngModel)]="techdetails.CondDRDrillsFreq" name="CondDRDrillsFreq"
                                #CondDRDrillsFreq="ngModel">
                         <div [hidden]="CondDRDrillsFreq.valid ||CondDRDrillsFreq.pristine"
                              class="alert alert-danger">
@@ -182,9 +223,9 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for=" ITStrategyPolicyDoc">Whether  you have "IT" strategy and policy duly documented ?</label>
-                        <input type="text" class="form-control" id=" ITStrategyPolicyDoc"
+                        <input type="text" class="form-control" id="ITStrategyPolicyDoc"
                                required
-                               [(ngModel)]="techdetailsform.ITStrategyPolicyDoc" name=" ITStrategyPolicyDoc"
+                               [(ngModel)]="techdetails.ITStrategyPolicyDoc" name="ITStrategyPolicyDoc"
                                #ITStrategyPolicyDoc="ngModel">
                         <div [hidden]="ITStrategyPolicyDoc.valid ||ITStrategyPolicyDoc.pristine"
                              class="alert alert-danger">
@@ -192,27 +233,28 @@
                         </div>
                       </div>
                   </div>
-                  <div class="col-md-4">
-                      <div class="form-group">
-                          <label for=" CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
-                          <input type="text" class="form-control" id=" CommiteeITBoardMeetFreq"
-                                 required
-                                 [(ngModel)]="techdetailsform.CommiteeITBoardMeetFreq" name=" CommiteeITBoardMeetFreq"
-                                 #CommiteeITBoardMeetFreq="ngModel">
-                          <div [hidden]="CommiteeITBoardMeetFreq.valid ||CommiteeITBoardMeetFreq.pristine"
-                               class="alert alert-danger">
-                               CommiteeITBoardMeetFreq is required
-                          </div>
-                        </div>       
-                    </div>
+                
             </div>
             <div class="row">
+                    <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="CommiteeITBoardMeetFreq"> Do you have "IT" commitee of the board ? How often it meets</label>
+                                <input type="text" class="form-control" id="CommiteeITBoardMeetFreq"
+                                       required
+                                       [(ngModel)]="techdetails.CommiteeITBoardMeetFreq" name="CommiteeITBoardMeetFreq"
+                                       #CommiteeITBoardMeetFreq="ngModel">
+                                <div [hidden]="CommiteeITBoardMeetFreq.valid ||CommiteeITBoardMeetFreq.pristine"
+                                     class="alert alert-danger">
+                                     CommiteeITBoardMeetFreq is required
+                                </div>
+                              </div>       
+                          </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for=" ConductionITSystemAudit "> Does your bank Conduct "IT" or "Systems Audit" ? When was such audit done?</label>
-                    <input type="text" class="form-control" id=" ConductionITSystemAudit"
+                    <input type="text" class="form-control" id="ConductionITSystemAudit"
                            required
-                           [(ngModel)]="techdetailsform.ConductionITSystemAudit" name=" ConductionITSystemAudit"
+                           [(ngModel)]="techdetails.ConductionITSystemAudit" name="ConductionITSystemAudit"
                            #ConductionITSystemAudit="ngModel"/>
                     <div [hidden]="ConductionITSystemAudit.valid ||ConductionITSystemAudit.pristine"
                          class="alert alert-danger">
@@ -221,40 +263,54 @@
                   </div>
            </div>
            <div class="col-md-4">
-              <div class="form-group">
-                  <label for=" OutSourcedServices">What are the out source services for managing your "IT" setup?</label>
-                  <input type="text" class="form-control" id=" OutSourcedServices"
-                         required
-                         [(ngModel)]="techdetailsform.OutSourcedServices" name=" OutSourcedServices"
-                         #OutSourcedServices="ngModel"/>
-                  <div [hidden]="OutSourcedServices.valid ||OutSourcedServices.pristine"
-                       class="alert alert-danger">
-                       OutSourcedServices is required
-                  </div>
-                </div>
-   
-          </div>
-                  <div class="col-md-4">
-                      <div class="form-group">
-                          <label for=" ServicesCustomerDueCBS "> Give briefly the list of Services/Facilities provided to customer due to CBS</label>
-                          <input type="text" class="form-control" id=" ServicesCustomerDueCBS"
-                                 required
-                                 [(ngModel)]="techdetailsform.ServicesCustomerDueCBS" name=" ServicesCustomerDueCBS"
-                                 #ServicesCustomerDueCBS="ngModel"/>
-                          <div [hidden]="ServicesCustomerDueCBS.valid ||ServicesCustomerDueCBS.pristine"
-                               class="alert alert-danger">
-                               ServicesCustomerDueCBS is required
-                          </div>
+                <div class="form-group">
+                        <label for="AuditCompletionDate">Audit Completion Date</label>
+                        <input type="date" class="form-control" id="AuditCompletionDate"
+                               required
+                               [(ngModel)]="techdetails.AuditCompletionDate" name="AuditCompletionDate"
+                               #AuditCompletionDate="ngModel"/>
+                        <div [hidden]="AuditCompletionDate.valid || AuditCompletionDate.pristine"
+                             class="alert alert-danger">
+                             Audit Completion Date is required
                         </div>
-                  </div>
+                      </div>
+            </div>
+
+ 
                 </div>
                 <div class="row">
+                        <div class="col-md-4">
+                                <div class="form-group">
+                                <label for=" OutSourcedServices">What are the out source services for managing your "IT" setup?</label>
+                                <input type="text" class="form-control" id="OutSourcedServices"
+                                       required
+                                       [(ngModel)]="techdetails.OutSourcedServices" name="OutSourcedServices"
+                                       #OutSourcedServices="ngModel"/>
+                                <div [hidden]="OutSourcedServices.valid ||OutSourcedServices.pristine"
+                                     class="alert alert-danger">
+                                     OutSourcedServices is required
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ServicesCustomerDueCBS"> Give briefly the list of Services/Facilities provided to customer due to CBS</label>
+                                    <input type="text" class="form-control" id="ServicesCustomerDueCBS"
+                                           required
+                                           [(ngModel)]="techdetails.ServicesCustomerDueCBS" name="ServicesCustomerDueCBS"
+                                           #ServicesCustomerDueCBS="ngModel"/>
+                                    <div [hidden]="ServicesCustomerDueCBS.valid ||ServicesCustomerDueCBS.pristine"
+                                         class="alert alert-danger">
+                                         ServicesCustomerDueCBS is required
+                                    </div>
+                                  </div>
+                            </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for=" ATM_ConnectedNFSOther "> Whether you have "ATM" and whether it is connected to NFS or otherwise</label>
-                            <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
+                            <label for=" ATM_ConnectedNFSOther"> Whether you have "ATM" and whether it is connected to NFS or otherwise</label>
+                            <input type="text" class="form-control" id="ATM_ConnectedNFSOther"
                                    required
-                                   [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
+                                   [(ngModel)]="techdetails.ATM_ConnectedNFSOther" name="ATM_ConnectedNFSOther"
                                    #ATM_ConnectedNFSOther="ngModel"/>
                             <div [hidden]="ATM_ConnectedNFSOther.valid ||ATM_ConnectedNFSOther.pristine"
                                  class="alert alert-danger">
@@ -263,60 +319,63 @@
                           </div>
               
                       </div>
-                      <div class="col-md-4">
-                          <div class="form-group">
-                              <label for=" UptimeITServicesInP ">What is the up time of "IT" services? Please respond in % terms</label>
-                              <input type="text" class="form-control" id=" UptimeITServicesInP"
-                                     required
-                                     [(ngModel)]="techdetailsform.UptimeITServicesInP" name=" UptimeITServicesInP"
-                                     #UptimeITServicesInP="ngModel"/>
-                              <div [hidden]="UptimeITServicesInP.valid ||UptimeITServicesInP.pristine"
-                                   class="alert alert-danger">
-                                   UptimeITServicesInP is required
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for=" ServiceLevelAgreements ">Whether all Service level Agreements in lace and renewed?</label>
-                                <input type="text" class="form-control" id=" ServiceLevelAgreements"
-                                       required
-                                       [(ngModel)]="techdetailsform.ServiceLevelAgreements" name=" ServiceLevelAgreements"
-                                       #ServiceLevelAgreements="ngModel"/>
-                                <div [hidden]="ServiceLevelAgreements.valid ||ServiceLevelAgreements.pristine"
-                                     class="alert alert-danger">
-                                     ServiceLevelAgreements is required
-                                </div>
-                              </div>
-                          </div>
                 </div>
                 <div class="row">
+                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="UptimeITServicesInP">What is the up time of "IT" services? Please respond in % terms</label>
+                                    <input type="text" class="form-control" id="UptimeITServicesInP"
+                                           required
+                                           [(ngModel)]="techdetails.UptimeITServicesInP" name="UptimeITServicesInP"
+                                           #UptimeITServicesInP="ngModel"/>
+                                    <div [hidden]="UptimeITServicesInP.valid ||UptimeITServicesInP.pristine"
+                                         class="alert alert-danger">
+                                         UptimeITServicesInP is required
+                                    </div>
+                                  </div>
+                              </div>
+                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=" ServiceLevelAgreements ">Whether all Service level Agreements in lace and renewed?</label>
+                                    <input type="text" class="form-control" id="ServiceLevelAgreements"
+                                           required
+                                           [(ngModel)]="techdetails.ServiceLevelAgreements" name="ServiceLevelAgreements"
+                                           #ServiceLevelAgreements="ngModel"/>
+                                    <div [hidden]="ServiceLevelAgreements.valid ||ServiceLevelAgreements.pristine"
+                                         class="alert alert-danger">
+                                         ServiceLevelAgreements is required
+                                    </div>
+                                  </div>
+                              </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for=" ATM_ConnectedNFSOther ">Whether your bank conducted any Business Process Engineering after implementation of CBS</label>
-                            <input type="text" class="form-control" id=" ATM_ConnectedNFSOther"
+                            <label for="ConductionOfDPE">ConductionOfDPE</label>
+                            <input type="text" class="form-control" id="ConductionOfDPE"
                                    required
-                                   [(ngModel)]="techdetailsform.ATM_ConnectedNFSOther" name=" ATM_ConnectedNFSOther"
-                                   #ATM_ConnectedNFSOther="ngModel"/>
-                            <div [hidden]="ATM_ConnectedNFSOther.valid ||ATM_ConnectedNFSOther.pristine"
+                                   [(ngModel)]="techdetails.ConductionOfDPE" name="ConductionOfDPE"
+                                   #ConductionOfDPE="ngModel"/>
+                            <div [hidden]="ConductionOfDPE.valid || ConductionOfDPE.pristine"
                                  class="alert alert-danger">
-                                 ATM_ConnectedNFSOther is required
+                                 ConductionOfDPE is required
                             </div>
                           </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for=" OtherInfo ">Any other information that may be fpund necessary of assessment not covered by above questionarie may be given.</label>
-                            <input type="text" class="form-control" id="OtherInfo"
-                                   required
-                                   [(ngModel)]="techdetailsform.OtherInfo" name=" OtherInfo"
-                                   #OtherInfo="ngModel"/>
-                            <div [hidden]="OtherInfo.valid ||OtherInfo.pristine"
-                                 class="alert alert-danger">
-                                 OtherInfo is required
-                            </div>
-                          </div>
-                      </div>
+
+                </div>
+                <div class="row">
+                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for=" OtherInfo ">Any other information that may be fpund necessary of assessment not covered by above questionarie may be given.</label>
+                                    <input type="text" class="form-control" id="OtherInfo"
+                                           required
+                                           [(ngModel)]="techdetails.OtherInfo" name="OtherInfo"
+                                           #OtherInfo="ngModel"/>
+                                    <div [hidden]="OtherInfo.valid ||OtherInfo.pristine"
+                                         class="alert alert-danger">
+                                         OtherInfo is required
+                                    </div>
+                                  </div>
+                              </div>
                 </div>
                 <button type="submit" class="btn btn-success" [disabled]="!TechnologyDetailsForm.form.valid" (click)="save()">Submit</button>
                 <button type="button" class="btn btn-default" (click)="goBack()">Back</button>

@@ -64,6 +64,7 @@ const routes: Routes = [
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
   {path: 'techdetailsview',component:TechDetailsViewComponent},
+  {path: 'techdetailsview/:id/:name',component:TechDetailsViewComponent},
   {path:'exelperformview/:id',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent},
@@ -71,8 +72,9 @@ const routes: Routes = [
   {path:'nextpickup/:id' , component: PickupAndDropComponent },
   {path:'nextsponser/:id' , component: PickupAndDropComponent },
   {path: 'sponserviewdetails/:id', component:PickUpAndDrop},
+  {path:'viewresult/:id/:name',component:ViewResultComponent},
+  {path: 'employeedetails/:id', component:PickupAndDropComponent}
   
-  {path:'viewresult/:id/:name',component:EventResult}
 ];
 
 @NgModule({

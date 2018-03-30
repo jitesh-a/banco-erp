@@ -3,9 +3,9 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
-                <input type="number" class="form-control" id=" NetWorthPreviousYrInPercentage "
+                <input type="number" class="form-control" id="NetWorthPreviousYrInPercentage "
                       required
-                      [(ngModel)]="excelperfform.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
+                      [(ngModel)]="excellentPerformance.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
                       #NetWorthPreviousYrInPercentage="ngModel" digits>
                 <div [hidden]=" NetWorthPreviousYrInPercentage .valid ||  NetWorthPreviousYrInPercentage.pristine"
                     class="alert alert-danger">
@@ -18,7 +18,7 @@
                   <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>
                   <input type="number" class="form-control" id=" NetWorthCurrentYrInPercentage"
                         required
-                        [(ngModel)]="excelperfform. NetWorthCurrentYrInPercentage" name=" NetWorthCurrentYrInPercentage"
+                        [(ngModel)]="excellentPerformance.NetWorthCurrentYrInPercentage" name="NetWorthCurrentYrInPercentage"
                         #NetWorthCurrentYrInPercentage="ngModel" digits>
                   <div [hidden]=" NetWorthCurrentYrInPercentage.valid ||  NetWorthCurrentYrInPercentage.pristine"
                       class="alert alert-danger">
@@ -31,7 +31,7 @@
                   <label for=" NetWorthOverPreviousYrInPercentage">Net Worth Over Previous Year In Percentage </label>
                   <input type="number" class="form-control" id="NetWorthOverPreviousYrInPercentage "
                         required
-                        [(ngModel)]="excelperfform.NetWorthOverPreviousYrInPercentage " name=" NetWorthOverPreviousYrInPercentage"
+                        [(ngModel)]="excellentPerformance.NetWorthOverPreviousYrInPercentage" name="NetWorthOverPreviousYrInPercentage"
                         #NetWorthOverPreviousYrInPercentage="ngModel" digits>
                   <div [hidden]="NetWorthOverPreviousYrInPercentage .valid || NetWorthOverPreviousYrInPercentage.pristine"
                       class="alert alert-danger">
@@ -41,12 +41,40 @@
           </div>        
   </div>
   <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="CRARCurrentYrInPercentage"> CRAR Current Year In Percentage</label>
+                        <input type="number" class="form-control" id="CRARCurrentYrInPercentage"
+                               required
+                               [(ngModel)]="excellentPerformance.CRARCurrentYrInPercentage" name="CRARCurrentYrInPercentage"
+                               #CRARCurrentYrInPercentage ="ngModel" digits>
+                        <div [hidden]="CRARCurrentYrInPercentage.valid || CRARCurrentYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             CRAR Current Year In Percentage is required
+                        </div>
+                      </div>
+            </div>    
+            <div class="col-md-4">
+                <div class="form-group">
+                        <label for="CRARPreviousYrInPercentage">CRAR Previous Year In Percentage</label>
+                        <input type="number" class="form-control" id="CRARPreviousYrInPercentage"
+                               required
+                               [(ngModel)]="excellentPerformance.CRARPreviousYrInPercentage" name="CRARCurrentYrInPercentage"
+                               #CRARPreviousYrInPercentage ="ngModel" digits>
+                        <div [hidden]="CRARPreviousYrInPercentage.valid || CRARPreviousYrInPercentage.pristine"
+                             class="alert alert-danger">
+                             CRAR Previous Year In Percentage is required
+                        </div>
+                      </div>
+            </div>       
+  </div>
+  <div class="row">
     <div class="col-md-4">
             <div class="form-group">
                     <label for="DepositCurrentYr "> Deposit Current Year</label>
                     <input type="number" class="form-control" id=" DepositCurrentYr"
                            required
-                           [(ngModel)]="excelperfform.DepositCurrentYr" name="DepositCurrentYr "
+                           [(ngModel)]="excellentPerformance.DepositCurrentYr" name="DepositCurrentYr "
                            #DepositCurrentYr ="ngModel" digits>
                     <div [hidden]=" DepositCurrentYr.valid || DepositCurrentYr.pristine"
                          class="alert alert-danger">
@@ -60,9 +88,9 @@
                         <label for="DepositPreviousYr "> Deposit Previous Year</label>
                         <input type="number" class="form-control" id=" DepositPreviousYr"
                                required
-                               [(ngModel)]="excelperfform.DepositPreviousYr" name="DepositPreviousYr"
+                               [(ngModel)]="excellentPerformance.DepositPreviousYr" name="DepositPreviousYr"
                                #DepositPreviousYr="ngModel" digits>
-                        <div [hidden]=" DepositPreviousYr.valid ||DepositPreviousYr.pristine"
+                        <div [hidden]="DepositPreviousYr.valid ||DepositPreviousYr.pristine"
                              class="alert alert-danger">
                              Deposit Previous Year is required
                         </div>
@@ -74,9 +102,9 @@
                         <label for=" TotalDepositOverPreviousYrInPercentage ">  Total Deposit Over Previous Year In Percentage</label>
                         <input type="number" class="form-control" id="  TotalDepositOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform.  TotalDepositOverPreviousYrInPercentage" name=" TotalDepositOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalDepositOverPreviousYrInPercentage" name="TotalDepositOverPreviousYrInPercentage "
                                #TotalDepositOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="  TotalDepositOverPreviousYrInPercentage.valid || TotalDepositOverPreviousYrInPercentage.pristine"
+                        <div [hidden]="TotalDepositOverPreviousYrInPercentage.valid || TotalDepositOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Deposit Over Previous Year In Percentage is required
                         </div>
@@ -88,12 +116,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
+                        <label for="TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
                         <input type="number" class="form-control" id="  TotalAdvancesCurrentYr"
                                required
-                               [(ngModel)]="excelperfform. TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
+                               [(ngModel)]="excellentPerformance.TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
                                #TotalAdvancesCurrentYr="ngModel" digits>
-                        <div [hidden]="  TotalAdvancesCurrentYr.valid || TotalAdvancesCurrentYr.pristine"
+                        <div [hidden]="TotalAdvancesCurrentYr.valid || TotalAdvancesCurrentYr.pristine"
                              class="alert alert-danger">
                              Total Advances Current Year is required
                         </div>
@@ -102,12 +130,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
+                        <label for="TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
                         <input type="number" class="form-control" id=" TotalAdvancesPreviousYr"
                                required
-                               [(ngModel)]="excelperfform. TotalAdvancesPreviousYr" name=" TotalAdvancesPreviousYr "
+                               [(ngModel)]="excellentPerformance.TotalAdvancesPreviousYr" name="TotalAdvancesPreviousYr"
                                #TotalAdvancesPreviousYr="ngModel" digits>
-                        <div [hidden]="  TotalAdvancesPreviousYr.valid || TotalAdvancesPreviousYr.pristine"
+                        <div [hidden]="TotalAdvancesPreviousYr.valid || TotalAdvancesPreviousYr.pristine"
                              class="alert alert-danger">
                              Total Advances Previous Year is required
                         </div>
@@ -116,12 +144,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>
+                        <label for="TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>
                         <input type="number" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform. TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage"
                                #TotalAdvancesOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="  TotalAdvancesOverPreviousYrInPercentage.valid || TotalAdvancesOverPreviousYrInPercentage.pristine"
+                        <div [hidden]="TotalAdvancesOverPreviousYrInPercentage.valid || TotalAdvancesOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Advances Over Previous Year In Percentage is required
                         </div>
@@ -132,12 +160,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  GrossNPAInCurrentYr ">  Gross NPA In Current Year</label>
-                        <input type="number" class="form-control" id=" GrossNPAInCurrentYr"
+                        <label for="GrossNPAInCurrentYr">  Gross NPA In Current Year</label>
+                        <input type="number" class="form-control" id="GrossNPAInCurrentYr"
                                required
-                               [(ngModel)]="excelperfform. GrossNPAInCurrentYr" name=" GrossNPAInCurrentYr "
+                               [(ngModel)]="excellentPerformance.GrossNPAInCurrentYr" name="GrossNPAInCurrentYr "
                                #GrossNPAInCurrentYr="ngModel" digits>
-                        <div [hidden]=" GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
+                        <div [hidden]="GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
                              class="alert alert-danger">
                              Gross NPA In Current Year is required
                         </div>
@@ -146,10 +174,10 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" GrossNPAInPreviousYr ">Gross NPA In Previous Year </label>
+                        <label for="GrossNPAInPreviousYr">Gross NPA In Previous Year </label>
                         <input type="number" class="form-control" id="GrossNPAInPreviousYr"
                                required
-                               [(ngModel)]="excelperfform.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
+                               [(ngModel)]="excellentPerformance.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
                                #GrossNPAInPreviousYr="ngModel" digits>
                         <div [hidden]="GrossNPAInPreviousYr.valid ||GrossNPAInPreviousYr.pristine"
                              class="alert alert-danger">
@@ -160,10 +188,10 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
+                        <label for="TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
                         <input type="number" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
                                #TotalGrossNPAOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]="TotalGrossNPAOverPreviousYrInPercentage.valid ||TotalGrossNPAOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
@@ -176,10 +204,10 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" NetNPACurrentYr "> Net NPA Current Year</label>
+                        <label for="NetNPACurrentYr "> Net NPA Current Year</label>
                         <input type="number" class="form-control" id="NetNPACurrentYr"
                                required
-                               [(ngModel)]="excelperfform.NetNPACurrentYr" name="NetNPACurrentYr "
+                               [(ngModel)]="excellentPerformance.NetNPACurrentYr" name="NetNPACurrentYr "
                                #NetNPACurrentYr="ngModel" digits>
                         <div [hidden]="NetNPACurrentYr.valid ||NetNPACurrentYr.pristine"
                              class="alert alert-danger">
@@ -194,7 +222,7 @@
                         <label for="NetNPAPreviousYr  "> Net NPA Previous Year</label>
                         <input type="number" class="form-control" id="NetNPAPreviousYr"
                                required
-                               [(ngModel)]="excelperfform.NetNPAPreviousYr" name="NetNPAPreviousYr "
+                               [(ngModel)]="excellentPerformance.NetNPAPreviousYr" name="NetNPAPreviousYr "
                                #NetNPAPreviousYr="ngModel" digits>
                         <div [hidden]="NetNPAPreviousYr.valid ||NetNPAPreviousYr.pristine"
                              class="alert alert-danger">
@@ -205,10 +233,10 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
-                        <input type="number" class="form-control" id=" TotalNetNPAOverPreviousYrInPercentage"
+                        <label for="TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
+                        <input type="number" class="form-control" id="TotalNetNPAOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform. TotalNetNPAOverPreviousYrInPercentage" name="  TotalNetNPAOverPreviousYrInPercentage"
+                               [(ngModel)]="excellentPerformance. TotalNetNPAOverPreviousYrInPercentage" name="TotalNetNPAOverPreviousYrInPercentage"
                                #TotalNetNPAOverPreviousYrInPercentage="ngModel" digits>
                         <div [hidden]=" TotalNetNPAOverPreviousYrInPercentage.valid || TotalNetNPAOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
@@ -224,9 +252,9 @@
                         <label for="ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>
                         <input type="number" class="form-control" id=" ReturnOnAssetsInCurrentYr"
                                required
-                               [(ngModel)]="excelperfform. ReturnOnAssetsInCurrentYr" name="  ReturnOnAssetsInCurrentYr"
+                               [(ngModel)]="excellentPerformance. ReturnOnAssetsInCurrentYr" name="ReturnOnAssetsInCurrentYr"
                                #ReturnOnAssetsInCurrentYr="ngModel" digits>
-                        <div [hidden]=" ReturnOnAssetsInCurrentYr.valid || ReturnOnAssetsInCurrentYr.pristine"
+                        <div [hidden]="ReturnOnAssetsInCurrentYr.valid || ReturnOnAssetsInCurrentYr.pristine"
                              class="alert alert-danger">
                              Return On Assets In Current Year   is required
                         </div>
@@ -234,12 +262,12 @@
         </div>
 
         <div class="col-md-4"><div class="form-group">
-                <label for="  ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
-                <input type="number" class="form-control" id=" ReturnOnAssetsInPerviousYr"
+                <label for="ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
+                <input type="number" class="form-control" id="ReturnOnAssetsInPerviousYr"
                        required
-                       [(ngModel)]="excelperfform. ReturnOnAssetsInPerviousYr" name="  ReturnOnAssetsInPerviousYr"
+                       [(ngModel)]="excellentPerformance.ReturnOnAssetsInPerviousYr" name="ReturnOnAssetsInPerviousYr"
                        #ReturnOnAssetsInPerviousYr="ngModel" digits>
-                <div [hidden]=" ReturnOnAssetsInPerviousYr.valid || ReturnOnAssetsInPerviousYr.pristine"
+                <div [hidden]="ReturnOnAssetsInPerviousYr.valid || ReturnOnAssetsInPerviousYr.pristine"
                      class="alert alert-danger">
                      Return On Assets In Pervious Year is required
                 </div>
@@ -248,12 +276,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
-                        <input type="number" class="form-control" id=" TotalReturnOnAssetsOverPreviousYrInPercentage"
+                        <label for="TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
+                        <input type="number" class="form-control" id="TotalReturnOnAssetsOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform. TotalReturnOnAssetsOverPreviousYrInPercentage" name=" TotalReturnOnAssetsOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalReturnOnAssetsOverPreviousYrInPercentage" name="TotalReturnOnAssetsOverPreviousYrInPercentage "
                                #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]=" TotalReturnOnAssetsOverPreviousYrInPercentage.valid || TotalReturnOnAssetsOverPreviousYrInPercentage.pristine"
+                        <div [hidden]="TotalReturnOnAssetsOverPreviousYrInPercentage.valid || TotalReturnOnAssetsOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Return On Assets Over Previous Year In Percentage  is required
                         </div>
@@ -265,10 +293,10 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PerEmpBusinessCurrentYr  ">Per Employee Business Current Year </label>
+                        <label for="PerEmpBusinessCurrentYr">Per Employee Business Current Year </label>
                         <input type="number" class="form-control" id="PerEmpBusinessCurrentYr"
                                required
-                               [(ngModel)]="excelperfform.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
+                               [(ngModel)]="excellentPerformance.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
                                #PerEmpBusinessCurrentYr="ngModel" digits>
                         <div [hidden]="PerEmpBusinessCurrentYr.valid ||PerEmpBusinessCurrentYr.pristine"
                              class="alert alert-danger">
@@ -279,12 +307,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="number"  >Per Employee Business Previous Year</label>
+                        <label for="PerEmpBusinessPreviousYr">Per Employee Business Previous Year</label>
                         <input type="number" class="form-control" id="PerEmpBusinessPreviousYr"
                                required
-                               [(ngModel)]="excelperfform.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
+                               [(ngModel)]="excellentPerformance.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
                                #PerEmpBusinessPreviousYr="ngModel" digits/>
-                        <div [hidden]="PerEmpBusinessPreviousYr.valid ||PerEmpBusinessPreviousYr.pristine"
+                        <div [hidden]="PerEmpBusinessPreviousYr.valid || PerEmpBusinessPreviousYr.pristine"
                              class="alert alert-danger">
                              Per Employee Business Previous Year is required
                         </div>
@@ -294,12 +322,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
+                        <label for="TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
                         <input type="number" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
                                #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalPerEmpBusinessOverPreviousYrInPercentage.valid ||TotalPerEmpBusinessOverPreviousYrInPercentage.pristine"
+                        <div [hidden]="TotalPerEmpBusinessOverPreviousYrInPercentage.valid || TotalPerEmpBusinessOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              Total Per Employee Business Over Previous Year In Percentage is required
                         </div>
@@ -310,12 +338,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
-                        <input type="number" class="form-control" id=" NetProfitToTotalAssetsCurrentYr"
+                        <label for="NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
+                        <input type="number" class="form-control" id="NetProfitToTotalAssetsCurrentYr"
                                required
-                               [(ngModel)]="excelperfform. NetProfitToTotalAssetsCurrentYr" name="  NetProfitToTotalAssetsCurrentYr"
+                               [(ngModel)]="excellentPerformance. NetProfitToTotalAssetsCurrentYr" name="NetProfitToTotalAssetsCurrentYr"
                                #NetProfitToTotalAssetsCurrentYr="ngModel" digits>
-                        <div [hidden]=" NetProfitToTotalAssetsCurrentYr.valid || NetProfitToTotalAssetsCurrentYr.pristine"
+                        <div [hidden]="NetProfitToTotalAssetsCurrentYr.valid || NetProfitToTotalAssetsCurrentYr.pristine"
                              class="alert alert-danger">
                              Net Profit To Total Assets Current Year  is required
                         </div>
@@ -324,12 +352,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" NetProfitToTotalAssetsPreviousYr  "> Net Profit To Total Assets Previous Year </label>
-                        <input type="number" class="form-control" id=" NetProfitToTotalAssetsPreviousYr"
+                        <label for="NetProfitToTotalAssetsPreviousYr"> Net Profit To Total Assets Previous Year </label>
+                        <input type="number" class="form-control" id="NetProfitToTotalAssetsPreviousYr"
                                required
-                               [(ngModel)]="excelperfform. NetProfitToTotalAssetsPreviousYr" name="  NetProfitToTotalAssetsPreviousYr"
+                               [(ngModel)]="excellentPerformance.NetProfitToTotalAssetsPreviousYr" name="NetProfitToTotalAssetsPreviousYr"
                                #NetProfitToTotalAssetsPreviousYr="ngModel" digits>
-                        <div [hidden]=" NetProfitToTotalAssetsPreviousYr.valid || NetProfitToTotalAssetsPreviousYr.pristine"
+                        <div [hidden]="NetProfitToTotalAssetsPreviousYr.valid || NetProfitToTotalAssetsPreviousYr.pristine"
                              class="alert alert-danger">
                              Net Profit To Total Assets Previous Year is required
                         </div>
@@ -338,12 +366,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage  ">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
+                        <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
                         <input type="number" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
                                required
-                               [(ngModel)]="excelperfform.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
+                               [(ngModel)]="excellentPerformance.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
                                #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.valid ||TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.pristine"
+                        <div [hidden]="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.valid || TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.pristine"
                              class="alert alert-danger">
                              TotalNetProfitToTotalAssetsOverPreviousYrInPercentage is required
                         </div>
@@ -354,40 +382,66 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="CRROrSLROccuredDuringCurrentYr  "> Whether CRR/SLR default ocurred During Current Year</label>
+                        <label for="CRROrSLROccuredDuringCurrentYr"> Whether CRR/SLR default ocurred During Current Year</label>
                         <input type="text" class="form-control" id="CRROrSLROccuredDuringCurrentYr"
                                required
-                               [(ngModel)]="excelperfform.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
+                               [(ngModel)]="excellentPerformance.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
                                #CRROrSLROccuredDuringCurrentYr="ngModel">
-                        <div [hidden]="CRROrSLROccuredDuringCurrentYr.valid ||CRROrSLROccuredDuringCurrentYr.pristine"
+                        <div [hidden]="CRROrSLROccuredDuringCurrentYr.valid || CRROrSLROccuredDuringCurrentYr.pristine"
                              class="alert alert-danger">
                              CRR Or SLR Occured During Current Year is required
                         </div>
                       </div>
         </div>
-
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  RBIImposeAnyPenaltyDuringCurrentYr ">  RBI Impose Any Penalty During Current Year</label>
-                        <input type="text" class="form-control" id=" RBIImposeAnyPenaltyDuringCurrentYr"
+                        <label for="CRROrSLROccuredDuringPreviousYr"> Whether CRR/SLR default ocurred During Previous Year</label>
+                        <input type="text" class="form-control" id="CRROrSLROccuredDuringPreviousYr"
                                required
-                               [(ngModel)]="excelperfform. RBIImposeAnyPenaltyDuringCurrentYr" name=" RBIImposeAnyPenaltyDuringCurrentYr "
+                               [(ngModel)]="excellentPerformance.CRROrSLROccuredDuringPreviousYr" name="CRROrSLROccuredDuringPreviousYr"
+                               #CRROrSLROccuredDuringPreviousYr="ngModel">
+                        <div [hidden]="CRROrSLROccuredDuringPreviousYr.valid || CRROrSLROccuredDuringPreviousYr.pristine"
+                             class="alert alert-danger">
+                             CRR Or SLR Occured During Previous Year is required
+                        </div>
+                      </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="RBIImposeAnyPenaltyDuringCurrentYr ">RBI Impose Any Penalty During Current Year</label>
+                        <input type="text" class="form-control" id="RBIImposeAnyPenaltyDuringCurrentYr"
+                               required
+                               [(ngModel)]="excellentPerformance.RBIImposeAnyPenaltyDuringCurrentYr" name="RBIImposeAnyPenaltyDuringCurrentYr "
                                #RBIImposeAnyPenaltyDuringCurrentYr="ngModel">
-                        <div [hidden]=" RBIImposeAnyPenaltyDuringCurrentYr.valid || RBIImposeAnyPenaltyDuringCurrentYr.pristine"
+                        <div [hidden]="RBIImposeAnyPenaltyDuringCurrentYr.valid || RBIImposeAnyPenaltyDuringCurrentYr.pristine"
                              class="alert alert-danger">
                              RBI Impose Any Penalty During Current Year  is required
                         </div>
                       </div>
         </div>
-
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" ShowcaseNotice  "> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
-                        <input type="text" class="form-control" id=" ShowcaseNotice"
+                        <label for="RBIImposeAnyPenaltyDuringPreviousYr">RBI Impose Any Penalty During Previous Year</label>
+                        <input type="text" class="form-control" id="RBIImposeAnyPenaltyDuringPreviousYr"
                                required
-                               [(ngModel)]="excelperfform. ShowcaseNotice" name=" ShowcaseNotice "
+                               [(ngModel)]="excellentPerformance.RBIImposeAnyPenaltyDuringPreviousYr" name="RBIImposeAnyPenaltyDuringPreviousYr"
+                               #RBIImposeAnyPenaltyDuringPreviousYr="ngModel">
+                        <div [hidden]="RBIImposeAnyPenaltyDuringPreviousYr.valid || RBIImposeAnyPenaltyDuringPreviousYr.pristine"
+                             class="alert alert-danger">
+                             RBI Impose Any Penalty During Previous Year is required
+                        </div>
+                      </div>
+        </div>
+        <div class="col-md-4">
+                <div class="form-group">
+                        <label for="ShowcaseNotice"> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
+                        <input type="text" class="form-control" id="ShowcaseNotice"
+                               required
+                               [(ngModel)]="excellentPerformance.ShowcaseNotice" name="ShowcaseNotice "
                                #ShowcaseNotice="ngModel">
-                        <div [hidden]=" ShowcaseNotice.valid || ShowcaseNotice.pristine"
+                        <div [hidden]="ShowcaseNotice.valid || ShowcaseNotice.pristine"
                              class="alert alert-danger">
                              ShowcaseNotice is required
                         </div>
@@ -398,12 +452,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" EnquiryByRBI_IncomeTax "> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
+                        <label for="EnquiryByRBI_IncomeTax"> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
                         <input type="text" class="form-control" id="EnquiryByRBI_IncomeTax"
                                required
-                               [(ngModel)]="excelperfform.EnquiryByRBI_IncomeTax" name=" EnquiryByRBI_IncomeTax"
+                               [(ngModel)]="excellentPerformance.EnquiryByRBI_IncomeTax" name="EnquiryByRBI_IncomeTax"
                                #EnquiryByRBI_IncomeTax="ngModel">
-                        <div [hidden]="EnquiryByRBI_IncomeTax.valid ||EnquiryByRBI_IncomeTax.pristine"
+                        <div [hidden]="EnquiryByRBI_IncomeTax.valid || EnquiryByRBI_IncomeTax.pristine"
                              class="alert alert-danger">
                              Enquiry By RBI Income Tax  is required
                         </div>
@@ -412,10 +466,10 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
+                        <label for="UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
                         <input type="text" class="form-control" id= "UPIorCKYCImplemented"
                                required
-                               [(ngModel)]="excelperfform. UPIorCKYCImplemented" name=" UPIorCKYCImplemented "
+                               [(ngModel)]="excellentPerformance.UPIorCKYCImplemented" name="UPIorCKYCImplemented "
                                #UPIorCKYCImplemented ="ngModel">
                         <div [hidden]=" UPIorCKYCImplemented.valid || UPIorCKYCImplemented.pristine"
                              class="alert alert-danger">
@@ -426,12 +480,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="KYCImplementationWithAML  ">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
+                        <label for="KYCImplementationWithAML">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
                         <input type="text" class="form-control" id="KYCImplementationWithAML"
                                required
-                               [(ngModel)]="excelperfform.KYCImplementationWithAML" name="KYCImplementationWithAML "
+                               [(ngModel)]="excellentPerformance.KYCImplementationWithAML" name="KYCImplementationWithAML "
                                #KYCImplementationWithAML="ngModel">
-                        <div [hidden]="KYCImplementationWithAML.valid ||KYCImplementationWithAML.pristine"
+                        <div [hidden]="KYCImplementationWithAML.valid || KYCImplementationWithAML.pristine"
                              class="alert alert-danger">
                              KYC Implementation With AML is required
                         </div>
@@ -442,11 +496,11 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
+                        <label for="BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
                           for determining interest rates to large borrowers. </label>
-                        <input type="text" class="form-control" id=" BorrowerRatings"
+                        <input type="text" class="form-control" id="BorrowerRatings"
                                required
-                               [(ngModel)]="excelperfform.BorrowerRatings" name=" BorrowerRatings "
+                               [(ngModel)]="excellentPerformance.BorrowerRatings" name=" BorrowerRatings "
                                #BorrowerRatings="ngModel">
                         <div [hidden]=" BorrowerRatings.valid || BorrowerRatings.pristine"
                              class="alert alert-danger">
@@ -458,12 +512,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PermissionToOpenBranchesInPreviousYr  ">Whether bank has  beeb granted permission to open branches in previous year</label>
+                        <label for="PermissionToOpenBranchesInPreviousYr">Whether bank has  beeb granted permission to open branches in previous year</label>
                         <input type="text" class="form-control" id="PermissionToOpenBranchesInPreviousYr"
                                required
-                               [(ngModel)]="excelperfform.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
+                               [(ngModel)]="excellentPerformance.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
                                #PermissionToOpenBranchesInPreviousYr="ngModel">
-                        <div [hidden]="PermissionToOpenBranchesInPreviousYr.valid ||PermissionToOpenBranchesInPreviousYr.pristine"
+                        <div [hidden]="PermissionToOpenBranchesInPreviousYr.valid || PermissionToOpenBranchesInPreviousYr.pristine"
                              class="alert alert-danger">
                              Permission To Open  Branches In Previous Year is required
                         </div>
@@ -473,12 +527,15 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  UniqueIdToCustomer "> Whether Unique Identification number given to customer</label>
-                        <input type="text" class="form-control" id=" UniqueIdToCustomer"
+                        <label for="UniqueIdToCustomer"> Whether Unique Identification number given to customer</label>
+                        <select type="text" class="form-control" id="UniqueIdToCustomer"
                                required
-                               [(ngModel)]="excelperfform.UniqueIdToCustomer" name=" UniqueIdToCustomer "
+                               [(ngModel)]="excellentPerformance.UniqueIdToCustomer" name="UniqueIdToCustomer"
                                #UniqueIdToCustomer="ngModel">
-                        <div [hidden]=" UniqueIdToCustomer.valid || UniqueIdToCustomer.pristine"
+                                <option [value]=true>Yes</option>
+                                <option [value]=false>No</option>
+                        </select>
+                        <div [hidden]="UniqueIdToCustomer.valid || UniqueIdToCustomer.pristine"
                              class="alert alert-danger">
                              UniqueIdToCustomer is required
                         </div>
@@ -489,11 +546,14 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="GotAnyAward  ">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>
-                        <input type="text" class="form-control" id="GotAnyAward"
+                        <label for="GotAnyAward">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>
+                        <select type="text" class="form-control" id="GotAnyAward"
                                required
-                               [(ngModel)]="excelperfform.GotAnyAward" name="GotAnyAward"
+                               [(ngModel)]="excellentPerformance.GotAnyAward" name="GotAnyAward"
                                #GotAnyAward="ngModel">
+                               <option [value]=true>Yes</option>
+                               <option [value]=false>No</option>
+                        </select>
                         <div [hidden]="GotAnyAward.valid ||GotAnyAward.pristine"
                              class="alert alert-danger">
                              GotAnyAward is required
@@ -503,12 +563,15 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="  NetOrMobileBankingFacility ">Whether net or mobile banking facility is given by bank </label>
-                        <input type="text" class="form-control" id=" NetOrMobileBankingFacility"
+                        <label for="NetOrMobileBankingFacility">Whether net or mobile banking facility is given by bank </label>
+                        <select type="text" class="form-control" id="NetOrMobileBankingFacility"
                                required
-                               [(ngModel)]="excelperfform.NetOrMobileBankingFacility" name=" NetOrMobileBankingFacility "
+                               [(ngModel)]="excellentPerformance.NetOrMobileBankingFacility" name="NetOrMobileBankingFacility "
                                #NetOrMobileBankingFacility="ngModel">
-                        <div [hidden]=" NetOrMobileBankingFacility.valid || NetOrMobileBankingFacility.pristine"
+                               <option [value]=true>Yes</option>
+                               <option [value]=false>No</option>
+                        </select>
+                        <div [hidden]="NetOrMobileBankingFacility.valid || NetOrMobileBankingFacility.pristine"
                              class="alert alert-danger">
                              Net Or Mobile Banking Facility  is required
                         </div>
