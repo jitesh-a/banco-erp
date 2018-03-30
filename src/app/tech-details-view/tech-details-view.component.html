@@ -545,11 +545,28 @@
                                            </div>
                         </div>   
                         <div class="row">
-                          <div class="col-md-offset-8 col-md-2">
+                          <div class="col-md-10">
                             <button type="submit" class="btn btn-success" [disabled]="!TechnologyMarksForm.form.valid" (click)="save()">Submit</button>
+                            <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
                           </div>
-                          <div>
-                          
+                          <div class="col-md-2">
+                              <label>Total Marks</label>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                  value = "{{techdetails.M1--techdetails.M2
+                                    --techdetails.M3--techdetails.M4
+                                    --techdetails.M5--techdetails.M6
+                                    --techdetails.M7--techdetails.M8
+                                    --techdetails.M9--techdetails.M10
+                                    --techdetails.M11--techdetails.M12
+                                    --techdetails.M13--techdetails.M14
+                                    --techdetails.M15--techdetails.M16
+                                    --techdetails.M17--techdetails.M18
+                                    --techdetails.M19--techdetails.M20
+                                    --techdetails.M21--techdetails.M22
+                                    --techdetails.M23--techdetails.M24
+                                    --techdetails.M25}}" readonly/>
+                                </div>
                           </div>
                         </div>     
                         </form>     

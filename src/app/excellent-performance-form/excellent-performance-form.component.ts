@@ -33,11 +33,11 @@ export class ExcellentPerformanceFormComponent implements OnInit {
   }
 
   save(): void{
-    
+    console.log("Excellent : "+this.excellentPerformance.BorrowerRatings);
       this.excelperfservice.addexcellentPerformance(this.excellentPerformance)
       .subscribe(
         res=>{
-         console.log(res);
+         console.log("Excellent Data : "+res);
          //alert("data saved successfully");
          this.router.navigate( ['/technologydetailsform', {id: this.id, name: this.name}]);
         },
