@@ -27,6 +27,21 @@
                    Name is required
               </div>
             </div>
+            <div class="form-group">
+                <label for="Category"> Bank Category</label>
+                <select class="form-control" id="Category"
+                required
+                [(ngModel)]="bank.Category" name="Category"
+                #Category="ngModel">
+                <option value="BankAssociation">Bank Association</option>
+                <option value="StateCoOper"></option> 
+                <option value="DCCBank">DCC Bank with Mix Business</option> 
+                <option value="UNITBank">UNIT Bank with Mix Business</option> 
+                <option value="MAHILABank">MAHILA Bank with Mix Business</option> 
+                <option value="EMPLOYEESBank">EMPLOYEES Bank with Mix Business</option> 
+                <option value="URBANBank">URBAN Bank with Mix Business</option>              
+                </select>
+              </div>
 
             <div class="row">
               <div class="col-md-6">

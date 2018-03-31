@@ -39,8 +39,6 @@ getPickupDrop(): void{
     })
   });
 }
-
-
         //delete
         delete(pickdrop: PickUpAndDrop): void {
           this.pickdrops = this.pickdrops.filter(h => h !== pickdrop);
