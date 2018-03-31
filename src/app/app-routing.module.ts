@@ -28,6 +28,8 @@ import { TechDetailsViewComponent } from "./tech-details-view/tech-details-view.
 import { ExcelPerformViewComponent } from "./excel-perform-view/excel-perform-view.component";
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from "./sponserview/sponserview.component";
+
+import { PickUpAndDrop } from '../models/pickUpAndDrop.model';
 import { ViewResultComponent } from "./view-result/view-result.component";
 import { EventResult } from "../models/eventResult.model";
 
@@ -61,12 +63,18 @@ const routes: Routes = [
   { path:'fillformemployee/:id/:name', component: EmployeeFormComponent},
   {path : 'questionary1', component: ExcellentPerformanceFormComponent},
   {path:'loginapi',component:Login},
-  {path: 'techdetailsview',component:TechDetailsViewComponent},
   {path: 'techdetailsview/:id/:name',component:TechDetailsViewComponent},
-  {path:'exelperformview/:id',component:ExcelPerformViewComponent},
+  {path:'exelperformview',component:ExcelPerformViewComponent},
+  {path:'exelperformview/:id/:name',component:ExcelPerformViewComponent},
   {path:'bankdetails/:id',component:BankDetailsComponent},
   {path: 'sponserview/:id', component:sponserviewComponent},
-  {path:'viewresult/:id/:name',component:ViewResultComponent}
+  {path:'nextpickup/:id' , component: PickupAndDropComponent },
+  {path:'nextpickup/:id' , component: PickupAndDropComponent },
+  {path:'nextsponser/:id' , component: PickupAndDropComponent },
+  {path: 'sponserviewdetails/:id', component:PickUpAndDrop},
+  {path:'viewresult/:id/:name',component:ViewResultComponent},
+  {path: 'employeedetails/:id', component:PickupAndDropComponent}
+  
 ];
 
 @NgModule({

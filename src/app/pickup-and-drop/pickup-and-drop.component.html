@@ -12,10 +12,13 @@
         <thead>
               <tr>
                 <th>Id</th>
+                
+                <th>Way of transport</th>
                 <th>Pick Up Time</th>
                 <th>Pick Up Place</th>
                 <th>Drop Time</th>
                 <th>Drop Place</th>
+                <th>Way of transport</th>
               </tr>
         </thead> 
         <tbody>
@@ -25,6 +28,7 @@
             <td>{{pud.PickUpPlace}}</td>
             <td>{{pud.DropTime}}</td>
             <td>{{pud.DropPlace}}</td>
+            <td>{{pud.Wayoftransport}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/pickupdropform/{{pud.Id}}"> Edit </a>
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(pud)">Delete</button>              

@@ -89,7 +89,7 @@ import { EventResult } from "../models/eventResult.model";
     ExcelPerformViewComponent,
     BankDetailsComponent,
     sponserviewComponent,
-    ViewResultComponent
+    ViewResultComponent,
   ],
   imports: [
     BrowserModule,

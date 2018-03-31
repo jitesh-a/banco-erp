@@ -27,7 +27,6 @@ export class BankTypeComponent implements OnInit {
                   this.banktypes=res["BankTypes"];
                   this.dataLoaded=true;
                   $(function(){
-                    alert('test');
                     $('#Banktype').DataTable({
                       dom: 'Bfrtip',
                       buttons: [

@@ -15,23 +15,47 @@ import { ExcellentPerformanceService } from "../excellent-performance.service";
 export class ExcelPerformViewComponent implements OnInit {
 
   id: number;
-  model: ExcellentPerformance=new ExcellentPerformance();
+  excellentperformance: ExcellentPerformance=new ExcellentPerformance();
 
   constructor(private excelperfservice:ExcellentPerformanceService,private route: ActivatedRoute,
   private location: Location,private router:Router) { }
 
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.fetchExcelDetails(this.id);
+    console.log(this.id);
   }
 
-  //fetch model
-  fetchModel(id: number): void{
-    this.excelperfservice.getexcellentPerformance(id)
+  //fetch excellentperformance
+  fetchExcelDetails(id: number): void{
+    this.excelperfservice.getExcelRecord(id)
     .subscribe(res=>{
-      this.model=res["data"];
+      this.excellentperformance=res["data"];
     },
     err=>{
       console.error(err);
     })
+  }
+
+  save() : void{
+
+    this.excelperfservice.updateexcellentPerformance(this.excellentperformance)
+    .subscribe(
+      res=>{
+       console.log(res);
+       alert("Marks Added successfully");
+       this.router.navigate( ['/techdetailsview', {id:this.id}]);
+      },
+      err=>{
+       console.error(err);
+       alert("Error occured");
+     //  this.router.navigate( ['/dashboard']);
+      }
+    ); 
+
+  }
+
+  goBack() :void{
+    this.location.back();
   }
 }

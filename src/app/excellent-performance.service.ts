@@ -44,6 +44,15 @@ export class ExcellentPerformanceService{
     );
   }
 
+  getExcelRecord(id: number): Observable<ExcellentPerformance> {
+    const url = `${this.apiUrl}getExcelRecord/${id}`;
+    console.log("URL :"+url);
+    return this.http.get<ExcellentPerformance>(url).pipe(
+      tap(_ => this.log(`fetched Technology Details id=${id}`)),
+      catchError(this.handleError<ExcellentPerformance>(`get Technology Details id=${id}`))
+    );
+  }
+
   /** POST: add a new banktype to the server */
   addexcellentPerformance(excel_perf:ExcellentPerformance): Observable<ExcellentPerformance> {
     return this.http.post<ExcellentPerformance>(this.apiUrl+'create', excel_perf, httpOptions).pipe(

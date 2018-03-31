@@ -5,41 +5,100 @@
     <div class="row">
       <div class="col-md-5">
           <div class="form-group">
-              <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
+              <label for="NetWorthCYP"> Net Worth Current Year In Percentage </label>
           </div>
       </div>
       <div class="col-md-5">
           <div class="form-group">
-              <input type="number" class="form-control" id=" NetWorthPreviousYrInPercentage "
+              <input type="number" class="form-control" id="NetWorthPreviousYrInPercentage"
               required
-              [(ngModel)]="excelperfform.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
-              #NetWorthPreviousYrInPercentage="ngModel" digits>
+              value= {{excellentperformance.NetWorthCYP}} name="NetWorthPreviousYrInPercentage "
+              readonly>
           </div>
       </div>
       <div class="col-md-2">
           <div class="form-group">
-              <input type="number" class="form-control" placeholder="marks"/>
+              <input type="number" class="form-control" [(ngModel)]="excellentperformance.M1" name="M1" #M1="ngModel" placeholder="marks"/>
           </div>
       </div>
     </div>
-
     <div class="row">
         <div class="col-md-5">
             <div class="form-group">
-                <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>               
+                <label for="NetWorthPYP"> Net Worth Previous Year In Percentage</label>               
             </div>
         </div>
         <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id=" NetWorthCurrentYrInPercentage"
+                <input type="number" class="form-control" id="NetWorthPYP"
                 required
-                [(ngModel)]="excelperfform. NetWorthCurrentYrInPercentage" name=" NetWorthCurrentYrInPercentage"
-                #NetWorthCurrentYrInPercentage="ngModel" digits>
+                value= {{excellentperformance.NetWorthPYP}} name="NetWorthPYP"
+                readonly>
             </div>
         </div>
         <div class="col-md-2">
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="marks"/>
+                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M2" name="M2" #M2="ngModel" placeholder="marks"/>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="NetWorthOverPYP"> Net Worth Over Previous Year In Percentage</label>               
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="number" class="form-control" id="NetWorthOverPYP"
+                required
+                value= {{excellentperformance.NetWorthOverPYP}} name="NetWorthOverPYP"
+                readonly>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M3" name="M3" #M3="ngModel" placeholder="marks"/>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="CRAR_CYP"> CRAR Current Year In Percentage</label>               
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="number" class="form-control" id="CRAR_CYP"
+                required
+                value= {{excellentperformance.CRAR_CYP}} name="CRAR_CYP"
+                readonly>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M4" name="M4" #M4="ngModel" placeholder="marks"/>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label for="CRAR_PYP"> CRAR Previous Year In Percentage</label>               
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="number" class="form-control" id="CRAR_PYP"
+                required
+                value= {{excellentperformance.CRAR_PYP}} name="CRAR_PYP"
+                readonly>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M5" name="M5" #M5="ngModel" placeholder="marks"/>
             </div>
         </div>
       </div>
@@ -47,20 +106,20 @@
       <div class="row">
           <div class="col-md-5">
               <div class="form-group">
-                  <label for="DepositCurrentYr "> Deposit Current Year</label>                 
+                  <label for="DepositCY"> Deposit Current Year</label>                 
               </div>
           </div>
           <div class="col-md-5">
               <div class="form-group">
-                  <input type="number" class="form-control" id=" DepositCurrentYr"
+                  <input type="number" class="form-control" id="DepositCY"
                   required
-                  [(ngModel)]="excelperfform.DepositCurrentYr" name="DepositCurrentYr "
-                  #DepositCurrentYr ="ngModel" digits>
+                  value= {{excellentperformance.DepositCY}} name="DepositCY"
+                  readonly>
               </div>
           </div>
           <div class="col-md-2">
               <div class="form-group">
-                  <input type="number" class="form-control" placeholder="marks"/>
+                  <input type="number" class="form-control" [(ngModel)]="excellentperformance.M6" name="M6" #M6="ngModel"placeholder="marks"/>
               </div>
           </div>
         </div>
@@ -68,20 +127,20 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="form-group">
-                    <label for="DepositPreviousYr "> Deposit Previous Year</label>                   
+                    <label for="DepositPY"> Deposit Previous Year</label>                   
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="form-group">
-                    <input type="number" class="form-control" id=" DepositPreviousYr"
+                    <input type="number" class="form-control" id="DepositPY"
                     required
-                    [(ngModel)]="excelperfform.DepositPreviousYr" name="DepositPreviousYr"
-                    #DepositPreviousYr="ngModel" digits>
+                    value= {{excellentperformance.DepositPY}} name="DepositPY"
+                    readonly>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
-                    <input type="number" class="form-control" placeholder="marks"/>
+                    <input type="number" class="form-control" [(ngModel)]="excellentperformance.M7" name="M7" #M7="ngModel" placeholder="marks"/>
                 </div>
             </div>
           </div>
@@ -89,20 +148,20 @@
           <div class="row">
               <div class="col-md-5">
                   <div class="form-group">
-                      <label for=" TotalDepositOverPreviousYrInPercentage ">  Total Deposit Over Previous Year In Percentage</label>                    
+                      <label for="TDepositOverPYP">  Total Deposit Over Previous Year In Percentage</label>                    
                   </div>
               </div>
               <div class="col-md-5">
                   <div class="form-group">
-                      <input type="number" class="form-control" id="TotalDepositOverPreviousYrInPercentage"
+                      <input type="number" class="form-control" id="TDepositOverPYP"
                       required
-                      [(ngModel)]="excelperfform.  TotalDepositOverPreviousYrInPercentage" name=" TotalDepositOverPreviousYrInPercentage "
-                      #TotalDepositOverPreviousYrInPercentage="ngModel" digits>
+                      value= {{excellentperformance.TDepositOverPYP}} name="TDepositOverPYP"
+                      readonly>
                   </div>
               </div>
               <div class="col-md-2">
                   <div class="form-group">
-                      <input type="number" class="form-control" placeholder="marks"/>
+                      <input type="number" class="form-control" [(ngModel)]="excellentperformance.M8" name="M8" #M8="ngModel" placeholder="marks"/>
                   </div>
               </div>
             </div>
@@ -110,109 +169,165 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <label for=" TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
+                        <label for="TAdvancesCY">  Total Advances Current Year</label>
                         
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="form-group">
-                        <input type="number" class="form-control" id="  TotalAdvancesCurrentYr"
+                        <input type="number" class="form-control" id="TAdvancesCY"
                         required
-                        [(ngModel)]="excelperfform. TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
-                        #TotalAdvancesCurrentYr="ngModel" digits>
+                        value= {{excellentperformance.TAdvancesCY}} name="TAdvancesCY"
+                        readonly>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="marks"/>
+                        <input type="number" class="form-control" [(ngModel)]="excellentperformance.M9" name="M9" #M9="ngModel" placeholder="marks"/>
                     </div>
                 </div>
               </div>
-
-              <div class="row">
-                  <div class="col-md-5">
-                      <div class="form-group">
-                        <label for=" TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
-                        
-                  </div>
-                  </div>
-                  <div class="col-md-5">
-                      <div class="form-group">
-                        <input type="number" class="form-control" id=" TotalAdvancesPreviousYr"
-                        required
-                        [(ngModel)]="excelperfform. TotalAdvancesPreviousYr" name=" TotalAdvancesPreviousYr "
-                        #TotalAdvancesPreviousYr="ngModel" digits>
-               </div>
-                      </div>
-                  
-                  <div class="col-md-2">
-                      <div class="form-group">
-                          <input type="number" class="form-control" placeholder="marks"/>
-                      </div>
-                  </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label for=" TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>                            
+                            <label for="TAdvancesPY"> Total Advances Previous Year </label>                            
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <input type="number" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
+                            <input type="number" class="form-control" id="TAdvancesPY"
                             required
-                            [(ngModel)]="excelperfform. TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage "
-                            #TotalAdvancesOverPreviousYrInPercentage="ngModel" digits>
+                            value= {{excellentperformance.TAdvancesPY}} name="TAdvancesPY"
+                            readonly>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="marks"/>
+                            <input type="number" class="form-control" [(ngModel)]="excellentperformance.M10" name="M10" #M10="ngModel" placeholder="marks"/>
                         </div>
                     </div>
                   </div>
-
+                  <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="TAdvancesOverPYP"> Total Advances Over Previous Year In Percentage</label>                            
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="TAdvancesOverPYP"
+                            required
+                            value= {{excellentperformance.TAdvancesOverPYP}} name="TAdvancesOverPYP"
+                            readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input type="number" class="form-control" [(ngModel)]="excellentperformance.M11" name="M11" #M11="ngModel" placeholder="marks"/>
+                        </div>
+                    </div>
+                  </div>
                   <div class="row">
                       <div class="col-md-5">
                           <div class="form-group">
-                            <label for="  GrossNPAInCurrentYr ">  Gross NPA In Current Year</label>
-                            
+                            <label for="GROSSNPAlnCY">  Gross NPA In Current Year</label>                           
                           </div>
                       </div>
                       <div class="col-md-5">
                           <div class="form-group">
-                            <input type="number" class="form-control" id=" GrossNPAInCurrentYr"
+                            <input type="number" class="form-control" id="GROSSNPAlnCY"
                             required
-                            [(ngModel)]="excelperfform. GrossNPAInCurrentYr" name=" GrossNPAInCurrentYr "
-                            #GrossNPAInCurrentYr="ngModel" digits>
+                            value= {{excellentperformance.GROSSNPAlnCY}} name="GROSSNPAlnCY"
+                            readonly>
                           </div>
                       </div>
                       <div class="col-md-2">
                           <div class="form-group">
-                              <input type="number" class="form-control" placeholder="marks"/>
+                              <input type="number" class="form-control" [(ngModel)]="excellentperformance.M12" name="M12" #M12="ngModel" placeholder="marks"/>
                           </div>
                       </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for=" GrossNPAInPreviousYr ">Gross NPA In Previous Year </label>
+                                <label for="GROSSNPAlnPY">Gross NPA In Previous Year </label>                      
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="GROSSNPAlnPY"
+                                required
+                                value= {{excellentperformance.GROSSNPAlnPY}} name="GROSSNPAlnPY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M13" name="M13" #M13="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="TGrossNPAOverPYP">Total Gross NPA Over Previous Year In Percentage </label>          
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="TGrossNPAOverPYP"
+                                required
+                                value= {{excellentperformance.TGrossNPAOverPYP}} name="TGrossNPAOverPYP"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M14" name="M14" #M14="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="NetNPACY"> Net NPA Current Year</label>                              
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="NetNPACY"
+                                required
+                                value= {{excellentperformance.NetNPACY}} name="NetNPACY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M15" name="M15" #M15="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="NetNPAPY"> Net NPA Previous Year</label>
                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="GrossNPAInPreviousYr"
+                                <input type="number" class="form-control" id="NetNPAPY"
                                 required
-                                [(ngModel)]="excelperfform.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
-                                #GrossNPAInPreviousYr="ngModel" digits>
+                                value= {{excellentperformance.NetNPAPY}} name="NetNPAPY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M16" name="M16" #M16="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -220,65 +335,21 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for=" TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
-                               
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="number" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
-                                required
-                                [(ngModel)]="excelperfform.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
-                                #TotalGrossNPAOverPreviousYrInPercentage="ngModel" digits>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for=" NetNPACurrentYr "> Net NPA Current Year</label>
-                               
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="number" class="form-control" id="NetNPACurrentYr"
-                                required
-                                [(ngModel)]="excelperfform.NetNPACurrentYr" name="NetNPACurrentYr "
-                                #NetNPACurrentYr="ngModel" digits>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="NetNPAPreviousYr  "> Net NPA Previous Year</label>
+                                <label for="TNetNPAOverPYP"> Total Net NPA Over Previous Year In Percentage </label>
                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="NetNPAPreviousYr"
+                                <input type="number" class="form-control" id="TNetNPAOverPYP"
                                 required
-                                [(ngModel)]="excelperfform.NetNPAPreviousYr" name="NetNPAPreviousYr "
-                                #NetNPAPreviousYr="ngModel" digits>
+                                value= {{excellentperformance.TNetNPAOverPYP}} name="TNetNPAOverPYP"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M17" name="M17" #M17="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -286,21 +357,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
-                                
+                                <label for="ReturnOnAssetsInCY"> Return On Assets In Current Year </label>                               
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id=" TotalNetNPAOverPreviousYrInPercentage"
+                                <input type="number" class="form-control" id="ReturnOnAssetsInCY"
                                 required
-                                [(ngModel)]="excelperfform. TotalNetNPAOverPreviousYrInPercentage" name="  TotalNetNPAOverPreviousYrInPercentage"
-                                #TotalNetNPAOverPreviousYrInPercentage="ngModel" digits>
+                                value= {{excellentperformance.ReturnOnAssetsInCY}} name="ReturnOnAssetsInCY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M18" name="M18" #M18="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -308,42 +378,21 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>                               
-                            </div>
+                                <label for="ReturnOnAssetsPY">  Return On Assets In Pervious Year</label>                               
+                        </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id=" ReturnOnAssetsInCurrentYr"
+                                <input type="number" class="form-control" id="ReturnOnAssetsPY"
                                 required
-                                [(ngModel)]="excelperfform. ReturnOnAssetsInCurrentYr" name="  ReturnOnAssetsInCurrentYr"
-                                #ReturnOnAssetsInCurrentYr="ngModel" digits>
+                                value= {{excellentperformance.ReturnOnAssetsPY}} name="ReturnOnAssetsPY"
+                                readonly>                    
                             </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="  ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
-                                
-                        </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="number" class="form-control" id=" ReturnOnAssetsInPerviousYr"
-                                required
-                                [(ngModel)]="excelperfform. ReturnOnAssetsInPerviousYr" name="  ReturnOnAssetsInPerviousYr"
-                                #ReturnOnAssetsInPerviousYr="ngModel" digits>                    </div>
                             </div>
                         
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M19" name="M19" #M19="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -351,21 +400,41 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
+                                <label for="TReturnOnAssetsOverPYP">  Total Return On Assets Over Previous Year In Percentage</label>
                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id=" TotalReturnOnAssetsOverPreviousYrInPercentage"
+                                <input type="number" class="form-control" id="TReturnOnAssetsOverPYP"
                                 required
-                                [(ngModel)]="excelperfform. TotalReturnOnAssetsOverPreviousYrInPercentage" name=" TotalReturnOnAssetsOverPreviousYrInPercentage "
-                                #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel" digits>
+                                value= {{excellentperformance.TReturnOnAssetsOverPYP}} name="TReturnOnAssetsOverPYP"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M20" name="M20" #M20="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="PerEmpBusinessCY">Per Employee Business Current Year </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="PerEmpBusinessCY"
+                                required
+                                value= {{excellentperformance.PerEmpBusinessCY}} name="PerEmpBusinessCY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M21" name="M21" #M21="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -373,21 +442,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="PerEmpBusinessCurrentYr  ">Per Employee Business Current Year </label>
-                               
+                                <label for=" PerEmpBusinessPY">Per Employee Business Previous Year</label>                               
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="PerEmpBusinessCurrentYr"
+                                <input type="number" class="form-control" id="PerEmpBusinessPY"
                                 required
-                                [(ngModel)]="excelperfform.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
-                                #PerEmpBusinessCurrentYr="ngModel" digits>
+                                value= {{excellentperformance.PerEmpBusinessPY}} name=" PerEmpBusinessPY"
+                                readonly/>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M22" name="M22" #M22="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -395,21 +463,42 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="number"  >Per Employee Business Previous Year</label>
+                                <label for="TPerEmpBusinessOverPYP">Total Per Employee Business Over Previous Year In Percentage </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="TPerEmpBusinessOverPYP"
+                                required
+                                value= {{excellentperformance.TPerEmpBusinessOverPYP}} name="TPerEmpBusinessOverPYP"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M23" name="M23" #M23="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="NetProfitToTAssetsCY"> Net Profit To Total Assets Current Year </label>
                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="PerEmpBusinessPreviousYr"
+                                <input type="number" class="form-control" id="NetProfitToTAssetsCY"
                                 required
-                                [(ngModel)]="excelperfform.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
-                                #PerEmpBusinessPreviousYr="ngModel" digits/>
+                                value= {{excellentperformance.NetProfitToTAssetsCY}} name="NetProfitToTAssetsCY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M24" name="M24" #M24="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -417,21 +506,43 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for=" TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
+                                <label for="NetProfitToTAssetsPY"> Net Profit To Total Assets Previous Year </label>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="NetProfitToTAssetsPY"
+                                required
+                                value= {{excellentperformance.NetProfitToTAssetsPY}} name="NetProfitToTAssetsPY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M25" name="M25" #M25="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="TNetProfitToTAssetsPY">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
+                                <input type="number" class="form-control" id="TNetProfitToTAssetsPY"
                                 required
-                                [(ngModel)]="excelperfform.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
-                                #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel" digits>
+                                value= {{excellentperformance.TNetProfitToTAssetsPY}} name="TNetProfitToTAssetsPY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M26" name="M26" #M26="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -439,21 +550,80 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
-                                
+                                <label for="CRROrSLROccuredCY"> Whether CRR/SLR default ocurred During Current Year</label>                              
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id=" NetProfitToTotalAssetsCurrentYr"
+                                <input type="text" class="form-control" id="CRROrSLROccuredCY"
                                 required
-                                [(ngModel)]="excelperfform. NetProfitToTotalAssetsCurrentYr" name="  NetProfitToTotalAssetsCurrentYr"
-                                #NetProfitToTotalAssetsCurrentYr="ngModel" digits>
+                                value= {{excellentperformance.CRROrSLROccuredCY}} name="CRROrSLROccuredCY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M27" name="M27" #M27="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="CRROrSLROccuredPY"> Whether CRR/SLR default ocurred During Previous Year</label>                              
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="CRROrSLROccuredPY"
+                                required
+                                value= {{excellentperformance.CRROrSLROccuredPY}} name="CRROrSLROccuredPY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M28" name="M28" #M28="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="RBIImposePenaltyCY">  RBI Impose Any Penalty During Current Year</label>       
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="RBIImposePenaltyCY"
+                                required
+                                value= {{excellentperformance.RBIImposePenaltyCY}} name="RBIImposePenaltyCY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M29" name="M29" #M29="ngModel" placeholder="marks"/>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="RBIImposePenaltyPY">  RBI Impose Any Penalty During Previous Year</label>       
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="RBIImposePenaltyPY"
+                                required
+                                value= {{excellentperformance.RBIImposePenaltyPY}} name="RBIImposePenaltyPY"
+                                readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M30" name="M30" #M30="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -461,21 +631,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for=" NetProfitToTotalAssetsPreviousYr  "> Net Profit To Total Assets Previous Year </label>
-
+                                <label for="ShowcaseNotice"> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id=" NetProfitToTotalAssetsPreviousYr"
+                                <input type="text" class="form-control" id="ShowcaseNotice"
                                 required
-                                [(ngModel)]="excelperfform. NetProfitToTotalAssetsPreviousYr" name="  NetProfitToTotalAssetsPreviousYr"
-                                #NetProfitToTotalAssetsPreviousYr="ngModel" digits>
+                                value= {{excellentperformance.ShowcaseNotice}} name="ShowcaseNotice"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M31" name="M31" #M31="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -483,94 +652,7 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage  ">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="number" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
-                                required
-                                [(ngModel)]="excelperfform.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
-                                #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel" digits>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="CRROrSLROccuredDuringCurrentYr  "> Whether CRR/SLR default ocurred During Current Year</label>                              
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="CRROrSLROccuredDuringCurrentYr"
-                                required
-                                [(ngModel)]="excelperfform.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
-                                #CRROrSLROccuredDuringCurrentYr="ngModel">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="  RBIImposeAnyPenaltyDuringCurrentYr ">  RBI Impose Any Penalty During Current Year</label>
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id=" RBIImposeAnyPenaltyDuringCurrentYr"
-                                required
-                                [(ngModel)]="excelperfform. RBIImposeAnyPenaltyDuringCurrentYr" name=" RBIImposeAnyPenaltyDuringCurrentYr "
-                                #RBIImposeAnyPenaltyDuringCurrentYr="ngModel">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for=" ShowcaseNotice  "> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id=" ShowcaseNotice"
-                                required
-                                [(ngModel)]="excelperfform. ShowcaseNotice" name=" ShowcaseNotice "
-                                #ShowcaseNotice="ngModel">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
-                            </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for=" EnquiryByRBI_IncomeTax "> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
+                                <label for="EnquiryByRBI_IncomeTax"> Any Enquiry By RBI or Income Tax authorities in respect of cancelled notes during or after demonitisation  </label>
                                
                             </div>
                         </div>
@@ -578,13 +660,13 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" id="EnquiryByRBI_IncomeTax"
                                 required
-                                [(ngModel)]="excelperfform.EnquiryByRBI_IncomeTax" name=" EnquiryByRBI_IncomeTax"
-                                #EnquiryByRBI_IncomeTax="ngModel">
+                                value= {{excellentperformance.EnquiryByRBI_IncomeTax}} name="EnquiryByRBI_IncomeTax"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M32" name="M32" #M32="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -592,21 +674,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for=" UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
-                                
+                                <label for="UPIorCKYCImplemented">Whether UPI or CKYC Implemented</label>
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
                                 <input type="text" class="form-control" id= "UPIorCKYCImplemented"
                                 required
-                                [(ngModel)]="excelperfform. UPIorCKYCImplemented" name=" UPIorCKYCImplemented "
-                                #UPIorCKYCImplemented ="ngModel">
+                                value= {{excellentperformance.UPIorCKYCImplemented}} name="UPIorCKYCImplemented"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M33" name="33" #M33="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -614,21 +695,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="KYCImplementationWithAML  ">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
-                                
+                                <label for="KYCWithAML">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="KYCImplementationWithAML"
+                                <input type="text" class="form-control" id="KYCWithAML"
                                 required
-                                [(ngModel)]="excelperfform.KYCImplementationWithAML" name="KYCImplementationWithAML "
-                                #KYCImplementationWithAML="ngModel">
+                                value= {{excellentperformance.KYCWithAML}} name="KYCWithAML"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M34" name="M34" #M34="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -636,22 +716,21 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
+                                <label for="BorrowerRatings"> How the bank implements internal control and whether it has borrower rating system
                                     for determining interest rates to large borrowers. </label>
-                                 
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="text" class="form-control" id=" BorrowerRatings"
+                                <input type="text" class="form-control" id="BorrowerRatings"
                                 required
-                                [(ngModel)]="excelperfform.BorrowerRatings" name=" BorrowerRatings "
-                                #BorrowerRatings="ngModel">
+                                value= {{excellentperformance.BorrowerRatings}} name="BorrowerRatings"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M35" name="M35" #M35="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -659,21 +738,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="PermissionToOpenBranchesInPreviousYr  ">Whether bank has  beeb granted permission to open branches in previous year</label>
-                               
+                                <label for="PermissionOpenBranchPY">Whether bank has  beeb granted permission to open branches in previous year</label>
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="PermissionToOpenBranchesInPreviousYr"
+                                <input type="text" class="form-control" id="PermissionOpenBranchPY"
                                 required
-                                [(ngModel)]="excelperfform.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
-                                #PermissionToOpenBranchesInPreviousYr="ngModel">
+                                value= {{excellentperformance.PermissionOpenBranchPY}} name="PermissionOpenBranchPY"
+                                readonly>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M36" name="M36" #M36="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -681,21 +759,21 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  UniqueIdToCustomer "> Whether Unique Identification number given to customer</label>
+                                <label for="UniqueIdToCustomer"> Whether Unique Identification number given to customer</label>
                                
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="text" class="form-control" id=" UniqueIdToCustomer"
+                                <input type="text" class="form-control" id="UniqueIdToCustomer"
                                 required
-                                [(ngModel)]="excelperfform.UniqueIdToCustomer" name=" UniqueIdToCustomer "
-                                #UniqueIdToCustomer="ngModel">  
+                                value= {{excellentperformance.UniqueIdToCustomer}} name="UniqueIdToCustomer"
+                                readonly>  
                         </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M37" name="M37" #M37="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -703,20 +781,20 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="GotAnyAward  ">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>                                
+                                <label for="GotAnyAward">Whether bank has been conferred with/got any award in year by any authorities or organisation</label>                                
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="GotAnyAward"
                                 required
-                                [(ngModel)]="excelperfform.GotAnyAward" name="GotAnyAward"
-                                #GotAnyAward="ngModel">
+                                value= {{excellentperformance.GotAnyAward}} name="GotAnyAward"
+                                readonly>
                         </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M38" name="M38" #M38="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div>
@@ -724,21 +802,21 @@
                       <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="  NetOrMobileBankingFacility ">Whether net or mobile banking facility is given by bank </label>
+                                <label for="NetOrMobileBankingFacility">Whether net or mobile banking facility is given by bank </label>
                                
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="text" class="form-control" id=" NetOrMobileBankingFacility"
+                                <input type="text" class="form-control" id="NetOrMobileBankingFacility"
                                 required
-                                [(ngModel)]="excelperfform.NetOrMobileBankingFacility" name=" NetOrMobileBankingFacility "
-                                #NetOrMobileBankingFacility="ngModel">
+                                value= {{excellentperformance.NetOrMobileBankingFacility}} name="NetOrMobileBankingFacility"
+                                readonly>
                         </div>
                     </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="marks"/>
+                                <input type="number" class="form-control" [(ngModel)]="excellentperformance.M39" name="M39" #M39="ngModel" placeholder="marks"/>
                             </div>
                         </div>
                       </div> 

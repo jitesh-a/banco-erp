@@ -2,38 +2,38 @@
   <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label for=" NetWorthPreviousYrInPercentage "> Net Worth Previous Year In Percentage </label>
-                <input type="number" class="form-control" id="NetWorthPreviousYrInPercentage "
+                <label for="NetWorthCYP"> Net Worth Current Year In Percentage </label>
+                <input type="text" class="form-control" id="NetWorthCYP"
                       required
-                      [(ngModel)]="excellentPerformance.NetWorthPreviousYrInPercentage" name="NetWorthPreviousYrInPercentage "
-                      #NetWorthPreviousYrInPercentage="ngModel" digits>
-                <div [hidden]=" NetWorthPreviousYrInPercentage .valid ||  NetWorthPreviousYrInPercentage.pristine"
+                      [(ngModel)]="excellentPerformance.NetWorthCYP" name="NetWorthCYP"
+                      #NetWorthCYP="ngModel">
+                <div [hidden]="NetWorthCYP.valid ||  NetWorthCYP.pristine"
                     class="alert alert-danger">
-                    Net Worth Previous Year In Percentage is required
+                    Net Worth Current Year In Percentage is required
                 </div>
               </div>
           </div>
           <div class="col-md-4">
               <div class="form-group">
-                  <label for=" NetWorthCurrentYrInPercentage"> Net Worth Current Year In Percentage</label>
-                  <input type="number" class="form-control" id=" NetWorthCurrentYrInPercentage"
+                  <label for="NetWorthPYP"> Net Worth Previous Year In Percentage</label>
+                  <input type="text" class="form-control" id="NetWorthPYP"
                         required
-                        [(ngModel)]="excellentPerformance.NetWorthCurrentYrInPercentage" name="NetWorthCurrentYrInPercentage"
-                        #NetWorthCurrentYrInPercentage="ngModel" digits>
-                  <div [hidden]=" NetWorthCurrentYrInPercentage.valid ||  NetWorthCurrentYrInPercentage.pristine"
+                        [(ngModel)]="excellentPerformance.NetWorthPYP" name="NetWorthPYP"
+                        #NetWorthPYP ="ngModel">
+                  <div [hidden]="NetWorthPYP.valid ||  NetWorthPYP.pristine"
                       class="alert alert-danger">
-                      Net Worth in Current Year In Percentage is required
+                      Net Worth in Previous Year In Percentage is required
                   </div>
                 </div>
           </div>
           <div class="col-md-4">
               <div class="form-group">
-                  <label for=" NetWorthOverPreviousYrInPercentage">Net Worth Over Previous Year In Percentage </label>
-                  <input type="number" class="form-control" id="NetWorthOverPreviousYrInPercentage "
+                  <label for="NetWorthOverPYP">Net Worth Over Previous Year In Percentage </label>
+                  <input type="text" class="form-control" id="NetWorthOverPYP"
                         required
-                        [(ngModel)]="excellentPerformance.NetWorthOverPreviousYrInPercentage" name="NetWorthOverPreviousYrInPercentage"
-                        #NetWorthOverPreviousYrInPercentage="ngModel" digits>
-                  <div [hidden]="NetWorthOverPreviousYrInPercentage .valid || NetWorthOverPreviousYrInPercentage.pristine"
+                        [(ngModel)]="excellentPerformance.NetWorthOverPYP" name="NetWorthOverPYP"
+                        #NetWorthOverPYP ="ngModel">
+                  <div [hidden]="NetWorthOverPYP.valid || NetWorthOverPYP.pristine"
                       class="alert alert-danger">
                       Net Worth Over Previous Year In Percentage is required
                   </div>
@@ -43,12 +43,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="CRARCurrentYrInPercentage"> CRAR Current Year In Percentage</label>
-                        <input type="number" class="form-control" id="CRARCurrentYrInPercentage"
+                        <label for="CRAR_CYP"> CRAR Current Year In Percentage</label>
+                        <input type="text" class="form-control" id="CRAR_CYP"
                                required
-                               [(ngModel)]="excellentPerformance.CRARCurrentYrInPercentage" name="CRARCurrentYrInPercentage"
-                               #CRARCurrentYrInPercentage ="ngModel" digits>
-                        <div [hidden]="CRARCurrentYrInPercentage.valid || CRARCurrentYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.CRAR_CYP" name="CRAR_CYP"
+                               #CRAR_CYP ="ngModel">
+                        <div [hidden]="CRAR_CYP.valid || CRAR_CYP.pristine"
                              class="alert alert-danger">
                              CRAR Current Year In Percentage is required
                         </div>
@@ -56,12 +56,12 @@
             </div>    
             <div class="col-md-4">
                 <div class="form-group">
-                        <label for="CRARPreviousYrInPercentage">CRAR Previous Year In Percentage</label>
-                        <input type="number" class="form-control" id="CRARPreviousYrInPercentage"
+                        <label for="CRAR_PYP">CRAR Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id="CRAR_PYP"
                                required
-                               [(ngModel)]="excellentPerformance.CRARPreviousYrInPercentage" name="CRARCurrentYrInPercentage"
-                               #CRARPreviousYrInPercentage ="ngModel" digits>
-                        <div [hidden]="CRARPreviousYrInPercentage.valid || CRARPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.CRAR_PYP" name="CRAR_PYP"
+                               #CRAR_PYP ="ngModel">
+                        <div [hidden]="CRAR_PYP.valid || CRAR_PYP.pristine"
                              class="alert alert-danger">
                              CRAR Previous Year In Percentage is required
                         </div>
@@ -71,12 +71,12 @@
   <div class="row">
     <div class="col-md-4">
             <div class="form-group">
-                    <label for="DepositCurrentYr "> Deposit Current Year</label>
-                    <input type="number" class="form-control" id=" DepositCurrentYr"
+                    <label for="DepositCY"> Deposit Current Year</label>
+                    <input type="number" class="form-control" id="DepositCY"
                            required
-                           [(ngModel)]="excellentPerformance.DepositCurrentYr" name="DepositCurrentYr "
-                           #DepositCurrentYr ="ngModel" digits>
-                    <div [hidden]=" DepositCurrentYr.valid || DepositCurrentYr.pristine"
+                           [(ngModel)]="excellentPerformance.DepositCY" name="DepositCY"
+                           #DepositCY ="ngModel" digits>
+                    <div [hidden]="DepositCY.valid || DepositCY.pristine"
                          class="alert alert-danger">
                          Deposit Current Year is required
                     </div>
@@ -85,12 +85,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="DepositPreviousYr "> Deposit Previous Year</label>
-                        <input type="number" class="form-control" id=" DepositPreviousYr"
+                        <label for="DepositPY"> Deposit Previous Year</label>
+                        <input type="number" class="form-control" id=" DepositPY"
                                required
-                               [(ngModel)]="excellentPerformance.DepositPreviousYr" name="DepositPreviousYr"
-                               #DepositPreviousYr="ngModel" digits>
-                        <div [hidden]="DepositPreviousYr.valid ||DepositPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.DepositPY" name="DepositPY"
+                               #DepositPY="ngModel" digits>
+                        <div [hidden]="DepositPY.valid ||DepositPY.pristine"
                              class="alert alert-danger">
                              Deposit Previous Year is required
                         </div>
@@ -99,12 +99,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for=" TotalDepositOverPreviousYrInPercentage ">  Total Deposit Over Previous Year In Percentage</label>
-                        <input type="number" class="form-control" id="  TotalDepositOverPreviousYrInPercentage"
+                        <label for="TDepositOverPYP">  Total Deposit Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id="TDepositOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance.TotalDepositOverPreviousYrInPercentage" name="TotalDepositOverPreviousYrInPercentage "
-                               #TotalDepositOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalDepositOverPreviousYrInPercentage.valid || TotalDepositOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TDepositOverPYP" name="TDepositOverPYP"
+                               #TDepositOverPYP="ngModel">
+                        <div [hidden]="TDepositOverPYP.valid || TDepositOverPYP.pristine"
                              class="alert alert-danger">
                              Total Deposit Over Previous Year In Percentage is required
                         </div>
@@ -116,12 +116,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalAdvancesCurrentYr ">  Total Advances Current Year</label>
-                        <input type="number" class="form-control" id="  TotalAdvancesCurrentYr"
+                        <label for="TAdvancesCY">  Total Advances Current Year</label>
+                        <input type="number" class="form-control" id="TAdvancesCY"
                                required
-                               [(ngModel)]="excellentPerformance.TotalAdvancesCurrentYr" name=" TotalAdvancesCurrentYr "
-                               #TotalAdvancesCurrentYr="ngModel" digits>
-                        <div [hidden]="TotalAdvancesCurrentYr.valid || TotalAdvancesCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.TAdvancesCY" name="TAdvancesCY"
+                               #TAdvancesCY="ngModel" digits>
+                        <div [hidden]="TAdvancesCY.valid || TAdvancesCY.pristine"
                              class="alert alert-danger">
                              Total Advances Current Year is required
                         </div>
@@ -130,12 +130,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalAdvancesPreviousYr"> Total Advances Previous Year</label>
-                        <input type="number" class="form-control" id=" TotalAdvancesPreviousYr"
+                        <label for="TAdvancesPY"> Total Advances Previous Year</label>
+                        <input type="number" class="form-control" id="TAdvancesPY"
                                required
-                               [(ngModel)]="excellentPerformance.TotalAdvancesPreviousYr" name="TotalAdvancesPreviousYr"
-                               #TotalAdvancesPreviousYr="ngModel" digits>
-                        <div [hidden]="TotalAdvancesPreviousYr.valid || TotalAdvancesPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.TAdvancesPY" name="TAdvancesPY"
+                               #TAdvancesPY="ngModel" digits>
+                        <div [hidden]="TAdvancesPY.valid || TAdvancesPY.pristine"
                              class="alert alert-danger">
                              Total Advances Previous Year is required
                         </div>
@@ -144,12 +144,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalAdvancesOverPreviousYrInPercentage "> Total Advances Over Previous Year In Percentage</label>
-                        <input type="number" class="form-control" id=" TotalAdvancesOverPreviousYrInPercentage"
+                        <label for="TAdvancesOverPYP"> Total Advances Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id="TAdvancesOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance.TotalAdvancesOverPreviousYrInPercentage" name="TotalAdvancesOverPreviousYrInPercentage"
-                               #TotalAdvancesOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalAdvancesOverPreviousYrInPercentage.valid || TotalAdvancesOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TAdvancesOverPYP" name="TAdvancesOverPYP"
+                               #TAdvancesOverPYP="ngModel">
+                        <div [hidden]="TAdvancesOverPYP.valid || TAdvancesOverPYP.pristine"
                              class="alert alert-danger">
                              Total Advances Over Previous Year In Percentage is required
                         </div>
@@ -160,12 +160,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="GrossNPAInCurrentYr">  Gross NPA In Current Year</label>
-                        <input type="number" class="form-control" id="GrossNPAInCurrentYr"
+                        <label for="GROSSNPAlnCY">  Gross NPA In Current Year</label>
+                        <input type="text" class="form-control" id="GROSSNPAlnCY"
                                required
-                               [(ngModel)]="excellentPerformance.GrossNPAInCurrentYr" name="GrossNPAInCurrentYr "
-                               #GrossNPAInCurrentYr="ngModel" digits>
-                        <div [hidden]="GrossNPAInCurrentYr.valid || GrossNPAInCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.GROSSNPAlnCY" name="GROSSNPAlnCY"
+                               #GROSSNPAlnCY="ngModel">
+                        <div [hidden]="GROSSNPAlnCY.valid || GROSSNPAlnCY.pristine"
                              class="alert alert-danger">
                              Gross NPA In Current Year is required
                         </div>
@@ -174,12 +174,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="GrossNPAInPreviousYr">Gross NPA In Previous Year </label>
-                        <input type="number" class="form-control" id="GrossNPAInPreviousYr"
+                        <label for="GROSSNPAlnPY">Gross NPA In Previous Year </label>
+                        <input type="text" class="form-control" id="GROSSNPAlnPY"
                                required
-                               [(ngModel)]="excellentPerformance.GrossNPAInPreviousYr" name="GrossNPAInPreviousYr "
-                               #GrossNPAInPreviousYr="ngModel" digits>
-                        <div [hidden]="GrossNPAInPreviousYr.valid ||GrossNPAInPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.GROSSNPAlnPY" name="GROSSNPAlnPY"
+                               #GROSSNPAlnPY="ngModel">
+                        <div [hidden]="GROSSNPAlnPY.valid || GROSSNPAlnPY.pristine"
                              class="alert alert-danger">
                              Gross NPA In Previous Year is required
                         </div>
@@ -188,12 +188,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalGrossNPAOverPreviousYrInPercentage ">Total Gross NPA Over Previous Year In Percentage </label>
-                        <input type="number" class="form-control" id="TotalGrossNPAOverPreviousYrInPercentage"
+                        <label for="TGrossNPAOverPYP">Total Gross NPA Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TGrossNPAOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance.TotalGrossNPAOverPreviousYrInPercentage" name="TotalGrossNPAOverPreviousYrInPercentage "
-                               #TotalGrossNPAOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalGrossNPAOverPreviousYrInPercentage.valid ||TotalGrossNPAOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TGrossNPAOverPYP" name="TGrossNPAOverPYP"
+                               #TGrossNPAOverPYP="ngModel">
+                        <div [hidden]="TGrossNPAOverPYP.valid || TGrossNPAOverPYP.pristine"
                              class="alert alert-danger">
                              Total Gross NPA Over Previous Year In Percentage is required
                         </div>
@@ -204,12 +204,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="NetNPACurrentYr "> Net NPA Current Year</label>
-                        <input type="number" class="form-control" id="NetNPACurrentYr"
+                        <label for="NetNPACY"> Net NPA Current Year</label>
+                        <input type="number" class="form-control" id="NetNPACY"
                                required
-                               [(ngModel)]="excellentPerformance.NetNPACurrentYr" name="NetNPACurrentYr "
-                               #NetNPACurrentYr="ngModel" digits>
-                        <div [hidden]="NetNPACurrentYr.valid ||NetNPACurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.NetNPACY" name="NetNPACY"
+                               #NetNPACY="ngModel" digits>
+                        <div [hidden]="NetNPACY.valid || NetNPACY.pristine"
                              class="alert alert-danger">
                              Net NPA Current Year is required
                         </div>
@@ -219,12 +219,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="NetNPAPreviousYr  "> Net NPA Previous Year</label>
-                        <input type="number" class="form-control" id="NetNPAPreviousYr"
+                        <label for="NetNPAPY"> Net NPA Previous Year</label>
+                        <input type="number" class="form-control" id="NetNPAPY"
                                required
-                               [(ngModel)]="excellentPerformance.NetNPAPreviousYr" name="NetNPAPreviousYr "
-                               #NetNPAPreviousYr="ngModel" digits>
-                        <div [hidden]="NetNPAPreviousYr.valid ||NetNPAPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.NetNPAPY" name="NetNPAPY"
+                               #NetNPAPY="ngModel" digits>
+                        <div [hidden]="NetNPAPY.valid || NetNPAPY.pristine"
                              class="alert alert-danger">
                              Net NPA Previous Year is required
                         </div>
@@ -233,12 +233,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalNetNPAOverPreviousYrInPercentage "> Total Net NPA Over Previous Year In Percentage </label>
-                        <input type="number" class="form-control" id="TotalNetNPAOverPreviousYrInPercentage"
+                        <label for="TNetNPAOverPYP"> Total Net NPA Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TNetNPAOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance. TotalNetNPAOverPreviousYrInPercentage" name="TotalNetNPAOverPreviousYrInPercentage"
-                               #TotalNetNPAOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]=" TotalNetNPAOverPreviousYrInPercentage.valid || TotalNetNPAOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TNetNPAOverPYP" name="TNetNPAOverPYP"
+                               #TNetNPAOverPYP="ngModel">
+                        <div [hidden]="TNetNPAOverPYP.valid || TNetNPAOverPYP.pristine"
                              class="alert alert-danger">
                              Total Net NPA Over Previous Year In Percentage  is required
                         </div>
@@ -249,25 +249,25 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="ReturnOnAssetsInCurrentYr"> Return On Assets In Current Year </label>
-                        <input type="number" class="form-control" id=" ReturnOnAssetsInCurrentYr"
+                        <label for="ReturnOnAssetsInCY"> Return On Assets In Current Year </label>
+                        <input type="number" class="form-control" id="ReturnOnAssetsInCY"
                                required
-                               [(ngModel)]="excellentPerformance. ReturnOnAssetsInCurrentYr" name="ReturnOnAssetsInCurrentYr"
-                               #ReturnOnAssetsInCurrentYr="ngModel" digits>
-                        <div [hidden]="ReturnOnAssetsInCurrentYr.valid || ReturnOnAssetsInCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.ReturnOnAssetsInCY" name="ReturnOnAssetsInCY"
+                               #ReturnOnAssetsInCY="ngModel" digits>
+                        <div [hidden]="ReturnOnAssetsInCY.valid || ReturnOnAssetsInCY.pristine"
                              class="alert alert-danger">
-                             Return On Assets In Current Year   is required
+                             Return On Assets In Current Year is required
                         </div>
                       </div>
         </div>
 
         <div class="col-md-4"><div class="form-group">
-                <label for="ReturnOnAssetsInPerviousYr ">  Return On Assets In Pervious Year</label>
-                <input type="number" class="form-control" id="ReturnOnAssetsInPerviousYr"
+                <label for="ReturnOnAssetsPY">  Return On Assets In Pervious Year</label>
+                <input type="number" class="form-control" id="ReturnOnAssetsPY"
                        required
-                       [(ngModel)]="excellentPerformance.ReturnOnAssetsInPerviousYr" name="ReturnOnAssetsInPerviousYr"
-                       #ReturnOnAssetsInPerviousYr="ngModel" digits>
-                <div [hidden]="ReturnOnAssetsInPerviousYr.valid || ReturnOnAssetsInPerviousYr.pristine"
+                       [(ngModel)]="excellentPerformance.ReturnOnAssetsPY" name="ReturnOnAssetsPY"
+                       #ReturnOnAssetsPY="ngModel" digits>
+                <div [hidden]="ReturnOnAssetsPY.valid || ReturnOnAssetsPY.pristine"
                      class="alert alert-danger">
                      Return On Assets In Pervious Year is required
                 </div>
@@ -276,12 +276,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalReturnOnAssetsOverPreviousYrInPercentage ">  Total Return On Assets Over Previous Year In Percentage</label>
-                        <input type="number" class="form-control" id="TotalReturnOnAssetsOverPreviousYrInPercentage"
+                        <label for="TReturnOnAssetsOverPYP">  Total Return On Assets Over Previous Year In Percentage</label>
+                        <input type="text" class="form-control" id="TReturnOnAssetsOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance.TotalReturnOnAssetsOverPreviousYrInPercentage" name="TotalReturnOnAssetsOverPreviousYrInPercentage "
-                               #TotalReturnOnAssetsOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalReturnOnAssetsOverPreviousYrInPercentage.valid || TotalReturnOnAssetsOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TReturnOnAssetsOverPYP" name="TReturnOnAssetsOverPYP"
+                               #TReturnOnAssetsOverPYP="ngModel">
+                        <div [hidden]="TReturnOnAssetsOverPYP.valid || TReturnOnAssetsOverPYP.pristine"
                              class="alert alert-danger">
                              Total Return On Assets Over Previous Year In Percentage  is required
                         </div>
@@ -293,12 +293,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PerEmpBusinessCurrentYr">Per Employee Business Current Year </label>
-                        <input type="number" class="form-control" id="PerEmpBusinessCurrentYr"
+                        <label for="PerEmpBusinessCY">Per Employee Business Current Year </label>
+                        <input type="number" class="form-control" id="PerEmpBusinessCY"
                                required
-                               [(ngModel)]="excellentPerformance.PerEmpBusinessCurrentYr" name="PerEmpBusinessCurrentYr "
-                               #PerEmpBusinessCurrentYr="ngModel" digits>
-                        <div [hidden]="PerEmpBusinessCurrentYr.valid ||PerEmpBusinessCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.PerEmpBusinessCY" name="PerEmpBusinessCY"
+                               #PerEmpBusinessCY="ngModel" digits>
+                        <div [hidden]="PerEmpBusinessCY.valid || PerEmpBusinessCY.pristine"
                              class="alert alert-danger">
                              Per Employee Business Current Year is required
                         </div>
@@ -307,12 +307,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PerEmpBusinessPreviousYr">Per Employee Business Previous Year</label>
-                        <input type="number" class="form-control" id="PerEmpBusinessPreviousYr"
+                        <label for="PerEmpBusinessPY">Per Employee Business Previous Year</label>
+                        <input type="number" class="form-control" id="PerEmpBusinessPY"
                                required
-                               [(ngModel)]="excellentPerformance.PerEmpBusinessPreviousYr" name=" PerEmpBusinessPreviousYr"
-                               #PerEmpBusinessPreviousYr="ngModel" digits/>
-                        <div [hidden]="PerEmpBusinessPreviousYr.valid || PerEmpBusinessPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.PerEmpBusinessPY" name="PerEmpBusinessPY"
+                               #PerEmpBusinessPY="ngModel" digits/>
+                        <div [hidden]="PerEmpBusinessPY.valid || PerEmpBusinessPY.pristine"
                              class="alert alert-danger">
                              Per Employee Business Previous Year is required
                         </div>
@@ -322,12 +322,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalPerEmpBusinessOverPreviousYrInPercentage ">Total Per Employee Business Over Previous Year In Percentage </label>
-                        <input type="number" class="form-control" id="TotalPerEmpBusinessOverPreviousYrInPercentage"
+                        <label for="TPerEmpBusinessOverPYP">Total Per Employee Business Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TPerEmpBusinessOverPYP"
                                required
-                               [(ngModel)]="excellentPerformance.TotalPerEmpBusinessOverPreviousYrInPercentage" name="TotalPerEmpBusinessOverPreviousYrInPercentage "
-                               #TotalPerEmpBusinessOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalPerEmpBusinessOverPreviousYrInPercentage.valid || TotalPerEmpBusinessOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TPerEmpBusinessOverPYP" name="TPerEmpBusinessOverPYP"
+                               #TPerEmpBusinessOverPYP="ngModel">
+                        <div [hidden]="TPerEmpBusinessOverPYP.valid || TPerEmpBusinessOverPYP.pristine"
                              class="alert alert-danger">
                              Total Per Employee Business Over Previous Year In Percentage is required
                         </div>
@@ -338,26 +338,26 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="NetProfitToTotalAssetsCurrentYr "> Net Profit To Total Assets Current Year </label>
-                        <input type="number" class="form-control" id="NetProfitToTotalAssetsCurrentYr"
+                        <label for="NetProfitToTAssetsCY"> Net Profit To Total Assets Current Year </label>
+                        <input type="number" class="form-control" id="NetProfitToTAssetsCY"
                                required
-                               [(ngModel)]="excellentPerformance. NetProfitToTotalAssetsCurrentYr" name="NetProfitToTotalAssetsCurrentYr"
-                               #NetProfitToTotalAssetsCurrentYr="ngModel" digits>
-                        <div [hidden]="NetProfitToTotalAssetsCurrentYr.valid || NetProfitToTotalAssetsCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.NetProfitToTAssetsCY" name="NetProfitToTAssetsCY"
+                               #NetProfitToTAssetsCY="ngModel" digits>
+                        <div [hidden]="NetProfitToTAssetsCY.valid || NetProfitToTAssetsCY.pristine"
                              class="alert alert-danger">
-                             Net Profit To Total Assets Current Year  is required
+                             Net Profit To Total Assets Current Year is required
                         </div>
                       </div>
         </div>
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="NetProfitToTotalAssetsPreviousYr"> Net Profit To Total Assets Previous Year </label>
-                        <input type="number" class="form-control" id="NetProfitToTotalAssetsPreviousYr"
+                        <label for="NetProfitToTAssetsPY"> Net Profit To Total Assets Previous Year </label>
+                        <input type="number" class="form-control" id="NetProfitToTAssetsPY"
                                required
-                               [(ngModel)]="excellentPerformance.NetProfitToTotalAssetsPreviousYr" name="NetProfitToTotalAssetsPreviousYr"
-                               #NetProfitToTotalAssetsPreviousYr="ngModel" digits>
-                        <div [hidden]="NetProfitToTotalAssetsPreviousYr.valid || NetProfitToTotalAssetsPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.NetProfitToTAssetsPY" name="NetProfitToTAssetsPY"
+                               #NetProfitToTAssetsPY="ngModel" digits>
+                        <div [hidden]="NetProfitToTAssetsPY.valid || NetProfitToTAssetsPY.pristine"
                              class="alert alert-danger">
                              Net Profit To Total Assets Previous Year is required
                         </div>
@@ -366,14 +366,14 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
-                        <input type="number" class="form-control" id="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage"
+                        <label for="TNetProfitToTAssetsPY">Total Net Profit To Total Assets Over Previous Year In Percentage </label>
+                        <input type="text" class="form-control" id="TNetProfitToTAssetsPY"
                                required
-                               [(ngModel)]="excellentPerformance.TotalNetProfitToTotalAssetsOverPreviousYrInPercentage" name="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage "
-                               #TotalNetProfitToTotalAssetsOverPreviousYrInPercentage="ngModel" digits>
-                        <div [hidden]="TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.valid || TotalNetProfitToTotalAssetsOverPreviousYrInPercentage.pristine"
+                               [(ngModel)]="excellentPerformance.TNetProfitToTAssetsPY" name="TNetProfitToTAssetsPY"
+                               #TNetProfitToTAssetsPY="ngModel">
+                        <div [hidden]="TNetProfitToTAssetsPY.valid || TNetProfitToTAssetsPY.pristine"
                              class="alert alert-danger">
-                             TotalNetProfitToTotalAssetsOverPreviousYrInPercentage is required
+                             Total Net Profit To Total Assets Over Previous Year In Percentage is required
                         </div>
                       </div>
         </div>
@@ -382,12 +382,12 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="CRROrSLROccuredDuringCurrentYr"> Whether CRR/SLR default ocurred During Current Year</label>
-                        <input type="text" class="form-control" id="CRROrSLROccuredDuringCurrentYr"
+                        <label for="CRROrSLROccuredCY"> Whether CRR/SLR default ocurred During Current Year</label>
+                        <input type="text" class="form-control" id="CRROrSLROccuredCY"
                                required
-                               [(ngModel)]="excellentPerformance.CRROrSLROccuredDuringCurrentYr" name="CRROrSLROccuredDuringCurrentYr "
-                               #CRROrSLROccuredDuringCurrentYr="ngModel">
-                        <div [hidden]="CRROrSLROccuredDuringCurrentYr.valid || CRROrSLROccuredDuringCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.CRROrSLROccuredCY" name="CRROrSLROccuredCY"
+                               #CRROrSLROccuredCY="ngModel">
+                        <div [hidden]="CRROrSLROccuredCY.valid || CRROrSLROccuredCY.pristine"
                              class="alert alert-danger">
                              CRR Or SLR Occured During Current Year is required
                         </div>
@@ -395,12 +395,12 @@
         </div>
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="CRROrSLROccuredDuringPreviousYr"> Whether CRR/SLR default ocurred During Previous Year</label>
-                        <input type="text" class="form-control" id="CRROrSLROccuredDuringPreviousYr"
+                        <label for="CRROrSLROccuredPY"> Whether CRR/SLR default ocurred During Previous Year</label>
+                        <input type="text" class="form-control" id="CRROrSLROccuredPY"
                                required
-                               [(ngModel)]="excellentPerformance.CRROrSLROccuredDuringPreviousYr" name="CRROrSLROccuredDuringPreviousYr"
-                               #CRROrSLROccuredDuringPreviousYr="ngModel">
-                        <div [hidden]="CRROrSLROccuredDuringPreviousYr.valid || CRROrSLROccuredDuringPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.CRROrSLROccuredPY" name="CRROrSLROccuredPY"
+                               #CRROrSLROccuredPY="ngModel">
+                        <div [hidden]="CRROrSLROccuredPY.valid || CRROrSLROccuredPY.pristine"
                              class="alert alert-danger">
                              CRR Or SLR Occured During Previous Year is required
                         </div>
@@ -410,12 +410,12 @@
         <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="RBIImposeAnyPenaltyDuringCurrentYr ">RBI Impose Any Penalty During Current Year</label>
-                        <input type="text" class="form-control" id="RBIImposeAnyPenaltyDuringCurrentYr"
+                        <label for="RBIImposePenaltyCY ">RBI Impose Any Penalty During Current Year</label>
+                        <input type="text" class="form-control" id="RBIImposePenaltyCY"
                                required
-                               [(ngModel)]="excellentPerformance.RBIImposeAnyPenaltyDuringCurrentYr" name="RBIImposeAnyPenaltyDuringCurrentYr "
-                               #RBIImposeAnyPenaltyDuringCurrentYr="ngModel">
-                        <div [hidden]="RBIImposeAnyPenaltyDuringCurrentYr.valid || RBIImposeAnyPenaltyDuringCurrentYr.pristine"
+                               [(ngModel)]="excellentPerformance.RBIImposePenaltyCY" name="RBIImposePenaltyCY"
+                               #RBIImposePenaltyCY="ngModel">
+                        <div [hidden]="RBIImposePenaltyCY.valid || RBIImposePenaltyCY.pristine"
                              class="alert alert-danger">
                              RBI Impose Any Penalty During Current Year  is required
                         </div>
@@ -423,12 +423,12 @@
         </div>
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="RBIImposeAnyPenaltyDuringPreviousYr">RBI Impose Any Penalty During Previous Year</label>
-                        <input type="text" class="form-control" id="RBIImposeAnyPenaltyDuringPreviousYr"
+                        <label for="RBIImposePenaltyPY">RBI Impose Any Penalty During Previous Year</label>
+                        <input type="text" class="form-control" id="RBIImposePenaltyPY"
                                required
-                               [(ngModel)]="excellentPerformance.RBIImposeAnyPenaltyDuringPreviousYr" name="RBIImposeAnyPenaltyDuringPreviousYr"
-                               #RBIImposeAnyPenaltyDuringPreviousYr="ngModel">
-                        <div [hidden]="RBIImposeAnyPenaltyDuringPreviousYr.valid || RBIImposeAnyPenaltyDuringPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.RBIImposePenaltyPY" name="RBIImposePenaltyPY"
+                               #RBIImposePenaltyPY="ngModel">
+                        <div [hidden]="RBIImposePenaltyPY.valid || RBIImposePenaltyPY.pristine"
                              class="alert alert-danger">
                              RBI Impose Any Penalty During Previous Year is required
                         </div>
@@ -439,11 +439,11 @@
                         <label for="ShowcaseNotice"> Whether RBI issued showcase notice/letter or imposed any restriction on Bank or issued any letter of displeasure during current year </label>
                         <input type="text" class="form-control" id="ShowcaseNotice"
                                required
-                               [(ngModel)]="excellentPerformance.ShowcaseNotice" name="ShowcaseNotice "
+                               [(ngModel)]="excellentPerformance.ShowcaseNotice" name="ShowcaseNotice"
                                #ShowcaseNotice="ngModel">
                         <div [hidden]="ShowcaseNotice.valid || ShowcaseNotice.pristine"
                              class="alert alert-danger">
-                             ShowcaseNotice is required
+                             Show case Notice is required
                         </div>
                       </div>
         </div>
@@ -466,7 +466,7 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="UPIorCKYCImplemented  ">Whether UPI or CKYC Implemented</label>
+                        <label for="UPIorCKYCImplemented">Whether UPI or CKYC Implemented</label>
                         <input type="text" class="form-control" id= "UPIorCKYCImplemented"
                                required
                                [(ngModel)]="excellentPerformance.UPIorCKYCImplemented" name="UPIorCKYCImplemented "
@@ -480,12 +480,12 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="KYCImplementationWithAML">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
-                        <input type="text" class="form-control" id="KYCImplementationWithAML"
+                        <label for="KYCWithAML">How effectively KYC is Implemented along  With AML activities and transaction monitoring</label>
+                        <input type="text" class="form-control" id="KYCWithAML"
                                required
-                               [(ngModel)]="excellentPerformance.KYCImplementationWithAML" name="KYCImplementationWithAML "
-                               #KYCImplementationWithAML="ngModel">
-                        <div [hidden]="KYCImplementationWithAML.valid || KYCImplementationWithAML.pristine"
+                               [(ngModel)]="excellentPerformance.KYCWithAML" name="KYCWithAML"
+                               #KYCWithAML="ngModel">
+                        <div [hidden]="KYCWithAML.valid || KYCWithAML.pristine"
                              class="alert alert-danger">
                              KYC Implementation With AML is required
                         </div>
@@ -496,7 +496,7 @@
   <div class="row">
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="BorrowerRatings "> How the bank implements internal control and whether it has borrower rating system
+                        <label for="BorrowerRatings"> How the bank implements internal control and whether it has borrower rating system
                           for determining interest rates to large borrowers. </label>
                         <input type="text" class="form-control" id="BorrowerRatings"
                                required
@@ -512,12 +512,15 @@
 
         <div class="col-md-4">
                 <div class="form-group">
-                        <label for="PermissionToOpenBranchesInPreviousYr">Whether bank has  beeb granted permission to open branches in previous year</label>
-                        <input type="text" class="form-control" id="PermissionToOpenBranchesInPreviousYr"
+                        <label for="PermissionOpenBranchPY">Whether bank has  beeb granted permission to open branches in previous year</label>
+                        <select type="text" class="form-control" id="PermissionOpenBranchPY"
                                required
-                               [(ngModel)]="excellentPerformance.PermissionToOpenBranchesInPreviousYr" name="PermissionToOpenBranchesInPreviousYr "
-                               #PermissionToOpenBranchesInPreviousYr="ngModel">
-                        <div [hidden]="PermissionToOpenBranchesInPreviousYr.valid || PermissionToOpenBranchesInPreviousYr.pristine"
+                               [(ngModel)]="excellentPerformance.PermissionOpenBranchPY" name="PermissionOpenBranchPY"
+                               #PermissionOpenBranchPY="ngModel">
+                                <option [value]=true>Yes</option>
+                                <option [value]=false>No</option>
+                        </select>
+                        <div [hidden]="PermissionOpenBranchPY.valid || PermissionOpenBranchPY.pristine"
                              class="alert alert-danger">
                              Permission To Open  Branches In Previous Year is required
                         </div>

@@ -12,7 +12,8 @@
         <thead>
               <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Bank name</th>
+                <th>Employee Name</th>
                 <th>Description</th>
                 <th>Contact</th>
                 <th>EmployeeNumber</th>
@@ -23,6 +24,7 @@
         <tbody>
           <tr *ngFor="let e of employees">
             <td>{{e.Id}}</td>
+            <td>{{e.BankName}}</td>
             <td>{{e.Name}}</td>
             <td>{{e.Description}}</td>
             <td>{{e.Contact}}</td>
@@ -33,7 +35,7 @@
               <a class="btn btn-sm btn-primary" href="/employeeform/{{e.Id}}"> Edit </a>
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>           
               <a class="btn btn-sm btn-success" href="/fillformemployee/{{e.Id}}/{{e.Name}}"> Generate Link </a>
-              <a class="btn btn-sm btn-success" href="/employeedetails/{{e.Id}}">View details</a>
+              <a class="btn btn-sm btn-info" href="/employeedetails/{{e.Id}}">View details</a>
             </td>
               
           </tr>
