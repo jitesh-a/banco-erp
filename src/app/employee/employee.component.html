@@ -12,7 +12,8 @@
         <thead>
               <tr>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Bank name</th>
+                <th>Employee Name</th>
                 <th>Description</th>
                 <th>Contact</th>
                 <th>EmployeeNumber</th>
@@ -23,6 +24,7 @@
         <tbody>
           <tr *ngFor="let e of employees">
             <td>{{e.Id}}</td>
+            <td>{{e.BankName}}</td>
             <td>{{e.Name}}</td>
             <td>{{e.Description}}</td>
             <td>{{e.Contact}}</td>

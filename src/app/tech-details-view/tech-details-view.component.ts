@@ -22,7 +22,7 @@ export class TechDetailsViewComponent implements OnInit {
 
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log("Bank Id :"+this.id);
+    console.log("Bank Id :"+Number(this.route.snapshot.paramMap.get('id')));
     this.getTechDetails(this.id);
     console.log("value" +this.totalmarks);
   }

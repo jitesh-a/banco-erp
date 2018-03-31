@@ -3,7 +3,8 @@
       <h1>Pick Up And Drop Form</h1>
       <hr/>
       <form (ngSubmit)="onSubmit" #pickupanddropForm="ngForm">
-          <div class="form-group" *ngIf="pickupdrop.Id>0">
+         
+        <div class="form-group" *ngIf="pickupdrop.Id>0">
               <label for="Id">Id</label>
               <input type="text" class="form-control" id="Id"
                      required
@@ -14,6 +15,7 @@
                   Id is required
                 </div>            
             </div>
+
             <div class="form-group">
               <label>Event Name</label>
               <select class="form-control" id="EventName"
@@ -29,6 +31,7 @@
                 Employee Name is required
               </div>
             </div>
+
             <div class="form-group">
               <label for="Type">Type</label>
               <select class="form-control" id="Type"
@@ -51,6 +54,7 @@
                 Type is required
               </div>
             </div>
+
             <div class="form-group" *ngIf="type==2">
               <label>Bank Name</label>
               <select class="form-control" id="BankName"
@@ -98,6 +102,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="PickUpPlace">Pick Up Place</label>
@@ -111,7 +117,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -126,6 +132,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="DropPlace">Drop Place</label>
@@ -137,9 +145,24 @@
                        class="alert alert-danger">
                        Drop Place is required
                   </div>
+                </div>
+              </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="DropPlace">way of transport</label>
+                      <input type="text" class="form-control" id="Wayoftransport"
+                             required
+                             [(ngModel)]="pickupdrop.Wayoftransport" name="Wayoftransport"
+                             #DropPlace="ngModel"/ >
+                      <div [hidden]="Wayoftransport.valid || Wayoftransport.pristine"
+                           class="alert alert-danger">
+                           Way of transport is required
+                      </div>
+
                 </div>                
               </div>
-            </div>
+            
           <button type="submit" class="btn btn-success" [disabled]="!pickupanddropform.valid" (click)="save()">Submit</button>
           <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
         </form> 
