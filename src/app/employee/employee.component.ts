@@ -10,6 +10,7 @@ export class EmployeeComponent implements OnInit {
  
   employees :Employee[]=[];
   dataLoaded: boolean;
+  link : string;
   constructor(private employeeService :EmployeeService) { }
 
   ngOnInit() {
@@ -39,6 +40,16 @@ export class EmployeeComponent implements OnInit {
     //.subscribe(data=>{},err=>{});
   }
 
+
+  //create link
+
+  createLink(employees: Employee):void{
+    
+      
+      this.link = "http://localhost:4200//fillformemployee/"+employees.Id+"/"+employees.Name;
+      console.log( this.link);
+     }
+    
   //delete
   delete(employee: Employee): void {
     this.employees = this.employees.filter(h => h !==employee);
