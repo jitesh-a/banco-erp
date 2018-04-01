@@ -54,6 +54,12 @@ import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { sponserviewComponent } from './sponserview/sponserview.component';
 import { ViewResultComponent } from './view-result/view-result.component';
 import { EventResult } from "../models/eventResult.model";
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import { FusionChartsModule } from 'angular4-fusioncharts';
+
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 @NgModule({
   declarations: [
@@ -99,7 +105,8 @@ import { EventResult } from "../models/eventResult.model";
     HttpClientModule,
     FormsModule,
     MatRadioModule,
-    CustomFormsModule
+    CustomFormsModule,
+    FusionChartsModule
   ],
   providers: [
     MessageService,
