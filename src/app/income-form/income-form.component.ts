@@ -65,7 +65,7 @@ export class IncomeFormComponent implements OnInit {
           }
         ); 
       }else{
-        this.income.Type = "Income";
+        console.log(this.income.Type);
         this.incomeService.addIncome(this.income)
         .subscribe(
           res=>{

@@ -1,5 +1,5 @@
 <div class="row" >
-  <div class="col-md-6"><h1> Bank </h1></div>
+  <div class="col-md-6"><h1> Bank details </h1></div>
 </div>
 <hr/>
 <div class="row" >
@@ -30,8 +30,8 @@
             <td>{{b.Pincode}}</td>
             <td>{{b.Telephone}}</td>
             <td>
-              <a class="btn btn-sm btn-info" href="/bankdetails/{{b.Id}}">View Details </a>
               <a class="btn btn-sm btn-success" href="/exelperformview/{{b.Id}}/{{b.Name}}">Evaluate</a>
+              <a class="btn btn-sm btn-info" href="/bankdetails/{{b.Id}}">View Details </a>
               <button class="btn btn-sm btn-danger" (click)="delete(b)">Delete</button> 
             </td>
           </tr>

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-      <h1>Income Form</h1>
+      <h1>Income/Expenses addition Form</h1>
       <hr/>
       <form (ngSubmit)="onSubmit" #incomeForm="ngForm">
           <div class="form-group" *ngIf="income.Id>0">
@@ -10,9 +10,20 @@
                      [(ngModel)]="income.Id" name="Id"
                      #Id="ngModel" readonly/> 
                 <div [hidden]="Id.valid || Id.pristine"
-                     class="alert alert-danger">
-                  Id is required
+                    >
+                  
                 </div>            
+            </div>
+            <div class="form-group">
+              <label for="Type">Type: Credit or Debit?</label>
+              <select class="form-control" id="Type"
+              required
+              [(ngModel)]="income.Type" name="Type"
+              #Type="ngModel">
+             <option value="Income">Income</option>
+             <option value="Expenses">Expenses</option>
+              </select>
+             
             </div>
           <div class="form-group">
             <label for="Name">Name</label>
@@ -21,23 +32,21 @@
                    [(ngModel)]="income.Name" name="Name"
                    #Name="ngModel" pattern="[a-zA-Z ]*"/>
             <div [hidden]="Name.valid || Name.pristine"
-                 class="alert alert-danger">
-              Name is required
+                 >
+           
             </div>
           </div>
           <div class="form-group">
-            <label for="Name">Event Name</label>
+            <label for="EventName">Event Name</label>
             <select class="form-control" id="EventName"
                    required
-                   [(ngModel)]="income.EventId" name="EventName"
-                   #Name="ngModel">
+                   [(ngModel)]="income.EventId" name="EventId"
+                   #EventId="ngModel">
               <option *ngFor="let e of events" [value]="e.Id">
                 {{e.Name}}
               </option>
             </select>
-            <div [hidden]="Name.valid || Name.pristine"
-                 class="alert alert-danger">
-              Name is required
+            <div [hidden]="EventId.valid || EventId.pristine">
             </div>
           </div>
           <div class="form-group">
@@ -47,8 +56,8 @@
                      [(ngModel)]="income.Description" name="Description"
                      #Description="ngModel"></textarea>
               <div [hidden]="Description.valid || Description.pristine"
-                   class="alert alert-danger">
-                   Description is required
+                   >
+          
               </div>
             </div>
             <div class="form-group">
@@ -58,8 +67,8 @@
                      [(ngModel)]="income.Amount" name="Amount"
                      #Amount="ngModel" digits />
               <div [hidden]="Amount.valid || Amount.pristine"
-                   class="alert alert-danger">
-                   Amount is required
+                   >
+                   
               </div>
              
             </div> 

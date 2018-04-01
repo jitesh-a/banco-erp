@@ -70,7 +70,7 @@ const routes: Routes = [
   {path: 'sponserview/:id', component:sponserviewComponent},
   {path:'nextpickup/:id' , component: PickupAndDropComponent },
   {path:'nextpickup/:id' , component: PickupAndDropComponent },
-  {path:'nextsponser/:id' , component: PickupAndDropComponent },
+  {path:'nextsponser/:id' , component: PickupAndDropFromComponent },
   {path: 'sponserviewdetails/:id', component:PickUpAndDrop},
   {path:'viewresult/:id/:name',component:ViewResultComponent},
   {path: 'employeedetails/:id', component:PickupAndDropComponent}

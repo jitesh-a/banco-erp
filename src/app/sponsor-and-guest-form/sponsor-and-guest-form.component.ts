@@ -67,8 +67,9 @@ export class SponsorAndGuestFormComponent implements OnInit {
         .subscribe(
           res=>{
            console.log(res);
+           
            alert("Data updated successfully");
-           this.router.navigate( ['/spandgst']);
+           this.router.navigate( ['/nextsponser',{id : this.sponsorandguest.Id}]);
           },
           err=>{
            console.error(err);
@@ -82,7 +83,7 @@ export class SponsorAndGuestFormComponent implements OnInit {
           res=>{
            console.log(res);
            alert("Data added successfully");
-           this.router.navigate( ['/spandgst']);
+           this.router.navigate( ['/nextsponser',{id : this.sponsorandguest.Id}]);
           },
           err=>{
            console.error(err);
