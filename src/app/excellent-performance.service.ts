@@ -30,9 +30,8 @@ export class ExcellentPerformanceService{
   }
 
   updateexcellentPerformance(excel_perf: ExcellentPerformance): Observable<any>{
-    //console.log(employee);
-    return this.http.put<ExcellentPerformance>(this.apiUrl+`edit/${excel_perf.Id}`,excel_perf, httpOptions)
-            ;
+    console.log("per :"+excel_perf.Id);
+    return this.http.post<ExcellentPerformance>(this.apiUrl+`edit/${excel_perf.Id}`,excel_perf, httpOptions);
   }
 
    /** GET banktype by id. Will 404 if id not found */
