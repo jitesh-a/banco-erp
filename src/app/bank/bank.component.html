@@ -12,7 +12,6 @@
               <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Address</th>
                 <th>District</th>
                 <th>State</th>
                 <th>Pincode</th>
@@ -24,14 +23,13 @@
           <tr *ngFor="let b of banks">
             <td>{{b.Id}}</td>
             <td>{{b.Name}}</td>
-            <td>{{b.Address}}</td>
             <td>{{b.District}}</td>
             <td>{{b.State}}</td>
             <td>{{b.Pincode}}</td>
             <td>{{b.Telephone}}</td>
             <td>
+                <a class="btn btn-sm btn-success" href="/exelperformview/{{b.Id}}/{{b.Name}}">Evaluate</a>
               <a class="btn btn-sm btn-info" href="/bankdetails/{{b.Id}}">View Details </a>
-              <a class="btn btn-sm btn-success" href="/exelperformview/{{b.Id}}/{{b.Name}}">Evaluate</a>
               <button class="btn btn-sm btn-danger" (click)="delete(b)">Delete</button> 
             </td>
           </tr>
