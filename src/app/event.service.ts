@@ -100,4 +100,9 @@ export class EventService {
     const url = `${this.apiUrl}renderincomechartdata`;
     return this.http.get<FusionChartModel[]>(url);
   }
+
+  renderExpenseChartData(): Observable<any>{
+    const url = `${this.apiUrl}renderexpensechartdata`;
+    return this.http.get<FusionChartModel[]>(url);
+  }
 }

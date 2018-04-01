@@ -14,8 +14,8 @@ const httpOptions = {
 @Injectable()
 export class LoginService {
 
+  public isAdmin : boolean = true;
   private apiUrl='http://localhost:7888/account/';
-
   constructor(private http:HttpClient) { }
 
   checkCredential (login : Login): Observable<Login> {

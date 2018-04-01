@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" *ngIf = "testingservice.isAdmin ">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" *ngIf ="loginservice.isAdmin ">
     <a class="navbar-brand" href="#">{{title}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,6 @@
       <li class="nav-item" routerLink="/pickupdrop">
         <a class="nav-link" >Pickup and drop</a>
       </li>
-
-      
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item" routerLink="/loginapi">
-          <a class="nav-link" >Login</a>
-       </li>
-      </ul>
      </ul>
     </div>
   </nav>
