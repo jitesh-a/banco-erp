@@ -42,6 +42,17 @@
                 <option value="URBANBank">URBAN Bank with Mix Business</option>              
                 </select>
               </div>
+              <div class="form-group">
+                <label for="SubCategory">SubCategory</label>
+                <input type="text" class="form-control" id="SubCategory"
+                       required
+                       [(ngModel)]="bank.SubCategory" name="SubCategory"
+                       #Name="ngModel" pattern="[a-zA-Z ]*" placeholder="enter the overall revenue of bank in CR ">
+                <div [hidden]="SubCategory.valid || SubCategory.pristine"
+                     class="alert alert-danger">
+                     SubCategory is required
+                </div>
+              </div>
 
             <div class="row">
               <div class="col-md-6">
