@@ -6,6 +6,8 @@ export class Bank{
     TypeName : string;
     TypeId : number;
     Name: string;
+    Category:string;
+    SubCategory:string;
     Address: string;
     City: string;
     District: string;
