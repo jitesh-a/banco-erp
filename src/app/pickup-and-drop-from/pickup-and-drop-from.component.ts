@@ -9,6 +9,7 @@ import { Event } from "../../models/event.model";
 import { EventService } from "../event.service";
 import { BankService } from "../bank.service";
 import { EmployeeService } from "../employee.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-pickup-and-drop-from',
@@ -21,71 +22,31 @@ export class PickupAndDropFromComponent implements OnInit {
   events : Event[] = [];
   banks : Bank[] =[];
   employees : Employee[] = [];
-  selectedbanks : Bank[] = [];
-  type : number;
+  id : number;                //id of sponsor ,Guest or Employee
+  type : string;
 
   constructor(private pickdropService:pickUpAndDropService,
               private route:ActivatedRoute,
               private location:Location,
-              private eventService:EventService,
-              private bankService:BankService,
-              private employeeService : EmployeeService) { }
+              private router : Router) { }
 
     ngOnInit() {
 
-      this.getEvents();
-      const id = Number(this.route.snapshot.paramMap.get('id'));
-      if(id>0){
-        this.getPickUpAndDrop(id);
+      this.id = Number(this.route.snapshot.paramMap.get('id'));
+      console.log("Id : "+this.pickupdrop.SponsorOrGuestId);
+      this.type = this.route.snapshot.paramMap.get('type');
+      console.log("Type : "+this.type);
+      if(this.id>0){
+        this.getPickUpAndDrop(this.id);
       }
     }
   
-    typeChange():void{
 
-      if(this.type == 3){
-        console.log(this.pickupdrop.EventId);
-        this.getBanks(this.pickupdrop.EventId);
-      }
-    }
-    getEvents() : void{
-
-      this.eventService.getEvents()
-                  .subscribe(res=>{
-                    console.log(res["events"])
-                    this.events=res["events"];
-                  });
-
-    } 
-
-    getBanks(id : number) : void {
-
-     console.log("get banks");
-      this.bankService.getBanks()
-                  .subscribe(res=>{ 
-                    console.log(res["banks"])
-                    this.banks = res["banks"];
-                  });
-      this.banks.forEach(element => {
-            if(element.EventId==id){
-                this.selectedbanks.push(element);
-            }        
-      });
-    }
-
-    getEmployees() : void {
-      
-      this.employeeService.getEmployee()
-                  .subscribe(res=>{
-                    console.log(res["employees"]);
-                    this.employees = res["employees"];
-                  })
-
-    }
-    getPickUpAndDrop(id: number): void {
+      getPickUpAndDrop(id: number): void {
         //const id = +this.route.snapshot.paramMap.get('id');
         this.pickdropService.getPickupAndDrop(id)
           .subscribe(res => this.pickupdrop = res["data"]);
-    }
+      }
       
       goBack(): void {
         this.location.back();
@@ -103,10 +64,18 @@ export class PickupAndDropFromComponent implements OnInit {
             }
           ); 
         }else{
+          if(this.type == "sponsorguest"){
+            this.pickupdrop.SponsorOrGuestId = this.id;
+          }
+          else if(this.type == "employee"){
+            this.pickupdrop.EmployeeId = this.id;
+          }
           this.pickdropService.addPickupAndDrop(this.pickupdrop)
           .subscribe(
             res=>{
              console.log(res);
+             alert("Data added successfully");
+             this.router.navigate( ['/spandgst']);
             },
             err=>{
              console.error(err);

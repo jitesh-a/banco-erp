@@ -68,7 +68,8 @@ export class SponsorAndGuestFormComponent implements OnInit {
           res=>{
            console.log(res);
            alert("Data updated successfully");
-           this.router.navigate( ['/spandgst']);
+           console.log(res["id"]);
+         //  this.router.navigate( ['/spandgst']);
           },
           err=>{
            console.error(err);
@@ -82,7 +83,9 @@ export class SponsorAndGuestFormComponent implements OnInit {
           res=>{
            console.log(res);
            alert("Data added successfully");
-           this.router.navigate( ['/spandgst']);
+           console.log(res["id"]);
+           console.log(res["type"]);
+           this.router.navigate( ['/pickupanddropform', {id: res["id"],type: "sponsorguest"}]);
           },
           err=>{
            console.error(err);
