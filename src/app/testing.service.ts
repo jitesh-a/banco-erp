@@ -5,7 +5,7 @@ export class TestingService {
   public isAdmin : boolean; 
   constructor() { 
 
-    this.isAdmin = true;
+    this.isAdmin = false;
   }
 
 }

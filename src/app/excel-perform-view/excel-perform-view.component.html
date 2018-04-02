@@ -1,7 +1,8 @@
-<h1>View Details </h1>
+<h1>Evaluation</h1>
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Excellent Performance View</h5>
+    <h5 class="card-title">Excellent Performance</h5>
+    <form (ngSubmit)="onSubmit" #FinancialMarksForm="ngForm">
     <div class="row">
       <div class="col-md-5">
           <div class="form-group">
@@ -10,7 +11,7 @@
       </div>
       <div class="col-md-5">
           <div class="form-group">
-              <input type="number" class="form-control" id="NetWorthPreviousYrInPercentage"
+              <input type="text" class="form-control" id="NetWorthPreviousYrInPercentage"
               required
               value= {{excellentperformance.NetWorthCYP}} name="NetWorthPreviousYrInPercentage "
               readonly>
@@ -30,7 +31,7 @@
         </div>
         <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id="NetWorthPYP"
+                <input type="text" class="form-control" id="NetWorthPYP"
                 required
                 value= {{excellentperformance.NetWorthPYP}} name="NetWorthPYP"
                 readonly>
@@ -50,7 +51,7 @@
         </div>
         <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id="NetWorthOverPYP"
+                <input type="text" class="form-control" id="NetWorthOverPYP"
                 required
                 value= {{excellentperformance.NetWorthOverPYP}} name="NetWorthOverPYP"
                 readonly>
@@ -70,7 +71,7 @@
         </div>
         <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id="CRAR_CYP"
+                <input type="text" class="form-control" id="CRAR_CYP"
                 required
                 value= {{excellentperformance.CRAR_CYP}} name="CRAR_CYP"
                 readonly>
@@ -90,7 +91,7 @@
         </div>
         <div class="col-md-5">
             <div class="form-group">
-                <input type="number" class="form-control" id="CRAR_PYP"
+                <input type="text" class="form-control" id="CRAR_PYP"
                 required
                 value= {{excellentperformance.CRAR_PYP}} name="CRAR_PYP"
                 readonly>
@@ -153,7 +154,7 @@
               </div>
               <div class="col-md-5">
                   <div class="form-group">
-                      <input type="number" class="form-control" id="TDepositOverPYP"
+                      <input type="text" class="form-control" id="TDepositOverPYP"
                       required
                       value= {{excellentperformance.TDepositOverPYP}} name="TDepositOverPYP"
                       readonly>
@@ -215,7 +216,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <input type="number" class="form-control" id="TAdvancesOverPYP"
+                            <input type="text" class="form-control" id="TAdvancesOverPYP"
                             required
                             value= {{excellentperformance.TAdvancesOverPYP}} name="TAdvancesOverPYP"
                             readonly>
@@ -235,7 +236,7 @@
                       </div>
                       <div class="col-md-5">
                           <div class="form-group">
-                            <input type="number" class="form-control" id="GROSSNPAlnCY"
+                            <input type="text" class="form-control" id="GROSSNPAlnCY"
                             required
                             value= {{excellentperformance.GROSSNPAlnCY}} name="GROSSNPAlnCY"
                             readonly>
@@ -255,7 +256,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="GROSSNPAlnPY"
+                                <input type="text" class="form-control" id="GROSSNPAlnPY"
                                 required
                                 value= {{excellentperformance.GROSSNPAlnPY}} name="GROSSNPAlnPY"
                                 readonly>
@@ -276,7 +277,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TGrossNPAOverPYP"
+                                <input type="text" class="form-control" id="TGrossNPAOverPYP"
                                 required
                                 value= {{excellentperformance.TGrossNPAOverPYP}} name="TGrossNPAOverPYP"
                                 readonly>
@@ -341,7 +342,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TNetNPAOverPYP"
+                                <input type="text" class="form-control" id="TNetNPAOverPYP"
                                 required
                                 value= {{excellentperformance.TNetNPAOverPYP}} name="TNetNPAOverPYP"
                                 readonly>
@@ -406,7 +407,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TReturnOnAssetsOverPYP"
+                                <input type="text" class="form-control" id="TReturnOnAssetsOverPYP"
                                 required
                                 value= {{excellentperformance.TReturnOnAssetsOverPYP}} name="TReturnOnAssetsOverPYP"
                                 readonly>
@@ -468,7 +469,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TPerEmpBusinessOverPYP"
+                                <input type="text" class="form-control" id="TPerEmpBusinessOverPYP"
                                 required
                                 value= {{excellentperformance.TPerEmpBusinessOverPYP}} name="TPerEmpBusinessOverPYP"
                                 readonly>
@@ -534,7 +535,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="TNetProfitToTAssetsPY"
+                                <input type="text" class="form-control" id="TNetProfitToTAssetsPY"
                                 required
                                 value= {{excellentperformance.TNetProfitToTAssetsPY}} name="TNetProfitToTAssetsPY"
                                 readonly>
@@ -818,11 +819,42 @@
                             <div class="form-group">
                                 <input type="number" class="form-control" [(ngModel)]="excellentperformance.M39" name="M39" #M39="ngModel" placeholder="marks"/>
                             </div>
+                            <label>Total Marks</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" 
+                                value = "{{excellentperformance.M1--excellentperformance.M2
+                                  --excellentperformance.M3--excellentperformance.M4
+                                  --excellentperformance.M5--excellentperformance.M6
+                                  --excellentperformance.M7--excellentperformance.M8
+                                  --excellentperformance.M9--excellentperformance.M10
+                                  --excellentperformance.M11--excellentperformance.M12
+                                  --excellentperformance.M13--excellentperformance.M14
+                                  --excellentperformance.M15--excellentperformance.M16
+                                  --excellentperformance.M17--excellentperformance.M18
+                                  --excellentperformance.M19--excellentperformance.M20
+                                  --excellentperformance.M21--excellentperformance.M22
+                                  --excellentperformance.M23--excellentperformance.M24
+                                  --excellentperformance.M25--excellentperformance.M26
+                                  --excellentperformance.M27--excellentperformance.M28
+                                  --excellentperformance.M29--excellentperformance.M30
+                                  --excellentperformance.M31--excellentperformance.M32
+                                  --excellentperformance.M33--excellentperformance.M34
+                                  --excellentperformance.M35--excellentperformance.M36
+                                  --excellentperformance.M37--excellentperformance.M38
+                                  --excellentperformance.M39}}" readonly/>
+                              </div>
                         </div>
                       </div> 
-
+                      <div class="row">
+                        <div class="col-md-10">
+                          <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-success" [disabled]="!FinancialMarksForm.form.valid" (click)="save()">Next</button>
+                        </div>
+                      </div>     
                      
-
+                    </form>
 
   </div>
 </div>

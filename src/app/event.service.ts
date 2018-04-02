@@ -6,6 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { FusionChartModel } from "../models/fusion-chart.model";
 import 'rxjs/add/operator/toPromise';
 
 
@@ -94,4 +95,9 @@ export class EventService {
   }
 
 
+  //charts
+  renderIncomeChartData(): Observable<any>{
+    const url = `${this.apiUrl}renderincomechartdata`;
+    return this.http.get<FusionChartModel[]>(url);
+  }
 }
