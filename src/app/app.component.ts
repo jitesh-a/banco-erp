@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TestingService } from "../app/testing.service";
+import { LoginService } from "./login.service";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { TestingService } from "../app/testing.service";
 export class AppComponent {
   title = 'Banco ERP';
  
-  constructor(public testingservice : TestingService) {
+  constructor(public loginservice : LoginService) {
     
    }
 
@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   showStatus():void{
-    console.log("Login Status : "+this.testingservice.isAdmin);
+    console.log("Login Status : "+this.loginservice.isAdmin);
 
   }
 }

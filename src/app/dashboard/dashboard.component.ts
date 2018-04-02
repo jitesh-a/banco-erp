@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TestingService } from "../testing.service";
+import { LoginService } from "../login.service";
 import { FusionChartModel } from "../../models/fusion-chart.model";
 import { EventService } from "../event.service";
 import { ErrorStateMatcher } from '@angular/material';
@@ -17,10 +17,11 @@ export class DashboardComponent implements OnInit {
     height = 400;
     type = 'column2d';
     dataFormat = 'json';
-    dataSource;
+    dataSource1;
+    dataSource2;
     title = 'Angular4 FusionCharts Sample';
 
-  constructor(private testingservice : TestingService,private eventService:EventService) { }
+  constructor(public loginservice : LoginService,private eventService:EventService) { }
 
   ngOnInit() {
     this.show();
@@ -28,22 +29,40 @@ export class DashboardComponent implements OnInit {
   }
 
   show():void{
-    console.log("Login Status : "+this.testingservice.isAdmin);
+    console.log("Login Status : "+this.loginservice.isAdmin);
   }
 
   renderChartData():void{
     this.eventService.renderIncomeChartData()
-    .subscribe(res=>{
-      console.log(res);
+    .subscribe(resIncome=>{
+      console.log(resIncome);
 
-      this.dataSource = {
+      this.dataSource1 = {
         "chart": {
             "caption": "Harry's SuperMart",
             "subCaption": "Top 5 stores in last month by revenue",
             "numberprefix": "$",
             "theme": "fint"
         },
-        "data": res["data"]
+        "data": resIncome["data"]
+    }
+
+    },err=>{
+      console.log(err);
+    })
+
+    this.eventService.renderExpenseChartData()
+    .subscribe(resExpense=>{
+      console.log(resExpense);
+
+      this.dataSource2 = {
+        "chart": {
+            "caption": "Harry's SuperMart",
+            "subCaption": "Top 5 stores in last month by revenue",
+            "numberprefix": "$",
+            "theme": "fint"
+        },
+        "data": resExpense["data"]
     }
 
     },err=>{

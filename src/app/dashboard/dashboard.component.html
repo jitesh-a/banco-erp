@@ -1,15 +1,33 @@
-<div class="jumbotron">
+<div class="jumbotron" *ngIf="!loginservice.isAdmin">
     <h1>Banco ERP Portal</h1>
     <p class="lead">March as Monarch Of Banking</p>
-    <h1>
-        {{title}}
-      </h1>
+    <a class="btn btn-lg btn-primary"  routerLink="/loginapi" role="button">Login &raquo;</a>
+</div>
+<div class="row">
+    <div class="col-md-6" *ngIf="loginservice.isAdmin">
+        <h2>
+           Income Chart
+         </h2>
+         <fusioncharts
+             [id]="id"
+             [width]="width"
+             [height]="height"
+             [type]="type"
+             [dataFormat]="dataFormat"
+             [dataSource]="dataSource1"
+         ></fusioncharts>
+   </div>
+   <div class="col-md-6">
+    <h2>
+        Expense Chart
+      </h2>
       <fusioncharts
           [id]="id"
           [width]="width"
           [height]="height"
           [type]="type"
           [dataFormat]="dataFormat"
-          [dataSource]="dataSource"
+          [dataSource]="dataSource2"
       ></fusioncharts>
+   </div>
 </div>
