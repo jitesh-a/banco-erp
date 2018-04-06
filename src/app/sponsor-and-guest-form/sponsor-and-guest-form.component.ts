@@ -85,7 +85,7 @@ export class SponsorAndGuestFormComponent implements OnInit {
            alert("Data added successfully");
            console.log(res["id"]);
            console.log(res["type"]);
-           this.router.navigate( ['/pickupanddropform', {id: res["id"],type: "sponsorguest"}]);
+           this.router.navigate( ['/pickupanddropform', {id: res["id"],type:"sponsorguest"}]);
           },
           err=>{
            console.error(err);

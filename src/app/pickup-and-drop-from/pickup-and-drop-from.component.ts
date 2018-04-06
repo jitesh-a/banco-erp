@@ -33,37 +33,23 @@ export class PickupAndDropFromComponent implements OnInit {
     ngOnInit() {
 
       this.id = Number(this.route.snapshot.paramMap.get('id'));
-      console.log("Id : "+this.pickupdrop.SponsorOrGuestId);
       this.type = this.route.snapshot.paramMap.get('type');
-      console.log("Type : "+this.type);
-      if(this.id>0){
-        this.getPickUpAndDrop(this.id);
-      }
+
     }
   
 
-      getPickUpAndDrop(id: number): void {
+  /*    getPickUpAndDrop(id: number): void {
         //const id = +this.route.snapshot.paramMap.get('id');
         this.pickdropService.getPickupAndDrop(id)
           .subscribe(res => this.pickupdrop = res["data"]);
       }
-      
+  */    
       goBack(): void {
         this.location.back();
       }
   
       save(): void{
-        if(this.pickupdrop.Id>0){
-          this.pickdropService.updatePickupAndDrop(this.pickupdrop)
-          .subscribe(
-            res=>{
-             console.log(res);
-            },
-            err=>{
-             console.error(err);
-            }
-          ); 
-        }else{
+        
           if(this.type == "sponsorguest"){
             this.pickupdrop.SponsorOrGuestId = this.id;
           }
@@ -82,5 +68,5 @@ export class PickupAndDropFromComponent implements OnInit {
             }
           ); 
         }         
-      }  
+      
 }

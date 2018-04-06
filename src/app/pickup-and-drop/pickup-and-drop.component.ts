@@ -25,8 +25,9 @@ export class PickupAndDropComponent implements OnInit {
 getPickupDrop(): void{
   this.pickdropService.getPickUpAndDrops()
   .subscribe(res=>{
-    console.log(res["pickupdrop"]);
-    this.pickdrops=res["pickupdrop"];
+    console.log(res["PickupAndDrop"]);
+    this.pickdrops=res["PickupAndDrop"];
+    
     this.dataLoaded=true;
     $(function(){
       //alert('test');
