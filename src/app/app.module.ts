@@ -59,6 +59,9 @@ import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 import { FusionChartsModule } from 'angular4-fusioncharts';
 
+
+
+
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 @NgModule({
@@ -107,6 +110,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
     MatRadioModule,
     CustomFormsModule,
     FusionChartsModule
+   
+     
   ],
   providers: [
     MessageService,

@@ -4,6 +4,9 @@ import { FusionChartModel } from "../../models/fusion-chart.model";
 import { EventService } from "../event.service";
 import { ErrorStateMatcher } from '@angular/material';
 import { ErrorHandler } from '@angular/core/src/error_handler';
+declare const $;
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -18,13 +21,14 @@ export class DashboardComponent implements OnInit {
     type = 'column2d';
     dataFormat = 'json';
     dataSource;
-    title = 'Angular4 FusionCharts Sample';
+    title = 'See Your Income Graph Here ';
 
   constructor(private testingservice : TestingService,private eventService:EventService) { }
 
   ngOnInit() {
     this.show();
     this.renderChartData();
+    $('.carousel').carousel()
   }
 
   show():void{
@@ -38,9 +42,8 @@ export class DashboardComponent implements OnInit {
 
       this.dataSource = {
         "chart": {
-            "caption": "Harry's SuperMart",
-            "subCaption": "Top 5 stores in last month by revenue",
-            "numberprefix": "$",
+            "caption": "Banco's Income Chart",
+            "numberprefix": "₹",
             "theme": "fint"
         },
         "data": res["data"]
@@ -50,4 +53,10 @@ export class DashboardComponent implements OnInit {
       console.log(err);
     })
   }
+
+  
+
+ 
+
+
 }
