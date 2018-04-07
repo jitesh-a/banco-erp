@@ -1,10 +1,6 @@
 export class PickUpAndDrop{
 
     Id: number;
-    EventId : number;
-    EventName : string;
-    BankId : number;
-    BankName : string;
     PickUpTime: Date;
     PickUpPlace: string;
     DropTime: Date;
@@ -12,6 +8,6 @@ export class PickUpAndDrop{
     Wayoftransport: string;
     EmployeeId: number;
     EmployeeName: string;
-    GuestOrSponsorId : number;
-    GuestOrSponsorName : string;
+    SponsorOrGuestId : number;
+    SponsorOrGuestName : string;
 }

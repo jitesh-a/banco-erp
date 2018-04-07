@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
- 
     
   }
 
@@ -31,9 +30,10 @@ export class LoginComponent implements OnInit {
               alert("Invalid Credentials");
             }
             else{
-              this.router.navigate( ['/events']);
+              this.loginService.isAdmin = true;
+              this.router.navigate( ['/dashboard']);
             }
-            this.router.navigate(['/events']);
+            this.router.navigate(['/dashboard']);
         }
       ); 
   }
