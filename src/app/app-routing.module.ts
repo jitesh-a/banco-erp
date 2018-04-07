@@ -37,6 +37,7 @@ const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard/:admin', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'eventform/:id', component: EventFormComponent },
   { path:'hotelform/:id', component: HotelFormComponent},
