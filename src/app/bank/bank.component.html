@@ -10,6 +10,7 @@
     <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="Bank">
         <thead>
               <tr>
+                <th>Event Name</th>
                 <th> Bank Id</th>
                 <th> Bank Name</th>
                 <th>District</th>
@@ -21,6 +22,7 @@
         </thead> 
         <tbody>
           <tr *ngFor="let b of banks">
+            <td>{{b.EventName}}</td>
             <td>{{b.Id}}</td>
             <td>{{b.Name}}</td>
             <td>{{b.District}}</td>
