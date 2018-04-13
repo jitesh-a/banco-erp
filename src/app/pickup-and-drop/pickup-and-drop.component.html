@@ -14,15 +14,17 @@
                 <th>Sr.No.</th>
                 
               
+                <th>Id</th>
                 <th>Pick Up Time</th>
                 <th>Pick Up Place</th>
                 <th>Drop Time</th>
                 <th>Drop Place</th>
                 <th>Way of transport</th>
+                <th>Actions</th>
               </tr>
         </thead> 
         <tbody>
-          <tr *ngFor="let pud of pickupdrop">
+          <tr *ngFor="let pud of pickdrops">
             <td>{{pud.Id}}</td>
             <td>{{pud.PickUpTime}}</td>
             <td>{{pud.PickUpPlace}}</td>

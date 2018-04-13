@@ -1,7 +1,6 @@
 export class Employee{
 
     Id: number;
-   
     Name: string;
     Description: string;
     Contact: string;

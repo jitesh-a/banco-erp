@@ -58,6 +58,7 @@ import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 import { FusionChartsModule } from 'angular4-fusioncharts';
+import { TopBanksComponent } from './top-banks/top-banks.component';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
@@ -96,6 +97,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
     BankDetailsComponent,
     sponserviewComponent,
     ViewResultComponent,
+    TopBanksComponent,
   ],
   imports: [
     BrowserModule,

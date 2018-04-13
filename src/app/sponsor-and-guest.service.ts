@@ -45,6 +45,7 @@ export class SponsorAndGuestService {
 
   /** POST: add a new sponsorandguest to the server */
   addSponsorAndGuest (sponsorandguest: SponsorAndGuest): Observable<SponsorAndGuest> {
+    console.log(sponsorandguest);
     return this.http.post<SponsorAndGuest>(this.apiUrl+'create', sponsorandguest, httpOptions).pipe(
       tap(res => this.log(`added sponsorandguest`)),
       catchError(this.handleError<SponsorAndGuest>('addSponsorAndGuest'))
