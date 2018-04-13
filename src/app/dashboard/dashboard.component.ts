@@ -6,6 +6,9 @@ import { ErrorStateMatcher } from '@angular/material';
 import { ErrorHandler } from '@angular/core/src/error_handler';
 import { Router } from "@angular/router";
 import { SessionService } from "../session.service";
+declare const $;
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -21,7 +24,6 @@ export class DashboardComponent implements OnInit {
     dataFormat = 'json';
     dataSource1;
     dataSource2;
-    title = 'Angular4 FusionCharts Sample';
 
   constructor(public loginservice : LoginService,private eventService:EventService,private router:Router,private session : SessionService) { 
  
@@ -30,6 +32,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.show();
     this.renderChartData();
+    $('.carousel').carousel()
   }
 
   show():void{
@@ -43,8 +46,7 @@ export class DashboardComponent implements OnInit {
 
       this.dataSource1 = {
         "chart": {
-            "caption": "Income",
-            "subCaption": "",
+            "caption": "Banco's Income Chart",
             "numberprefix": "₹",
             "theme": "fint"
         },
@@ -73,4 +75,10 @@ export class DashboardComponent implements OnInit {
       console.log(err);
     })
   }
+
+  
+
+ 
+
+
 }

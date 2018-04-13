@@ -1,6 +1,6 @@
 <div class="row" >
-  <div class="col-md-6"><h1> Events </h1></div>
-  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/eventform/0"> New Event </a></div>
+  <div class="col-md-6"><h1> Event List </h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/eventform/0">Add New Event </a></div>
 </div>
 <hr/>
 <h4>{{link}}</h4>
@@ -12,9 +12,8 @@
     <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="table_events">
         <thead>
               <tr>
-                <th>Id</th>
+                <th>Sr.No.</th>
                 <th>Name</th>
-                <th>Description</th>
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Actions</th>
@@ -24,7 +23,6 @@
           <tr *ngFor="let e of events">
             <td>{{e.Id}}</td>
             <td>{{e.Name}}</td>
-            <td>{{e.Description}}</td>
             <td>{{e.StartDate}}</td>
             <td>{{e.EndDate}}</td>
             <td>
@@ -32,6 +30,8 @@
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>
               <a class="btn btn-sm btn-success" (click)="createLink(e)"> Generate Link </a>
               <a class="btn  btn-sm btn-info" href="/viewresult/{{e.Id}}/{{e.Name}}">View Result</a>
+              <a class="btn  btn-sm btn-default" href="/topbanks/{{e.Id}}">View Analysis</a>
+              
             </td>
           </tr>
         </tbody>

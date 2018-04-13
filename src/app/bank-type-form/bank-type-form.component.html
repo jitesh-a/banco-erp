@@ -4,7 +4,7 @@
     <hr/>
     <form (ngSubmit)="onSubmit" #bankTypeForm="ngForm">
         <div class="form-group" *ngIf="banktype.Id>0">
-            <label for="Id">Id</label>
+            <label for="Id">Bank Type Id</label>
             <input type="number" class="form-control" id="Id"
                    required
                    [(ngModel)]="banktype.Id" name="Id"

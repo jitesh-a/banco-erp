@@ -67,7 +67,9 @@ export class SponsorAndGuestFormComponent implements OnInit {
         .subscribe(
           res=>{
            console.log(res);
+           
            alert("Data updated successfully");
+           this.router.navigate( ['/nextsponser',{id : this.sponsorandguest.Id}]);
            console.log(res["id"]);
          //  this.router.navigate( ['/spandgst']);
           },

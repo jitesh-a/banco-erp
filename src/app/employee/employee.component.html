@@ -1,6 +1,6 @@
 <div class="row" >
-  <div class="col-md-6"><h1> Employee </h1></div>
-  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/employeeform">Add Employee </a></div>
+  <div class="col-md-6"><h1> Employee Details</h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/employeeform">Add new Employee Details</a></div>
 </div>
 <hr/>
 <h4>{{link}}</h4>
@@ -12,25 +12,29 @@
     <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="#Employee">
         <thead>
               <tr>
-                <th>Id</th>
+                <th>Sr.No.</th>
+                <th>Employee Id</th>
                 <th>Bank name</th>
+                <th>EmployeeNumber</th>
                 <th>Employee Name</th>
                 <th>Contact</th>
-                <th>EmployeeNumber</th>
                 <th>Gender</th>
                 <th>IDProof</th>
-                <th>Actions</th>
+                <th>Details</th>
               </tr>
         </thead> 
         <tbody>
           <tr *ngFor="let e of employees">
             <td>{{e.Id}}</td>
             <td>{{e.BankName}}</td>
-            <td>{{e.Name}}</td>
-            <td>{{e.Contact}}</td>
             <td>{{e.EmployeeNumber}}</td>
+            <td>{{e.Name}}</td>
+            
+            <td>{{e.Contact}}</td>
+            
             <td>{{e.Gender}}</td>
             <td>{{e.IDProof}}</td>
+            <td>{{e.Description}}</td>
             <td>
               <a class="btn btn-sm btn-primary" href="/employeeform/{{e.Id}}"> Edit </a>
               <button type="button" class="btn btn-sm btn-danger" (click)="delete(e)">Delete</button>     

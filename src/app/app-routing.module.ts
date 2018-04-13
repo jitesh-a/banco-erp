@@ -33,6 +33,8 @@ import { PickUpAndDrop } from '../models/pickUpAndDrop.model';
 import { ViewResultComponent } from "./view-result/view-result.component";
 import { EventResult } from "../models/eventResult.model";
 
+import { TopBanksComponent } from "./top-banks/top-banks.component";
+
 const routes: Routes = [
   { path: 'events', component: BancoEventComponent },
   { path: 'spandgst', component: SponsorAndGuestComponent },
@@ -72,10 +74,11 @@ const routes: Routes = [
   {path: 'sponserview/:id', component:sponserviewComponent},
   {path:'nextpickup/:id' , component: PickupAndDropComponent },
   {path:'nextpickup/:id' , component: PickupAndDropComponent },
-  {path:'nextsponser/:id' , component: PickupAndDropComponent },
+  {path:'nextsponser/:id' , component: PickupAndDropFromComponent },
   {path: 'sponserviewdetails/:id', component:PickUpAndDrop},
   {path:'viewresult/:id/:name',component:ViewResultComponent},
-  {path: 'employeedetails/:id', component:PickupAndDropComponent}
+  {path: 'employeedetails/:id', component:PickupAndDropComponent},
+  {path:'topbanks/:id',component:TopBanksComponent}
   
 ];
 

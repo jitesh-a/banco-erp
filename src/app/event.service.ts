@@ -105,4 +105,12 @@ export class EventService {
     const url = `${this.apiUrl}renderexpensechartdata`;
     return this.http.get<FusionChartModel[]>(url);
   }
+
+  topBanks(id:number): Observable<any> {
+    const url = `${this.apiUrl}fetchtopbanks/${id}`;
+    return this.http.get<FusionChartModel[]>(url).pipe(
+      tap(_ => this.log(`fetched result id=${id}`)),
+      catchError(this.handleError<Event>(`fetch result id=${id}`))
+    );
+  }
 }

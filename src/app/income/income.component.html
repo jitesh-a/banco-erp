@@ -1,6 +1,7 @@
 <div class="row" >
-  <div class="col-md-6"><h1> Income </h1></div>
-  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/incomeform"> New Income </a></div>
+  <div class="col-md-6"><h1> Income and Expenses </h1></div>
+  <div class="col-md-6" align="right"><a class="btn btn-success btn-md"  routerLink="/incomeform">Add new Credit/Debit record</a></div>
+  
 </div>
 <hr/>
 <div class="row" >
@@ -11,16 +12,18 @@
     <table class="table table-bordered table-hover" *ngIf="dataLoaded==true" id="#Income">
         <thead>
               <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Amount</th>
+                <th>Sr.No.</th>
+                <th>Type (credit/debit)</th>
+                <th>Credit/Debit for?</th>
+                <th>Details</th>
+                <th>Credit/Debit amount</th>
                 <th>Actions</th>
               </tr>
         </thead> 
         <tbody>
           <tr *ngFor="let i of incomes">
             <td>{{i.Id}}</td>
+            <td>{{i.Type}}</td>
             <td>{{i.Name}}</td>
             <td>{{i.Description}}</td>
             <td>{{i.Amount}}</td>
