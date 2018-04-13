@@ -60,6 +60,9 @@ import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 import { FusionChartsModule } from 'angular4-fusioncharts';
 import { TopBanksComponent } from './top-banks/top-banks.component';
 
+
+
+
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 @NgModule({
@@ -109,6 +112,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
     MatRadioModule,
     CustomFormsModule,
     FusionChartsModule
+   
+     
   ],
   providers: [
     MessageService,

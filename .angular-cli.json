@@ -33,7 +33,7 @@
         "assets/js/vfs_fonts.js",
         "assets/js/buttons.html5.js",
         "assets/js/buttons.print.min.js",
-        "assets/js/bootbox.min.js"                
+        "assets/js/bootbox.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -68,6 +68,7 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
   }
 }

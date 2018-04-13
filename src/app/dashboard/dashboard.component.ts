@@ -4,6 +4,9 @@ import { FusionChartModel } from "../../models/fusion-chart.model";
 import { EventService } from "../event.service";
 import { ErrorStateMatcher } from '@angular/material';
 import { ErrorHandler } from '@angular/core/src/error_handler';
+declare const $;
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -26,6 +29,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.show();
     this.renderChartData();
+    $('.carousel').carousel()
   }
 
   show():void{
@@ -39,9 +43,8 @@ export class DashboardComponent implements OnInit {
 
       this.dataSource1 = {
         "chart": {
-            "caption": "Harry's SuperMart",
-            "subCaption": "Top 5 stores in last month by revenue",
-            "numberprefix": "$",
+            "caption": "Banco's Income Chart",
+            "numberprefix": "₹",
             "theme": "fint"
         },
         "data": resIncome["data"]
@@ -69,4 +72,10 @@ export class DashboardComponent implements OnInit {
       console.log(err);
     })
   }
+
+  
+
+ 
+
+
 }

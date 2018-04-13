@@ -34,7 +34,7 @@
                 [(ngModel)]="bank.Category" name="Category"
                 #Category="ngModel">
                 <option value="BankAssociation">Bank Association</option>
-                <option value="StateCoOper"></option> 
+                <option value="StateCoOper">State Co-Operative</option> 
                 <option value="DCCBank">DCC Bank with Mix Business</option> 
                 <option value="UNITBank">UNIT Bank with Mix Business</option> 
                 <option value="MAHILABank">MAHILA Bank with Mix Business</option> 
@@ -47,7 +47,7 @@
                 <input type="text" class="form-control" id="SubCategory"
                        required
                        [(ngModel)]="bank.SubCategory" name="SubCategory"
-                       #Name="ngModel" pattern="[a-zA-Z ]*" placeholder="enter the overall revenue of bank in CR ">
+                       #SubCategory="ngModel" pattern="[a-zA-Z ]*" placeholder="enter the overall revenue of bank in Crore "/>
                 <div [hidden]="SubCategory.valid || SubCategory.pristine"
                      class="alert alert-danger">
                      SubCategory is required
@@ -973,7 +973,7 @@
             <div class="form-group">
               <label for="Website">Website</label>
               <input type="text" class="form-control" id="Website"
-                     required
+                
                      [(ngModel)]="bank.Website" name="Website"
                      #Website="ngModel" url>
               <div [hidden]="Website.valid || Website.pristine"
@@ -988,7 +988,7 @@
                         <input type="text" class="form-control" id="Chairman_name"
                               required
                               [(ngModel)]="bank.Chairman_name" name="Chairman_name"
-                              #Chairman_name="ngModel" pattern="[a-zA-Z ]*">
+                              #Chairman_name="ngModel" pattern="[a-zA-Z.]*">
                         <div [hidden]="Chairman_name.valid ||Chairman_name.pristine"
                             class="alert alert-danger">
                             Chairman_name is required
@@ -1081,7 +1081,7 @@
             <div class="form-group">
               <label for="Description">Description</label>
               <textarea type="text" class="form-control" id="Description"
-                     required
+                
                      [(ngModel)]="bank.Description" name="Description"
                      #Description="ngModel"></textarea>
               <div [hidden]="Description.valid || Description.pristine"
@@ -1095,7 +1095,7 @@
                 <input type="number" class="form-control" id="Contact"
                        required
                        [(ngModel)]="bank.contact" name="Contact"
-                       #Contact="ngModel"  pattern="[7-9]{1}[0-9]{9}" digits>
+                       #Contact="ngModel" digits>
                 <div [hidden]="Contact.valid || Contact.pristine"
                      class="alert alert-danger">
                      Contact is required

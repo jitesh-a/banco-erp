@@ -12,6 +12,9 @@
               <tr>
                 <th>Sr.No.</th>
                 <th>Name</th>
+                <th>Event Name</th>
+                <th> Bank Id</th>
+                <th> Bank Name</th>
                 <th>District</th>
                 <th>State</th>
                 <th>Pincode</th>
@@ -21,6 +24,7 @@
         </thead> 
         <tbody>
           <tr *ngFor="let b of banks">
+            <td>{{b.EventName}}</td>
             <td>{{b.Id}}</td>
             <td>{{b.Name}}</td>
             <td>{{b.District}}</td>
