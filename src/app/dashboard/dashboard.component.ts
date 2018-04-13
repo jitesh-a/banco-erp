@@ -18,7 +18,7 @@ declare const $;
 export class DashboardComponent implements OnInit {
 
     id = 'chart1';
-    width = 600;
+    width = 400;
     height = 400;
     type = 'column2d';
     dataFormat = 'json';
