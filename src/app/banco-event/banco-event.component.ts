@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import { Event } from "../../models/event.model";
 import { EventService } from "../event.service";
+import { SessionService } from "../session.service";
 
 declare const $;
 
@@ -14,7 +15,7 @@ export class BancoEventComponent implements OnInit {
 events: Event[]=[];
 dataLoaded: boolean;
 link : string;
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService,private session : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

@@ -6,6 +6,7 @@ import { pickUpAndDropService } from "../pickup-and-drop.service";
 import { PickUpAndDrop } from '../../models/pickUpAndDrop.model';
 import { SponsorAndGuest } from '../../models/sponsorAndGuest.model';
 import { SponsorAndGuestService } from '../sponsor-and-guest.service';
+import { SessionService } from "../session.service";
 
 @Component({
   selector: 'app-sponserview-details',
@@ -22,7 +23,8 @@ export class sponserviewComponent implements OnInit {
     private route:ActivatedRoute,
     private location:Location,
     private router:Router,
-    private pickdropService:pickUpAndDropService) { }
+    private pickdropService:pickUpAndDropService,
+    private session :  SessionService) { }
 
   ngOnInit() { 
     this.id = Number(this.route.snapshot.paramMap.get('id'));

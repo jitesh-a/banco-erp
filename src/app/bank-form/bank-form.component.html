@@ -9,7 +9,7 @@
               <input type="number" class="form-control" id="Id"
                      required
                      [(ngModel)]="bank.Id" name="Id"
-                     #Id="ngModel" readonly> 
+                     #Id="ngModel" placeholder="Enter bank form" readonly> 
                 <div [hidden]="Id.valid || Id.pristine"
                      class="alert alert-danger">
                   Id is required
@@ -21,7 +21,7 @@
               <input type="text" class="form-control" id="Name"
                      required
                      [(ngModel)]="bank.Name" name="Name"
-                     #Name="ngModel" pattern="[a-zA-Z ]*">
+                     #Name="ngModel" placeholder="Enter Name" pattern="[a-zA-Z ]*">
               <div [hidden]="Name.valid || Name.pristine"
                    class="alert alert-danger">
                    Name is required
@@ -31,7 +31,7 @@
                 <label for="Category"> Bank Category</label>
                 <select class="form-control" id="Category"
                 required
-                [(ngModel)]="bank.Category" name="Category"
+                [(ngModel)]="bank.Category" name="Category" placeholder= "Enter bank category"
                 #Category="ngModel">
                 <option value="BankAssociation">Bank Association</option>
                 <option value="StateCoOper"></option> 
@@ -44,10 +44,10 @@
               </div>
               <div class="form-group">
                 <label for="SubCategory">SubCategory</label>
-                <input type="text" class="form-control" id="SubCategory"
+                <input type="text" class="form-control" placeholder="Enter Subcategory" id="SubCategory"
                        required
                        [(ngModel)]="bank.SubCategory" name="SubCategory"
-                       #Name="ngModel" pattern="[a-zA-Z ]*" placeholder="enter the overall revenue of bank in CR ">
+                       #SubCategory="ngModel" pattern="[a-zA-Z ]*" placeholder="Enter the overall revenue of bank in CR ">
                 <div [hidden]="SubCategory.valid || SubCategory.pristine"
                      class="alert alert-danger">
                      SubCategory is required
@@ -179,7 +179,8 @@
                             <select class="form-control" id="District"
                                    required
                                    [(ngModel)]="bank.District" name="District"
-                                   #District="ngModel">                                
+                                   #District="ngModel" value ="Select">    
+                                <option>Select districts</option>                               
                                 <option value="Nicobar">	Nicobar	</option>
                                 <option value="North Middle Andaman">	North Middle Andaman	</option>
                                 <option value="South Andaman">	South Andaman	</option>
@@ -907,7 +908,7 @@
                 <label for="Address">Address</label>
                 <textarea type="text" class="form-control" id="Address"
                        required
-                       [(ngModel)]="bank.Address" name="Address"
+                       [(ngModel)]="bank.Address" name="Address" placeholder="Enter the address"
                        rows = "3" #Address="ngModel"></textarea>
                 <div [hidden]="Address.valid || Address.pristine"
                      class="alert alert-danger">
@@ -919,9 +920,10 @@
                     <div class="form-group">
                         <label for="Telephone">Telephone</label>
                         <input type="text" class="form-control" id="Telephone"
-                               required
+                               required 
                                [(ngModel)]="bank.Telephone" name="Telephone"
-                               #Telephone="ngModel">
+                               #Telephone="ngModel"
+                               placeholder="Enter telephone">
                         <div [hidden]="Telephone.valid || Telephone.pristine"
                              class="alert alert-danger">
                              Telephone is required
@@ -934,7 +936,7 @@
                         <input type="number" class="form-control" id="Pincode"
                                required
                                [(ngModel)]="bank.Pincode" name="Pincode"
-                               #Pincode="ngModel" pattern="^[1-9][0-9]{5}$">
+                               #Pincode="ngModel" placeholder="Enter the pincode" pattern="^[1-9][0-9]{5}$">
                         <div [hidden]="Pincode.valid ||Pincode.pristine"
                              class="alert alert-danger">
                              Enter valid pincode 
@@ -949,7 +951,7 @@
                         <input type="number" class="form-control" id="Establishment_no"
                                required
                                [(ngModel)]="bank.Establishment_no" name="Establishment_no"
-                               #Establishment_no="ngModel">
+                               #Establishment_no="ngModel" placeholder="Enter the establishment number">
                         <div [hidden]="Establishment_no.valid || Establishment_no.pristine"
                              class="alert alert-danger">
                              Establishment_no is required
@@ -962,7 +964,7 @@
                         <input type="email" class="form-control" id="emailid_bank"
                                required
                                [(ngModel)]="bank.emailid_bank" name="emailid_bank"
-                               #emailid_bank="ngModel">
+                               #emailid_bank="ngModel" placeholder="Enter the email id of bank">
                         <div [hidden]="emailid_bank.valid || emailid_bank.pristine"
                              class="alert alert-danger">
                              emailid_bank is required
@@ -977,7 +979,7 @@
                      [(ngModel)]="bank.Website" name="Website"
                      #Website="ngModel" url>
               <div [hidden]="Website.valid || Website.pristine"
-                   class="alert alert-danger">
+                   class="alert alert-danger" >
                    Website is required
               </div>
             </div>
@@ -988,7 +990,7 @@
                         <input type="text" class="form-control" id="Chairman_name"
                               required
                               [(ngModel)]="bank.Chairman_name" name="Chairman_name"
-                              #Chairman_name="ngModel" pattern="[a-zA-Z ]*">
+                              #Chairman_name="ngModel" pattern="[a-zA-Z.]*">
                         <div [hidden]="Chairman_name.valid ||Chairman_name.pristine"
                             class="alert alert-danger">
                             Chairman_name is required

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from "../../models/employee.model";
 import { EmployeeService } from "../employee.service";
+import { SessionService } from "../session.service";
+
 declare const $;
 @Component({
   templateUrl: './employee.component.html',
@@ -11,7 +13,7 @@ export class EmployeeComponent implements OnInit {
   employees :Employee[]=[];
   dataLoaded: boolean;
   link : string;
-  constructor(private employeeService :EmployeeService) { }
+  constructor(private employeeService :EmployeeService,private session : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

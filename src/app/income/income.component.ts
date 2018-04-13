@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Income } from '../../models/income.model';
 import { IncomeService } from '../income.service';
+import { SessionService } from "../session.service";
+
 declare const $;
 @Component({
   selector: 'app-income',
@@ -10,7 +12,7 @@ declare const $;
 export class IncomeComponent implements OnInit {
   incomes: Income[]=[];
   dataLoaded:boolean;
-  constructor(private incomeService: IncomeService) { }
+  constructor(private incomeService: IncomeService,private session : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

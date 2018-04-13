@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import { PickUpAndDrop } from '../../models/pickUpAndDrop.model';
 import { pickUpAndDropService } from "../pickup-and-drop.service";
+import { SessionService } from "../session.service";
 
 declare const $;
 @Component({
@@ -13,7 +14,7 @@ export class PickupAndDropComponent implements OnInit {
 
   pickdrops: PickUpAndDrop[]=[];
   dataLoaded:boolean;
-  constructor(private pickdropService:pickUpAndDropService) { }
+  constructor(private pickdropService:pickUpAndDropService,private session : SessionService) { }
 
   ngOnInit() {
         this.dataLoaded=false;

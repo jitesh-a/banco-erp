@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SessionService } from "../session.service";
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import {Bank  } from "../../models/bank.model";
 import { BankService } from "../bank.service";
@@ -17,7 +17,7 @@ export class BankComponent implements OnInit {
   dataLoaded: boolean;
   changeview : boolean;
   
-  constructor(private bankService: BankService) { }
+  constructor(private bankService: BankService,private service : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

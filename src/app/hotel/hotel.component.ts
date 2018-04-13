@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatPaginator, MatTableDataSource,MatSort} from '@angular/material';
 import { Hotel } from "../../models/hotel.model";
 import { HotelService } from "../hotel.service";
+import { SessionService } from "../session.service";
+
 declare const $;
 @Component({
  
@@ -13,7 +15,7 @@ export class HotelComponent implements OnInit {
   hotels: Hotel[] = [];
   dataLoaded: boolean;
 
-  constructor(private hotelService: HotelService) { }
+  constructor(private hotelService: HotelService,private session : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

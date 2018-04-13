@@ -5,6 +5,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 import { Router } from "@angular/router";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { SessionService } from "../session.service";
 
 declare const $;
 @Component({
@@ -17,7 +18,7 @@ export class ViewResultComponent implements OnInit {
 
   result: EventResult[]=[];
   constructor(private eventService: EventService,private route:ActivatedRoute,
-    private location:Location,private router:Router) { }
+    private location:Location,private router:Router,private session : SessionService) { }
   dataLoaded:boolean;
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));

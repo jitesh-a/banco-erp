@@ -31,9 +31,13 @@ export class LoginComponent implements OnInit {
             }
             else{
               this.loginService.isAdmin = true;
+              localStorage.setItem("UserType","admin");
+              localStorage.setItem("UserId",res["user"].Id);
+              localStorage.setItem("UserName",res["user"].UserName);
+              console.log("Values added");
               this.router.navigate( ['/dashboard']);
             }
-            this.router.navigate(['/dashboard']);
+          //  this.router.navigate(['/dashboard']);
         }
       ); 
   }

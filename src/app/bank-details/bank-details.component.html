@@ -7,10 +7,6 @@
       <table class="table table-striped"  id="table_events">
           <tbody>
             <tr>
-              <td> <label>Type :</label></td>
-              <td>{{bank.TypeName}} </td>
-            </tr>
-            <tr>
               <td><label>Name :</label></td>
               <td> {{bank.Name}}</td>
             </tr>
@@ -89,10 +85,10 @@
                   <td>{{bank.Description}}</td>
                 </tr>   
                 <tr>
-                  <td><label>Questionary Type:</label></td>
-                  <td>{{bank.QuestionarieTypeId}}</td>
+                  <button type="button" class="btn btn-info" (click)="goBack()">Back</button>
                 </tr>
           </tbody>
         </table>
+
   </div>
 </div>

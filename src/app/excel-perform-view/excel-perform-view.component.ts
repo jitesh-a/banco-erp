@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from "@angular/router";
 import { ExcellentPerformanceService } from "../excellent-performance.service";
-
+import { SessionService } from "../session.service";
 
 @Component({
   selector: 'app-excel-perform-view',
@@ -19,7 +19,7 @@ export class ExcelPerformViewComponent implements OnInit {
   excellentperformance: ExcellentPerformance=new ExcellentPerformance();
 
   constructor(private excelperfservice:ExcellentPerformanceService,private route: ActivatedRoute,
-  private location: Location,private router:Router) { }
+  private location: Location,private router:Router,private session :SessionService) { }
 
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));

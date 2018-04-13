@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BankType } from "../../models/bankType.model";
 import { BankTypeService } from "../bank-type.service";
+import { SessionService } from "../session.service";
 
 declare const $;
 @Component({
@@ -11,7 +12,7 @@ export class BankTypeComponent implements OnInit {
  
   banktypes :BankType[]=[];
   dataLoaded: boolean;
-  constructor(private banktypeService :BankTypeService) { }
+  constructor(private banktypeService :BankTypeService,private session : SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;

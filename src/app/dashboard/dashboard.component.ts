@@ -4,6 +4,8 @@ import { FusionChartModel } from "../../models/fusion-chart.model";
 import { EventService } from "../event.service";
 import { ErrorStateMatcher } from '@angular/material';
 import { ErrorHandler } from '@angular/core/src/error_handler';
+import { Router } from "@angular/router";
+import { SessionService } from "../session.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -21,7 +23,9 @@ export class DashboardComponent implements OnInit {
     dataSource2;
     title = 'Angular4 FusionCharts Sample';
 
-  constructor(public loginservice : LoginService,private eventService:EventService) { }
+  constructor(public loginservice : LoginService,private eventService:EventService,private router:Router,private session : SessionService) { 
+ 
+  }
 
   ngOnInit() {
     this.show();
@@ -39,9 +43,9 @@ export class DashboardComponent implements OnInit {
 
       this.dataSource1 = {
         "chart": {
-            "caption": "Harry's SuperMart",
-            "subCaption": "Top 5 stores in last month by revenue",
-            "numberprefix": "$",
+            "caption": "Income",
+            "subCaption": "",
+            "numberprefix": "₹",
             "theme": "fint"
         },
         "data": resIncome["data"]
@@ -57,9 +61,9 @@ export class DashboardComponent implements OnInit {
 
       this.dataSource2 = {
         "chart": {
-            "caption": "Harry's SuperMart",
-            "subCaption": "Top 5 stores in last month by revenue",
-            "numberprefix": "$",
+            "caption": "Expense",
+            "subCaption": "",
+            "numberprefix": "₹",
             "theme": "fint"
         },
         "data": resExpense["data"]

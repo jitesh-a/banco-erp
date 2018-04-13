@@ -6,6 +6,7 @@ import { BankTypeService } from "../bank-type.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from "@angular/router";
+import { SessionService } from "../session.service";
 
 @Component({
   selector: 'app-bank-details',
@@ -21,7 +22,8 @@ export class BankDetailsComponent implements OnInit {
     private bankTypeService:BankTypeService,
     private route:ActivatedRoute,
     private location:Location,
-    private router:Router) { }
+    private router:Router,
+    private session : SessionService) { }
 
   ngOnInit() { 
     this.id = Number(this.route.snapshot.paramMap.get('id'));
@@ -35,4 +37,9 @@ export class BankDetailsComponent implements OnInit {
           console.log(res);
         })
   }
+
+  goBack() :void{
+    this.location.back();
+  }
+    
 }

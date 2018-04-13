@@ -5,6 +5,7 @@ import { TechnologyDetailsService } from "../technology-details.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from "@angular/router";
+import { SessionService } from "../session.service";
 
 @Component({
   selector: 'app-tech-details-view',
@@ -18,7 +19,8 @@ export class TechDetailsViewComponent implements OnInit {
   techdetails:TechnologyDetails=new TechnologyDetails();
 
   constructor(private techdetailsService:TechnologyDetailsService ,private route: ActivatedRoute,
-    private location: Location,private router:Router) { }
+    private location: Location,private router:Router,
+    private session : SessionService) { }
 
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));

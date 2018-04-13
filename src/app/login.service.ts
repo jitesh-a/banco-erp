@@ -14,7 +14,7 @@ const httpOptions = {
 @Injectable()
 export class LoginService {
 
-  public isAdmin : boolean = true;
+  public isAdmin : boolean = false;
   private apiUrl='http://localhost:7888/account/';
   constructor(private http:HttpClient) { }
 

@@ -3,7 +3,7 @@
     <p class="lead">March as Monarch Of Banking</p>
     <a class="btn btn-lg btn-primary"  routerLink="/loginapi" role="button">Login &raquo;</a>
 </div>
-<div class="row">
+<div class="row" *ngIf="loginservice.isAdmin">
     <div class="col-md-6" *ngIf="loginservice.isAdmin">
         <h2>
            Income Chart

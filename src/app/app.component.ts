@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginService } from "./login.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,17 +9,25 @@ import { LoginService } from "./login.service";
 })
 export class AppComponent {
   title = 'Banco ERP';
- 
-  constructor(public loginservice : LoginService) {
+  admin = false;
+  constructor(public loginservice : LoginService,private router : Router) {
     
    }
 
   ngOnInit() {
-    this.showStatus();
+    console.log("sd:"+localStorage.getItem("UserType"));
+    if(localStorage.getItem("UserType") == "admin"){
+      this.admin = true;  
+      this.loginservice.isAdmin=true;
+    }
+    console.log("admin"+this.admin)
   }
 
-  showStatus():void{
-    console.log("Login Status : "+this.loginservice.isAdmin);
 
+
+  logOut() : void{
+    localStorage.clear();
+    this.loginservice.isAdmin=false;
+    this.router.navigate(["/loginapi"]);
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SponsorAndGuest } from "../../models/sponsorAndGuest.model";
 import { SponsorAndGuestService } from "../sponsor-and-guest.service";
 import { EventService } from "../event.service";
+import { SessionService } from "../session.service";
 
 declare const $;
 
@@ -17,7 +18,7 @@ export class SponsorAndGuestComponent implements OnInit {
   
   dataLoaded: boolean;
 
-  constructor(private sponsorAndGuestService : SponsorAndGuestService,private eventService: EventService) { }
+  constructor(private sponsorAndGuestService : SponsorAndGuestService,private eventService: EventService,private session :SessionService) { }
 
   ngOnInit() {
 

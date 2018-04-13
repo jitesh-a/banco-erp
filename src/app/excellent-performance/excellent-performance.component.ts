@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ExcellentPerformanceService } from "../excellent-performance.service";
 import { ExcellentPerformance } from "../../models/excellentPerformance.model";
+import { SessionService } from "../session.service";
+
 @Component({
   templateUrl: './excellent-performance.component.html',
   styleUrls: ['./excellent-performance.component.css']
@@ -9,7 +11,7 @@ export class ExcellentPerformanceComponent implements OnInit {
  
   list :ExcellentPerformance[]=[];
   dataLoaded: boolean;
-  constructor(private excellentService :ExcellentPerformanceService) { }
+  constructor(private excellentService :ExcellentPerformanceService,private session :SessionService) { }
 
   ngOnInit() {
     this.dataLoaded=false;
