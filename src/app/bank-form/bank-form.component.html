@@ -21,7 +21,7 @@
               <input type="text" class="form-control" id="Name"
                      required
                      [(ngModel)]="bank.Name" name="Name"
-                     #Name="ngModel" placeholder="Enter Name" pattern="[a-zA-Z ]*">
+                     #Name="ngModel" placeholder="Enter Name" pattern="[a-zA-Z. ]*">
               <div [hidden]="Name.valid || Name.pristine"
                    class="alert alert-danger">
                    Name is required
@@ -47,7 +47,7 @@
                 <input type="text" class="form-control" placeholder="Enter Subcategory" id="SubCategory"
                        required
                        [(ngModel)]="bank.SubCategory" name="SubCategory"
-                       #SubCategory="ngModel" pattern="[a-zA-Z]*" placeholder="enter the overall revenue of bank in Crore "/>
+                       #SubCategory="ngModel" pattern="[a-zA-Z 0-9]*" placeholder="enter the overall revenue of bank in Crore "/>
                 <div [hidden]="SubCategory.valid || SubCategory.pristine"
                      class="alert alert-danger">
                      SubCategory is required
